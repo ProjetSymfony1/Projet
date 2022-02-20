@@ -26,14 +26,14 @@ class AdminController extends AbstractController
     /**
      * @Route("/ajout-compte-admin", name="ajoutAdmin")
      */
-    public function ajouterAdmin():Response{
+    public function addAdmin():Response{
         return $this->render('admin/form/ajoutCompteAdmin.html.twig');
     }
 
     /**
      * @Route("/ajout-creneau", name="ajoutCreneau")
      */
-    public function ajouterCreneau(): Response{
+    public function addCreneau(): Response{
         return $this->render('admin/form/ajoutCreneauForm.html.twig');
     }
 }
