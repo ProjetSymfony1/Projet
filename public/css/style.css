@@ -1,0 +1,76 @@
+a{
+    color: #8f392c !important;
+    font-weight: 500;
+}
+.imgHeader{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+.btn-outline-primary{
+    color: #8f392c !important;
+    border-color: #8f392c !important;
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:focus,
+.btn-outline-primary.active {
+    background: #8f392c !important;
+    color: #ffffff !important;
+    border-color: #8f392c !important;
+
+}
+.hrCustom{
+    margin: 0;
+    border:2px solid #8f392c ;
+}
+.content{
+    min-height: 78vh ;
+}
+.borderTitle{
+    width: 65%;
+    border: 1px solid black;
+    background-color:#8f392c;
+    color:white;
+    font-family: "Brush Script MT";
+    box-shadow: 5px 5px #888888
+}
+.description{
+    color:#8f392c;
+    font-weight: 500;
+}
+.footer{
+    background-color: #8f392c;
+}
+.componentFooter{
+    width: 30%;
+    color:white;
+    font-size: 0.6rem;
+    font-weight: 500;
+}
+
+.btn-primary{
+    background: #8f392c !important;
+    color: #ffffff !important;
+    border-color: #8f392c !important;
+}
+.ma-form{
+    color: #790b30;
+}
+.border-class{
+    border: 2px solid #790b30
+}
+.titre-border{
+    font-weight : 900;
+    width: 80%;
+    border: 1px solid black;
+    background-color:#8f392c;
+    color:white;
+    font-style: italic;
+    box-shadow: 5px 5px #888888
+
+}
+.btn-submit{
+    float: right;
+
+}

@@ -1,19 +1,41 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomepageController!{% endblock %}
+{% block title %}Page d'accueil{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/xampp/htdocs/chez-gusto/src/Controller/HomepageController.php'|file_link(0) }}">src/Controller/HomepageController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/xampp/htdocs/chez-gusto/templates/homepage/index.html.twig'|file_link(0) }}">templates/homepage/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <!-- Body-->
+    <div class="container-fluid content">
+        <div class="row">
+            <div class="col-7 my-auto">
+                <div class="borderTitle mb-4 ml-0">
+                    <p class="text-center h3 my-2">'anyone can cook'</p>
+                </div>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolorum
+                    impedit, aut laboriosam sunt eum expedita neque dicta dolore, cupiditate velit consectetur error rem
+                    nostrum provident accusantium officiis at doloribus totam esse fugiat! Impedit, dolorum et nemo
+                    neque fuga reprehenderit saepe error eveniet eum quasi aliquam, non nisi rem, qui nobis ipsam
+                    tenetur repellat aspernatur! Nulla nobis illum tempore reprehenderit? Nam, cupiditate. Pariatur?</p>
+            </div>
+            <div class="col-5">
+                <img src="{{ asset('image/pngwing.com.png') }}" width="100%" height="auto"/>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="d-flex justify-content-between py-4">
+                <div class="componentFooter">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex ipsum eaque asperiores ea commodi non
+                    libero veniam consequatur reprehenderit odit ab voluptatibus facilis saepe laboriosam voluptates
+                    quae voluptas, suscipit quam.
+                </div>
+                <div class="componentFooter">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam cumque quos distinctio laudantium
+                    asperiores a, ipsam aperiam provident doloribus veniam sit nemo dignissimos hic, vel eos, doloremque
+                    quibusdam optio aliquam.
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

@@ -15,6 +15,7 @@ return [
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], [], []],
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
+<<<<<<< HEAD
     'indexAdmin' => [[], ['_controller' => 'App\\Controller\\AdminController::index'], [], [['text', '/AdminIndex']], [], [], []],
     'ajoutAdmin' => [[], ['_controller' => 'App\\Controller\\AdminController::addAdmin'], [], [['text', '/ajout-compte-admin']], [], [], []],
     'ajoutCreneau' => [[], ['_controller' => 'App\\Controller\\AdminController::addCreneau'], [], [['text', '/ajout-creneau']], [], [], []],
@@ -23,4 +24,16 @@ return [
     'inscriptionForm' => [[], ['_controller' => 'App\\Controller\\HomepageController::register'], [], [['text', '/inscriptionForm']], [], [], []],
     'connexionForm' => [[], ['_controller' => 'App\\Controller\\HomepageController::connect'], [], [['text', '/connexionForm']], [], [], []],
     'menu' => [[], ['_controller' => 'App\\Controller\\HomepageController::menu'], [], [['text', '/nos-Menu']], [], [], []],
+=======
+    'user-index' => [[], ['_controller' => 'App\\Controller\\UserController::indexUser'], [], [['text', '/user/index']], [], [], []],
+    'user-contactForm' => [[], ['_controller' => 'App\\Controller\\UserController::contactForm'], [], [['text', '/user/contactForm']], [], [], []],
+    'user-updateForm' => [[], ['_controller' => 'App\\Controller\\UserController::updateForm'], [], [['text', '/user/updateInfoClient']], [], [], []],
+    'user-reserver' => [[], ['_controller' => 'App\\Controller\\UserController::reserver'], [], [['text', '/user/reservation']], [], [], []],
+    'index' => [[], ['_controller' => 'App\\Controller\\homepageController::home'], [], [['text', '/']], [], [], []],
+    'inscriptionForm' => [[], ['_controller' => 'App\\Controller\\homepageController::inscrire'], [], [['text', '/inscriptionForm']], [], [], []],
+    'connexionForm' => [[], ['_controller' => 'App\\Controller\\homepageController::connecter'], [], [['text', '/connexionForm']], [], [], []],
+    'non-reserver' => [[], ['_controller' => 'App\\Controller\\homepageController::pasReserver'], [], [['text', '/reserve-non-connexion']], [], [], []],
+    'menu' => [[], ['_controller' => 'App\\Controller\\homepageController::menu'], [], [['text', '/nos-Menu']], [], [], []],
+    'connexion' => [[], ['_controller' => 'App\\Controller\\homepageController::okConnect'], [], [['text', '/okConnect']], [], [], []],
+>>>>>>> origin/front-end
 ];

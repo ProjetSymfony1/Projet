@@ -1,3 +1,57 @@
-<h1>
-    page de connexion
-</h1>
+{% extends 'base.html.twig' %}
+
+{% block title %}Page d'inscription{% endblock %}
+
+{% block body %}
+
+    <!-- Body-->
+    <div class="container-fluid content">
+        <div class = "row">
+            <div class="col-6 my-auto">
+                <form>
+                    <div class="ma-form">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <div class="border-class">
+                                <input type="text" class="form-control" id="username" placeholder="votre pseudo" >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="mdp">Password</label>
+                            <div class="border-class">
+                                <input type="Password" class="form-control" id="mdp" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-submit">
+                        <button type="submit" class="btn btn-primary btn-lg btn-blog">LOG IN</button>
+                    </div>
+                    <div class="text">
+                        <p class="text-center"><u><a href="{{ path('inscriptionForm') }}">Don't have an account? Sign up</u></p></a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-4">
+                <div class="titre-border mb-4 ml-0">
+                    <p class="text-center h3 my-2">WELCOME BACK</p>
+                </div>
+                <div class="col-5">
+                    <img src="{{ asset('image/CHEZ_GUSTO_LOGO.png') }}"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="d-flex justify-content-between py-4">
+                <div class="componentFooter">
+                    TRAN Ha Phuong<br>
+                    DIDI Teya<br>
+                    Katia<br>
+                    Manelle<br>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

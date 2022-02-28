@@ -6,8 +6,13 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+<<<<<<< HEAD
     'App\\Controller\\AdminController' => $baseDir . '/src/Controller/AdminController.php',
     'App\\Controller\\HomepageController' => $baseDir . '/src/Controller/HomepageController.php',
+=======
+    'App\\Controller\\UserController' => $baseDir . '/src/Controller/UserController.php',
+    'App\\Controller\\homepageController' => $baseDir . '/src/Controller/homepageController.php',
+>>>>>>> origin/front-end
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
     'Collator' => $vendorDir . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',

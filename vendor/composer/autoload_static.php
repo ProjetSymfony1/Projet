@@ -4,7 +4,11 @@
 
 namespace Composer\Autoload;
 
+<<<<<<< HEAD
 class ComposerStaticInit905b6f10d94a0ca69264a8357b577e19
+=======
+class ComposerStaticInit373ad398bb80587163cdf0c1b488bcb2
+>>>>>>> origin/front-end
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -574,8 +578,13 @@ class ComposerStaticInit905b6f10d94a0ca69264a8357b577e19
     );
 
     public static $classMap = array (
+<<<<<<< HEAD
         'App\\Controller\\AdminController' => __DIR__ . '/../..' . '/src/Controller/AdminController.php',
         'App\\Controller\\HomepageController' => __DIR__ . '/../..' . '/src/Controller/HomepageController.php',
+=======
+        'App\\Controller\\UserController' => __DIR__ . '/../..' . '/src/Controller/UserController.php',
+        'App\\Controller\\homepageController' => __DIR__ . '/../..' . '/src/Controller/homepageController.php',
+>>>>>>> origin/front-end
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
         'Collator' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
@@ -6202,9 +6211,15 @@ class ComposerStaticInit905b6f10d94a0ca69264a8357b577e19
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+<<<<<<< HEAD
             $loader->prefixLengthsPsr4 = ComposerStaticInit905b6f10d94a0ca69264a8357b577e19::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit905b6f10d94a0ca69264a8357b577e19::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInit905b6f10d94a0ca69264a8357b577e19::$classMap;
+=======
+            $loader->prefixLengthsPsr4 = ComposerStaticInit373ad398bb80587163cdf0c1b488bcb2::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit373ad398bb80587163cdf0c1b488bcb2::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit373ad398bb80587163cdf0c1b488bcb2::$classMap;
+>>>>>>> origin/front-end
 
         }, null, ClassLoader::class);
     }
