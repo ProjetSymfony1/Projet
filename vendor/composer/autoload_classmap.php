@@ -6,14 +6,30 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-<<<<<<< HEAD
     'App\\Controller\\AdminController' => $baseDir . '/src/Controller/AdminController.php',
     'App\\Controller\\HomepageController' => $baseDir . '/src/Controller/HomepageController.php',
-=======
+    'App\\Controller\\RegistrationController' => $baseDir . '/src/Controller/RegistrationController.php',
+    'App\\Controller\\SecurityController' => $baseDir . '/src/Controller/SecurityController.php',
     'App\\Controller\\UserController' => $baseDir . '/src/Controller/UserController.php',
-    'App\\Controller\\homepageController' => $baseDir . '/src/Controller/homepageController.php',
->>>>>>> origin/front-end
+    'App\\Entity\\Cart' => $baseDir . '/src/Entity/Cart.php',
+    'App\\Entity\\Favorite' => $baseDir . '/src/Entity/Favorite.php',
+    'App\\Entity\\Message' => $baseDir . '/src/Entity/Message.php',
+    'App\\Entity\\Order' => $baseDir . '/src/Entity/Order.php',
+    'App\\Entity\\Reservation' => $baseDir . '/src/Entity/Reservation.php',
+    'App\\Entity\\TimeSlot' => $baseDir . '/src/Entity/TimeSlot.php',
+    'App\\Entity\\User' => $baseDir . '/src/Entity/User.php',
+    'App\\Entity\\dish' => $baseDir . '/src/Entity/dish.php',
+    'App\\Form\\RegistrationFormType' => $baseDir . '/src/Form/RegistrationFormType.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
+    'App\\Repository\\CartRepository' => $baseDir . '/src/Repository/CartRepository.php',
+    'App\\Repository\\DishRepository' => $baseDir . '/src/Repository/DishRepository.php',
+    'App\\Repository\\FavoriteRepository' => $baseDir . '/src/Repository/FavoriteRepository.php',
+    'App\\Repository\\MessageRepository' => $baseDir . '/src/Repository/MessageRepository.php',
+    'App\\Repository\\OrderRepository' => $baseDir . '/src/Repository/OrderRepository.php',
+    'App\\Repository\\ReservationRepository' => $baseDir . '/src/Repository/ReservationRepository.php',
+    'App\\Repository\\TimeSlotRepository' => $baseDir . '/src/Repository/TimeSlotRepository.php',
+    'App\\Repository\\UserRepository' => $baseDir . '/src/Repository/UserRepository.php',
+    'App\\Security\\AppCustomAuthenticator' => $baseDir . '/src/Security/AppCustomAuthenticator.php',
     'Collator' => $vendorDir . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'DeepCopy\\DeepCopy' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
@@ -5167,6 +5183,7 @@ return array(
     'Symfony\\Component\\VarDumper\\Caster\\IntlCaster' => $vendorDir . '/symfony/var-dumper/Caster/IntlCaster.php',
     'Symfony\\Component\\VarDumper\\Caster\\LinkStub' => $vendorDir . '/symfony/var-dumper/Caster/LinkStub.php',
     'Symfony\\Component\\VarDumper\\Caster\\MemcachedCaster' => $vendorDir . '/symfony/var-dumper/Caster/MemcachedCaster.php',
+    'Symfony\\Component\\VarDumper\\Caster\\MysqliCaster' => $vendorDir . '/symfony/var-dumper/Caster/MysqliCaster.php',
     'Symfony\\Component\\VarDumper\\Caster\\PdoCaster' => $vendorDir . '/symfony/var-dumper/Caster/PdoCaster.php',
     'Symfony\\Component\\VarDumper\\Caster\\PgSqlCaster' => $vendorDir . '/symfony/var-dumper/Caster/PgSqlCaster.php',
     'Symfony\\Component\\VarDumper\\Caster\\ProxyManagerCaster' => $vendorDir . '/symfony/var-dumper/Caster/ProxyManagerCaster.php',

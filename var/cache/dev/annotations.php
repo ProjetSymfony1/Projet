@@ -54,30 +54,326 @@ return [[
 '[C]Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%23addLink' => 1,
 'Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%24container' => 0,
 '[C]Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%24container' => 1,
+'App%5CController%5CAdminController' => 0,
+'[C]App%5CController%5CAdminController' => 1,
+'App%5CController%5CAdminController%23index' => 2,
+'[C]App%5CController%5CAdminController%23index' => 1,
+'App%5CController%5CAdminController%23addAdmin' => 3,
+'[C]App%5CController%5CAdminController%23addAdmin' => 1,
+'App%5CController%5CAdminController%23addCreneau' => 4,
+'[C]App%5CController%5CAdminController%23addCreneau' => 1,
+'App%5CController%5CHomepageController' => 0,
+'[C]App%5CController%5CHomepageController' => 1,
+'App%5CController%5CHomepageController%23home' => 5,
+'[C]App%5CController%5CHomepageController%23home' => 1,
+'App%5CController%5CHomepageController%23index' => 6,
+'[C]App%5CController%5CHomepageController%23index' => 1,
+'App%5CController%5CHomepageController%23homeLog' => 7,
+'[C]App%5CController%5CHomepageController%23homeLog' => 1,
+'App%5CController%5CHomepageController%23register' => 8,
+'[C]App%5CController%5CHomepageController%23register' => 1,
+'App%5CController%5CHomepageController%23connect' => 9,
+'[C]App%5CController%5CHomepageController%23connect' => 1,
+'App%5CController%5CHomepageController%23menu' => 10,
+'[C]App%5CController%5CHomepageController%23menu' => 1,
+'App%5CController%5CRegistrationController' => 0,
+'[C]App%5CController%5CRegistrationController' => 1,
+'App%5CController%5CRegistrationController%23register' => 0,
+'[C]App%5CController%5CRegistrationController%23register' => 1,
+'App%5CController%5CSecurityController' => 0,
+'[C]App%5CController%5CSecurityController' => 1,
+'App%5CController%5CSecurityController%23login' => 11,
+'[C]App%5CController%5CSecurityController%23login' => 1,
+'App%5CController%5CSecurityController%23logout' => 12,
+'[C]App%5CController%5CSecurityController%23logout' => 1,
 'App%5CController%5CUserController' => 0,
 '[C]App%5CController%5CUserController' => 1,
-'App%5CController%5CUserController%23indexUser' => 2,
+'App%5CController%5CUserController%23indexUser' => 13,
 '[C]App%5CController%5CUserController%23indexUser' => 1,
-'App%5CController%5CUserController%23contactForm' => 3,
+'App%5CController%5CUserController%23contactForm' => 14,
 '[C]App%5CController%5CUserController%23contactForm' => 1,
-'App%5CController%5CUserController%23updateForm' => 4,
+'App%5CController%5CUserController%23updateForm' => 15,
 '[C]App%5CController%5CUserController%23updateForm' => 1,
-'App%5CController%5CUserController%23reserver' => 5,
+'App%5CController%5CUserController%23reserver' => 16,
 '[C]App%5CController%5CUserController%23reserver' => 1,
-'App%5CController%5ChomepageController' => 0,
-'[C]App%5CController%5ChomepageController' => 1,
-'App%5CController%5ChomepageController%23home' => 6,
-'[C]App%5CController%5ChomepageController%23home' => 1,
-'App%5CController%5ChomepageController%23inscrire' => 7,
-'[C]App%5CController%5ChomepageController%23inscrire' => 1,
-'App%5CController%5ChomepageController%23connecter' => 8,
-'[C]App%5CController%5ChomepageController%23connecter' => 1,
-'App%5CController%5ChomepageController%23pasReserver' => 9,
-'[C]App%5CController%5ChomepageController%23pasReserver' => 1,
-'App%5CController%5ChomepageController%23menu' => 10,
-'[C]App%5CController%5ChomepageController%23menu' => 1,
-'App%5CController%5ChomepageController%23okConnect' => 11,
-'[C]App%5CController%5ChomepageController%23okConnect' => 1,
+'App%5CEntity%5CCart' => 0,
+'[C]App%5CEntity%5CCart' => 1,
+'App%5CEntity%5CCart%23__construct' => 0,
+'[C]App%5CEntity%5CCart%23__construct' => 1,
+'App%5CEntity%5CCart%23getId' => 0,
+'[C]App%5CEntity%5CCart%23getId' => 1,
+'App%5CEntity%5CCart%23getIdUser' => 0,
+'[C]App%5CEntity%5CCart%23getIdUser' => 1,
+'App%5CEntity%5CCart%23setIdUser' => 0,
+'[C]App%5CEntity%5CCart%23setIdUser' => 1,
+'App%5CEntity%5CCart%23getIdDish' => 0,
+'[C]App%5CEntity%5CCart%23getIdDish' => 1,
+'App%5CEntity%5CCart%23addIdDish' => 0,
+'[C]App%5CEntity%5CCart%23addIdDish' => 1,
+'App%5CEntity%5CCart%23removeIdDish' => 0,
+'[C]App%5CEntity%5CCart%23removeIdDish' => 1,
+'App%5CEntity%5CCart%24id' => 0,
+'[C]App%5CEntity%5CCart%24id' => 1,
+'App%5CEntity%5CCart%24id_user' => 0,
+'[C]App%5CEntity%5CCart%24id_user' => 1,
+'App%5CEntity%5CCart%24id_dish' => 0,
+'[C]App%5CEntity%5CCart%24id_dish' => 1,
+'App%5CEntity%5CFavorite' => 0,
+'[C]App%5CEntity%5CFavorite' => 1,
+'App%5CEntity%5CFavorite%23getId' => 0,
+'[C]App%5CEntity%5CFavorite%23getId' => 1,
+'App%5CEntity%5CFavorite%23getIdUser' => 0,
+'[C]App%5CEntity%5CFavorite%23getIdUser' => 1,
+'App%5CEntity%5CFavorite%23setIdUser' => 0,
+'[C]App%5CEntity%5CFavorite%23setIdUser' => 1,
+'App%5CEntity%5CFavorite%23getIdDish' => 0,
+'[C]App%5CEntity%5CFavorite%23getIdDish' => 1,
+'App%5CEntity%5CFavorite%23setIdDish' => 0,
+'[C]App%5CEntity%5CFavorite%23setIdDish' => 1,
+'App%5CEntity%5CFavorite%24id' => 0,
+'[C]App%5CEntity%5CFavorite%24id' => 1,
+'App%5CEntity%5CFavorite%24id_user' => 0,
+'[C]App%5CEntity%5CFavorite%24id_user' => 1,
+'App%5CEntity%5CFavorite%24id_dish' => 0,
+'[C]App%5CEntity%5CFavorite%24id_dish' => 1,
+'App%5CEntity%5CMessage' => 0,
+'[C]App%5CEntity%5CMessage' => 1,
+'App%5CEntity%5CMessage%23getId' => 0,
+'[C]App%5CEntity%5CMessage%23getId' => 1,
+'App%5CEntity%5CMessage%23getMessage' => 0,
+'[C]App%5CEntity%5CMessage%23getMessage' => 1,
+'App%5CEntity%5CMessage%23setMessage' => 0,
+'[C]App%5CEntity%5CMessage%23setMessage' => 1,
+'App%5CEntity%5CMessage%23getIdUser' => 0,
+'[C]App%5CEntity%5CMessage%23getIdUser' => 1,
+'App%5CEntity%5CMessage%23setIdUser' => 0,
+'[C]App%5CEntity%5CMessage%23setIdUser' => 1,
+'App%5CEntity%5CMessage%24id' => 0,
+'[C]App%5CEntity%5CMessage%24id' => 1,
+'App%5CEntity%5CMessage%24message' => 0,
+'[C]App%5CEntity%5CMessage%24message' => 1,
+'App%5CEntity%5CMessage%24id_user' => 0,
+'[C]App%5CEntity%5CMessage%24id_user' => 1,
+'App%5CEntity%5COrder' => 0,
+'[C]App%5CEntity%5COrder' => 1,
+'App%5CEntity%5COrder%23getId' => 0,
+'[C]App%5CEntity%5COrder%23getId' => 1,
+'App%5CEntity%5COrder%23getDate' => 0,
+'[C]App%5CEntity%5COrder%23getDate' => 1,
+'App%5CEntity%5COrder%23setDate' => 0,
+'[C]App%5CEntity%5COrder%23setDate' => 1,
+'App%5CEntity%5COrder%23getIdCart' => 0,
+'[C]App%5CEntity%5COrder%23getIdCart' => 1,
+'App%5CEntity%5COrder%23setIdCart' => 0,
+'[C]App%5CEntity%5COrder%23setIdCart' => 1,
+'App%5CEntity%5COrder%24id' => 0,
+'[C]App%5CEntity%5COrder%24id' => 1,
+'App%5CEntity%5COrder%24date' => 0,
+'[C]App%5CEntity%5COrder%24date' => 1,
+'App%5CEntity%5COrder%24id_cart' => 0,
+'[C]App%5CEntity%5COrder%24id_cart' => 1,
+'App%5CEntity%5CReservation' => 0,
+'[C]App%5CEntity%5CReservation' => 1,
+'App%5CEntity%5CReservation%23getId' => 0,
+'[C]App%5CEntity%5CReservation%23getId' => 1,
+'App%5CEntity%5CReservation%23getIdUser' => 0,
+'[C]App%5CEntity%5CReservation%23getIdUser' => 1,
+'App%5CEntity%5CReservation%23setIdUser' => 0,
+'[C]App%5CEntity%5CReservation%23setIdUser' => 1,
+'App%5CEntity%5CReservation%23getIdTimeslot' => 0,
+'[C]App%5CEntity%5CReservation%23getIdTimeslot' => 1,
+'App%5CEntity%5CReservation%23setIdTimeslot' => 0,
+'[C]App%5CEntity%5CReservation%23setIdTimeslot' => 1,
+'App%5CEntity%5CReservation%24id' => 0,
+'[C]App%5CEntity%5CReservation%24id' => 1,
+'App%5CEntity%5CReservation%24id_user' => 0,
+'[C]App%5CEntity%5CReservation%24id_user' => 1,
+'App%5CEntity%5CReservation%24id_timeslot' => 0,
+'[C]App%5CEntity%5CReservation%24id_timeslot' => 1,
+'App%5CEntity%5CTimeSlot' => 0,
+'[C]App%5CEntity%5CTimeSlot' => 1,
+'App%5CEntity%5CTimeSlot%23__construct' => 0,
+'[C]App%5CEntity%5CTimeSlot%23__construct' => 1,
+'App%5CEntity%5CTimeSlot%23getId' => 0,
+'[C]App%5CEntity%5CTimeSlot%23getId' => 1,
+'App%5CEntity%5CTimeSlot%23getDate' => 0,
+'[C]App%5CEntity%5CTimeSlot%23getDate' => 1,
+'App%5CEntity%5CTimeSlot%23setDate' => 0,
+'[C]App%5CEntity%5CTimeSlot%23setDate' => 1,
+'App%5CEntity%5CTimeSlot%23getHour' => 0,
+'[C]App%5CEntity%5CTimeSlot%23getHour' => 1,
+'App%5CEntity%5CTimeSlot%23setHour' => 0,
+'[C]App%5CEntity%5CTimeSlot%23setHour' => 1,
+'App%5CEntity%5CTimeSlot%23getAvailable' => 0,
+'[C]App%5CEntity%5CTimeSlot%23getAvailable' => 1,
+'App%5CEntity%5CTimeSlot%23setAvailable' => 0,
+'[C]App%5CEntity%5CTimeSlot%23setAvailable' => 1,
+'App%5CEntity%5CTimeSlot%23getTimeslotReservation' => 0,
+'[C]App%5CEntity%5CTimeSlot%23getTimeslotReservation' => 1,
+'App%5CEntity%5CTimeSlot%23addTimeslotReservation' => 0,
+'[C]App%5CEntity%5CTimeSlot%23addTimeslotReservation' => 1,
+'App%5CEntity%5CTimeSlot%23removeTimeslotReservation' => 0,
+'[C]App%5CEntity%5CTimeSlot%23removeTimeslotReservation' => 1,
+'App%5CEntity%5CTimeSlot%24id' => 0,
+'[C]App%5CEntity%5CTimeSlot%24id' => 1,
+'App%5CEntity%5CTimeSlot%24date' => 0,
+'[C]App%5CEntity%5CTimeSlot%24date' => 1,
+'App%5CEntity%5CTimeSlot%24hour' => 0,
+'[C]App%5CEntity%5CTimeSlot%24hour' => 1,
+'App%5CEntity%5CTimeSlot%24available' => 0,
+'[C]App%5CEntity%5CTimeSlot%24available' => 1,
+'App%5CEntity%5CTimeSlot%24timeslot_reservation' => 0,
+'[C]App%5CEntity%5CTimeSlot%24timeslot_reservation' => 1,
+'App%5CEntity%5CUser' => 17,
+'[C]App%5CEntity%5CUser' => 1,
+'App%5CEntity%5CUser%23__construct' => 0,
+'[C]App%5CEntity%5CUser%23__construct' => 1,
+'App%5CEntity%5CUser%23getId' => 0,
+'[C]App%5CEntity%5CUser%23getId' => 1,
+'App%5CEntity%5CUser%23getIdUser' => 0,
+'[C]App%5CEntity%5CUser%23getIdUser' => 1,
+'App%5CEntity%5CUser%23setIdUser' => 0,
+'[C]App%5CEntity%5CUser%23setIdUser' => 1,
+'App%5CEntity%5CUser%23getPwdUser' => 0,
+'[C]App%5CEntity%5CUser%23getPwdUser' => 1,
+'App%5CEntity%5CUser%23setPwdUser' => 0,
+'[C]App%5CEntity%5CUser%23setPwdUser' => 1,
+'App%5CEntity%5CUser%23getMail' => 0,
+'[C]App%5CEntity%5CUser%23getMail' => 1,
+'App%5CEntity%5CUser%23setMail' => 0,
+'[C]App%5CEntity%5CUser%23setMail' => 1,
+'App%5CEntity%5CUser%23getFirstName' => 0,
+'[C]App%5CEntity%5CUser%23getFirstName' => 1,
+'App%5CEntity%5CUser%23setFirstName' => 0,
+'[C]App%5CEntity%5CUser%23setFirstName' => 1,
+'App%5CEntity%5CUser%23getLastName' => 0,
+'[C]App%5CEntity%5CUser%23getLastName' => 1,
+'App%5CEntity%5CUser%23setLastName' => 0,
+'[C]App%5CEntity%5CUser%23setLastName' => 1,
+'App%5CEntity%5CUser%23getAdress' => 0,
+'[C]App%5CEntity%5CUser%23getAdress' => 1,
+'App%5CEntity%5CUser%23setAdress' => 0,
+'[C]App%5CEntity%5CUser%23setAdress' => 1,
+'App%5CEntity%5CUser%23getGender' => 0,
+'[C]App%5CEntity%5CUser%23getGender' => 1,
+'App%5CEntity%5CUser%23setGender' => 0,
+'[C]App%5CEntity%5CUser%23setGender' => 1,
+'App%5CEntity%5CUser%23getLevel' => 0,
+'[C]App%5CEntity%5CUser%23getLevel' => 1,
+'App%5CEntity%5CUser%23setLevel' => 0,
+'[C]App%5CEntity%5CUser%23setLevel' => 1,
+'App%5CEntity%5CUser%23getUserMessage' => 0,
+'[C]App%5CEntity%5CUser%23getUserMessage' => 1,
+'App%5CEntity%5CUser%23addUserMessage' => 0,
+'[C]App%5CEntity%5CUser%23addUserMessage' => 1,
+'App%5CEntity%5CUser%23removeUserMessage' => 0,
+'[C]App%5CEntity%5CUser%23removeUserMessage' => 1,
+'App%5CEntity%5CUser%23getUserFav' => 0,
+'[C]App%5CEntity%5CUser%23getUserFav' => 1,
+'App%5CEntity%5CUser%23addUserFav' => 0,
+'[C]App%5CEntity%5CUser%23addUserFav' => 1,
+'App%5CEntity%5CUser%23removeUserFav' => 0,
+'[C]App%5CEntity%5CUser%23removeUserFav' => 1,
+'App%5CEntity%5CUser%23getUserCart' => 0,
+'[C]App%5CEntity%5CUser%23getUserCart' => 1,
+'App%5CEntity%5CUser%23addUserCart' => 0,
+'[C]App%5CEntity%5CUser%23addUserCart' => 1,
+'App%5CEntity%5CUser%23removeUserCart' => 0,
+'[C]App%5CEntity%5CUser%23removeUserCart' => 1,
+'App%5CEntity%5CUser%23getUserReservation' => 0,
+'[C]App%5CEntity%5CUser%23getUserReservation' => 1,
+'App%5CEntity%5CUser%23addUserReservation' => 0,
+'[C]App%5CEntity%5CUser%23addUserReservation' => 1,
+'App%5CEntity%5CUser%23removeUserReservation' => 0,
+'[C]App%5CEntity%5CUser%23removeUserReservation' => 1,
+'App%5CEntity%5CUser%23getRoles' => 0,
+'[C]App%5CEntity%5CUser%23getRoles' => 1,
+'App%5CEntity%5CUser%23eraseCredentials' => 0,
+'[C]App%5CEntity%5CUser%23eraseCredentials' => 1,
+'App%5CEntity%5CUser%23getUserIdentifier' => 0,
+'[C]App%5CEntity%5CUser%23getUserIdentifier' => 1,
+'App%5CEntity%5CUser%23getPassword' => 0,
+'[C]App%5CEntity%5CUser%23getPassword' => 1,
+'App%5CEntity%5CUser%24id' => 0,
+'[C]App%5CEntity%5CUser%24id' => 1,
+'App%5CEntity%5CUser%24id_user' => 0,
+'[C]App%5CEntity%5CUser%24id_user' => 1,
+'App%5CEntity%5CUser%24pwd_user' => 0,
+'[C]App%5CEntity%5CUser%24pwd_user' => 1,
+'App%5CEntity%5CUser%24mail' => 0,
+'[C]App%5CEntity%5CUser%24mail' => 1,
+'App%5CEntity%5CUser%24first_name' => 0,
+'[C]App%5CEntity%5CUser%24first_name' => 1,
+'App%5CEntity%5CUser%24last_name' => 0,
+'[C]App%5CEntity%5CUser%24last_name' => 1,
+'App%5CEntity%5CUser%24adress' => 0,
+'[C]App%5CEntity%5CUser%24adress' => 1,
+'App%5CEntity%5CUser%24gender' => 0,
+'[C]App%5CEntity%5CUser%24gender' => 1,
+'App%5CEntity%5CUser%24level' => 0,
+'[C]App%5CEntity%5CUser%24level' => 1,
+'App%5CEntity%5CUser%24user_message' => 0,
+'[C]App%5CEntity%5CUser%24user_message' => 1,
+'App%5CEntity%5CUser%24user_fav' => 0,
+'[C]App%5CEntity%5CUser%24user_fav' => 1,
+'App%5CEntity%5CUser%24user_cart' => 0,
+'[C]App%5CEntity%5CUser%24user_cart' => 1,
+'App%5CEntity%5CUser%24user_reservation' => 0,
+'[C]App%5CEntity%5CUser%24user_reservation' => 1,
+'App%5CEntity%5Cdish' => 0,
+'[C]App%5CEntity%5Cdish' => 1,
+'App%5CEntity%5Cdish%23__construct' => 0,
+'[C]App%5CEntity%5Cdish%23__construct' => 1,
+'App%5CEntity%5Cdish%23getId' => 0,
+'[C]App%5CEntity%5Cdish%23getId' => 1,
+'App%5CEntity%5Cdish%23getDishName' => 0,
+'[C]App%5CEntity%5Cdish%23getDishName' => 1,
+'App%5CEntity%5Cdish%23setDishName' => 0,
+'[C]App%5CEntity%5Cdish%23setDishName' => 1,
+'App%5CEntity%5Cdish%23getDescription' => 0,
+'[C]App%5CEntity%5Cdish%23getDescription' => 1,
+'App%5CEntity%5Cdish%23setDescription' => 0,
+'[C]App%5CEntity%5Cdish%23setDescription' => 1,
+'App%5CEntity%5Cdish%23getPrice' => 0,
+'[C]App%5CEntity%5Cdish%23getPrice' => 1,
+'App%5CEntity%5Cdish%23setPrice' => 0,
+'[C]App%5CEntity%5Cdish%23setPrice' => 1,
+'App%5CEntity%5Cdish%23getType' => 0,
+'[C]App%5CEntity%5Cdish%23getType' => 1,
+'App%5CEntity%5Cdish%23setType' => 0,
+'[C]App%5CEntity%5Cdish%23setType' => 1,
+'App%5CEntity%5Cdish%23getPhoto' => 0,
+'[C]App%5CEntity%5Cdish%23getPhoto' => 1,
+'App%5CEntity%5Cdish%23setPhoto' => 0,
+'[C]App%5CEntity%5Cdish%23setPhoto' => 1,
+'App%5CEntity%5Cdish%23getFavorites' => 0,
+'[C]App%5CEntity%5Cdish%23getFavorites' => 1,
+'App%5CEntity%5Cdish%23addFavorite' => 0,
+'[C]App%5CEntity%5Cdish%23addFavorite' => 1,
+'App%5CEntity%5Cdish%23removeFavorite' => 0,
+'[C]App%5CEntity%5Cdish%23removeFavorite' => 1,
+'App%5CEntity%5Cdish%23getCarts' => 0,
+'[C]App%5CEntity%5Cdish%23getCarts' => 1,
+'App%5CEntity%5Cdish%23addCart' => 0,
+'[C]App%5CEntity%5Cdish%23addCart' => 1,
+'App%5CEntity%5Cdish%23removeCart' => 0,
+'[C]App%5CEntity%5Cdish%23removeCart' => 1,
+'App%5CEntity%5Cdish%24id' => 0,
+'[C]App%5CEntity%5Cdish%24id' => 1,
+'App%5CEntity%5Cdish%24dish_name' => 0,
+'[C]App%5CEntity%5Cdish%24dish_name' => 1,
+'App%5CEntity%5Cdish%24description' => 0,
+'[C]App%5CEntity%5Cdish%24description' => 1,
+'App%5CEntity%5Cdish%24price' => 0,
+'[C]App%5CEntity%5Cdish%24price' => 1,
+'App%5CEntity%5Cdish%24type' => 0,
+'[C]App%5CEntity%5Cdish%24type' => 1,
+'App%5CEntity%5Cdish%24photo' => 0,
+'[C]App%5CEntity%5Cdish%24photo' => 1,
+'App%5CEntity%5Cdish%24favorites' => 0,
+'[C]App%5CEntity%5Cdish%24favorites' => 1,
+'App%5CEntity%5Cdish%24carts' => 0,
+'[C]App%5CEntity%5Cdish%24carts' => 1,
 'Doctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController' => 0,
 '[C]Doctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController' => 1,
 'Doctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%23__construct' => 0,
@@ -626,7 +922,7 @@ return [[
 ], [
 
 0 => [],
-1 => 1645653542,
+1 => 1646389626,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
@@ -636,7 +932,7 @@ return [[
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
-                    '/user/index',
+                    '/AdminIndex',
                 ],
                 'methods' => [
                     [],
@@ -645,7 +941,7 @@ return [[
                     [],
                 ],
                 'name' => [
-                    'user-index',
+                    'indexAdmin',
                 ],
                 'requirements' => [
                     [],
@@ -685,7 +981,7 @@ return [[
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
-                    '/user/contactForm',
+                    '/ajout-compte-admin',
                 ],
                 'methods' => [
                     [],
@@ -694,7 +990,7 @@ return [[
                     [],
                 ],
                 'name' => [
-                    'user-contactForm',
+                    'ajoutAdmin',
                 ],
                 'requirements' => [
                     [],
@@ -734,7 +1030,7 @@ return [[
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
-                    '/user/updateInfoClient',
+                    '/ajout-creneau',
                 ],
                 'methods' => [
                     [],
@@ -743,7 +1039,7 @@ return [[
                     [],
                 ],
                 'name' => [
-                    'user-updateForm',
+                    'ajoutCreneau',
                 ],
                 'requirements' => [
                     [],
@@ -783,7 +1079,7 @@ return [[
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
-                    '/user/reservation',
+                    '/',
                 ],
                 'methods' => [
                     [],
@@ -792,7 +1088,7 @@ return [[
                     [],
                 ],
                 'name' => [
-                    'user-reserver',
+                    'homepage',
                 ],
                 'requirements' => [
                     [],
@@ -832,7 +1128,7 @@ return [[
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
-                    '/',
+                    '/index',
                 ],
                 'methods' => [
                     [],
@@ -881,7 +1177,7 @@ return [[
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
-                    '/inscriptionForm',
+                    '/homeLog',
                 ],
                 'methods' => [
                     [],
@@ -890,7 +1186,7 @@ return [[
                     [],
                 ],
                 'name' => [
-                    'inscriptionForm',
+                    'homeLog',
                 ],
                 'requirements' => [
                     [],
@@ -930,7 +1226,7 @@ return [[
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
-                    '/connexionForm',
+                    '/register',
                 ],
                 'methods' => [
                     [],
@@ -939,7 +1235,7 @@ return [[
                     [],
                 ],
                 'name' => [
-                    'connexionForm',
+                    'app_register',
                 ],
                 'requirements' => [
                     [],
@@ -979,7 +1275,7 @@ return [[
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
-                    '/reserve-non-connexion',
+                    '/connexionForm',
                 ],
                 'methods' => [
                     [],
@@ -988,7 +1284,7 @@ return [[
                     [],
                 ],
                 'name' => [
-                    'non-reserver',
+                    'connexionForm',
                 ],
                 'requirements' => [
                     [],
@@ -1077,7 +1373,7 @@ return [[
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
-                    '/okConnect',
+                    '/login',
                 ],
                 'methods' => [
                     [],
@@ -1086,7 +1382,7 @@ return [[
                     [],
                 ],
                 'name' => [
-                    'connexion',
+                    'app_login',
                 ],
                 'requirements' => [
                     [],
@@ -1108,6 +1404,280 @@ return [[
                 ],
                 'env' => [
                     null,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+12 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/logout',
+                ],
+                'methods' => [
+                    [],
+                ],
+                'schemes' => [
+                    [],
+                ],
+                'name' => [
+                    'app_logout',
+                ],
+                'requirements' => [
+                    [],
+                ],
+                'options' => [
+                    [],
+                ],
+                'defaults' => [
+                    [],
+                ],
+                'host' => [
+                    null,
+                ],
+                'condition' => [
+                    null,
+                ],
+                'priority' => [
+                    null,
+                ],
+                'env' => [
+                    null,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+13 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/user/index',
+                ],
+                'methods' => [
+                    [],
+                ],
+                'schemes' => [
+                    [],
+                ],
+                'name' => [
+                    'user-index',
+                ],
+                'requirements' => [
+                    [],
+                ],
+                'options' => [
+                    [],
+                ],
+                'defaults' => [
+                    [],
+                ],
+                'host' => [
+                    null,
+                ],
+                'condition' => [
+                    null,
+                ],
+                'priority' => [
+                    null,
+                ],
+                'env' => [
+                    null,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+14 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/user/contactForm',
+                ],
+                'methods' => [
+                    [],
+                ],
+                'schemes' => [
+                    [],
+                ],
+                'name' => [
+                    'user-contactForm',
+                ],
+                'requirements' => [
+                    [],
+                ],
+                'options' => [
+                    [],
+                ],
+                'defaults' => [
+                    [],
+                ],
+                'host' => [
+                    null,
+                ],
+                'condition' => [
+                    null,
+                ],
+                'priority' => [
+                    null,
+                ],
+                'env' => [
+                    null,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+15 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/user/updateInfoClient',
+                ],
+                'methods' => [
+                    [],
+                ],
+                'schemes' => [
+                    [],
+                ],
+                'name' => [
+                    'user-updateForm',
+                ],
+                'requirements' => [
+                    [],
+                ],
+                'options' => [
+                    [],
+                ],
+                'defaults' => [
+                    [],
+                ],
+                'host' => [
+                    null,
+                ],
+                'condition' => [
+                    null,
+                ],
+                'priority' => [
+                    null,
+                ],
+                'env' => [
+                    null,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+16 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/user/reservation',
+                ],
+                'methods' => [
+                    [],
+                ],
+                'schemes' => [
+                    [],
+                ],
+                'name' => [
+                    'user-reserver',
+                ],
+                'requirements' => [
+                    [],
+                ],
+                'options' => [
+                    [],
+                ],
+                'defaults' => [
+                    [],
+                ],
+                'host' => [
+                    null,
+                ],
+                'condition' => [
+                    null,
+                ],
+                'priority' => [
+                    null,
+                ],
+                'env' => [
+                    null,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+17 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'message' => [
+                    'There is already an account with this id_user',
+                ],
+                'fields' => [
+                    [
+                        'id_user',
+                    ],
+                ],
+                'groups' => [
+                    [
+                        'Default',
+                    ],
                 ],
             ],
         ],

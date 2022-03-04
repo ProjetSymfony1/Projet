@@ -8,26 +8,31 @@
     <div class="container-fluid content">
         <div class = "row">
             <div class="col-6 my-auto">
-                <form>
+                <form action="{{ path('login') }}" method="post">
                     <div class="ma-form">
                         <div class="form-group">
                             <label for="username">Username</label>
                             <div class="border-class">
-                                <input type="text" class="form-control" id="username" placeholder="votre pseudo" >
+                                <input type="text" class="form-control" id="username" name="_username" placeholder="Votre pseudo" value="{{ last_username }}" >
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="mdp">Password</label>
                             <div class="border-class">
-                                <input type="Password" class="form-control" id="mdp" placeholder="">
+                                <input type="Password" class="form-control" id="password" name="_password" placeholder="">
                             </div>
                         </div>
                     </div>
                     <div class="btn-submit">
                         <button type="submit" class="btn btn-primary btn-lg btn-blog">LOG IN</button>
                     </div>
+
+                    {% if error %}
+                        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    {% endif %}
+
                     <div class="text">
-                        <p class="text-center"><u><a href="{{ path('app_register') }}">Don't have an account? Sign up</u></p></a>
+                        <p class="text-center"><u><a href="{{ path('app_register') }}">Don't have an account? Sign up</a></u></p>
                     </div>
                 </form>
             </div>
@@ -37,7 +42,7 @@
                     <p class="text-center h3 my-2">WELCOME BACK</p>
                 </div>
                 <div class="col-5">
-                    <img src="{{ asset('image/CHEZ_GUSTO_LOGO.png') }}"/>
+                    <img src="{{ asset('image/CHEZ_GUSTO_LOGO.png') }}" alt="logo"/>
                 </div>
             </div>
         </div>

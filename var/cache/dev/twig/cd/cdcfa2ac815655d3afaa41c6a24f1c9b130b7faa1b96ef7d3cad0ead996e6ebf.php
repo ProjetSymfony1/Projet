@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* homepage/connexionForm.html.twig */
+/* homepage/auth.html.twig */
 class __TwigTemplate_89427ffd0140cdaa700e627f880176e290095b2ff5301d631e3046a4a0a959d8 extends Template
 {
     private $source;
@@ -40,12 +40,12 @@ class __TwigTemplate_89427ffd0140cdaa700e627f880176e290095b2ff5301d631e3046a4a0a
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "homepage/connexionForm.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "homepage/auth.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "homepage/connexionForm.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "homepage/auth.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "homepage/connexionForm.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "homepage/auth.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -153,7 +153,7 @@ class __TwigTemplate_89427ffd0140cdaa700e627f880176e290095b2ff5301d631e3046a4a0a
 
     public function getTemplateName()
     {
-        return "homepage/connexionForm.html.twig";
+        return "homepage/auth.html.twig";
     }
 
     public function isTraitable()
@@ -224,6 +224,6 @@ class __TwigTemplate_89427ffd0140cdaa700e627f880176e290095b2ff5301d631e3046a4a0a
             </div>
         </div>
     </div>
-{% endblock %}", "homepage/connexionForm.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\homepage\\connexionForm.html.twig");
+{% endblock %}", "homepage/auth.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\homepage\\auth.html.twig");
     }
 }

@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* homepage/connexionForm.html.twig */
+/* homepage/auth.html.twig */
 class __TwigTemplate_e974baf2093f4baa14b9c2a31c6d2ad5 extends Template
 {
     private $source;
@@ -34,10 +34,10 @@ class __TwigTemplate_e974baf2093f4baa14b9c2a31c6d2ad5 extends Template
     {
         $macros = $this->macros;
         $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "homepage/connexionForm.html.twig"));
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "homepage/auth.html.twig"));
 
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "homepage/connexionForm.html.twig"));
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "homepage/auth.html.twig"));
 
         // line 1
         echo "<h1>
@@ -53,7 +53,7 @@ class __TwigTemplate_e974baf2093f4baa14b9c2a31c6d2ad5 extends Template
 
     public function getTemplateName()
     {
-        return "homepage/connexionForm.html.twig";
+        return "homepage/auth.html.twig";
     }
 
     public function getDebugInfo()
@@ -65,6 +65,6 @@ class __TwigTemplate_e974baf2093f4baa14b9c2a31c6d2ad5 extends Template
     {
         return new Source("<h1>
     page de connexion
-</h1>", "homepage/connexionForm.html.twig", "C:\\xampp\\htdocs\\chez-gusto\\templates\\homepage\\connexionForm.html.twig");
+</h1>", "homepage/auth.html.twig", "C:\\xampp\\htdocs\\chez-gusto\\templates\\homepage\\auth.html.twig");
     }
 }

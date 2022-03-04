@@ -1,22 +1,22 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-develop',
+        'version' => 'dev-develop',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => '6256e95ed3bf1d2d4e7ca17d6244e36b3728fa0d',
         'name' => '__root__',
         'dev' => true,
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-develop',
+            'version' => 'dev-develop',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '6256e95ed3bf1d2d4e7ca17d6244e36b3728fa0d',
             'dev_requirement' => false,
         ),
         'composer/package-versions-deprecated' => array(
@@ -1104,12 +1104,12 @@
             'dev_requirement' => false,
         ),
         'symfony/security-bundle' => array(
-            'pretty_version' => 'v6.0.2',
-            'version' => '6.0.2.0',
+            'pretty_version' => 'v6.0.5',
+            'version' => '6.0.5.0',
             'type' => 'symfony-bundle',
             'install_path' => __DIR__ . '/../symfony/security-bundle',
             'aliases' => array(),
-            'reference' => '49bdda6e27076084ed7404c87ab23b42ffae6553',
+            'reference' => '069c2c94600253891e9ba3cb1e098ba6a8bcddd1',
             'dev_requirement' => false,
         ),
         'symfony/security-core' => array(
@@ -1233,12 +1233,12 @@
             'dev_requirement' => false,
         ),
         'symfony/var-dumper' => array(
-            'pretty_version' => 'v6.0.2',
-            'version' => '6.0.2.0',
+            'pretty_version' => 'v6.0.5',
+            'version' => '6.0.5.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/var-dumper',
             'aliases' => array(),
-            'reference' => '41e46f64084a205459a862751158ce2190bd5cb5',
+            'reference' => '60d6a756d5f485df5e6e40b337334848f79f61ce',
             'dev_requirement' => false,
         ),
         'symfony/var-exporter' => array(

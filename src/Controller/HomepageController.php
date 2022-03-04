@@ -38,7 +38,7 @@ class HomepageController extends AbstractController
         if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             $model = new \createAccount();
             if ($model->create()===TRUE){
-                return $this->render('homepage/connexionForm.html.twig');
+                return $this->render('auth.html.twig');
             } else {
                 return $this->render('homepage/index1.html.twig');
             }
@@ -54,10 +54,10 @@ class HomepageController extends AbstractController
     }
 
     /**
-     * @Route("/connexionForm", name="connexionForm")
+     * @Route("/login", name="login")
      */
     public function connect(): Response{
-        return $this->render('homepage/connexionForm.html.twig');
+        return $this->render('security/auth.html.twig');
     }
 
     /**
