@@ -22,16 +22,16 @@
 <div class="container my-1">
     <div class="d-flex justify-content-between">
         <div class="my-auto">
-            <a href="{{ path('index') }}">HOME</a>&nbsp; &nbsp; &nbsp;
+            <a href="{{ path('homepage') }}">HOME</a>&nbsp; &nbsp; &nbsp;
             <a href="#">LA CARTE</a>&nbsp; &nbsp;
-            <a href="{{ path('non-reserver') }}">RÉSERVATION</a>
+            <a href="">RÉSERVATION</a>
         </div>
         <div>
             <img src="{{ asset('image/CHEZ_GUSTO_LOGO.png') }}" class="imgHeader" />
         </div>
         <div class="my-auto">
             <a href ="#"  class="btn btn-outline-primary" role = "button">CART</a> &nbsp;&nbsp;
-            <a href = {{ path('inscriptionForm') }} class="btn btn-outline-primary" role = "button">SIGNUP</a> &nbsp;&nbsp;
+            <a href = {{ path('app_register') }} class="btn btn-outline-primary" role = "button">SIGNUP</a> &nbsp;&nbsp;
             <a href = {{ path('connexionForm') }} class="btn btn-outline-primary" role = "button">LOGIN</a>
         </div>
     </div>

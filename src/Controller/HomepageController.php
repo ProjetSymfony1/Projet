@@ -18,9 +18,15 @@ class HomepageController extends AbstractController
     }*/
 
     /**
-     * @Route("/", name="index")
+     * @Route("/", name="homepage")
      */
     public function home(): Response{
+        return $this->render('homepage/index.html.twig');
+    }
+    /**
+     * @Route("/index", name="index")
+     */
+    public function index(): Response{
         return $this->render('homepage/index1.html.twig');
     }
 
@@ -41,10 +47,10 @@ class HomepageController extends AbstractController
     }
 
     /**
-     * @Route("/inscriptionForm", name="inscriptionForm")
+     * @Route("/register", name="app_register")
      */
     public function register(): Response{
-        return $this->render('homepage/inscriptionForm.html.twig');
+        return $this->render('registration/register.html.twig');
     }
 
     /**

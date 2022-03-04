@@ -2,48 +2,62 @@
 
 namespace App\Controller;
 
-use App\Entity\User;
+use App\createAccount\createAccount;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Doctrine\ORM;
 
-class homepageController extends AbstractController
+class HomepageController extends AbstractController
 {
-    /* #[Route('/homepage', name: 'homepage')]
-     public function index(): Response
-     {
-         return $this->render('homepage/index.html.twig', [
-             'controller_name' => 'HomepageController',
-         ]);
-     }*/
+   /* #[Route('/homepage', name: 'homepage')]
+    public function index(): Response
+    {
+        return $this->render('homepage/index.html.twig', [
+            'controller_name' => 'HomepageController',
+        ]);
+    }*/
 
     /**
-     * @Route("/", name="index")
+     * @Route("/", name="homepage")
      */
     public function home(): Response{
         return $this->render('homepage/index.html.twig');
     }
+    /**
+     * @Route("/index", name="index")
+     */
+    public function index(): Response{
+        return $this->render('homepage/index1.html.twig');
+    }
 
     /**
-     * @Route("/inscriptionForm", name="inscriptionForm")
+     * @Route("/homeLog", name="homeLog")
      */
-    public function inscrire(): Response{
-        return $this->render('homepage/signupForm.html.twig');
+    public function homeLog(): Response{
+        require_once(createAccount::class);
+        if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $model = new \createAccount();
+            if ($model->create()===TRUE){
+                return $this->render('homepage/connexionForm.html.twig');
+            } else {
+                return $this->render('homepage/index1.html.twig');
+            }
+        }
+        return $this->render('homepage/inscriptionForm.html.twig');
+    }
+
+    /**
+     * @Route("/register", name="app_register")
+     */
+    public function register(): Response{
+        return $this->render('registration/register.html.twig');
     }
 
     /**
      * @Route("/connexionForm", name="connexionForm")
      */
-    public function connecter(): Response{
+    public function connect(): Response{
         return $this->render('homepage/connexionForm.html.twig');
-    }
-
-    /**
-     * @Route("/reserve-non-connexion", name="non-reserver")
-     */
-    public function pasReserver(): Response{
-        return $this->render('homepage/nonReservation.html.twig');
     }
 
     /**
@@ -51,14 +65,5 @@ class homepageController extends AbstractController
      */
     public function menu(): Response{
         return $this->render('homepage/menu.html.twig');
-    }
-
-    /**
-     * @Route("/okConnect", name="connexion")
-     */
-    public function okConnect(): Response{
-        $repos = $this->getDoctrine()->getRepository(User::class);
-        $pseudo = $repos->find(2);
-        return $this->render('homepage/user.html.twig', ['mon_pseudo' =>'pseudo']);
     }
 }
