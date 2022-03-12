@@ -19,6 +19,7 @@ return [
     'user-contactForm' => [[], ['_controller' => 'App\\Controller\\UserController::contactForm'], [], [['text', '/user/contactForm']], [], [], []],
     'user-updateForm' => [[], ['_controller' => 'App\\Controller\\UserController::updateForm'], [], [['text', '/user/updateInfoClient']], [], [], []],
     'user-reserver' => [[], ['_controller' => 'App\\Controller\\UserController::reserver'], [], [['text', '/user/reservation']], [], [], []],
+    'user-reserver-history' => [[], ['_controller' => 'App\\Controller\\UserController::reserverHistory'], [], [['text', '/user/reservationHistory']], [], [], []],
     'index' => [[], ['_controller' => 'App\\Controller\\homepageController::home'], [], [['text', '/']], [], [], []],
     'inscriptionForm' => [[], ['_controller' => 'App\\Controller\\homepageController::inscrire'], [], [['text', '/inscriptionForm']], [], [], []],
     'connexionForm' => [[], ['_controller' => 'App\\Controller\\homepageController::connecter'], [], [['text', '/connexionForm']], [], [], []],

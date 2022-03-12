@@ -113,3 +113,25 @@ a{
 {
     display: inline;
 }
+
+.historyTable
+{
+    width: 100%;
+}
+
+.historyTable tr
+{
+    border-bottom: #8f392c 1px solid;
+    border-top: #8f392c 1px solid;
+
+
+}
+
+.historyTable td
+{
+    padding: 10px 5px;
+    width: 33%;
+    color: #790b30;
+    text-align: center;
+
+}

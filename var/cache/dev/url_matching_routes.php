@@ -17,6 +17,7 @@ return [
         '/user/contactForm' => [[['_route' => 'user-contactForm', '_controller' => 'App\\Controller\\UserController::contactForm'], null, null, null, false, false, null]],
         '/user/updateInfoClient' => [[['_route' => 'user-updateForm', '_controller' => 'App\\Controller\\UserController::updateForm'], null, null, null, false, false, null]],
         '/user/reservation' => [[['_route' => 'user-reserver', '_controller' => 'App\\Controller\\UserController::reserver'], null, null, null, false, false, null]],
+        '/user/reservationHistory' => [[['_route' => 'user-reserver-history', '_controller' => 'App\\Controller\\UserController::reserverHistory'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'index', '_controller' => 'App\\Controller\\homepageController::home'], null, null, null, false, false, null]],
         '/inscriptionForm' => [[['_route' => 'inscriptionForm', '_controller' => 'App\\Controller\\homepageController::inscrire'], null, null, null, false, false, null]],
         '/connexionForm' => [[['_route' => 'connexionForm', '_controller' => 'App\\Controller\\homepageController::connecter'], null, null, null, false, false, null]],
