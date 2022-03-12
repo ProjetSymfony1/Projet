@@ -15,7 +15,7 @@ class Cart
     #[ORM\Column(type: 'integer')]
     private $id;
 
-    #[ORM\ManyToOne(targetEntity: user::class, inversedBy: 'user_cart')]
+    #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'user_cart')]
     #[ORM\JoinColumn(nullable: false)]
     private $id_user;
 
@@ -32,12 +32,12 @@ class Cart
         return $this->id;
     }
 
-    public function getIdUser(): ?user
+    public function getIdUser(): ?User
     {
         return $this->id_user;
     }
 
-    public function setIdUser(?user $id_user): self
+    public function setIdUser(?User $id_user): self
     {
         $this->id_user = $id_user;
 
