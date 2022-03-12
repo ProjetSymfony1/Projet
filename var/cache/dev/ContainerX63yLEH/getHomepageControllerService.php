@@ -18,7 +18,7 @@ class getHomepageControllerService extends App_KernelDevDebugContainer
     public static function do($container, $lazyLoad = true)
     {
         include_once \dirname(__DIR__, 4).''.\DIRECTORY_SEPARATOR.'vendor'.\DIRECTORY_SEPARATOR.'symfony'.\DIRECTORY_SEPARATOR.'framework-bundle'.\DIRECTORY_SEPARATOR.'Controller'.\DIRECTORY_SEPARATOR.'AbstractController.php';
-        include_once \dirname(__DIR__, 4).''.\DIRECTORY_SEPARATOR.'src'.\DIRECTORY_SEPARATOR.'Controller'.\DIRECTORY_SEPARATOR.'homepageController.php';
+        include_once \dirname(__DIR__, 4) . '' . \DIRECTORY_SEPARATOR . 'src' . \DIRECTORY_SEPARATOR . 'Controller' . \DIRECTORY_SEPARATOR . 'HomepageController.php';
 
         $container->services['App\\Controller\\homepageController'] = $instance = new \App\Controller\homepageController();
 

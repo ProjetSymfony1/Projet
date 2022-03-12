@@ -587,3 +587,11 @@ dd8eb4,::1,GET,http://localhost:8888/resto/public/nos-Menu,1647096036,,200
 ff48d9,::1,GET,http://localhost:8888/resto/public/nos-Menu,1647096061,,200
 7d1027,::1,GET,http://localhost:8888/resto/public/nos-Menu,1647096373,,200
 971439,::1,GET,http://localhost:8888/resto/public/nos-Menu,1647096380,,200
+a2457d,::1,GET,http://localhost:8888/chez-gusto/public/,1647101441,,200
+b2964c,::1,GET,http://localhost:8888/chez-gusto/public/menu,1647101447,,200
+63b8d4,::1,GET,http://localhost:8888/chez-gusto/public/menu,1647101492,,200
+7117e0,::1,GET,http://localhost:8888/chez-gusto/public/login,1647101542,,200
+ff34e1,::1,POST,http://localhost:8888/chez-gusto/public/login,1647101553,,302
+84469b,::1,GET,http://localhost:8888/chez-gusto/public/login,1647101553,,200
+a809cd,::1,POST,http://localhost:8888/chez-gusto/public/login,1647101561,,302
+8539d2,::1,GET,http://localhost:8888/chez-gusto/public/,1647101561,,200
