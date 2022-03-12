@@ -23,6 +23,7 @@ return [
         '/reserve-non-connexion' => [[['_route' => 'non-reserver', '_controller' => 'App\\Controller\\homepageController::pasReserver'], null, null, null, false, false, null]],
         '/nos-Menu' => [[['_route' => 'menu', '_controller' => 'App\\Controller\\homepageController::menu'], null, null, null, false, false, null]],
         '/okConnect' => [[['_route' => 'connexion', '_controller' => 'App\\Controller\\homepageController::okConnect'], null, null, null, false, false, null]],
+        '/contactUs' => [[['_route' => 'contactUs', '_controller' => 'App\\Controller\\homepageController::contactUs'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

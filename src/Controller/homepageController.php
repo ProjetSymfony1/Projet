@@ -61,4 +61,11 @@ class homepageController extends AbstractController
         $pseudo = $repos->find(2);
         return $this->render('homepage/user.html.twig', ['mon_pseudo' =>'pseudo']);
     }
+
+    /**
+     * @Route("/contactUs", name="contactUs")
+     */
+    public function contactUs(): Response{
+        return $this->render('homepage/contactUs.html.twig');
+    }
 }

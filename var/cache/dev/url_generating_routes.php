@@ -25,4 +25,5 @@ return [
     'non-reserver' => [[], ['_controller' => 'App\\Controller\\homepageController::pasReserver'], [], [['text', '/reserve-non-connexion']], [], [], []],
     'menu' => [[], ['_controller' => 'App\\Controller\\homepageController::menu'], [], [['text', '/nos-Menu']], [], [], []],
     'connexion' => [[], ['_controller' => 'App\\Controller\\homepageController::okConnect'], [], [['text', '/okConnect']], [], [], []],
+    'contactUs' => [[], ['_controller' => 'App\\Controller\\homepageController::contactUs'], [], [['text', '/contactUs']], [], [], []],
 ];

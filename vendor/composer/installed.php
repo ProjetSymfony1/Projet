@@ -1,22 +1,22 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => 'f3c934b0ee747d197d43b5305003892aa527a08e',
         'name' => '__root__',
         'dev' => true,
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => 'f3c934b0ee747d197d43b5305003892aa527a08e',
             'dev_requirement' => false,
         ),
         'composer/package-versions-deprecated' => array(
@@ -1215,12 +1215,12 @@
             'dev_requirement' => false,
         ),
         'symfony/twig-bundle' => array(
-            'pretty_version' => 'v6.0.1',
-            'version' => '6.0.1.0',
+            'pretty_version' => 'v6.0.3',
+            'version' => '6.0.3.0',
             'type' => 'symfony-bundle',
             'install_path' => __DIR__ . '/../symfony/twig-bundle',
             'aliases' => array(),
-            'reference' => '1a31af12592d8b9498830ff0236f7357c41a6030',
+            'reference' => 'bee311f9b10c05262536ff954fe7a1c3f7e8d497',
             'dev_requirement' => false,
         ),
         'symfony/validator' => array(
