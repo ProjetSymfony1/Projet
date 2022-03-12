@@ -3,51 +3,50 @@
 {% block title %}FormContact User{% endblock %}
 
 {% block body %}
-    <div class="container-fluid content">
-        <div class="col my-auto">
-            <div class="row">
-                <div class="col-sm">
-                    <a href ="#"  class="btn btn-outline-primary" role = "button">RESERVATION</a> &nbsp;&nbsp;
+    <div class="container-fluid content" style="width: 80%; margin: auto;">
+        <div  style="padding: 20px;">
+            <div class="row justify-content-around">
+                <div class="col-3 text-center" >
+                    <a href = "#"   class="btn btn-outline-primary btn-block" role = "button">RESERVATION</a> &nbsp;&nbsp;
                 </div>
-                <div class="col-sm">
-                    <a href ="#"  class="btn btn-outline-primary" role = "button">FAVORIS</a> &nbsp;&nbsp;
+                <div class="col-3 text-center">
+                    <a href = "#" class="btn btn-outline-primary btn-block" role = "button">FAVORIS</a> &nbsp;&nbsp;
                 </div>
-                <div class="col-sm">
-                    <a href ="#"  class="btn btn-outline-primary text-button active" role = "button" >
+                <div class="col-3 text-center">
+                    <a href = {{ path('user-contactForm') }}  class="btn btn-outline-primary btn-block text-button active" role = "button" >
                         CONTACT</a> &nbsp;&nbsp;
                 </div>
-                <div class="col-sm">
-                    <a href ="#"  class="btn btn-outline-primary" role = "button">MON COMPTE</a>
+                <div class="col-3 text-center">
+                    <a href = {{ path('user-updateForm') }}  class="btn btn-outline-primary btn-block text-nowrap" role = "button">MON COMPTE</a>
                 </div>
             </div>
         </div>
 
-        <div class="col-6">
+        <div class="col-12">
             <form>
                 <div class="ma-form">
                     <div class="form-group">
-                        <label for="objet">Objet</label>
+                        <label for="messageTitle">Message title</label>
                         <div class="border-class">
-                            <select id="sex" class="form-control">
-                                <option selected>Select type</option>
-                                <option selected>Type a</option>
-                                <option selected>Type b</option>
-                            </select>
+                            <input type="text" class="form-control" id="messageTitle" placeholder="Objet du message" >
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
                         <div class="border-class">
-                            <input type="text" class="form-message" id="message" placeholder="MESSAGE">
+                                <textarea class="form-control" id="message" rows="5">
+
+                                </textarea>
 
                         </div>
                     </div>
                 </div>
-                <div class="btn-submit">
-                    <button type="submit" class="btn btn-primary btn-lg btn-blog">SEND</button>
+                <div class="btn-submit" style="min-height: 50px;">
+                    <button type="submit" class="btn btn-primary">SEND</button>
                 </div>
+                <br><br>
             </form>
         </div>
-        </div>
     </div>
+
 {% endblock %}

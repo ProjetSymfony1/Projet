@@ -43,4 +43,10 @@ class UserController extends AbstractController
     public function reserver() :Response{
         return $this->render('user/reservation.html.twig');
     }
+    /**
+     * @Route("/user/reservationHistory", name="user-reserver-history")
+     */
+    public function reserverHistory() :Response{
+        return $this->render('user/reservationHistory.html.twig');
+    }
 }

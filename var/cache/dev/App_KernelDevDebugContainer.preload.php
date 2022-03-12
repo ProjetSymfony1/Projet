@@ -432,6 +432,7 @@ $classes[] = 'Symfony\Component\Serializer\Mapping\ClassDiscriminatorFromClassMe
 $classes[] = 'Symfony\Component\Serializer\Normalizer\DateTimeZoneNormalizer';
 $classes[] = 'Symfony\Component\Serializer\Normalizer\DateIntervalNormalizer';
 $classes[] = 'Symfony\Component\Serializer\Normalizer\FormErrorNormalizer';
+$classes[] = 'Symfony\Component\Serializer\Normalizer\BackedEnumNormalizer';
 $classes[] = 'Symfony\Component\Serializer\Normalizer\DataUriNormalizer';
 $classes[] = 'Symfony\Component\Serializer\Normalizer\ArrayDenormalizer';
 $classes[] = 'Symfony\Component\Serializer\Normalizer\ObjectNormalizer';
