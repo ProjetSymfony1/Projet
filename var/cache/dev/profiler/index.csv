@@ -484,3 +484,12 @@ ff34e1,::1,POST,http://localhost:8888/chez-gusto/public/login,1647101553,,302
 84469b,::1,GET,http://localhost:8888/chez-gusto/public/login,1647101553,,200
 a809cd,::1,POST,http://localhost:8888/chez-gusto/public/login,1647101561,,302
 8539d2,::1,GET,http://localhost:8888/chez-gusto/public/,1647101561,,200
+a29a0d,::1,GET,http://localhost:8888/chez-gusto/public/,1647108640,,200
+6fc425,::1,GET,http://localhost:8888/chez-gusto/public/logout,1647108651,,302
+c96330,::1,GET,http://localhost:8888/chez-gusto/public/,1647108651,,200
+a8d83b,::1,GET,http://localhost:8888/chez-gusto/public/menu,1647108655,,200
+f3c508,::1,GET,http://localhost:8888/chez-gusto/public/login,1647108658,,200
+6a16e7,::1,POST,http://localhost:8888/chez-gusto/public/login,1647108671,,302
+6172f2,::1,GET,http://localhost:8888/chez-gusto/public/user/index,1647108672,3bb593,500
+3bb593,::1,GET,http://localhost:8888/chez-gusto/public/user/index,1647108672,,500
+34301b,::1,GET,http://localhost:8888/chez-gusto/public/user/index,1647108721,,200
