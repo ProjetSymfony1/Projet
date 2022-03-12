@@ -82,13 +82,10 @@ class __TwigTemplate_5826001571f88a6bd7abc300010854eb450eaff1ce89ec8a77f0b938b31
         <div class=\"my-auto\">
             <a href=\"";
         // line 25
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("homepage");
         echo "\">HOME</a>&nbsp; &nbsp; &nbsp;
             <a href=\"#\">LA CARTE</a>&nbsp; &nbsp;
-            <a href=\"";
-        // line 27
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("non-reserver");
-        echo "\">RÉSERVATION</a>
+            <a href=\"\">RÉSERVATION</a>
         </div>
         <div>
             <img src=\"";
@@ -100,11 +97,11 @@ class __TwigTemplate_5826001571f88a6bd7abc300010854eb450eaff1ce89ec8a77f0b938b31
             <a href =\"#\"  class=\"btn btn-outline-primary\" role = \"button\">CART</a> &nbsp;&nbsp;
             <a href = ";
         // line 34
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inscriptionForm");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
         echo " class=\"btn btn-outline-primary\" role = \"button\">SIGNUP</a> &nbsp;&nbsp;
             <a href = ";
         // line 35
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("connexionForm");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
         echo " class=\"btn btn-outline-primary\" role = \"button\">LOGIN</a>
         </div>
     </div>
@@ -238,7 +235,7 @@ class __TwigTemplate_5826001571f88a6bd7abc300010854eb450eaff1ce89ec8a77f0b938b31
 
     public function getDebugInfo()
     {
-        return array (  212 => 40,  194 => 19,  181 => 16,  171 => 15,  158 => 12,  148 => 11,  129 => 5,  117 => 41,  115 => 40,  107 => 35,  103 => 34,  96 => 30,  90 => 27,  85 => 25,  78 => 20,  76 => 19,  73 => 18,  71 => 15,  68 => 14,  66 => 11,  59 => 8,  54 => 5,  48 => 1,);
+        return array (  209 => 40,  191 => 19,  178 => 16,  168 => 15,  155 => 12,  145 => 11,  126 => 5,  114 => 41,  112 => 40,  104 => 35,  100 => 34,  93 => 30,  85 => 25,  78 => 20,  76 => 19,  73 => 18,  71 => 15,  68 => 14,  66 => 11,  59 => 8,  54 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -267,17 +264,17 @@ class __TwigTemplate_5826001571f88a6bd7abc300010854eb450eaff1ce89ec8a77f0b938b31
 <div class=\"container my-1\">
     <div class=\"d-flex justify-content-between\">
         <div class=\"my-auto\">
-            <a href=\"{{ path('index') }}\">HOME</a>&nbsp; &nbsp; &nbsp;
+            <a href=\"{{ path('homepage') }}\">HOME</a>&nbsp; &nbsp; &nbsp;
             <a href=\"#\">LA CARTE</a>&nbsp; &nbsp;
-            <a href=\"{{ path('non-reserver') }}\">RÉSERVATION</a>
+            <a href=\"\">RÉSERVATION</a>
         </div>
         <div>
             <img src=\"{{ asset('image/CHEZ_GUSTO_LOGO.png') }}\" class=\"imgHeader\" />
         </div>
         <div class=\"my-auto\">
             <a href =\"#\"  class=\"btn btn-outline-primary\" role = \"button\">CART</a> &nbsp;&nbsp;
-            <a href = {{ path('inscriptionForm') }} class=\"btn btn-outline-primary\" role = \"button\">SIGNUP</a> &nbsp;&nbsp;
-            <a href = {{ path('connexionForm') }} class=\"btn btn-outline-primary\" role = \"button\">LOGIN</a>
+            <a href = {{ path('app_register') }} class=\"btn btn-outline-primary\" role = \"button\">SIGNUP</a> &nbsp;&nbsp;
+            <a href = {{ path('login') }} class=\"btn btn-outline-primary\" role = \"button\">LOGIN</a>
         </div>
     </div>
 </div>
@@ -285,6 +282,6 @@ class __TwigTemplate_5826001571f88a6bd7abc300010854eb450eaff1ce89ec8a77f0b938b31
 {% block body %}{% endblock %}
 </body>
 </html>
-", "base.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\base.html.twig");
+", "base.html.twig", "C:\\xampp1\\htdocs\\chez-gustoV3\\templates\\base.html.twig");
     }
 }

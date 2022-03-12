@@ -120,6 +120,6 @@ Bienvenue sur votre site
 {% block body %}
 
 Bienvenue sur votre site
-{% endblock %}", "user/indexUser.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\user\\indexUser.html.twig");
+{% endblock %}", "user/indexUser.html.twig", "C:\\xampp1\\htdocs\\chez-gustoV3\\templates\\user\\indexUser.html.twig");
     }
 }

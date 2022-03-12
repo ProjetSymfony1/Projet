@@ -99,7 +99,7 @@ class __TwigTemplate_1bf2e40af6484382a9ba9a589fc2d1c62d850ac09710405d5550ec2446e
         <div class=\"my-auto\">
             <a href =\"#\"  class=\"btn btn-outline-primary\" role = \"button\">CART</a>
             <div class=\"dropdown\">
-                <a class=\"btn btn-outline-primary dropdown-toggle\" data-toggle =\"dropdown\" href = \"#\"  role = \"button\"> Ha Phuong TRAN</a>
+                <a class=\"btn btn-outline-primary dropdown-toggle\" data-toggle =\"dropdown\" href = \"#\"  role = \"button\"> #IdUser</a>
                 <div class=\"dropdown-menu\">
                     <a class=\"dropdown-item\" href=\"#\">Action</a>
                     <a class=\"dropdown-item\" href=\"#\">Another action</a>
@@ -278,7 +278,7 @@ class __TwigTemplate_1bf2e40af6484382a9ba9a589fc2d1c62d850ac09710405d5550ec2446e
         <div class=\"my-auto\">
             <a href =\"#\"  class=\"btn btn-outline-primary\" role = \"button\">CART</a>
             <div class=\"dropdown\">
-                <a class=\"btn btn-outline-primary dropdown-toggle\" data-toggle =\"dropdown\" href = \"#\"  role = \"button\"> Ha Phuong TRAN</a>
+                <a class=\"btn btn-outline-primary dropdown-toggle\" data-toggle =\"dropdown\" href = \"#\"  role = \"button\"> #IdUser</a>
                 <div class=\"dropdown-menu\">
                     <a class=\"dropdown-item\" href=\"#\">Action</a>
                     <a class=\"dropdown-item\" href=\"#\">Another action</a>
@@ -293,6 +293,6 @@ class __TwigTemplate_1bf2e40af6484382a9ba9a589fc2d1c62d850ac09710405d5550ec2446e
 </body>
 </html>
 
-", "user/baseUser.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\user\\baseUser.html.twig");
+", "user/baseUser.html.twig", "C:\\xampp1\\htdocs\\chez-gustoV3\\templates\\user\\baseUser.html.twig");
     }
 }
