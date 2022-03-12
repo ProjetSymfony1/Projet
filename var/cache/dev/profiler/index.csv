@@ -5,3 +5,4 @@ b5be80,::1,GET,http://localhost/chez-gustoV3/public/register,1647094448,,200
 edfac1,::1,GET,http://localhost/chez-gustoV3/public/user/reservation,1647094474,,200
 d04028,::1,GET,http://localhost/chez-gustoV3/public/user/reservation,1647094527,,200
 4e16cc,::1,GET,http://localhost/chez-gustoV3/public/user/reservation,1647094556,,200
+2bf0d1,::1,GET,http://localhost:8888/chez-gusto/public/user/index,1647106821,,200
