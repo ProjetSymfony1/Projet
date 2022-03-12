@@ -13,7 +13,7 @@ class Reservation
     #[ORM\Column(type: 'integer')]
     private $id;
 
-    #[ORM\ManyToOne(targetEntity: user::class, inversedBy: 'user_reservation')]
+    #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'user_reservation')]
     #[ORM\JoinColumn(nullable: false)]
     private $id_user;
 
@@ -26,12 +26,12 @@ class Reservation
         return $this->id;
     }
 
-    public function getIdUser(): ?user
+    public function getIdUser(): ?User
     {
         return $this->id_user;
     }
 
-    public function setIdUser(?user $id_user): self
+    public function setIdUser(?User $id_user): self
     {
         $this->id_user = $id_user;
 

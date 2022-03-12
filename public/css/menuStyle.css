@@ -1,0 +1,40 @@
+.imgMenu {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
+.box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 50px 100px;
+}
+
+.box :first-child {
+    align-self: center;
+}
+p {
+    text-align: center;
+}
+.textMenu {
+    text-align: center;
+    color : #8f392c;
+}
+.textPrix {
+    text-align: center;
+}
+
+.textDesc {
+    text-align: center;
+    color: #999999;
+}
+
+button {
+    align-items: center;
+}
+
+.btn-addCart {
+    border: 2px solid #8f392c;
+    color: #8f392c;
+}

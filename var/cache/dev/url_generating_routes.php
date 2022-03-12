@@ -21,7 +21,7 @@ return [
     'homepage' => [[], ['_controller' => 'App\\Controller\\HomepageController::home'], [], [['text', '/']], [], [], []],
     'index' => [[], ['_controller' => 'App\\Controller\\HomepageController::index'], [], [['text', '/index']], [], [], []],
     'homeLog' => [[], ['_controller' => 'App\\Controller\\HomepageController::homeLog'], [], [['text', '/homeLog']], [], [], []],
-    'menu' => [[], ['_controller' => 'App\\Controller\\HomepageController::menu'], [], [['text', '/nos-Menu']], [], [], []],
+    'menu' => [[], ['_controller' => 'App\\Controller\\HomepageController::menu'], [], [['text', '/menu']], [], [], []],
     'app_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], [], []],
     'login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], [], []],
