@@ -1,31 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Reservation{% endblock %}
+{% block title %}Page d'accueil{% endblock %}
 
 {% block body %}
 
-    <!-- Body-->
-    <div class="container-fluid content">
-        <div class="row">
-            <div class="col-8 my-auto">
-                <p class="mamamiaTitle">Mamamia...</p>
-                <p class="mamamiaTitle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Need to log in for this one...</p>
-                <div class="row">
-                    <div class="col-2 my-auto">
-                    </div>
-                    <div class="col-5">
-                        <img src="{{ asset('image/2106829115-August113.gif') }}" width="70%" style="display: block; margin:auto; padding-bottom: 15px;"/>
-                    </div>
-                    <div class="col-5" style="padding-top: 10%">
-                        <a href = {{ path('connexionForm') }} class="btn btn-outline-primary" role = "button" style="width: 100%">LOGIN</a>
-                        <p class="underlinedText">Don't have an account? <a href = {{ path('inscriptionForm') }}>Sign Up</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4">
-                <img src="{{ asset('image/pngwing.com-4.png') }}" width="100%" height="auto" style="margin-top: 30px;"/>
-            </div>
-        </div>
-    </div>
+    <h1>
+        Il vous faudrait de vous connecter pour pouvoir réserver une place chez nous.
+    </h1>
 
 {% endblock %}

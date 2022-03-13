@@ -17,12 +17,9 @@ return [
         '/ajout-compte-admin' => [[['_route' => 'ajoutAdmin', '_controller' => 'App\\Controller\\AdminController::addAdmin'], null, null, null, false, false, null]],
         '/ajout-creneau' => [[['_route' => 'ajoutCreneau', '_controller' => 'App\\Controller\\AdminController::addCreneau'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'homepage', '_controller' => 'App\\Controller\\HomepageController::home'], null, null, null, false, false, null]],
-        '/inscriptionForm' => [[['_route' => 'inscriptionForm', '_controller' => 'App\\Controller\\HomepageController::inscrire'], null, null, null, false, false, null]],
-        '/connexionForm' => [[['_route' => 'connexionForm', '_controller' => 'App\\Controller\\HomepageController::connecter'], null, null, null, false, false, null]],
-        '/reserve-non-connexion' => [[['_route' => 'non-reserver', '_controller' => 'App\\Controller\\HomepageController::pasReserver'], null, null, null, false, false, null]],
-        '/nos-Menu' => [[['_route' => 'menu', '_controller' => 'App\\Controller\\HomepageController::menu'], null, null, null, false, false, null]],
-        '/okConnect' => [[['_route' => 'connexion', '_controller' => 'App\\Controller\\HomepageController::okConnect'], null, null, null, false, false, null]],
-        '/contactUs' => [[['_route' => 'contactUs', '_controller' => 'App\\Controller\\HomepageController::contactUs'], null, null, null, false, false, null]],
+        '/index' => [[['_route' => 'index', '_controller' => 'App\\Controller\\HomepageController::index'], null, null, null, false, false, null]],
+        '/homeLog' => [[['_route' => 'homeLog', '_controller' => 'App\\Controller\\HomepageController::homeLog'], null, null, null, false, false, null]],
+        '/menu' => [[['_route' => 'menu', '_controller' => 'App\\Controller\\HomepageController::menu'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
@@ -30,7 +27,6 @@ return [
         '/user/contactForm' => [[['_route' => 'user-contactForm', '_controller' => 'App\\Controller\\UserController::contactForm'], null, null, null, false, false, null]],
         '/user/updateInfoClient' => [[['_route' => 'user-updateForm', '_controller' => 'App\\Controller\\UserController::updateForm'], null, null, null, false, false, null]],
         '/user/reservation' => [[['_route' => 'user-reserver', '_controller' => 'App\\Controller\\UserController::reserver'], null, null, null, false, false, null]],
-        '/user/reservationHistory' => [[['_route' => 'user-reserver-history', '_controller' => 'App\\Controller\\UserController::reserverHistory'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
