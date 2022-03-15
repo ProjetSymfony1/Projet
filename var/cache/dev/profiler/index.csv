@@ -586,3 +586,7 @@ d8f7c7,127.0.0.1,GET,http://localhost:8000/login,1647354388,,200
 1eb92e,127.0.0.1,GET,http://localhost:8000/user/index,1647354403,,200
 2aa650,127.0.0.1,GET,http://localhost:8000/user/reservation,1647354411,,200
 5e1ea7,127.0.0.1,GET,http://localhost:8000/user/reservation,1647354563,,200
+3ce2a3,::1,GET,http://localhost:8888/chez-gusto/public/user/index,1647355881,,200
+4d46af,::1,GET,http://localhost:8888/chez-gusto/public/user/index,1647356544,,200
+b52be8,::1,GET,http://localhost:8888/chez-gusto/public/,1647356610,,200
+4c5471,::1,GET,http://localhost:8888/chez-gusto/public/register,1647356613,,200

@@ -36,6 +36,9 @@ class dish
     #[ORM\ManyToMany(targetEntity: Cart::class, mappedBy: 'id_dish')]
     private $carts;
 
+    #[ORM\Column(type: 'boolean', nullable: true)]
+    private $archived;
+
     public function __construct()
     {
         $this->favorites = new ArrayCollection();
@@ -160,6 +163,18 @@ class dish
         if ($this->carts->removeElement($cart)) {
             $cart->removeIdDish($this);
         }
+
+        return $this;
+    }
+
+    public function getArchived(): ?bool
+    {
+        return $this->archived;
+    }
+
+    public function setArchived(?bool $archived): self
+    {
+        $this->archived = $archived;
 
         return $this;
     }
