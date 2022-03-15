@@ -1,3 +1,50 @@
-<h1>
-    MENU
-</h1>
+{% extends 'base.html.twig' %}
+{% block header %} <link rel="stylesheet" href="{{ asset('css/menuStyle.css') }}" /> {% endblock %}
+{% block title %}La carte{% endblock %}
+
+{% block body %}
+    <div class="box">
+        <table width="100%" style="margin: auto; text-align: center">
+            <tr>
+                {% for dish in dishes %}
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="{{ asset(dish.photo) }}" class="imgMenu">
+                                    <h2 class="textMenu"> {{ dish.dishName }} </h2>
+                                    <h4 class="textPrix"> {{ dish.price }} € </h4>
+                                    <h6 class="textDesc"> {{ dish.description }} </h6>
+                                    <button class="btn btn-addCart"> Ajouter au Panier </button>
+                                    <button class="btn btn-primary"> Ajouter aux Favoris </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    {% if dish.id % 3 == 0 %}
+                        </tr>
+                        <tr><td><br></td></tr>
+                        <tr>
+                    {% endif %}
+                {% endfor %}
+        </table>
+    </div>
+
+    <!--Footer-->
+    <div class="footer">
+        <div class="container">
+            <div class="d-flex justify-content-between py-4">
+                <div class="componentFooter">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex ipsum eaque asperiores ea commodi non
+                    libero veniam consequatur reprehenderit odit ab voluptatibus facilis saepe laboriosam voluptates
+                    quae voluptas, suscipit quam.
+                </div>
+                <div class="componentFooter">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam cumque quos distinctio laudantium
+                    asperiores a, ipsam aperiam provident doloribus veniam sit nemo dignissimos hic, vel eos, doloremque
+                    quibusdam optio aliquam.
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -42,9 +42,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'string', length: 255)]
     private $gender;
 
-    #[ORM\Column(type: 'boolean')]
-    private $level;
-
     #[ORM\OneToMany(mappedBy: 'id_user', targetEntity: Message::class)]
     private $user_message;
 
@@ -56,6 +53,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\OneToMany(mappedBy: 'id_user', targetEntity: Reservation::class)]
     private $user_reservation;
+
+    #[ORM\Column(type: 'json')]
+    private $level = [];
 
     public function __construct()
     {
@@ -150,18 +150,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setGender(string $gender): self
     {
         $this->gender = $gender;
-
-        return $this;
-    }
-
-    public function getLevel(): ?bool
-    {
-        return $this->level;
-    }
-
-    public function setLevel(bool $level): self
-    {
-        $this->level = $level;
 
         return $this;
     }
@@ -306,5 +294,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function getPassword(): ?string
     {
         return $this->pwd_user;
+    }
+
+    public function getLevel(): ?array
+    {
+        return $this->level;
+    }
+
+    public function setLevel(array $level): self
+    {
+        $this->level = $level;
+
+        return $this;
     }
 }

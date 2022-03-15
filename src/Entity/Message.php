@@ -16,7 +16,7 @@ class Message
     #[ORM\Column(type: 'string', length: 2048)]
     private $message;
 
-    #[ORM\ManyToOne(targetEntity: user::class, inversedBy: 'user_message')]
+    #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'user_message')]
     private $id_user;
 
     public function getId(): ?int
@@ -36,12 +36,12 @@ class Message
         return $this;
     }
 
-    public function getIdUser(): ?user
+    public function getIdUser(): ?User
     {
         return $this->id_user;
     }
 
-    public function setIdUser(?user $id_user): self
+    public function setIdUser(?User $id_user): self
     {
         $this->id_user = $id_user;
 
