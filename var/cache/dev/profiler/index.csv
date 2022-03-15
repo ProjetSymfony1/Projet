@@ -556,3 +556,16 @@ b4bd5e,::1,POST,http://localhost:8888/chez-gusto/public/login,1647348077,,302
 479884,::1,GET,http://localhost:8888/chez-gusto/public/login,1647348162,,200
 1bb84f,::1,POST,http://localhost:8888/chez-gusto/public/login,1647348171,,302
 4ce67d,::1,GET,http://localhost:8888/chez-gusto/public/user/index,1647348171,,200
+82cd0e,::1,GET,http://localhost:8888/chez-gusto/public/logout,1647351893,ba6480,500
+ba6480,::1,GET,http://localhost:8888/chez-gusto/public/logout,1647351893,,500
+08439a,::1,GET,http://localhost:8888/chez-gusto/public/user/index,1647351920,,200
+b62f71,::1,GET,http://localhost:8888/chez-gusto/public/,1647351922,,200
+39ac61,::1,GET,http://localhost:8888/chez-gusto/public/register,1647351927,e763e7,500
+e763e7,::1,GET,http://localhost:8888/chez-gusto/public/register,1647351927,,500
+284021,::1,GET,http://localhost:8888/chez-gusto/public/register,1647351956,b11d5f,500
+b11d5f,::1,GET,http://localhost:8888/chez-gusto/public/register,1647351956,,500
+9dc5db,::1,GET,http://localhost:8888/chez-gusto/public/register,1647351974,c5cb90,500
+c5cb90,::1,GET,http://localhost:8888/chez-gusto/public/register,1647351974,,500
+c185a5,::1,GET,http://localhost:8888/chez-gusto/public/register,1647351986,f1a1bc,500
+f1a1bc,::1,GET,http://localhost:8888/chez-gusto/public/register,1647351986,,500
+1a8167,::1,GET,http://localhost:8888/chez-gusto/public/register,1647352041,,200

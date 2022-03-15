@@ -4,20 +4,66 @@
 
 {% block body %}
     <h1>Register</h1>
+    <div class="container-fluid content">
+        <div class = "row">
+            <div class="col-6 my-auto">
+                {{ form_start(registrationForm) }}
+                <form>
+                    <div class="ma-form">
+                        <div class="form-group">
+                            <div class="border-class">
+                                {{ form_row(registrationForm.id_user) }}
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <div class="border-class">
+                                    {{ form_row(registrationForm.lastName) }}
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <div class="border-class">
+                                    {{ form_row(registrationForm.firstName) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                {{ form_row(registrationForm.mail) }}
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <div class="border-class">
+                                    {{ form_row(registrationForm.adress) }}
+                            </div>
+                        </div>
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.firstName) }}
-        {{ form_row(registrationForm.lastName) }}
-        {{ form_row(registrationForm.id_user) }}
-        {{ form_row(registrationForm.mail) }}
-        {{ form_row(registrationForm.adress) }}
-        {{ form_row(registrationForm.gender) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.level) }}
-        {{ form_row(registrationForm.agreeTerms) }}
 
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+                        <div class="form-group">
+                            <div class="border-class">
+                                {{ form_row(registrationForm.plainPassword, {
+                                    label: 'Password'
+                                }) }}
+                            </div>
+                        </div>
+                    </div>
+                    {{ form_row(registrationForm.level) }}
+                    {{ form_row(registrationForm.agreeTerms) }}
+                    <button type="submit" class="btn btn-primary">MAMMA MIA</button>
+                    {{ form_end(registrationForm) }}
+                </form>
+            </div>
+
+
+            <div class="col-4">
+                <div class="titre-border mb-4 ml-0">
+                    <p class="text-center h3 my-2">JOIN US</p>
+                </div>
+                <div class="col-5">
+                    <img src="{{ asset('image/CHEZ_GUSTO_LOGO.png') }}"/>
+                </div>
+            </div>
+
+        </div>
+    </div>
 {% endblock %}
