@@ -520,3 +520,5 @@ a6bd92,::1,GET,http://localhost:8888/chez-gusto/public/menu,1647337633,,200
 90e172,127.0.0.1,GET,http://localhost:8000/user/index,1647339832,,200
 cf57a0,127.0.0.1,GET,http://localhost:8000/user/index,1647340233,,200
 d6225f,127.0.0.1,GET,http://localhost:8000/user/reservation,1647340290,,200
+898f4c,127.0.0.1,GET,http://localhost:8000/user/index,1647341119,,200
+f31f93,127.0.0.1,GET,http://localhost:8000/user/reservation,1647341159,,200
