@@ -31,6 +31,7 @@ class RegistrationController extends AbstractController
         if ($form->get('level')->getData() === true) {
             $user->setLevel(['ROLE_ADMIN']);
         }
+        $user->setCreatedAt(new \DateTimeImmutable());
 
         if ($form->isSubmitted() && $form->isValid()) {
             // encode the plain password
