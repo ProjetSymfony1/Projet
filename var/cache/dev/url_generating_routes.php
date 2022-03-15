@@ -22,6 +22,7 @@ return [
     'index' => [[], ['_controller' => 'App\\Controller\\HomepageController::index'], [], [['text', '/index']], [], [], []],
     'homeLog' => [[], ['_controller' => 'App\\Controller\\HomepageController::homeLog'], [], [['text', '/homeLog']], [], [], []],
     'menu' => [[], ['_controller' => 'App\\Controller\\HomepageController::menu'], [], [['text', '/menu']], [], [], []],
+    'non-reservation' => [[], ['_controller' => 'App\\Controller\\HomepageController::nonReservation'], [], [['text', '/reserve-non-connexion']], [], [], []],
     'app_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], [], []],
     'login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], [], []],
@@ -29,4 +30,5 @@ return [
     'user-contactForm' => [[], ['_controller' => 'App\\Controller\\UserController::contactForm'], [], [['text', '/user/contactForm']], [], [], []],
     'user-updateForm' => [[], ['_controller' => 'App\\Controller\\UserController::updateForm'], [], [['text', '/user/updateInfoClient']], [], [], []],
     'user-reserver' => [[], ['_controller' => 'App\\Controller\\UserController::reserver'], [], [['text', '/user/reservation']], [], [], []],
+    'user-reserver-history' => [[], ['_controller' => 'App\\Controller\\UserController::reservationHistory'], [], [['text', '/user/reservationHistory']], [], [], []],
 ];

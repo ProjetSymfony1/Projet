@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-c4cfe8,::1,GET,http://localhost/chez-gustoV3/public/,1647094281,,200
-243dd0,::1,GET,http://localhost/chez-gustoV3/public/login,1647094284,,200
-16df4f,::1,GET,http://localhost/chez-gustoV3/public/login,1647094360,,200
-b5be80,::1,GET,http://localhost/chez-gustoV3/public/register,1647094448,,200
-edfac1,::1,GET,http://localhost/chez-gustoV3/public/user/reservation,1647094474,,200
-d04028,::1,GET,http://localhost/chez-gustoV3/public/user/reservation,1647094527,,200
-4e16cc,::1,GET,http://localhost/chez-gustoV3/public/user/reservation,1647094556,,200
-2bf0d1,::1,GET,http://localhost:8888/chez-gusto/public/user/index,1647106821,,200
-b6e3fc,127.0.0.1,GET,http://localhost:8000/user/index,1647338036,70e76e,500
-70e76e,127.0.0.1,GET,http://localhost:8000/user/index,1647338036,,500
-dd9c84,127.0.0.1,GET,http://localhost:8000/user/index,1647338108,,200
-9c2f76,127.0.0.1,GET,http://localhost:8000/user/index,1647338143,,200
-5933f1,127.0.0.1,GET,http://localhost:8000/user/reservation,1647338148,,200
-697f4d,127.0.0.1,GET,http://localhost:8000/user/index,1647338254,,200
-=======
 ee45db,::1,GET,http://localhost/chez-gusto/public/,1645651781,,404
 19bd61,::1,GET,http://localhost/chez-gusto/public/,1645652129,,200
 c616d1,::1,GET,http://localhost/chez-gusto/public/inscriptionForm,1645652140,,200
@@ -511,7 +495,6 @@ f3c508,::1,GET,http://localhost:8888/chez-gusto/public/login,1647108658,,200
 34301b,::1,GET,http://localhost:8888/chez-gusto/public/user/index,1647108721,,200
 a6bd92,::1,GET,http://localhost:8888/chez-gusto/public/menu,1647337633,,200
 68751f,::1,GET,http://localhost:8888/chez-gusto/public/,1647337636,,200
->>>>>>> 1bde469997e1022e03a7a5febb173574a9450661
 4e7b80,127.0.0.1,GET,http://localhost:8000/user/index,1647338898,,200
 9da93f,127.0.0.1,GET,http://localhost:8000/user/index,1647338914,,200
 4a8fd7,127.0.0.1,GET,http://localhost:8000/user/index,1647338935,,200

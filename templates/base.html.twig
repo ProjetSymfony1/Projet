@@ -22,9 +22,9 @@
 <div class="container my-1">
     <div class="d-flex justify-content-between">
         <div class="my-auto">
-            <a href="{{ path('homepage') }}">HOME</a>&nbsp; &nbsp; &nbsp;
+            <a href="{{ path('homepage') }}">HOME</a>
             <a href= {{ path('menu') }}>LA CARTE</a>&nbsp; &nbsp;
-            <a href="">RÉSERVATION</a>
+            <a href="{{ path('non-reservation') }}">RÉSERVATION</a>
         </div>
         <div>
             <img src="{{ asset('image/CHEZ_GUSTO_LOGO.png') }}" class="imgHeader" />
@@ -38,5 +38,23 @@
 </div>
 <hr class="hrCustom ">
 {% block body %}{% endblock %}
+<div class="footer">
+    <div class="container">
+        <div class="d-flex justify-content-between py-4">
+            <div class="componentFooter">
+                Membres du groupe :<br/>
+                TRAN Ha Phuong<br/>
+                DIDI Teya<br/>
+                HAMMACHE Katia<br/>
+                ISSELNANE Manel<br/>
+            </div>
+            <div class="componentFooter">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam cumque quos distinctio laudantium
+                asperiores a, ipsam aperiam provident doloribus veniam sit nemo dignissimos hic, vel eos, doloremque
+                quibusdam optio aliquam.<br ><br >
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

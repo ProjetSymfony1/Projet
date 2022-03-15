@@ -21,6 +21,9 @@ class Reservation
     #[ORM\JoinColumn(nullable: false)]
     private $id_timeslot;
 
+    #[ORM\Column(type: 'datetime_immutable')]
+    private $createdAt;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -46,6 +49,18 @@ class Reservation
     public function setIdTimeslot(?TimeSlot $id_timeslot): self
     {
         $this->id_timeslot = $id_timeslot;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeImmutable
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeImmutable $createdAt): self
+    {
+        $this->createdAt = $createdAt;
 
         return $this;
     }
