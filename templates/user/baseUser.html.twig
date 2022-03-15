@@ -1,84 +1,83 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %}Welcome!{% endblock %}</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-    {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    {% block stylesheets %}
-        {{ encore_entry_link_tags('app') }}
-    {% endblock %}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
 
-    {% block javascripts %}
+        {% block javascripts %}
 
-        {{ encore_entry_script_tags('app') }}
-    {% endblock %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
 
-    {% block header %}{% endblock %}
-</head>
-<body>
-<div class="container my-1">
-    <div class="d-flex justify-content-between">
-        <div class="my-auto">
-            <a href="{{ path('user-index') }}">HOME</a>&nbsp; &nbsp; &nbsp;
-            <a href="#">LA CARTE</a>&nbsp; &nbsp; &nbsp;
-            <a href="{{ path('user-reserver') }}">RÉSERVATION</a>
-        </div>
-        <div>
-            <img src="{{ asset('image/CHEZ_GUSTO_LOGO.png') }}" class="imgHeader" />
-        </div>
-        <div class="my-auto">
-            <a href ="#"  class="btn btn-outline-primary" role = "button">CART</a>
-            <div class="dropdown">
+        {% block header %}{% endblock %}
+    </head>
+    <body>
+        <div class="container my-1">
+                <div class="d-flex justify-content-between">
+                    <div class="my-auto">
+                        <a href="{{ path('user-index') }}">HOME</a>&nbsp; &nbsp; &nbsp;
+                        <a href="#">LA CARTE</a>&nbsp; &nbsp; &nbsp;
+                        <a href="{{ path('user-reserver') }}">RÉSERVATION</a>
+                    </div>
+                    <div>
+                        <img src="{{ asset('image/CHEZ_GUSTO_LOGO.png') }}" class="imgHeader" />
+                    </div>
+                    <div class="my-auto">
+                        <a href ="#"  class="btn btn-outline-primary" role = "button">CART</a>
+                        <div class="dropdown">
 
-                <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ha Phuong TRAN</button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href = "#">Reservations</a>
-                    <a class="dropdown-item" href="#">Favoris</a>
-                    <a class="dropdown-item" href = "#">Contact</a>
-                    <a class="dropdown-item" href = "#">Mon compte</a>
-                    <a class="dropdown-item" href="#">Log out</a>
+                            <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ha Phuong TRAN</button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href = "#">Reservations</a>
+                                <a class="dropdown-item" href="#">Favoris</a>
+                                <a class="dropdown-item" href = "#">Contact</a>
+                                <a class="dropdown-item" href = "#">Mon compte</a>
+                                <a class="dropdown-item" href="#">Log out</a>
 
-                <a class="btn btn-outline-primary dropdown-toggle" data-toggle ="dropdown" href = "#"  role = "button"></a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
->>>>>>> 1bde469997e1022e03a7a5febb173574a9450661
+                            <a class="btn btn-outline-primary dropdown-toggle" data-toggle ="dropdown" href = "#"  role = "button"></a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <hr class="hrCustom ">
+
+        {% block body %}{% endblock %}
+
+        <div class="footer">
+            <div class="container">
+                <div class="d-flex justify-content-between py-4">
+                    <div class="componentFooter">
+                        Membres du groupe :<br/>
+                        TRAN Ha Phuong<br/>
+                        DIDI Teya<br/>
+                        HAMMACHE Katia<br/>
+                        ISSELNANE Manel<br/>
+                    </div>
+                    <div class="componentFooter">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam cumque quos distinctio laudantium
+                        asperiores a, ipsam aperiam provident doloribus veniam sit nemo dignissimos hic, vel eos, doloremque
+                        quibusdam optio aliquam.<br ><br >
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<hr class="hrCustom ">
-{% block body %}{% endblock %}
-
-<div class="footer">
-    <div class="container">
-        <div class="d-flex justify-content-between py-4">
-            <div class="componentFooter">
-                Membres du groupe :<br/>
-                TRAN Ha Phuong<br/>
-                DIDI Teya<br/>
-                HAMMACHE Katia<br/>
-                ISSELNANE Manel<br/>
-            </div>
-            <div class="componentFooter">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam cumque quos distinctio laudantium
-                asperiores a, ipsam aperiam provident doloribus veniam sit nemo dignissimos hic, vel eos, doloremque
-                quibusdam optio aliquam.<br ><br >
-
-            </div>
-        </div>
-    </div>
-</div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-</body>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
 </html>
 
