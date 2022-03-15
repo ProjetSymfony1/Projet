@@ -2,6 +2,14 @@ a{
     color: #8f392c !important;
     font-weight: 500;
 }
+.aBis{
+    color: #fff !important;
+    font-weight: 500;
+    text-decoration: underline;
+}
+.aBis:hover{
+    text-decoration: none;
+}
 .imgHeader{
     width: 100px;
     height: 100px;
@@ -72,4 +80,58 @@ a{
 }
 .btn-submit{
     float: right;
+
+}
+
+.mamamiaTitle{
+    font-size: 4em;
+    color: #8f392c;
+    font-weight: bold;
+    font-family: "Brush Script MT";
+
+    padding-left: 50px;
+}
+
+.underlinedText{
+    font-style: italic;
+    text-decoration: underline;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.regularTitle{
+    font-size: 1.5em;
+    color: #8f392c;
+}
+
+.contactInfo td
+{
+    padding: 8px;
+}
+
+.dropdown
+{
+    display: inline;
+}
+
+.historyTable
+{
+    width: 100%;
+}
+
+.historyTable tr
+{
+    border-bottom: #8f392c 1px solid;
+    border-top: #8f392c 1px solid;
+
+
+}
+
+.historyTable td
+{
+    padding: 10px 5px;
+    width: 33%;
+    color: #790b30;
+    text-align: center;
+
 }

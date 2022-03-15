@@ -512,3 +512,6 @@ f3c508,::1,GET,http://localhost:8888/chez-gusto/public/login,1647108658,,200
 a6bd92,::1,GET,http://localhost:8888/chez-gusto/public/menu,1647337633,,200
 68751f,::1,GET,http://localhost:8888/chez-gusto/public/,1647337636,,200
 >>>>>>> 1bde469997e1022e03a7a5febb173574a9450661
+4e7b80,127.0.0.1,GET,http://localhost:8000/user/index,1647338898,,200
+9da93f,127.0.0.1,GET,http://localhost:8000/user/index,1647338914,,200
+4a8fd7,127.0.0.1,GET,http://localhost:8000/user/index,1647338935,,200
