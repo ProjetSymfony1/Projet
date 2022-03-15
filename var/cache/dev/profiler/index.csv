@@ -493,3 +493,5 @@ f3c508,::1,GET,http://localhost:8888/chez-gusto/public/login,1647108658,,200
 6172f2,::1,GET,http://localhost:8888/chez-gusto/public/user/index,1647108672,3bb593,500
 3bb593,::1,GET,http://localhost:8888/chez-gusto/public/user/index,1647108672,,500
 34301b,::1,GET,http://localhost:8888/chez-gusto/public/user/index,1647108721,,200
+a6bd92,::1,GET,http://localhost:8888/chez-gusto/public/menu,1647337633,,200
+68751f,::1,GET,http://localhost:8888/chez-gusto/public/,1647337636,,200
