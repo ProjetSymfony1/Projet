@@ -6,6 +6,7 @@ use App\Repository\UserRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use phpDocumentor\Reflection\Types\Boolean;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -55,7 +56,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $user_reservation;
 
     #[ORM\Column(type: 'json')]
-    private $level = [];
+    private array $level = [];
 
     public function __construct()
     {
@@ -276,9 +277,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function getRoles(): array
     {
-        return [
-            'ROLE_USER'
-        ];
+        return $this->getLevel();
     }
 
     public function eraseCredentials()
@@ -296,7 +295,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->pwd_user;
     }
 
-    public function getLevel(): ?array
+    public function getLevel(): array
     {
         return $this->level;
     }
@@ -304,7 +303,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setLevel(array $level): self
     {
         $this->level = $level;
-
         return $this;
     }
 }

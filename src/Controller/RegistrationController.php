@@ -6,6 +6,7 @@ use App\Entity\User;
 use App\Form\RegistrationFormType;
 use App\Security\AppCustomAuthenticator;
 use Doctrine\ORM\EntityManagerInterface;
+use phpDocumentor\Reflection\Type;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -20,10 +21,15 @@ class RegistrationController extends AbstractController
     {
         $user = new User();
         $form = $this->createForm(RegistrationFormType::class, $user);
+
         $form->handleRequest($request);
 
-        if ($user->getLevel() === null) {
-            $user->setLevel('false');
+        if ($form->get('level')->getData() === false) {
+            $user->setLevel(['ROLE_USER']);
+        }
+
+        if ($form->get('level')->getData() === true) {
+            $user->setLevel(['ROLE_ADMIN']);
         }
 
         if ($form->isSubmitted() && $form->isValid()) {
