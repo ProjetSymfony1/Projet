@@ -515,3 +515,4 @@ a6bd92,::1,GET,http://localhost:8888/chez-gusto/public/menu,1647337633,,200
 4e7b80,127.0.0.1,GET,http://localhost:8000/user/index,1647338898,,200
 9da93f,127.0.0.1,GET,http://localhost:8000/user/index,1647338914,,200
 4a8fd7,127.0.0.1,GET,http://localhost:8000/user/index,1647338935,,200
+04dc28,127.0.0.1,GET,http://localhost:8000/user/reservation,1647339148,,200
