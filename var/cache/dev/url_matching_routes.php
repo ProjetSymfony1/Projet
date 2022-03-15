@@ -28,6 +28,7 @@ return [
         '/user/contactForm' => [[['_route' => 'user-contactForm', '_controller' => 'App\\Controller\\UserController::contactForm'], null, null, null, false, false, null]],
         '/user/updateInfoClient' => [[['_route' => 'user-updateForm', '_controller' => 'App\\Controller\\UserController::updateForm'], null, null, null, false, false, null]],
         '/user/reservation' => [[['_route' => 'user-reserver', '_controller' => 'App\\Controller\\UserController::reserver'], null, null, null, false, false, null]],
+        '/user/reservationHistory' => [[['_route' => 'user-reserver-history', '_controller' => 'App\\Controller\\UserController::reservationHistory'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

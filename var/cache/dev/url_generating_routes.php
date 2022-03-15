@@ -30,4 +30,5 @@ return [
     'user-contactForm' => [[], ['_controller' => 'App\\Controller\\UserController::contactForm'], [], [['text', '/user/contactForm']], [], [], []],
     'user-updateForm' => [[], ['_controller' => 'App\\Controller\\UserController::updateForm'], [], [['text', '/user/updateInfoClient']], [], [], []],
     'user-reserver' => [[], ['_controller' => 'App\\Controller\\UserController::reserver'], [], [['text', '/user/reservation']], [], [], []],
+    'user-reserver-history' => [[], ['_controller' => 'App\\Controller\\UserController::reservationHistory'], [], [['text', '/user/reservationHistory']], [], [], []],
 ];

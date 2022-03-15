@@ -1,0 +1,49 @@
+{% extends 'user/baseUser.html.twig' %}
+
+{% block title %}Reservations History{% endblock %}
+
+{% block body %}
+    <div class="container-fluid content" style="width: 80%; margin: auto;">
+        <div  style="padding: 20px;">
+            <div class="row justify-content-around">
+                <div class="col-3 text-center" >
+                    <a href = {{ path('user-reserver-history') }}    class="btn btn-outline-primary btn-block active" role = "button">RESERVATION</a> &nbsp;&nbsp;
+                </div>
+                <div class="col-3 text-center">
+                    <a href = "#" class="btn btn-outline-primary btn-block" role = "button">FAVORIS</a> &nbsp;&nbsp;
+                </div>
+                <div class="col-3 text-center">
+                    <a href = {{ path('user-contactForm') }}  class="btn btn-outline-primary btn-block text-button" role = "button" >
+                    CONTACT</a> &nbsp;&nbsp;
+                </div>
+                <div class="col-3 text-center">
+                    <a href = {{ path('user-updateForm') }}  class="btn btn-outline-primary btn-block text-nowrap" role = "button">MON COMPTE</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <form>
+                <table class="historyTable">
+                    <tr>
+                        <td>06/01/2022</td>
+                        <td>21:00</td>
+                        <td>
+                            <a href ="#"  class="btn btn-outline-primary" role = "button" id="">Delete</a>&nbsp;&nbsp;
+                            <a href ="#"  class="btn btn-outline-primary" role = "button" id="">Update</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>06/01/2022</td>
+                        <td>21:00</td>
+                        <td>
+                            <a href ="#"  class="btn btn-outline-primary" role = "button" id="">Delete</a>&nbsp;&nbsp;
+                            <a href ="#"  class="btn btn-outline-primary" role = "button" id="">Update</a>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
