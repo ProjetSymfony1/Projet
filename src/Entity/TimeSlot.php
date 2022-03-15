@@ -15,17 +15,14 @@ class TimeSlot
     #[ORM\Column(type: 'integer')]
     private $id;
 
-    #[ORM\Column(type: 'date')]
-    private $date;
-
-    #[ORM\Column(type: 'time')]
-    private $hour;
-
     #[ORM\Column(type: 'boolean')]
     private $available;
 
     #[ORM\OneToMany(mappedBy: 'id_timeslot', targetEntity: Reservation::class)]
     private $timeslot_reservation;
+
+    #[ORM\Column(type: 'datetime')]
+    private $dateTime;
 
     public function __construct()
     {
@@ -35,30 +32,6 @@ class TimeSlot
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getDate(): ?\DateTimeInterface
-    {
-        return $this->date;
-    }
-
-    public function setDate(\DateTimeInterface $date): self
-    {
-        $this->date = $date;
-
-        return $this;
-    }
-
-    public function getHour(): ?\DateTimeInterface
-    {
-        return $this->hour;
-    }
-
-    public function setHour(\DateTimeInterface $hour): self
-    {
-        $this->hour = $hour;
-
-        return $this;
     }
 
     public function getAvailable(): ?bool
@@ -99,6 +72,18 @@ class TimeSlot
                 $timeslotReservation->setIdTimeslot(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getDateTime(): ?\DateTimeInterface
+    {
+        return $this->dateTime;
+    }
+
+    public function setDateTime(\DateTimeInterface $dateTime): self
+    {
+        $this->dateTime = $dateTime;
 
         return $this;
     }

@@ -19,6 +19,9 @@ class Message
     #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'user_message')]
     private $id_user;
 
+    #[ORM\Column(type: 'datetime_immutable')]
+    private $createdAt;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -44,6 +47,18 @@ class Message
     public function setIdUser(?User $id_user): self
     {
         $this->id_user = $id_user;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeImmutable
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeImmutable $createdAt): self
+    {
+        $this->createdAt = $createdAt;
 
         return $this;
     }
