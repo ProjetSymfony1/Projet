@@ -64,4 +64,11 @@ class HomepageController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/reserve-non-connexion", name="non-reservation")
+     */
+    public function nonReservation(): Response{
+        return $this->render('homepage/nonReservation.html.twig');
+    }
+
 }
