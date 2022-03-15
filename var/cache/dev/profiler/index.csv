@@ -556,3 +556,11 @@ b4bd5e,::1,POST,http://localhost:8888/chez-gusto/public/login,1647348077,,302
 479884,::1,GET,http://localhost:8888/chez-gusto/public/login,1647348162,,200
 1bb84f,::1,POST,http://localhost:8888/chez-gusto/public/login,1647348171,,302
 4ce67d,::1,GET,http://localhost:8888/chez-gusto/public/user/index,1647348171,,200
+1703f8,::1,GET,http://localhost:8888/chez-gusto/public/menu,1647350451,,200
+cbdac8,::1,GET,http://localhost:8888/chez-gusto/public/register,1647350462,,200
+49a9bf,::1,GET,http://localhost:8888/chez-gusto/public/menu,1647350486,,200
+09cc04,::1,GET,http://localhost:8888/chez-gusto/public/login,1647350491,,200
+b7a2ed,::1,GET,http://localhost:8888/chez-gusto/public/register,1647350493,,200
+15281a,::1,GET,http://localhost:8888/chez-gusto/public/login,1647350496,,200
+66eec0,::1,GET,http://localhost:8888/chez-gusto/public/menu,1647350498,,200
+d7dff1,::1,GET,http://localhost:8888/chez-gusto/public/menu,1647350551,,200
