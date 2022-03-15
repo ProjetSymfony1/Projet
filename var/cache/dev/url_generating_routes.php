@@ -22,6 +22,7 @@ return [
     'index' => [[], ['_controller' => 'App\\Controller\\HomepageController::index'], [], [['text', '/index']], [], [], []],
     'homeLog' => [[], ['_controller' => 'App\\Controller\\HomepageController::homeLog'], [], [['text', '/homeLog']], [], [], []],
     'menu' => [[], ['_controller' => 'App\\Controller\\HomepageController::menu'], [], [['text', '/menu']], [], [], []],
+    'non-reservation' => [[], ['_controller' => 'App\\Controller\\HomepageController::nonReservation'], [], [['text', '/reserve-non-connexion']], [], [], []],
     'app_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], [], []],
     'login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], [], []],

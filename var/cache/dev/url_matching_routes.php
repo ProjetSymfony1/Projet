@@ -20,6 +20,7 @@ return [
         '/index' => [[['_route' => 'index', '_controller' => 'App\\Controller\\HomepageController::index'], null, null, null, false, false, null]],
         '/homeLog' => [[['_route' => 'homeLog', '_controller' => 'App\\Controller\\HomepageController::homeLog'], null, null, null, false, false, null]],
         '/menu' => [[['_route' => 'menu', '_controller' => 'App\\Controller\\HomepageController::menu'], null, null, null, false, false, null]],
+        '/reserve-non-connexion' => [[['_route' => 'non-reservation', '_controller' => 'App\\Controller\\HomepageController::nonReservation'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
