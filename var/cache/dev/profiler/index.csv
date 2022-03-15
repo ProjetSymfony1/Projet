@@ -6,3 +6,9 @@ edfac1,::1,GET,http://localhost/chez-gustoV3/public/user/reservation,1647094474,
 d04028,::1,GET,http://localhost/chez-gustoV3/public/user/reservation,1647094527,,200
 4e16cc,::1,GET,http://localhost/chez-gustoV3/public/user/reservation,1647094556,,200
 2bf0d1,::1,GET,http://localhost:8888/chez-gusto/public/user/index,1647106821,,200
+b6e3fc,127.0.0.1,GET,http://localhost:8000/user/index,1647338036,70e76e,500
+70e76e,127.0.0.1,GET,http://localhost:8000/user/index,1647338036,,500
+dd9c84,127.0.0.1,GET,http://localhost:8000/user/index,1647338108,,200
+9c2f76,127.0.0.1,GET,http://localhost:8000/user/index,1647338143,,200
+5933f1,127.0.0.1,GET,http://localhost:8000/user/reservation,1647338148,,200
+697f4d,127.0.0.1,GET,http://localhost:8000/user/index,1647338254,,200
