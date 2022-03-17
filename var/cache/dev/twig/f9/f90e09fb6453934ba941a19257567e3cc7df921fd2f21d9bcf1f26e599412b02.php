@@ -97,6 +97,6 @@ class __TwigTemplate_d1ca0de3b52f04d3737f1a082e3222418a7a19395e8af8db966da7269d8
         </div>
     </div>
 </div>
-", "@WebProfiler/Profiler/header.html.twig", "C:\\xampp1\\htdocs\\chez-gustoV3\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\header.html.twig");
+", "@WebProfiler/Profiler/header.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\header.html.twig");
     }
 }

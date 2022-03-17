@@ -130,6 +130,6 @@ class __TwigTemplate_1c7cebe105ef97f8735f58f720c7b26084077d76647c75a0baf9e6daeba
         Sfjs.loadToolbar('{{ token }}');
     })();
 /*]]>*/</script>
-", "@WebProfiler/Profiler/toolbar_js.html.twig", "C:\\xampp1\\htdocs\\chez-gustoV3\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\toolbar_js.html.twig");
+", "@WebProfiler/Profiler/toolbar_js.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\toolbar_js.html.twig");
     }
 }

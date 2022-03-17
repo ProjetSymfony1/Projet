@@ -149,6 +149,6 @@ class __TwigTemplate_8b26153bd5aa1fa12050d996f531b6aa120c706ecdc51ccbc268a64f223
 
     {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: profiler_url }) }}
 {% endblock %}
-", "@WebProfiler/Profiler/cancel.html.twig", "C:\\xampp1\\htdocs\\chez-gustoV3\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\cancel.html.twig");
+", "@WebProfiler/Profiler/cancel.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\cancel.html.twig");
     }
 }

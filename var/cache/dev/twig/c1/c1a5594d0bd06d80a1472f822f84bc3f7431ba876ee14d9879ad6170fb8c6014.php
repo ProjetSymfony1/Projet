@@ -250,6 +250,6 @@ class __TwigTemplate_0f26a2ffb86f6806cf1ba488440da689bbf29cdfae6b0fa5a47860fe305
 
 </div>
 
-{% endblock %}", "user/updateInfoClient.html.twig", "C:\\xampp1\\htdocs\\chez-gustoV3\\templates\\user\\updateInfoClient.html.twig");
+{% endblock %}", "user/updateInfoClient.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\user\\updateInfoClient.html.twig");
     }
 }

@@ -148,18 +148,6 @@ class __TwigTemplate_5b509604b06162a36284a068f6c4d47542876cc285eca8bf8ef8bcf211d
             </div>
         </div>
     </div>
-    <div class=\"footer\">
-        <div class=\"container\">
-            <div class=\"d-flex justify-content-between py-4\">
-                <div class=\"componentFooter\">
-                    TRAN Ha Phuong<br>
-                    DIDI Teya<br>
-                    Katia<br>
-                    Manelle<br>
-                </div>
-            </div>
-        </div>
-    </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -235,18 +223,7 @@ class __TwigTemplate_5b509604b06162a36284a068f6c4d47542876cc285eca8bf8ef8bcf211d
             </div>
         </div>
     </div>
-    <div class=\"footer\">
-        <div class=\"container\">
-            <div class=\"d-flex justify-content-between py-4\">
-                <div class=\"componentFooter\">
-                    TRAN Ha Phuong<br>
-                    DIDI Teya<br>
-                    Katia<br>
-                    Manelle<br>
-                </div>
-            </div>
-        </div>
-    </div>
-{% endblock %}", "security/auth.html.twig", "C:\\xampp1\\htdocs\\chez-gustoV3\\templates\\security\\auth.html.twig");
+{% endblock %}
+", "security/auth.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\security\\auth.html.twig");
     }
 }

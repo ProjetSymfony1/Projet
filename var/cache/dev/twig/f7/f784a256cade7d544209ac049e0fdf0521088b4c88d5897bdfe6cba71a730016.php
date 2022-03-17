@@ -102,6 +102,6 @@ class __TwigTemplate_c95da5013c5546c73de029c936b091c1ff8929684eaca9eec1e9d193a0d
     {% if link|default(false) %}</a>{% endif %}
         <div class=\"sf-toolbar-info\">{{ text|default('') }}</div>
 </div>
-", "@WebProfiler/Profiler/toolbar_item.html.twig", "C:\\xampp1\\htdocs\\chez-gustoV3\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\toolbar_item.html.twig");
+", "@WebProfiler/Profiler/toolbar_item.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\toolbar_item.html.twig");
     }
 }

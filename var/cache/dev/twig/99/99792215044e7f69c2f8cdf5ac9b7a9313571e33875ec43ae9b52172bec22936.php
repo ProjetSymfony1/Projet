@@ -299,6 +299,6 @@ class __TwigTemplate_71c7ae37b5a6bc4545576c8c5226b6605ab83136b3e657e341f56b8970a
 {% block body %}{% endblock %}
 </body>
 </html>
-", "admin/indexAdmin.html.twig", "C:\\xampp1\\htdocs\\chez-gustoV3\\templates\\admin\\indexAdmin.html.twig");
+", "admin/indexAdmin.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\admin\\indexAdmin.html.twig");
     }
 }

@@ -65,7 +65,7 @@ class __TwigTemplate_945ec8c970f9791dcfe7a977d4f00564e84aa084bd7ea9637b4f7db1ff7
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Page d'accueil";
+        echo "Reservation";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -86,9 +86,41 @@ class __TwigTemplate_945ec8c970f9791dcfe7a977d4f00564e84aa084bd7ea9637b4f7db1ff7
 
         // line 6
         echo "
-    <h1>
-        Il vous faudrait de vous connecter pour pouvoir réserver une place chez nous.
-    </h1>
+    <!-- Body-->
+    <div class=\"container-fluid content\">
+        <div class=\"row\">
+            <div class=\"col-8 my-auto\">
+                <p class=\"mamamiaTitle\">Mamamia...</p>
+                <p class=\"mamamiaTitle\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Need to log in for this one...</p>
+                <div class=\"row\">
+                    <div class=\"col-2 my-auto\">
+                    </div>
+                    <div class=\"col-5\">
+                        <img src=\"";
+        // line 17
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/2106829115-August113.gif"), "html", null, true);
+        echo "\" width=\"70%\" style=\"display: block; margin:auto; padding-bottom: 15px;\"/>
+                    </div>
+                    <div class=\"col-5\" style=\"padding-top: 10%\">
+                        <a href = ";
+        // line 20
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
+        echo " class=\"btn btn-outline-primary\" role = \"button\" style=\"width: 100%\">LOGIN</a>
+                        <p class=\"underlinedText\">Don't have an account? <a href = ";
+        // line 21
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
+        echo ">Sign Up</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class=\"col-4\">
+                <img src=\"";
+        // line 26
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/plat-1.png"), "html", null, true);
+        echo "\" width=\"100%\" height=\"auto\" style=\"margin-top: 30px;\"/>
+            </div>
+        </div>
+    </div>
 
 ";
         
@@ -111,21 +143,41 @@ class __TwigTemplate_945ec8c970f9791dcfe7a977d4f00564e84aa084bd7ea9637b4f7db1ff7
 
     public function getDebugInfo()
     {
-        return array (  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  119 => 26,  111 => 21,  107 => 20,  101 => 17,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Page d'accueil{% endblock %}
+{% block title %}Reservation{% endblock %}
 
 {% block body %}
 
-    <h1>
-        Il vous faudrait de vous connecter pour pouvoir réserver une place chez nous.
-    </h1>
+    <!-- Body-->
+    <div class=\"container-fluid content\">
+        <div class=\"row\">
+            <div class=\"col-8 my-auto\">
+                <p class=\"mamamiaTitle\">Mamamia...</p>
+                <p class=\"mamamiaTitle\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Need to log in for this one...</p>
+                <div class=\"row\">
+                    <div class=\"col-2 my-auto\">
+                    </div>
+                    <div class=\"col-5\">
+                        <img src=\"{{ asset('image/2106829115-August113.gif') }}\" width=\"70%\" style=\"display: block; margin:auto; padding-bottom: 15px;\"/>
+                    </div>
+                    <div class=\"col-5\" style=\"padding-top: 10%\">
+                        <a href = {{ path('login') }} class=\"btn btn-outline-primary\" role = \"button\" style=\"width: 100%\">LOGIN</a>
+                        <p class=\"underlinedText\">Don't have an account? <a href = {{ path('app_register') }}>Sign Up</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class=\"col-4\">
+                <img src=\"{{ asset('image/plat-1.png') }}\" width=\"100%\" height=\"auto\" style=\"margin-top: 30px;\"/>
+            </div>
+        </div>
+    </div>
 
-{% endblock %}", "homepage/nonReservation.html.twig", "C:\\xampp1\\htdocs\\chez-gustoV3\\templates\\homepage\\nonReservation.html.twig");
+{% endblock %}", "homepage/nonReservation.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\homepage\\nonReservation.html.twig");
     }
 }

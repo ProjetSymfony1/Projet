@@ -1671,6 +1671,6 @@ class __TwigTemplate_df22fe3b897f067c584af9ae56f97faebf5fb941ceb1fa62ab6272be971
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "C:\\xampp1\\htdocs\\chez-gustoV3\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\db.html.twig");
     }
 }

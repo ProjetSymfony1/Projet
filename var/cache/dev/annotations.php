@@ -76,6 +76,12 @@ return [[
 '[C]App%5CController%5CHomepageController%23connect' => 1,
 'App%5CController%5CHomepageController%23menu' => 10,
 '[C]App%5CController%5CHomepageController%23menu' => 1,
+'App%5CController%5CHomepageController%23nonReservation' => 11,
+'[C]App%5CController%5CHomepageController%23nonReservation' => 1,
+'App%5CController%5CMenuController' => 0,
+'[C]App%5CController%5CMenuController' => 1,
+'App%5CController%5CMenuController%23showAll' => 0,
+'[C]App%5CController%5CMenuController%23showAll' => 1,
 'App%5CController%5CRegistrationController' => 0,
 '[C]App%5CController%5CRegistrationController' => 1,
 'App%5CController%5CRegistrationController%23register' => 0,
@@ -84,18 +90,20 @@ return [[
 '[C]App%5CController%5CSecurityController' => 1,
 'App%5CController%5CSecurityController%23login' => 9,
 '[C]App%5CController%5CSecurityController%23login' => 1,
-'App%5CController%5CSecurityController%23logout' => 11,
+'App%5CController%5CSecurityController%23logout' => 12,
 '[C]App%5CController%5CSecurityController%23logout' => 1,
 'App%5CController%5CUserController' => 0,
 '[C]App%5CController%5CUserController' => 1,
-'App%5CController%5CUserController%23indexUser' => 12,
+'App%5CController%5CUserController%23indexUser' => 13,
 '[C]App%5CController%5CUserController%23indexUser' => 1,
-'App%5CController%5CUserController%23contactForm' => 13,
+'App%5CController%5CUserController%23contactForm' => 14,
 '[C]App%5CController%5CUserController%23contactForm' => 1,
-'App%5CController%5CUserController%23updateForm' => 14,
+'App%5CController%5CUserController%23updateForm' => 15,
 '[C]App%5CController%5CUserController%23updateForm' => 1,
-'App%5CController%5CUserController%23reserver' => 15,
+'App%5CController%5CUserController%23reserver' => 16,
 '[C]App%5CController%5CUserController%23reserver' => 1,
+'App%5CController%5CUserController%23reservationHistory' => 17,
+'[C]App%5CController%5CUserController%23reservationHistory' => 1,
 'App%5CEntity%5CCart' => 0,
 '[C]App%5CEntity%5CCart' => 1,
 'App%5CEntity%5CCart%23__construct' => 0,
@@ -148,12 +156,18 @@ return [[
 '[C]App%5CEntity%5CMessage%23getIdUser' => 1,
 'App%5CEntity%5CMessage%23setIdUser' => 0,
 '[C]App%5CEntity%5CMessage%23setIdUser' => 1,
+'App%5CEntity%5CMessage%23getCreatedAt' => 0,
+'[C]App%5CEntity%5CMessage%23getCreatedAt' => 1,
+'App%5CEntity%5CMessage%23setCreatedAt' => 0,
+'[C]App%5CEntity%5CMessage%23setCreatedAt' => 1,
 'App%5CEntity%5CMessage%24id' => 0,
 '[C]App%5CEntity%5CMessage%24id' => 1,
 'App%5CEntity%5CMessage%24message' => 0,
 '[C]App%5CEntity%5CMessage%24message' => 1,
 'App%5CEntity%5CMessage%24id_user' => 0,
 '[C]App%5CEntity%5CMessage%24id_user' => 1,
+'App%5CEntity%5CMessage%24createdAt' => 0,
+'[C]App%5CEntity%5CMessage%24createdAt' => 1,
 'App%5CEntity%5COrder' => 0,
 '[C]App%5CEntity%5COrder' => 1,
 'App%5CEntity%5COrder%23getId' => 0,
@@ -184,26 +198,36 @@ return [[
 '[C]App%5CEntity%5CReservation%23getIdTimeslot' => 1,
 'App%5CEntity%5CReservation%23setIdTimeslot' => 0,
 '[C]App%5CEntity%5CReservation%23setIdTimeslot' => 1,
+'App%5CEntity%5CReservation%23getCreatedAt' => 0,
+'[C]App%5CEntity%5CReservation%23getCreatedAt' => 1,
+'App%5CEntity%5CReservation%23setCreatedAt' => 0,
+'[C]App%5CEntity%5CReservation%23setCreatedAt' => 1,
+'App%5CEntity%5CReservation%23getArchived' => 0,
+'[C]App%5CEntity%5CReservation%23getArchived' => 1,
+'App%5CEntity%5CReservation%23setArchived' => 0,
+'[C]App%5CEntity%5CReservation%23setArchived' => 1,
+'App%5CEntity%5CReservation%23getUpdatedAt' => 0,
+'[C]App%5CEntity%5CReservation%23getUpdatedAt' => 1,
+'App%5CEntity%5CReservation%23setUpdatedAt' => 0,
+'[C]App%5CEntity%5CReservation%23setUpdatedAt' => 1,
 'App%5CEntity%5CReservation%24id' => 0,
 '[C]App%5CEntity%5CReservation%24id' => 1,
 'App%5CEntity%5CReservation%24id_user' => 0,
 '[C]App%5CEntity%5CReservation%24id_user' => 1,
 'App%5CEntity%5CReservation%24id_timeslot' => 0,
 '[C]App%5CEntity%5CReservation%24id_timeslot' => 1,
+'App%5CEntity%5CReservation%24createdAt' => 0,
+'[C]App%5CEntity%5CReservation%24createdAt' => 1,
+'App%5CEntity%5CReservation%24archived' => 0,
+'[C]App%5CEntity%5CReservation%24archived' => 1,
+'App%5CEntity%5CReservation%24updatedAt' => 0,
+'[C]App%5CEntity%5CReservation%24updatedAt' => 1,
 'App%5CEntity%5CTimeSlot' => 0,
 '[C]App%5CEntity%5CTimeSlot' => 1,
 'App%5CEntity%5CTimeSlot%23__construct' => 0,
 '[C]App%5CEntity%5CTimeSlot%23__construct' => 1,
 'App%5CEntity%5CTimeSlot%23getId' => 0,
 '[C]App%5CEntity%5CTimeSlot%23getId' => 1,
-'App%5CEntity%5CTimeSlot%23getDate' => 0,
-'[C]App%5CEntity%5CTimeSlot%23getDate' => 1,
-'App%5CEntity%5CTimeSlot%23setDate' => 0,
-'[C]App%5CEntity%5CTimeSlot%23setDate' => 1,
-'App%5CEntity%5CTimeSlot%23getHour' => 0,
-'[C]App%5CEntity%5CTimeSlot%23getHour' => 1,
-'App%5CEntity%5CTimeSlot%23setHour' => 0,
-'[C]App%5CEntity%5CTimeSlot%23setHour' => 1,
 'App%5CEntity%5CTimeSlot%23getAvailable' => 0,
 '[C]App%5CEntity%5CTimeSlot%23getAvailable' => 1,
 'App%5CEntity%5CTimeSlot%23setAvailable' => 0,
@@ -214,17 +238,19 @@ return [[
 '[C]App%5CEntity%5CTimeSlot%23addTimeslotReservation' => 1,
 'App%5CEntity%5CTimeSlot%23removeTimeslotReservation' => 0,
 '[C]App%5CEntity%5CTimeSlot%23removeTimeslotReservation' => 1,
+'App%5CEntity%5CTimeSlot%23getDateTime' => 0,
+'[C]App%5CEntity%5CTimeSlot%23getDateTime' => 1,
+'App%5CEntity%5CTimeSlot%23setDateTime' => 0,
+'[C]App%5CEntity%5CTimeSlot%23setDateTime' => 1,
 'App%5CEntity%5CTimeSlot%24id' => 0,
 '[C]App%5CEntity%5CTimeSlot%24id' => 1,
-'App%5CEntity%5CTimeSlot%24date' => 0,
-'[C]App%5CEntity%5CTimeSlot%24date' => 1,
-'App%5CEntity%5CTimeSlot%24hour' => 0,
-'[C]App%5CEntity%5CTimeSlot%24hour' => 1,
 'App%5CEntity%5CTimeSlot%24available' => 0,
 '[C]App%5CEntity%5CTimeSlot%24available' => 1,
 'App%5CEntity%5CTimeSlot%24timeslot_reservation' => 0,
 '[C]App%5CEntity%5CTimeSlot%24timeslot_reservation' => 1,
-'App%5CEntity%5CUser' => 16,
+'App%5CEntity%5CTimeSlot%24dateTime' => 0,
+'[C]App%5CEntity%5CTimeSlot%24dateTime' => 1,
+'App%5CEntity%5CUser' => 18,
 '[C]App%5CEntity%5CUser' => 1,
 'App%5CEntity%5CUser%23__construct' => 0,
 '[C]App%5CEntity%5CUser%23__construct' => 1,
@@ -258,10 +284,6 @@ return [[
 '[C]App%5CEntity%5CUser%23getGender' => 1,
 'App%5CEntity%5CUser%23setGender' => 0,
 '[C]App%5CEntity%5CUser%23setGender' => 1,
-'App%5CEntity%5CUser%23getLevel' => 0,
-'[C]App%5CEntity%5CUser%23getLevel' => 1,
-'App%5CEntity%5CUser%23setLevel' => 0,
-'[C]App%5CEntity%5CUser%23setLevel' => 1,
 'App%5CEntity%5CUser%23getUserMessage' => 0,
 '[C]App%5CEntity%5CUser%23getUserMessage' => 1,
 'App%5CEntity%5CUser%23addUserMessage' => 0,
@@ -294,6 +316,18 @@ return [[
 '[C]App%5CEntity%5CUser%23getUserIdentifier' => 1,
 'App%5CEntity%5CUser%23getPassword' => 0,
 '[C]App%5CEntity%5CUser%23getPassword' => 1,
+'App%5CEntity%5CUser%23getLevel' => 0,
+'[C]App%5CEntity%5CUser%23getLevel' => 1,
+'App%5CEntity%5CUser%23setLevel' => 0,
+'[C]App%5CEntity%5CUser%23setLevel' => 1,
+'App%5CEntity%5CUser%23getCreatedAt' => 0,
+'[C]App%5CEntity%5CUser%23getCreatedAt' => 1,
+'App%5CEntity%5CUser%23setCreatedAt' => 0,
+'[C]App%5CEntity%5CUser%23setCreatedAt' => 1,
+'App%5CEntity%5CUser%23getDeletedAt' => 0,
+'[C]App%5CEntity%5CUser%23getDeletedAt' => 1,
+'App%5CEntity%5CUser%23setDeletedAt' => 0,
+'[C]App%5CEntity%5CUser%23setDeletedAt' => 1,
 'App%5CEntity%5CUser%24id' => 0,
 '[C]App%5CEntity%5CUser%24id' => 1,
 'App%5CEntity%5CUser%24id_user' => 0,
@@ -310,8 +344,6 @@ return [[
 '[C]App%5CEntity%5CUser%24adress' => 1,
 'App%5CEntity%5CUser%24gender' => 0,
 '[C]App%5CEntity%5CUser%24gender' => 1,
-'App%5CEntity%5CUser%24level' => 0,
-'[C]App%5CEntity%5CUser%24level' => 1,
 'App%5CEntity%5CUser%24user_message' => 0,
 '[C]App%5CEntity%5CUser%24user_message' => 1,
 'App%5CEntity%5CUser%24user_fav' => 0,
@@ -320,6 +352,12 @@ return [[
 '[C]App%5CEntity%5CUser%24user_cart' => 1,
 'App%5CEntity%5CUser%24user_reservation' => 0,
 '[C]App%5CEntity%5CUser%24user_reservation' => 1,
+'App%5CEntity%5CUser%24level' => 0,
+'[C]App%5CEntity%5CUser%24level' => 1,
+'App%5CEntity%5CUser%24createdAt' => 0,
+'[C]App%5CEntity%5CUser%24createdAt' => 1,
+'App%5CEntity%5CUser%24deletedAt' => 0,
+'[C]App%5CEntity%5CUser%24deletedAt' => 1,
 'App%5CEntity%5Cdish' => 0,
 '[C]App%5CEntity%5Cdish' => 1,
 'App%5CEntity%5Cdish%23__construct' => 0,
@@ -358,6 +396,10 @@ return [[
 '[C]App%5CEntity%5Cdish%23addCart' => 1,
 'App%5CEntity%5Cdish%23removeCart' => 0,
 '[C]App%5CEntity%5Cdish%23removeCart' => 1,
+'App%5CEntity%5Cdish%23getArchived' => 0,
+'[C]App%5CEntity%5Cdish%23getArchived' => 1,
+'App%5CEntity%5Cdish%23setArchived' => 0,
+'[C]App%5CEntity%5Cdish%23setArchived' => 1,
 'App%5CEntity%5Cdish%24id' => 0,
 '[C]App%5CEntity%5Cdish%24id' => 1,
 'App%5CEntity%5Cdish%24dish_name' => 0,
@@ -374,6 +416,8 @@ return [[
 '[C]App%5CEntity%5Cdish%24favorites' => 1,
 'App%5CEntity%5Cdish%24carts' => 0,
 '[C]App%5CEntity%5Cdish%24carts' => 1,
+'App%5CEntity%5Cdish%24archived' => 0,
+'[C]App%5CEntity%5Cdish%24archived' => 1,
 'Doctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController' => 0,
 '[C]Doctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController' => 1,
 'Doctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%23__construct' => 0,
@@ -922,7 +966,7 @@ return [[
 ], [
 
 0 => [],
-1 => 1647094260,
+1 => 1647528096,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
@@ -1324,7 +1368,7 @@ return [[
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
-                    '/nos-Menu',
+                    '/menu',
                 ],
                 'methods' => [
                     [],
@@ -1373,6 +1417,55 @@ return [[
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
+                    '/reserve-non-connexion',
+                ],
+                'methods' => [
+                    [],
+                ],
+                'schemes' => [
+                    [],
+                ],
+                'name' => [
+                    'non-reservation',
+                ],
+                'requirements' => [
+                    [],
+                ],
+                'options' => [
+                    [],
+                ],
+                'defaults' => [
+                    [],
+                ],
+                'host' => [
+                    null,
+                ],
+                'condition' => [
+                    null,
+                ],
+                'priority' => [
+                    null,
+                ],
+                'env' => [
+                    null,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+12 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
                     '/logout',
                 ],
                 'methods' => [
@@ -1413,7 +1506,7 @@ return [[
         []
     );
 },
-12 => static function () {
+13 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
@@ -1462,7 +1555,7 @@ return [[
         []
     );
 },
-13 => static function () {
+14 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
@@ -1511,7 +1604,7 @@ return [[
         []
     );
 },
-14 => static function () {
+15 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
@@ -1560,7 +1653,7 @@ return [[
         []
     );
 },
-15 => static function () {
+16 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
@@ -1609,7 +1702,56 @@ return [[
         []
     );
 },
-16 => static function () {
+17 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/user/reservationHistory',
+                ],
+                'methods' => [
+                    [],
+                ],
+                'schemes' => [
+                    [],
+                ],
+                'name' => [
+                    'user-reserver-history',
+                ],
+                'requirements' => [
+                    [],
+                ],
+                'options' => [
+                    [],
+                ],
+                'defaults' => [
+                    [],
+                ],
+                'host' => [
+                    null,
+                ],
+                'condition' => [
+                    null,
+                ],
+                'priority' => [
+                    null,
+                ],
+                'env' => [
+                    null,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+18 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity')),

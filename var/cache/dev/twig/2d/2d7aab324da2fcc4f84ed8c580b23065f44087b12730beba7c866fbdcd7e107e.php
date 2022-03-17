@@ -86,39 +86,42 @@ class __TwigTemplate_557685752487ebd6f3ef452cf485a2b32b6c9b16f58bbd01e53154f370a
 
         // line 6
         echo "    <div class=\"container-fluid content\">
-        <div class=\"row\">
-            <div class=\"col-7 my-auto\">
-                <div class=\"borderTitle mb-4 ml-0\">
-                    <p class=\"text-center h3 my-2\">'SIT AT ON TABLE'</p>
-                </div>
-                <div class=\"ma-form\">
-                    <div class=\"row\">
-                        <div class=\"col-sm-6\">
-                            <div class=\"form-group\">
-                                <label for=\"date\">Date</label>
-                                <div class=\"border-class\">
-                                    <input type=\"text\" class=\"form-control\" id=\"date\">
+        <form>
+            <div class=\"row\">
+                <div class=\"col-6 my-auto\">
+                    <div class=\"borderTitle mb-4 ml-0\">
+                        <p class=\"text-center h2 my-2\">Sit at our table...</p>
+                    </div>
+                    <div class=\"ma-form\">
+                        <div class=\"row\">
+                            <div class=\"col-sm-6\">
+                                <div class=\"form-group\">
+                                    <label for=\"date\">Date</label>
+                                    <div class=\"border-class\">
+                                        <input type=\"date\" class=\"form-control\" id=\"date\">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class=\"col-sm-6\">
-                            <div class=\"form-group\">
-                                <label for=\"time\">Time</label>
-                                <div class=\"border-class\">
-                                    <input type=\"text\" class=\"form-control\" id=\"time\">
+                            <div class=\"col-sm-6\">
+                                <div class=\"form-group\">
+                                    <label for=\"time\">Time</label>
+                                    <div class=\"border-class\">
+                                        <input type=\"time\" class=\"form-control\" id=\"time\">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <button type=\"submit\" class=\"btn btn-primary\" style=\"float: right\">Book</button>
                 </div>
-            </div>
-            <div class=\"col-5\">
-                <img src=\"";
-        // line 34
+                <div class=\"col-6\">
+                    <img src=\"";
+        // line 36
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/pngwing.com-8.png"), "html", null, true);
         echo "\" width=\"100%\" height=\"auto\"/>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
 ";
         
@@ -141,7 +144,7 @@ class __TwigTemplate_557685752487ebd6f3ef452cf485a2b32b6c9b16f58bbd01e53154f370a
 
     public function getDebugInfo()
     {
-        return array (  118 => 34,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  120 => 36,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -152,37 +155,40 @@ class __TwigTemplate_557685752487ebd6f3ef452cf485a2b32b6c9b16f58bbd01e53154f370a
 
 {% block body %}
     <div class=\"container-fluid content\">
-        <div class=\"row\">
-            <div class=\"col-7 my-auto\">
-                <div class=\"borderTitle mb-4 ml-0\">
-                    <p class=\"text-center h3 my-2\">'SIT AT ON TABLE'</p>
-                </div>
-                <div class=\"ma-form\">
-                    <div class=\"row\">
-                        <div class=\"col-sm-6\">
-                            <div class=\"form-group\">
-                                <label for=\"date\">Date</label>
-                                <div class=\"border-class\">
-                                    <input type=\"text\" class=\"form-control\" id=\"date\">
+        <form>
+            <div class=\"row\">
+                <div class=\"col-6 my-auto\">
+                    <div class=\"borderTitle mb-4 ml-0\">
+                        <p class=\"text-center h2 my-2\">Sit at our table...</p>
+                    </div>
+                    <div class=\"ma-form\">
+                        <div class=\"row\">
+                            <div class=\"col-sm-6\">
+                                <div class=\"form-group\">
+                                    <label for=\"date\">Date</label>
+                                    <div class=\"border-class\">
+                                        <input type=\"date\" class=\"form-control\" id=\"date\">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class=\"col-sm-6\">
-                            <div class=\"form-group\">
-                                <label for=\"time\">Time</label>
-                                <div class=\"border-class\">
-                                    <input type=\"text\" class=\"form-control\" id=\"time\">
+                            <div class=\"col-sm-6\">
+                                <div class=\"form-group\">
+                                    <label for=\"time\">Time</label>
+                                    <div class=\"border-class\">
+                                        <input type=\"time\" class=\"form-control\" id=\"time\">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <button type=\"submit\" class=\"btn btn-primary\" style=\"float: right\">Book</button>
+                </div>
+                <div class=\"col-6\">
+                    <img src=\"{{ asset('image/pngwing.com-8.png') }}\" width=\"100%\" height=\"auto\"/>
                 </div>
             </div>
-            <div class=\"col-5\">
-                <img src=\"{{ asset('image/pngwing.com-8.png') }}\" width=\"100%\" height=\"auto\"/>
-            </div>
-        </div>
+        </form>
     </div>
-{% endblock %}", "user/reservation.html.twig", "C:\\xampp1\\htdocs\\chez-gustoV3\\templates\\user\\reservation.html.twig");
+{% endblock %}", "user/reservation.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\user\\reservation.html.twig");
     }
 }

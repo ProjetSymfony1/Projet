@@ -59,8 +59,8 @@ class __TwigTemplate_1bf2e40af6484382a9ba9a589fc2d1c62d850ac09710405d5550ec2446e
         echo "    <link rel=\"stylesheet\" href=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style.css"), "html", null, true);
         echo "\" />
-    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\"
-          integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">
+    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">
+
     ";
         // line 11
         $this->displayBlock('stylesheets', $context, $blocks);
@@ -69,41 +69,44 @@ class __TwigTemplate_1bf2e40af6484382a9ba9a589fc2d1c62d850ac09710405d5550ec2446e
     ";
         // line 15
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 18
+        // line 19
         echo "
     ";
-        // line 19
-        $this->displayBlock('header', $context, $blocks);
         // line 20
+        $this->displayBlock('header', $context, $blocks);
+        // line 21
         echo "</head>
 <body>
 <div class=\"container my-1\">
     <div class=\"d-flex justify-content-between\">
         <div class=\"my-auto\">
             <a href=\"";
-        // line 25
+        // line 26
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user-index");
         echo "\">HOME</a>&nbsp; &nbsp; &nbsp;
             <a href=\"#\">LA CARTE</a>&nbsp; &nbsp; &nbsp;
             <a href=\"";
-        // line 27
+        // line 28
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user-reserver");
         echo "\">RÉSERVATION</a>
         </div>
         <div>
             <img src=\"";
-        // line 30
+        // line 31
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/CHEZ_GUSTO_LOGO.png"), "html", null, true);
         echo "\" class=\"imgHeader\" />
         </div>
         <div class=\"my-auto\">
             <a href =\"#\"  class=\"btn btn-outline-primary\" role = \"button\">CART</a>
             <div class=\"dropdown\">
-                <a class=\"btn btn-outline-primary dropdown-toggle\" data-toggle =\"dropdown\" href = \"#\"  role = \"button\"> #IdUser</a>
-                <div class=\"dropdown-menu\">
-                    <a class=\"dropdown-item\" href=\"#\">Action</a>
-                    <a class=\"dropdown-item\" href=\"#\">Another action</a>
-                    <a class=\"dropdown-item\" href=\"#\">Something else here</a>
+
+                <button class=\"btn btn-outline-primary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">Ha Phuong TRAN</button>
+                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
+                    <a class=\"dropdown-item\" href = \"#\">Reservations</a>
+                    <a class=\"dropdown-item\" href=\"#\">Favoris</a>
+                    <a class=\"dropdown-item\" href = \"#\">Contact</a>
+                    <a class=\"dropdown-item\" href = \"#\">Mon compte</a>
+                    <a class=\"dropdown-item\" href=\"#\">Log out</a>
                 </div>
             </div>
         </div>
@@ -111,10 +114,34 @@ class __TwigTemplate_1bf2e40af6484382a9ba9a589fc2d1c62d850ac09710405d5550ec2446e
 </div>
 <hr class=\"hrCustom \">
 ";
-        // line 46
+        // line 50
         $this->displayBlock('body', $context, $blocks);
-        // line 47
-        echo "</body>
+        // line 51
+        echo "
+<div class=\"footer\">
+    <div class=\"container\">
+        <div class=\"d-flex justify-content-between py-4\">
+            <div class=\"componentFooter\">
+                Membres du groupe :<br/>
+                TRAN Ha Phuong<br/>
+                DIDI Teya<br/>
+                HAMMACHE Katia<br/>
+                ISSELNANE Manel<br/>
+            </div>
+            <div class=\"componentFooter\">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam cumque quos distinctio laudantium
+                asperiores a, ipsam aperiam provident doloribus veniam sit nemo dignissimos hic, vel eos, doloremque
+                quibusdam optio aliquam.<br ><br >
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
+<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
+<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
+
+</body>
 </html>
 
 ";
@@ -179,7 +206,9 @@ class __TwigTemplate_1bf2e40af6484382a9ba9a589fc2d1c62d850ac09710405d5550ec2446e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 16
-        echo "        ";
+        echo "
+        ";
+        // line 17
         echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('encore_entry_script_tags')->getCallable(), ["app"]), "html", null, true);
         echo "
     ";
@@ -191,7 +220,7 @@ class __TwigTemplate_1bf2e40af6484382a9ba9a589fc2d1c62d850ac09710405d5550ec2446e
 
     }
 
-    // line 19
+    // line 20
     public function block_header($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -209,7 +238,7 @@ class __TwigTemplate_1bf2e40af6484382a9ba9a589fc2d1c62d850ac09710405d5550ec2446e
 
     }
 
-    // line 46
+    // line 50
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -239,7 +268,7 @@ class __TwigTemplate_1bf2e40af6484382a9ba9a589fc2d1c62d850ac09710405d5550ec2446e
 
     public function getDebugInfo()
     {
-        return array (  213 => 46,  195 => 19,  182 => 16,  172 => 15,  159 => 12,  149 => 11,  130 => 5,  117 => 47,  115 => 46,  96 => 30,  90 => 27,  85 => 25,  78 => 20,  76 => 19,  73 => 18,  71 => 15,  68 => 14,  66 => 11,  59 => 8,  54 => 5,  48 => 1,);
+        return array (  242 => 50,  224 => 20,  212 => 17,  209 => 16,  199 => 15,  186 => 12,  176 => 11,  157 => 5,  120 => 51,  118 => 50,  96 => 31,  90 => 28,  85 => 26,  78 => 21,  76 => 20,  73 => 19,  71 => 15,  68 => 14,  66 => 11,  59 => 8,  54 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -252,13 +281,14 @@ class __TwigTemplate_1bf2e40af6484382a9ba9a589fc2d1c62d850ac09710405d5550ec2446e
     <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
     {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
     <link rel=\"stylesheet\" href=\"{{ asset('css/style.css') }}\" />
-    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\"
-          integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">
+    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">
+
     {% block stylesheets %}
         {{ encore_entry_link_tags('app') }}
     {% endblock %}
 
     {% block javascripts %}
+
         {{ encore_entry_script_tags('app') }}
     {% endblock %}
 
@@ -278,11 +308,14 @@ class __TwigTemplate_1bf2e40af6484382a9ba9a589fc2d1c62d850ac09710405d5550ec2446e
         <div class=\"my-auto\">
             <a href =\"#\"  class=\"btn btn-outline-primary\" role = \"button\">CART</a>
             <div class=\"dropdown\">
-                <a class=\"btn btn-outline-primary dropdown-toggle\" data-toggle =\"dropdown\" href = \"#\"  role = \"button\"> #IdUser</a>
-                <div class=\"dropdown-menu\">
-                    <a class=\"dropdown-item\" href=\"#\">Action</a>
-                    <a class=\"dropdown-item\" href=\"#\">Another action</a>
-                    <a class=\"dropdown-item\" href=\"#\">Something else here</a>
+
+                <button class=\"btn btn-outline-primary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">Ha Phuong TRAN</button>
+                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
+                    <a class=\"dropdown-item\" href = \"#\">Reservations</a>
+                    <a class=\"dropdown-item\" href=\"#\">Favoris</a>
+                    <a class=\"dropdown-item\" href = \"#\">Contact</a>
+                    <a class=\"dropdown-item\" href = \"#\">Mon compte</a>
+                    <a class=\"dropdown-item\" href=\"#\">Log out</a>
                 </div>
             </div>
         </div>
@@ -290,9 +323,33 @@ class __TwigTemplate_1bf2e40af6484382a9ba9a589fc2d1c62d850ac09710405d5550ec2446e
 </div>
 <hr class=\"hrCustom \">
 {% block body %}{% endblock %}
+
+<div class=\"footer\">
+    <div class=\"container\">
+        <div class=\"d-flex justify-content-between py-4\">
+            <div class=\"componentFooter\">
+                Membres du groupe :<br/>
+                TRAN Ha Phuong<br/>
+                DIDI Teya<br/>
+                HAMMACHE Katia<br/>
+                ISSELNANE Manel<br/>
+            </div>
+            <div class=\"componentFooter\">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam cumque quos distinctio laudantium
+                asperiores a, ipsam aperiam provident doloribus veniam sit nemo dignissimos hic, vel eos, doloremque
+                quibusdam optio aliquam.<br ><br >
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
+<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
+<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
+
 </body>
 </html>
 
-", "user/baseUser.html.twig", "C:\\xampp1\\htdocs\\chez-gustoV3\\templates\\user\\baseUser.html.twig");
+", "user/baseUser.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\user\\baseUser.html.twig");
     }
 }

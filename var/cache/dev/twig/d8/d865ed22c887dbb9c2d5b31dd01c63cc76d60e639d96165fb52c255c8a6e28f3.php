@@ -154,6 +154,6 @@ class __TwigTemplate_ae348fd4848e410148c9cb74e34e25c2c05e1b843e60d1c6dd4f1300080
     </ul>
 </div>
 {% endblock %}
-", "admin/index.html.twig", "C:\\xampp1\\htdocs\\chez-gustoV3\\templates\\admin\\index.html.twig");
+", "admin/index.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\admin\\index.html.twig");
     }
 }

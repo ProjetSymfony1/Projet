@@ -171,6 +171,6 @@ class __TwigTemplate_7c3827a2e2cbf2d482cd2fac9125163f2ca27a396a5e0a69028e4ba1870
         {%- endfor -%}
     </pre>
 {% endif %}
-", "@Doctrine/Collector/explain.html.twig", "C:\\xampp1\\htdocs\\chez-gustoV3\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\explain.html.twig");
+", "@Doctrine/Collector/explain.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\explain.html.twig");
     }
 }

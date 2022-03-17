@@ -348,6 +348,6 @@ class __TwigTemplate_15d6c5a57062ce7556cc5672e306ca46faba8fa25c41afc1814b3375612
 {% block body %}{% endblock %}
 </body>
 </html>
-", "homepage/user.html.twig", "C:\\xampp1\\htdocs\\chez-gustoV3\\templates\\homepage\\user.html.twig");
+", "homepage/user.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\homepage\\user.html.twig");
     }
 }

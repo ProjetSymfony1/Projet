@@ -98,6 +98,6 @@ class __TwigTemplate_d9f4071076f8c5eb59a203acc9a9e2f3772e88d43cfc977341bce9f13d9
 {% block body %}
     <h1>C'est la page d'index</h1>
 
-{% endblock %}", "homepage/index1.html.twig", "C:\\xampp1\\htdocs\\chez-gustoV3\\templates\\homepage\\index1.html.twig");
+{% endblock %}", "homepage/index1.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\homepage\\index1.html.twig");
     }
 }

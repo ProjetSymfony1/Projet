@@ -107,22 +107,6 @@ class __TwigTemplate_b719f757354c7a1f145491c95e6ca74af47acfba81299985f8cfaa22426
             </div>
         </div>
     </div>
-    <div class=\"footer\">
-        <div class=\"container\">
-            <div class=\"d-flex justify-content-between py-4\">
-                <div class=\"componentFooter\">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex ipsum eaque asperiores ea commodi non
-                    libero veniam consequatur reprehenderit odit ab voluptatibus facilis saepe laboriosam voluptates
-                    quae voluptas, suscipit quam.
-                </div>
-                <div class=\"componentFooter\">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam cumque quos distinctio laudantium
-                    asperiores a, ipsam aperiam provident doloribus veniam sit nemo dignissimos hic, vel eos, doloremque
-                    quibusdam optio aliquam.
-                </div>
-            </div>
-        </div>
-    </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -173,22 +157,7 @@ class __TwigTemplate_b719f757354c7a1f145491c95e6ca74af47acfba81299985f8cfaa22426
             </div>
         </div>
     </div>
-    <div class=\"footer\">
-        <div class=\"container\">
-            <div class=\"d-flex justify-content-between py-4\">
-                <div class=\"componentFooter\">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex ipsum eaque asperiores ea commodi non
-                    libero veniam consequatur reprehenderit odit ab voluptatibus facilis saepe laboriosam voluptates
-                    quae voluptas, suscipit quam.
-                </div>
-                <div class=\"componentFooter\">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam cumque quos distinctio laudantium
-                    asperiores a, ipsam aperiam provident doloribus veniam sit nemo dignissimos hic, vel eos, doloremque
-                    quibusdam optio aliquam.
-                </div>
-            </div>
-        </div>
-    </div>
-{% endblock %}", "homepage/index.html.twig", "C:\\xampp1\\htdocs\\chez-gustoV3\\templates\\homepage\\index.html.twig");
+{% endblock %}
+", "homepage/index.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\homepage\\index.html.twig");
     }
 }

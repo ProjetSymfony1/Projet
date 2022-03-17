@@ -83,9 +83,15 @@ class __TwigTemplate_5826001571f88a6bd7abc300010854eb450eaff1ce89ec8a77f0b938b31
             <a href=\"";
         // line 25
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("homepage");
-        echo "\">HOME</a>&nbsp; &nbsp; &nbsp;
-            <a href=\"#\">LA CARTE</a>&nbsp; &nbsp;
-            <a href=\"\">RÉSERVATION</a>
+        echo "\">HOME</a>&nbsp; &nbsp;
+            <a href= ";
+        // line 26
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("menu");
+        echo ">LA CARTE</a>&nbsp; &nbsp;
+            <a href=\"";
+        // line 27
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("non-reservation");
+        echo "\">RÉSERVATION</a>
         </div>
         <div>
             <img src=\"";
@@ -111,7 +117,25 @@ class __TwigTemplate_5826001571f88a6bd7abc300010854eb450eaff1ce89ec8a77f0b938b31
         // line 40
         $this->displayBlock('body', $context, $blocks);
         // line 41
-        echo "</body>
+        echo "<div class=\"footer\">
+    <div class=\"container\">
+        <div class=\"d-flex justify-content-between py-4\">
+            <div class=\"componentFooter\">
+                Membres du groupe :<br/>
+                TRAN Ha Phuong<br/>
+                DIDI Teya<br/>
+                HAMMACHE Katia<br/>
+                ISSELNANE Manel<br/>
+            </div>
+            <div class=\"componentFooter\">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam cumque quos distinctio laudantium
+                asperiores a, ipsam aperiam provident doloribus veniam sit nemo dignissimos hic, vel eos, doloremque
+                quibusdam optio aliquam.<br ><br >
+            </div>
+        </div>
+    </div>
+</div>
+</body>
 </html>
 ";
         
@@ -235,7 +259,7 @@ class __TwigTemplate_5826001571f88a6bd7abc300010854eb450eaff1ce89ec8a77f0b938b31
 
     public function getDebugInfo()
     {
-        return array (  209 => 40,  191 => 19,  178 => 16,  168 => 15,  155 => 12,  145 => 11,  126 => 5,  114 => 41,  112 => 40,  104 => 35,  100 => 34,  93 => 30,  85 => 25,  78 => 20,  76 => 19,  73 => 18,  71 => 15,  68 => 14,  66 => 11,  59 => 8,  54 => 5,  48 => 1,);
+        return array (  233 => 40,  215 => 19,  202 => 16,  192 => 15,  179 => 12,  169 => 11,  150 => 5,  120 => 41,  118 => 40,  110 => 35,  106 => 34,  99 => 30,  93 => 27,  89 => 26,  85 => 25,  78 => 20,  76 => 19,  73 => 18,  71 => 15,  68 => 14,  66 => 11,  59 => 8,  54 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -264,9 +288,9 @@ class __TwigTemplate_5826001571f88a6bd7abc300010854eb450eaff1ce89ec8a77f0b938b31
 <div class=\"container my-1\">
     <div class=\"d-flex justify-content-between\">
         <div class=\"my-auto\">
-            <a href=\"{{ path('homepage') }}\">HOME</a>&nbsp; &nbsp; &nbsp;
-            <a href=\"#\">LA CARTE</a>&nbsp; &nbsp;
-            <a href=\"\">RÉSERVATION</a>
+            <a href=\"{{ path('homepage') }}\">HOME</a>&nbsp; &nbsp;
+            <a href= {{ path('menu') }}>LA CARTE</a>&nbsp; &nbsp;
+            <a href=\"{{ path('non-reservation') }}\">RÉSERVATION</a>
         </div>
         <div>
             <img src=\"{{ asset('image/CHEZ_GUSTO_LOGO.png') }}\" class=\"imgHeader\" />
@@ -280,8 +304,26 @@ class __TwigTemplate_5826001571f88a6bd7abc300010854eb450eaff1ce89ec8a77f0b938b31
 </div>
 <hr class=\"hrCustom \">
 {% block body %}{% endblock %}
+<div class=\"footer\">
+    <div class=\"container\">
+        <div class=\"d-flex justify-content-between py-4\">
+            <div class=\"componentFooter\">
+                Membres du groupe :<br/>
+                TRAN Ha Phuong<br/>
+                DIDI Teya<br/>
+                HAMMACHE Katia<br/>
+                ISSELNANE Manel<br/>
+            </div>
+            <div class=\"componentFooter\">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam cumque quos distinctio laudantium
+                asperiores a, ipsam aperiam provident doloribus veniam sit nemo dignissimos hic, vel eos, doloremque
+                quibusdam optio aliquam.<br ><br >
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
-", "base.html.twig", "C:\\xampp1\\htdocs\\chez-gustoV3\\templates\\base.html.twig");
+", "base.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\base.html.twig");
     }
 }

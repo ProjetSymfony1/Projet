@@ -86,7 +86,27 @@ class __TwigTemplate_4057c5beb13cc22d07eb4471d2ff124a262b1c9c00ee6099ae4a7af7efb
 
         // line 6
         echo "
-Bienvenue sur votre site
+    <!-- Body-->
+    <div class=\"container-fluid content\">
+        <div class=\"row\">
+            <div class=\"col-7 my-auto\">
+                <div class=\"borderTitle mb-4 ml-0\">
+                    <p class=\"text-center h3 my-2\">Welcome to your home !</p>
+                </div>
+                <p class=\"description\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolorum
+                    impedit, aut laboriosam sunt eum expedita neque dicta dolore, cupiditate velit consectetur error rem
+                    nostrum provident accusantium officiis at doloribus totam esse fugiat! Impedit, dolorum et nemo
+                    neque fuga reprehenderit saepe error eveniet eum quasi aliquam, non nisi rem, qui nobis ipsam
+                    tenetur repellat aspernatur! Nulla nobis illum tempore reprehenderit? Nam, cupiditate. Pariatur?</p>
+            </div>
+            <div class=\"col-5\">
+                <img src=\"";
+        // line 21
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/pngwing.com.png"), "html", null, true);
+        echo "\" width=\"100%\" height=\"auto\"/>
+            </div>
+        </div>
+    </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -108,7 +128,7 @@ Bienvenue sur votre site
 
     public function getDebugInfo()
     {
-        return array (  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  105 => 21,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -119,7 +139,24 @@ Bienvenue sur votre site
 
 {% block body %}
 
-Bienvenue sur votre site
-{% endblock %}", "user/indexUser.html.twig", "C:\\xampp1\\htdocs\\chez-gustoV3\\templates\\user\\indexUser.html.twig");
+    <!-- Body-->
+    <div class=\"container-fluid content\">
+        <div class=\"row\">
+            <div class=\"col-7 my-auto\">
+                <div class=\"borderTitle mb-4 ml-0\">
+                    <p class=\"text-center h3 my-2\">Welcome to your home !</p>
+                </div>
+                <p class=\"description\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolorum
+                    impedit, aut laboriosam sunt eum expedita neque dicta dolore, cupiditate velit consectetur error rem
+                    nostrum provident accusantium officiis at doloribus totam esse fugiat! Impedit, dolorum et nemo
+                    neque fuga reprehenderit saepe error eveniet eum quasi aliquam, non nisi rem, qui nobis ipsam
+                    tenetur repellat aspernatur! Nulla nobis illum tempore reprehenderit? Nam, cupiditate. Pariatur?</p>
+            </div>
+            <div class=\"col-5\">
+                <img src=\"{{ asset('image/pngwing.com.png') }}\" width=\"100%\" height=\"auto\"/>
+            </div>
+        </div>
+    </div>
+{% endblock %}", "user/indexUser.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\user\\indexUser.html.twig");
     }
 }
