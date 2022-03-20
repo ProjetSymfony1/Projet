@@ -17,37 +17,10 @@ class UserController extends AbstractController
     }*/
 
     /**
-     * @Route("/user/index", name="user-index")
+     * @Route("/user/{id}", name="user-homepage")
      */
-    public function indexUser() :Response{
+    public function userhomepage(User $user) :Response{
         return $this->render('user/indexUser.html.twig');
     }
-
-    /**
-     * @Route("/user/contactForm", name="user-contactForm")
-     */
-    public function contactForm() :Response{
-        return $this->render('user/formContactUser.html.twig');
-    }
-
-    /**
-     * @Route("/user/updateInfoClient", name="user-updateForm")
-     */
-    public function updateForm() :Response{
-        return $this->render('user/updateInfoClient.html.twig');
-    }
-
-    /**
-     * @Route("/user/reservation", name="user-reserver")
-     */
-    public function reserver() :Response{
-        return $this->render('user/reservation.html.twig');
-    }
-
-    /**
-     * @Route("/user/reservationHistory", name="user-reserver-history")
-     */
-    public function reservationHistory() :Response{
-        return $this->render('user/reservationHistory.html.twig');
-    }
+	
 }

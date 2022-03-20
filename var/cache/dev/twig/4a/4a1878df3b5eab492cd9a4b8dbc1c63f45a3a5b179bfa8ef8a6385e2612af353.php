@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* homepage/nonReservation.html.twig */
+/* homepage/booking.html.twig */
 class __TwigTemplate_945ec8c970f9791dcfe7a977d4f00564e84aa084bd7ea9637b4f7db1ff77d878 extends Template
 {
     private $source;
@@ -40,12 +40,12 @@ class __TwigTemplate_945ec8c970f9791dcfe7a977d4f00564e84aa084bd7ea9637b4f7db1ff7
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "homepage/nonReservation.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "homepage/booking.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "homepage/nonReservation.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "homepage/booking.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "homepage/nonReservation.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "homepage/booking.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -133,7 +133,7 @@ class __TwigTemplate_945ec8c970f9791dcfe7a977d4f00564e84aa084bd7ea9637b4f7db1ff7
 
     public function getTemplateName()
     {
-        return "homepage/nonReservation.html.twig";
+        return "homepage/booking.html.twig";
     }
 
     public function isTraitable()
@@ -178,6 +178,6 @@ class __TwigTemplate_945ec8c970f9791dcfe7a977d4f00564e84aa084bd7ea9637b4f7db1ff7
         </div>
     </div>
 
-{% endblock %}", "homepage/nonReservation.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\homepage\\nonReservation.html.twig");
+{% endblock %}", "homepage/booking.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\homepage\\booking.html.twig");
     }
 }

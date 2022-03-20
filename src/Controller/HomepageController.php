@@ -16,42 +16,6 @@ class HomepageController extends AbstractController
     public function home(): Response{
         return $this->render('homepage/index.html.twig');
     }
-    /**
-     * @Route("/index", name="index")
-     */
-    public function index(): Response{
-        return $this->render('homepage/index1.html.twig');
-    }
-
-    /**
-     * @Route("/homeLog", name="homeLog")
-     */
-    public function homeLog(): Response{
-        require_once(createAccount::class);
-        if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-            $model = new \createAccount();
-            if ($model->create()===TRUE){
-                return $this->render('auth.html.twig');
-            } else {
-                return $this->render('homepage/index1.html.twig');
-            }
-        }
-        return $this->render('homepage/inscriptionForm.html.twig');
-    }
-
-    /**
-     * @Route("/register", name="app_register")
-     */
-    public function register(): Response{
-        return $this->render('registration/register.html.twig');
-    }
-
-    /**
-     * @Route("/login", name="login")
-     */
-    public function connect(): Response{
-        return $this->render('security/auth.html.twig');
-    }
 
     /**
      * @Route("/menu", name="menu")
@@ -65,10 +29,9 @@ class HomepageController extends AbstractController
     }
 
     /**
-     * @Route("/reserve-non-connexion", name="non-reservation")
+     * @Route("/reservation", name="reservation")
      */
-    public function nonReservation(): Response{
-        return $this->render('homepage/nonReservation.html.twig');
+    public function book(): Response{
+        return $this->render('homepage/booking.html.twig');
     }
-
 }

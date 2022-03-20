@@ -4,6 +4,11 @@
 
 {% block body %}
     <div class="box">
+
+        {% if is_granted('ROLE_ADMIN') %}
+            <button class="btn btn-primary btn-sm"> Ajouter des plats </button>
+        {% endif %}
+
         <table width="100%" style="margin: auto; text-align: center">
             <tr>
                 {% for dish in dishes %}
@@ -15,8 +20,12 @@
                                     <h2 class="textMenu"> {{ dish.dishName }} </h2>
                                     <h4 class="textPrix"> {{ dish.price }} € </h4>
                                     <h6 class="textDesc"> {{ dish.description }} </h6>
-                                    <button class="btn btn-addCart"> Ajouter au Panier </button>
-                                    <button class="btn btn-primary"> Ajouter aux Favoris </button>
+                                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                                        <button class="btn btn-addCart"> Ajouter au Panier </button>
+                                        <button class="btn btn-primary"> Ajouter aux Favoris </button>
+                                    {% else %}
+
+                                    {% endif %}
                                 </td>
                             </tr>
                         </table>
