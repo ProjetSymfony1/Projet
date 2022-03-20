@@ -4,13 +4,19 @@
 
 {% block body %}
 
-    <!-- Body-->
+
     <div class="container-fluid content">
         <div class="row">
             <div class="col-7 my-auto">
-                <div class="borderTitle mb-4 ml-0">
-                    <p class="text-center h3 my-2">'anyone can cook'</p>
-                </div>
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    <div class="borderTitle mb-4 ml-0">
+                        <p class="text-center h3 my-2">Welcome to your home !</p>
+                    </div>
+                {% else %}
+                    <div class="borderTitle mb-4 ml-0">
+                        <p class="text-center h3 my-2">'anyone can cook'</p>
+                    </div>
+                {% endif %}
                 <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolorum
                     impedit, aut laboriosam sunt eum expedita neque dicta dolore, cupiditate velit consectetur error rem
                     nostrum provident accusantium officiis at doloribus totam esse fugiat! Impedit, dolorum et nemo
