@@ -86,14 +86,27 @@ class __TwigTemplate_b719f757354c7a1f145491c95e6ca74af47acfba81299985f8cfaa22426
 
         // line 6
         echo "
-    <!-- Body-->
+
     <div class=\"container-fluid content\">
         <div class=\"row\">
             <div class=\"col-7 my-auto\">
-                <div class=\"borderTitle mb-4 ml-0\">
-                    <p class=\"text-center h3 my-2\">'anyone can cook'</p>
-                </div>
-                <p class=\"description\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolorum
+                ";
+        // line 11
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
+            // line 12
+            echo "                    <div class=\"borderTitle mb-4 ml-0\">
+                        <p class=\"text-center h3 my-2\">Welcome to your home !</p>
+                    </div>
+                ";
+        } else {
+            // line 16
+            echo "                    <div class=\"borderTitle mb-4 ml-0\">
+                        <p class=\"text-center h3 my-2\">'anyone can cook'</p>
+                    </div>
+                ";
+        }
+        // line 20
+        echo "                <p class=\"description\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolorum
                     impedit, aut laboriosam sunt eum expedita neque dicta dolore, cupiditate velit consectetur error rem
                     nostrum provident accusantium officiis at doloribus totam esse fugiat! Impedit, dolorum et nemo
                     neque fuga reprehenderit saepe error eveniet eum quasi aliquam, non nisi rem, qui nobis ipsam
@@ -101,7 +114,7 @@ class __TwigTemplate_b719f757354c7a1f145491c95e6ca74af47acfba81299985f8cfaa22426
             </div>
             <div class=\"col-5\">
                 <img src=\"";
-        // line 21
+        // line 27
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/pngwing.com.png"), "html", null, true);
         echo "\" width=\"100%\" height=\"auto\"/>
             </div>
@@ -128,7 +141,7 @@ class __TwigTemplate_b719f757354c7a1f145491c95e6ca74af47acfba81299985f8cfaa22426
 
     public function getDebugInfo()
     {
-        return array (  105 => 21,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  118 => 27,  109 => 20,  103 => 16,  97 => 12,  95 => 11,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -139,13 +152,19 @@ class __TwigTemplate_b719f757354c7a1f145491c95e6ca74af47acfba81299985f8cfaa22426
 
 {% block body %}
 
-    <!-- Body-->
+
     <div class=\"container-fluid content\">
         <div class=\"row\">
             <div class=\"col-7 my-auto\">
-                <div class=\"borderTitle mb-4 ml-0\">
-                    <p class=\"text-center h3 my-2\">'anyone can cook'</p>
-                </div>
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    <div class=\"borderTitle mb-4 ml-0\">
+                        <p class=\"text-center h3 my-2\">Welcome to your home !</p>
+                    </div>
+                {% else %}
+                    <div class=\"borderTitle mb-4 ml-0\">
+                        <p class=\"text-center h3 my-2\">'anyone can cook'</p>
+                    </div>
+                {% endif %}
                 <p class=\"description\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolorum
                     impedit, aut laboriosam sunt eum expedita neque dicta dolore, cupiditate velit consectetur error rem
                     nostrum provident accusantium officiis at doloribus totam esse fugiat! Impedit, dolorum et nemo

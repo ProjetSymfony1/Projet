@@ -18,6 +18,7 @@ return [
     'indexAdmin' => [[], ['_controller' => 'App\\Controller\\AdminController::index'], [], [['text', '/AdminIndex']], [], [], []],
     'ajoutAdmin' => [[], ['_controller' => 'App\\Controller\\AdminController::addAdmin'], [], [['text', '/ajout-compte-admin']], [], [], []],
     'ajoutCreneau' => [[], ['_controller' => 'App\\Controller\\AdminController::addCreneau'], [], [['text', '/ajout-creneau']], [], [], []],
+    'ajout_dish' => [[], ['_controller' => 'App\\Controller\\AjoutDishController::register'], [], [['text', '/ajoutDish']], [], [], []],
     'homepage' => [[], ['_controller' => 'App\\Controller\\HomepageController::home'], [], [['text', '/']], [], [], []],
     'menu' => [[], ['_controller' => 'App\\Controller\\HomepageController::menu'], [], [['text', '/menu']], [], [], []],
     'reservation' => [[], ['_controller' => 'App\\Controller\\HomepageController::book'], [], [['text', '/reservation']], [], [], []],

@@ -90,7 +90,7 @@ class __TwigTemplate_5826001571f88a6bd7abc300010854eb450eaff1ce89ec8a77f0b938b31
         echo ">LA CARTE</a>&nbsp; &nbsp;
             <a href=\"";
         // line 27
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("non-reservation");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("reservation");
         echo "\">RÉSERVATION</a>
         </div>
         <div>
@@ -100,23 +100,45 @@ class __TwigTemplate_5826001571f88a6bd7abc300010854eb450eaff1ce89ec8a77f0b938b31
         echo "\" class=\"imgHeader\" />
         </div>
         <div class=\"my-auto\">
-            <a href =\"#\"  class=\"btn btn-outline-primary\" role = \"button\">CART</a> &nbsp;&nbsp;
-            <a href = ";
+            <a href =\"#\"  class=\"btn btn-outline-primary\" role = \"button\">CART</a>
+            ";
         // line 34
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
-        echo " class=\"btn btn-outline-primary\" role = \"button\">SIGNUP</a> &nbsp;&nbsp;
-            <a href = ";
-        // line 35
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
-        echo " class=\"btn btn-outline-primary\" role = \"button\">LOGIN</a>
-        </div>
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
+            // line 35
+            echo "                <div class=\"dropdown\">
+                    <button class=\"btn btn-outline-primary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"> ";
+            // line 36
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 36, $this->source); })()), "user", [], "any", false, false, false, 36), "idUser", [], "any", false, false, false, 36), "html", null, true);
+            echo " </button>
+                    <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
+                        <a class=\"dropdown-item\" href = \"#\">Reservations</a>
+                        <a class=\"dropdown-item\" href=\"#\">Favoris</a>
+                        <a class=\"dropdown-item\" href = \"#\">Contact</a>
+                        <a class=\"dropdown-item\" href = \"#\">Mon compte</a>
+                        <a class=\"dropdown-item\" href=\"#\">Log out</a>
+                    </div>
+                </div>
+            ";
+        } else {
+            // line 46
+            echo "                <a href = ";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
+            echo " class=\"btn btn-outline-primary\" role = \"button\">SIGNUP</a> &nbsp;&nbsp;
+                <a href = ";
+            // line 47
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
+            echo " class=\"btn btn-outline-primary\" role = \"button\">LOGIN</a>
+            ";
+        }
+        // line 49
+        echo "        </div>
     </div>
 </div>
 <hr class=\"hrCustom \">
 ";
-        // line 40
+        // line 53
         $this->displayBlock('body', $context, $blocks);
-        // line 41
+        // line 54
         echo "<div class=\"footer\">
     <div class=\"container\">
         <div class=\"d-flex justify-content-between py-4\">
@@ -135,6 +157,10 @@ class __TwigTemplate_5826001571f88a6bd7abc300010854eb450eaff1ce89ec8a77f0b938b31
         </div>
     </div>
 </div>
+<script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
+<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
+<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
+
 </body>
 </html>
 ";
@@ -229,7 +255,7 @@ class __TwigTemplate_5826001571f88a6bd7abc300010854eb450eaff1ce89ec8a77f0b938b31
 
     }
 
-    // line 40
+    // line 53
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -259,7 +285,7 @@ class __TwigTemplate_5826001571f88a6bd7abc300010854eb450eaff1ce89ec8a77f0b938b31
 
     public function getDebugInfo()
     {
-        return array (  233 => 40,  215 => 19,  202 => 16,  192 => 15,  179 => 12,  169 => 11,  150 => 5,  120 => 41,  118 => 40,  110 => 35,  106 => 34,  99 => 30,  93 => 27,  89 => 26,  85 => 25,  78 => 20,  76 => 19,  73 => 18,  71 => 15,  68 => 14,  66 => 11,  59 => 8,  54 => 5,  48 => 1,);
+        return array (  259 => 53,  241 => 19,  228 => 16,  218 => 15,  205 => 12,  195 => 11,  176 => 5,  142 => 54,  140 => 53,  134 => 49,  129 => 47,  124 => 46,  111 => 36,  108 => 35,  106 => 34,  99 => 30,  93 => 27,  89 => 26,  85 => 25,  78 => 20,  76 => 19,  73 => 18,  71 => 15,  68 => 14,  66 => 11,  59 => 8,  54 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -290,15 +316,28 @@ class __TwigTemplate_5826001571f88a6bd7abc300010854eb450eaff1ce89ec8a77f0b938b31
         <div class=\"my-auto\">
             <a href=\"{{ path('homepage') }}\">HOME</a>&nbsp; &nbsp;
             <a href= {{ path('menu') }}>LA CARTE</a>&nbsp; &nbsp;
-            <a href=\"{{ path('non-reservation') }}\">RÉSERVATION</a>
+            <a href=\"{{ path('reservation') }}\">RÉSERVATION</a>
         </div>
         <div>
             <img src=\"{{ asset('image/CHEZ_GUSTO_LOGO.png') }}\" class=\"imgHeader\" />
         </div>
         <div class=\"my-auto\">
-            <a href =\"#\"  class=\"btn btn-outline-primary\" role = \"button\">CART</a> &nbsp;&nbsp;
-            <a href = {{ path('app_register') }} class=\"btn btn-outline-primary\" role = \"button\">SIGNUP</a> &nbsp;&nbsp;
-            <a href = {{ path('login') }} class=\"btn btn-outline-primary\" role = \"button\">LOGIN</a>
+            <a href =\"#\"  class=\"btn btn-outline-primary\" role = \"button\">CART</a>
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                <div class=\"dropdown\">
+                    <button class=\"btn btn-outline-primary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"> {{ app.user.idUser }} </button>
+                    <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
+                        <a class=\"dropdown-item\" href = \"#\">Reservations</a>
+                        <a class=\"dropdown-item\" href=\"#\">Favoris</a>
+                        <a class=\"dropdown-item\" href = \"#\">Contact</a>
+                        <a class=\"dropdown-item\" href = \"#\">Mon compte</a>
+                        <a class=\"dropdown-item\" href=\"#\">Log out</a>
+                    </div>
+                </div>
+            {% else %}
+                <a href = {{ path('app_register') }} class=\"btn btn-outline-primary\" role = \"button\">SIGNUP</a> &nbsp;&nbsp;
+                <a href = {{ path('login') }} class=\"btn btn-outline-primary\" role = \"button\">LOGIN</a>
+            {% endif %}
         </div>
     </div>
 </div>
@@ -322,6 +361,10 @@ class __TwigTemplate_5826001571f88a6bd7abc300010854eb450eaff1ce89ec8a77f0b938b31
         </div>
     </div>
 </div>
+<script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
+<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
+<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
+
 </body>
 </html>
 ", "base.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\base.html.twig");

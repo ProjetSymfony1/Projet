@@ -4,11 +4,6 @@
 
 {% block body %}
     <div class="box">
-
-        {% if is_granted('ROLE_ADMIN') %}
-            <button class="btn btn-primary btn-sm"> Ajouter des plats </button>
-        {% endif %}
-
         <table width="100%" style="margin: auto; text-align: center">
             <tr>
                 {% for dish in dishes %}
@@ -37,6 +32,11 @@
                     {% endif %}
                 {% endfor %}
         </table>
+    </div>
+    <div class="row justify-content-md-center">
+        {% if is_granted('ROLE_ADMIN') %}
+            <a href="{{ path('ajout_dish') }}" class="btn btn-primary btn-sm"> Ajouter des plats </a>
+        {% endif %}
     </div>
 
 

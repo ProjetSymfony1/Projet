@@ -575,6 +575,7 @@ class ComposerStaticInit373ad398bb80587163cdf0c1b488bcb2
 
     public static $classMap = array (
         'App\\Controller\\AdminController' => __DIR__ . '/../..' . '/src/Controller/AdminController.php',
+        'App\\Controller\\AjoutDishController' => __DIR__ . '/../..' . '/src/Controller/AjoutDishController.php',
         'App\\Controller\\HomepageController' => __DIR__ . '/../..' . '/src/Controller/HomepageController.php',
         'App\\Controller\\MenuController' => __DIR__ . '/../..' . '/src/Controller/MenuController.php',
         'App\\Controller\\RegistrationController' => __DIR__ . '/../..' . '/src/Controller/RegistrationController.php',
@@ -588,6 +589,7 @@ class ComposerStaticInit373ad398bb80587163cdf0c1b488bcb2
         'App\\Entity\\TimeSlot' => __DIR__ . '/../..' . '/src/Entity/TimeSlot.php',
         'App\\Entity\\User' => __DIR__ . '/../..' . '/src/Entity/User.php',
         'App\\Entity\\dish' => __DIR__ . '/../..' . '/src/Entity/dish.php',
+        'App\\Form\\DishFormType' => __DIR__ . '/../..' . '/src/Form/DishFormType.php',
         'App\\Form\\RegistrationFormType' => __DIR__ . '/../..' . '/src/Form/RegistrationFormType.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
         'App\\Repository\\CartRepository' => __DIR__ . '/../..' . '/src/Repository/CartRepository.php',

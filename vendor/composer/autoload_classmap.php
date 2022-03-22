@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Controller\\AdminController' => $baseDir . '/src/Controller/AdminController.php',
+    'App\\Controller\\AjoutDishController' => $baseDir . '/src/Controller/AjoutDishController.php',
     'App\\Controller\\HomepageController' => $baseDir . '/src/Controller/HomepageController.php',
     'App\\Controller\\MenuController' => $baseDir . '/src/Controller/MenuController.php',
     'App\\Controller\\RegistrationController' => $baseDir . '/src/Controller/RegistrationController.php',
@@ -20,6 +21,7 @@ return array(
     'App\\Entity\\TimeSlot' => $baseDir . '/src/Entity/TimeSlot.php',
     'App\\Entity\\User' => $baseDir . '/src/Entity/User.php',
     'App\\Entity\\dish' => $baseDir . '/src/Entity/dish.php',
+    'App\\Form\\DishFormType' => $baseDir . '/src/Form/DishFormType.php',
     'App\\Form\\RegistrationFormType' => $baseDir . '/src/Form/RegistrationFormType.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
     'App\\Repository\\CartRepository' => $baseDir . '/src/Repository/CartRepository.php',

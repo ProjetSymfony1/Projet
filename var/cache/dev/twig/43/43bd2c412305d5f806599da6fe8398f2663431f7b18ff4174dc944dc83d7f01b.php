@@ -136,30 +136,53 @@ class __TwigTemplate_0ffee4bb5328d8c7910b91eb3bbbc4e24550e37145991114966a3f5d58f
             // line 17
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["dish"], "description", [], "any", false, false, false, 17), "html", null, true);
             echo " </h6>
-                                    <button class=\"btn btn-addCart\"> Ajouter au Panier </button>
-                                    <button class=\"btn btn-primary\"> Ajouter aux Favoris </button>
-                                </td>
+                                    ";
+            // line 18
+            if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
+                // line 19
+                echo "                                        <button class=\"btn btn-addCart\"> Ajouter au Panier </button>
+                                        <button class=\"btn btn-primary\"> Ajouter aux Favoris </button>
+                                    ";
+            } else {
+                // line 22
+                echo "
+                                    ";
+            }
+            // line 24
+            echo "                                </td>
                             </tr>
                         </table>
                     </td>
                     ";
-            // line 24
-            if (((twig_get_attribute($this->env, $this->source, $context["dish"], "id", [], "any", false, false, false, 24) % 3) == 0)) {
-                // line 25
+            // line 28
+            if (((twig_get_attribute($this->env, $this->source, $context["dish"], "id", [], "any", false, false, false, 28) % 3) == 0)) {
+                // line 29
                 echo "                        </tr>
                         <tr><td><br></td></tr>
                         <tr>
                     ";
             }
-            // line 29
+            // line 33
             echo "                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['dish'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 30
+        // line 34
         echo "        </table>
     </div>
+    <div class=\"row justify-content-md-center\">
+        ";
+        // line 37
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
+            // line 38
+            echo "            <a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ajout_dish");
+            echo "\" class=\"btn btn-primary btn-sm\"> Ajouter des plats </a>
+        ";
+        }
+        // line 40
+        echo "    </div>
 
 
 ";
@@ -183,7 +206,7 @@ class __TwigTemplate_0ffee4bb5328d8c7910b91eb3bbbc4e24550e37145991114966a3f5d58f
 
     public function getDebugInfo()
     {
-        return array (  161 => 30,  155 => 29,  149 => 25,  147 => 24,  137 => 17,  133 => 16,  129 => 15,  125 => 14,  119 => 10,  115 => 9,  110 => 6,  100 => 5,  81 => 3,  60 => 2,  37 => 1,);
+        return array (  185 => 40,  179 => 38,  177 => 37,  172 => 34,  166 => 33,  160 => 29,  158 => 28,  152 => 24,  148 => 22,  143 => 19,  141 => 18,  137 => 17,  133 => 16,  129 => 15,  125 => 14,  119 => 10,  115 => 9,  110 => 6,  100 => 5,  81 => 3,  60 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -205,8 +228,12 @@ class __TwigTemplate_0ffee4bb5328d8c7910b91eb3bbbc4e24550e37145991114966a3f5d58f
                                     <h2 class=\"textMenu\"> {{ dish.dishName }} </h2>
                                     <h4 class=\"textPrix\"> {{ dish.price }} € </h4>
                                     <h6 class=\"textDesc\"> {{ dish.description }} </h6>
-                                    <button class=\"btn btn-addCart\"> Ajouter au Panier </button>
-                                    <button class=\"btn btn-primary\"> Ajouter aux Favoris </button>
+                                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                                        <button class=\"btn btn-addCart\"> Ajouter au Panier </button>
+                                        <button class=\"btn btn-primary\"> Ajouter aux Favoris </button>
+                                    {% else %}
+
+                                    {% endif %}
                                 </td>
                             </tr>
                         </table>
@@ -218,6 +245,11 @@ class __TwigTemplate_0ffee4bb5328d8c7910b91eb3bbbc4e24550e37145991114966a3f5d58f
                     {% endif %}
                 {% endfor %}
         </table>
+    </div>
+    <div class=\"row justify-content-md-center\">
+        {% if is_granted('ROLE_ADMIN') %}
+            <a href=\"{{ path('ajout_dish') }}\" class=\"btn btn-primary btn-sm\"> Ajouter des plats </a>
+        {% endif %}
     </div>
 
 

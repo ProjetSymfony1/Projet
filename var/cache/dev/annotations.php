@@ -62,6 +62,18 @@ return [[
 '[C]App%5CController%5CAdminController%23addAdmin' => 1,
 'App%5CController%5CAdminController%23addCreneau' => 4,
 '[C]App%5CController%5CAdminController%23addCreneau' => 1,
+'App%5CController%5CAjoutDishController' => 0,
+'[C]App%5CController%5CAjoutDishController' => 1,
+'App%5CController%5CAjoutDishController%23__construct' => 0,
+'[C]App%5CController%5CAjoutDishController%23__construct' => 1,
+'App%5CController%5CAjoutDishController%23onAddictionDishSuccess' => 0,
+'[C]App%5CController%5CAjoutDishController%23onAddictionDishSuccess' => 1,
+'App%5CController%5CAjoutDishController%23getLoginUrl' => 0,
+'[C]App%5CController%5CAjoutDishController%23getLoginUrl' => 1,
+'App%5CController%5CAjoutDishController%23register' => 0,
+'[C]App%5CController%5CAjoutDishController%23register' => 1,
+'App%5CController%5CAjoutDishController%24urlGenerator' => 0,
+'[C]App%5CController%5CAjoutDishController%24urlGenerator' => 1,
 'App%5CController%5CHomepageController' => 0,
 '[C]App%5CController%5CHomepageController' => 1,
 'App%5CController%5CHomepageController%23home' => 5,
@@ -950,7 +962,7 @@ return [[
 ], [
 
 0 => [],
-1 => 1647797516,
+1 => 1647969169,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
@@ -1400,17 +1412,17 @@ return [[
         null,
         [
             'stdClass' => [
-                'groups' => [
-                    [
-                        'Default',
-                    ],
-                ],
                 'message' => [
                     'There is already an account with this id_user',
                 ],
                 'fields' => [
                     [
                         'id_user',
+                    ],
+                ],
+                'groups' => [
+                    [
+                        'Default',
                     ],
                 ],
             ],
