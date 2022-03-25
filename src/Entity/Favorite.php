@@ -46,7 +46,7 @@ class Favorite
         return $this;
     }
 
-    public function getIdDish(): ?dish
+    public function getIdDish(): int
     {
         return $this->id_dish;
     }

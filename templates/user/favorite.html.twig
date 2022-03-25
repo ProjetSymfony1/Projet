@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% block header %} <link rel="stylesheet" href="{{ asset('css/menuStyle.css') }}" />{% endblock %}
+{% block title %}Vos favoris{% endblock %}
+
+{% block body %}
+    <div class="box">
+        <table style="margin: auto">
+        {% for fav in favs %}
+            {% if fav.idUser == app.user.id %}
+                {% for dish in dishes %}
+                    {% if dish.id == fav.idDish %}
+                            <tr>
+                                <td>
+                                    <img class="imgMenu" src="{{ asset(dish.photo) }}">
+                                </td>
+                                <td>
+                                    <h2 class="textMenu">{{ dish.dishName }}</h2>
+                                    <h4 class="textPrix"> {{ dish.price }} € </h4>
+                                    <h6 class="textDesc"> {{ dish.description }} </h6>
+                                </td>
+                                <td>
+                                    <a href="" class="btn btn-primary"> Supprimer des favoris </a>
+                                </td>
+                            </tr>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+        </table>
+    </div>
+
+{% endblock %}

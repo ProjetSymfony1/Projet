@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Repository\DishRepository;
+use App\Repository\FavoriteRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -21,6 +23,16 @@ class UserController extends AbstractController
      */
     public function userhomepage(User $user) :Response{
         return $this->render('user/indexUser.html.twig');
+    }
+
+    /**
+     * @Route("/favoris", name="favoris")
+     */
+    public function menu(FavoriteRepository $favoriteRepository, DishRepository $dishRepository): Response
+    {
+        return $this->render("user/favorite.html.twig", [
+            "favs" => $favoriteRepository->findAll(), "dishes" => $dishRepository->findAll()
+        ]);
     }
 	
 }

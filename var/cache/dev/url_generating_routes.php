@@ -27,4 +27,5 @@ return [
     'login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], [], []],
     'user-homepage' => [['id'], ['_controller' => 'App\\Controller\\UserController::userhomepage'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/user']], [], [], []],
+    'favoris' => [[], ['_controller' => 'App\\Controller\\UserController::menu'], [], [['text', '/favoris']], [], [], []],
 ];
