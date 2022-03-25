@@ -13,6 +13,7 @@ return [
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
+        '/ajoutFavoris' => [[['_route' => 'add-fav', '_controller' => 'App\\Controller\\AddFavoriteController::addFav'], null, null, null, false, false, null]],
         '/AdminIndex' => [[['_route' => 'indexAdmin', '_controller' => 'App\\Controller\\AdminController::index'], null, null, null, false, false, null]],
         '/ajout-compte-admin' => [[['_route' => 'ajoutAdmin', '_controller' => 'App\\Controller\\AdminController::addAdmin'], null, null, null, false, false, null]],
         '/ajout-creneau' => [[['_route' => 'ajoutCreneau', '_controller' => 'App\\Controller\\AdminController::addCreneau'], null, null, null, false, false, null]],

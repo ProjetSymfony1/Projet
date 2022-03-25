@@ -15,10 +15,12 @@ class Favorite
 
     #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'user_fav')]
     #[ORM\JoinColumn(nullable: false)]
+    #[ORM\Column(type: 'integer')]
     private $id_user;
 
     #[ORM\ManyToOne(targetEntity: dish::class, inversedBy: 'favorites')]
     #[ORM\JoinColumn(nullable: false)]
+    #[ORM\Column(type: 'integer')]
     private $id_dish;
 
     public function getId(): ?int
@@ -26,15 +28,21 @@ class Favorite
         return $this->id;
     }
 
-    public function getIdUser(): ?User
+    public function getIdUser(): int
     {
         return $this->id_user;
     }
 
-    public function setIdUser(?User $id_user): self
+    public function setIdUser(int $id_user): self
     {
         $this->id_user = $id_user;
 
+        return $this;
+    }
+
+    public function setUserDish(int $idUser) : self
+    {
+        $this->id_user = $idUser;
         return $this;
     }
 
@@ -46,6 +54,13 @@ class Favorite
     public function setIdDish(?dish $id_dish): self
     {
         $this->id_dish = $id_dish;
+
+        return $this;
+    }
+
+    public function setDishFav(int $idDish): self
+    {
+        $this->id_dish = $idDish;
 
         return $this;
     }

@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Favorite;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use phpDocumentor\Reflection\Types\Boolean;
 
 /**
  * @method Favorite|null find($id, $lockMode = null, $lockVersion = null)
@@ -17,6 +18,17 @@ class FavoriteRepository extends ServiceEntityRepository
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Favorite::class);
+    }
+
+    public function findByIds(int $idUser, int $idDish)
+    {
+        return $this->createQueryBuilder("f")
+            ->andWhere("f.id_dish = :idDish")
+            ->andWhere("f.id_user = :idUser")
+            ->setParameter("idDish", $idDish)
+            ->setParameter("idUser", $idUser)
+            ->getQuery()
+            ->getResult();
     }
 
     // /**
