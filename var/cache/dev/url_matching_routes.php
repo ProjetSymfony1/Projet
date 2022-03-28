@@ -13,18 +13,17 @@ return [
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
-        '/ajoutFavoris' => [[['_route' => 'add-fav', '_controller' => 'App\\Controller\\AddFavoriteController::addFav'], null, null, null, false, false, null]],
-        '/AdminIndex' => [[['_route' => 'indexAdmin', '_controller' => 'App\\Controller\\AdminController::index'], null, null, null, false, false, null]],
-        '/ajout-compte-admin' => [[['_route' => 'ajoutAdmin', '_controller' => 'App\\Controller\\AdminController::addAdmin'], null, null, null, false, false, null]],
-        '/ajout-creneau' => [[['_route' => 'ajoutCreneau', '_controller' => 'App\\Controller\\AdminController::addCreneau'], null, null, null, false, false, null]],
-        '/ajoutDish' => [[['_route' => 'ajout_dish', '_controller' => 'App\\Controller\\AjoutDishController::register'], null, null, null, false, false, null]],
+        '/favoris' => [[['_route' => 'favoris', '_controller' => 'App\\Controller\\FavoriteController::menu'], null, null, null, false, false, null]],
+        '/ajoutFavoris' => [[['_route' => 'add-fav', '_controller' => 'App\\Controller\\FavoriteController::addFav'], null, null, null, false, false, null]],
+        '/supFavoris' => [[['_route' => 'del-fav', '_controller' => 'App\\Controller\\FavoriteController::delFav'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'homepage', '_controller' => 'App\\Controller\\HomepageController::home'], null, null, null, false, false, null]],
         '/menu' => [[['_route' => 'menu', '_controller' => 'App\\Controller\\HomepageController::menu'], null, null, null, false, false, null]],
         '/reservation' => [[['_route' => 'reservation', '_controller' => 'App\\Controller\\HomepageController::book'], null, null, null, false, false, null]],
+        '/addDish' => [[['_route' => 'add_dish', '_controller' => 'App\\Controller\\MenuController::add'], null, null, null, false, false, null]],
+        '/user/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\MessageController::contact'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
-        '/favoris' => [[['_route' => 'favoris', '_controller' => 'App\\Controller\\UserController::menu'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -43,7 +42,6 @@ return [
                     .')'
                     .'|error/(\\d+)(?:\\.([^/]++))?(*:159)'
                 .')'
-                .'|/user/([^/]++)(*:182)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -53,9 +51,8 @@ return [
         101 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         114 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         124 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        159 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
-        182 => [
-            [['_route' => 'user-homepage', '_controller' => 'App\\Controller\\UserController::userhomepage'], ['id'], null, null, false, true, null],
+        159 => [
+            [['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

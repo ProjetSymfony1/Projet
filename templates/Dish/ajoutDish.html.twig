@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Ajouter Dish{% endblock %}
+{% block title %}Add A Dish{% endblock %}
 
 {% block body %}
     <div class="container-fluid content">
@@ -10,44 +10,48 @@
                 <form>
                     <div class="ma-form">
                         <div class="form-group">
+                            {{form_label(DishForm.dish_name, 'Dish name')}}
                             <div class="border-class">
-                                {{form_label(DishForm.dish_name)}}
                                 {{form_widget(DishForm.dish_name)}}
                             </div>
                         </div>
                         <div class="form-group">
+                            {{form_label(DishForm.description, 'Describe the dish')}}
                             <div class="border-class">
-                                {{ form_row(DishForm.description) }}
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="border-class">
-                                {{ form_row(DishForm.photo) }}
+                                {{ form_widget(DishForm.description) }}
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
+                                {{form_label(DishForm.type, 'Type')}}
                                 <div class="border-class">
-                                    {{ form_row(DishForm.type) }}
+                                    {{ form_widget(DishForm.type) }}
                                 </div>
                             </div>
                             <div class="form-group col-md-6">
+                                {{form_label(DishForm.price, 'Price')}}
                                 <div class="border-class">
-                                    {{ form_row(DishForm.price) }}
+                                    {{ form_widget(DishForm.price) }}
                                 </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            {{form_label(DishForm.photo, 'Upload your path..')}}
+                            <div class="border-class">
+                                {{ form_widget(DishForm.photo) }}
                             </div>
                         </div>
                     </div>
 
 
-                    <button type="submit" class="btn btn-primary">Ajouter</button>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Append</button>
                     {{ form_end(DishForm) }}
                 </form>
             </div>
 
-            <div class="col-4">
-                <div class="titre-border mb-4 ml-0">
-                    <p class="text-center h3 my-2">Ajouter un nouveau plat</p>
+            <div class="col-5">
+                <div class="borderTitle mb-4 ml-0">
+                    <p class="text-center h2 my-2">Add A New Dish</p>
                 </div>
                 <div class="col-5">
                     <img src="{{ asset('image/pngwing.com.png') }}"/>

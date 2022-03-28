@@ -133,6 +133,7 @@
     <parameter key="serializer.mapping.cache.file">/Applications/MAMP/htdocs/chez-gusto/var/cache/dev/serialization.php</parameter>
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
+      <parameter>bootstrap_4_layout.html.twig</parameter>
     </parameter>
     <parameter key="twig.default_path">/Applications/MAMP/htdocs/chez-gusto/templates</parameter>
     <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
@@ -330,11 +331,11 @@
       <tag name="controller.service_arguments"/>
       <tag name="routing.route_loader"/>
     </service>
-    <service id="App\Controller\AddFavoriteController" class="App\Controller\AddFavoriteController" public="true" autowire="true" autoconfigure="true">
+    <service id="App\Controller\AddDishController" class="App\Controller\AddDishController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
-        <argument type="service" id=".service_locator.l1ae.Qz.App\Controller\AddFavoriteController"/>
+        <argument type="service" id=".service_locator.l1ae.Qz.App\Controller\AddDishController"/>
       </call>
     </service>
     <service id="App\Controller\AdminController" class="App\Controller\AdminController" public="true" autowire="true" autoconfigure="true">
@@ -344,12 +345,11 @@
         <argument type="service" id=".service_locator.l1ae.Qz.App\Controller\AdminController"/>
       </call>
     </service>
-    <service id="App\Controller\AjoutDishController" class="App\Controller\AjoutDishController" public="true" autowire="true" autoconfigure="true">
+    <service id="App\Controller\FavoriteController" class="App\Controller\FavoriteController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
-      <argument type="service" id="router.default"/>
       <call method="setContainer">
-        <argument type="service" id=".service_locator.l1ae.Qz.App\Controller\AjoutDishController"/>
+        <argument type="service" id=".service_locator.l1ae.Qz.App\Controller\FavoriteController"/>
       </call>
     </service>
     <service id="App\Controller\HomepageController" class="App\Controller\HomepageController" public="true" autowire="true" autoconfigure="true">
@@ -364,6 +364,13 @@
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.l1ae.Qz.App\Controller\MenuController"/>
+      </call>
+    </service>
+    <service id="App\Controller\MessageController" class="App\Controller\MessageController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.l1ae.Qz.App\Controller\MessageController"/>
       </call>
     </service>
     <service id="App\Controller\RegistrationController" class="App\Controller\RegistrationController" public="true" autowire="true" autoconfigure="true">
@@ -5602,21 +5609,24 @@
       </call>
     </service>
     <service id="twig.missing_extension_suggestor" class="Twig\Extra\TwigExtraBundle\MissingExtensionSuggestor"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AddFavoriteController" class="App\Controller\AddFavoriteController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AddFavoriteController" class="App\Controller\AddFavoriteController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\AddFavoriteController" class="App\Controller\AddFavoriteController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AddDishController" class="App\Controller\AddDishController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AddDishController" class="App\Controller\AddDishController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\AddDishController" class="App\Controller\AddDishController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AdminController" class="App\Controller\AdminController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AdminController" class="App\Controller\AdminController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\AdminController" class="App\Controller\AdminController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AjoutDishController" class="App\Controller\AjoutDishController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AjoutDishController" class="App\Controller\AjoutDishController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\AjoutDishController" class="App\Controller\AjoutDishController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\FavoriteController" class="App\Controller\FavoriteController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\FavoriteController" class="App\Controller\FavoriteController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\FavoriteController" class="App\Controller\FavoriteController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\HomepageController" class="App\Controller\HomepageController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\HomepageController" class="App\Controller\HomepageController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\HomepageController" class="App\Controller\HomepageController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\MenuController" class="App\Controller\MenuController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\MenuController" class="App\Controller\MenuController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\MenuController" class="App\Controller\MenuController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\MessageController" class="App\Controller\MessageController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\MessageController" class="App\Controller\MessageController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\MessageController" class="App\Controller\MessageController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -5961,6 +5971,13 @@
         <argument key="loader" type="service_closure" id=".errored..service_locator.KfbR3DY.Symfony\Component\Config\Loader\LoaderInterface"/>
       </argument>
     </service>
+    <service id=".service_locator.c5HshjL" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="dishRepository" type="service_closure" id="App\Repository\DishRepository"/>
+        <argument key="favoriteRepository" type="service_closure" id="App\Repository\FavoriteRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.CpYXYDY" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5969,22 +5986,31 @@
         <argument key="registry" type="service_closure" id="doctrine"/>
       </argument>
     </service>
-    <service id=".service_locator.sk74CaS" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.ShvcuJq" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="token" type="service_closure" id=".errored..service_locator.sk74CaS.Symfony\Component\Security\Core\Authentication\Token\TokenInterface"/>
-      </argument>
-    </service>
-    <service id=".service_locator.l2QwsaZ" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
+        <argument key="dishRepository" type="service_closure" id="App\Repository\DishRepository"/>
         <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="favoriteRepository" type="service_closure" id="App\Repository\FavoriteRepository"/>
       </argument>
     </service>
     <service id=".service_locator.QMnY7LW" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="dishRepository" type="service_closure" id="App\Repository\DishRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator..ALD__g" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="dishRepository" type="service_closure" id="App\Repository\DishRepository"/>
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
+    <service id=".service_locator.l2QwsaZ" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
     <service id=".service_locator.B3Rkt.q" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -6002,47 +6028,33 @@
         <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".errored.bI7QKKd" class="App\Controller\User"/>
-    <service id=".service_locator.y09GgST" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.OhoKKh1" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="user" type="service_closure" id=".errored.bI7QKKd"/>
-      </argument>
-    </service>
-    <service id=".service_locator.c5HshjL" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="dishRepository" type="service_closure" id="App\Repository\DishRepository"/>
-        <argument key="favoriteRepository" type="service_closure" id="App\Repository\FavoriteRepository"/>
-      </argument>
-    </service>
-    <service id=".service_locator.MhAORL_" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="App\Controller\AddFavoriteController::addFav" type="service_closure" id=".service_locator.CpYXYDY"/>
-        <argument key="App\Controller\AjoutDishController::onAddictionDishSuccess" type="service_closure" id=".service_locator.sk74CaS"/>
-        <argument key="App\Controller\AjoutDishController::register" type="service_closure" id=".service_locator.l2QwsaZ"/>
+        <argument key="App\Controller\FavoriteController::addFav" type="service_closure" id=".service_locator.CpYXYDY"/>
+        <argument key="App\Controller\FavoriteController::delFav" type="service_closure" id=".service_locator.ShvcuJq"/>
+        <argument key="App\Controller\FavoriteController::menu" type="service_closure" id=".service_locator.c5HshjL"/>
         <argument key="App\Controller\HomepageController::menu" type="service_closure" id=".service_locator.QMnY7LW"/>
-        <argument key="App\Controller\MenuController::showAll" type="service_closure" id=".service_locator.QMnY7LW"/>
+        <argument key="App\Controller\MenuController::add" type="service_closure" id=".service_locator..ALD__g"/>
+        <argument key="App\Controller\MenuController::menu" type="service_closure" id=".service_locator.QMnY7LW"/>
+        <argument key="App\Controller\MessageController::contact" type="service_closure" id=".service_locator.l2QwsaZ"/>
         <argument key="App\Controller\RegistrationController::register" type="service_closure" id=".service_locator.B3Rkt.q"/>
         <argument key="App\Controller\SecurityController::login" type="service_closure" id=".service_locator.UDgw6Ol"/>
-        <argument key="App\Controller\UserController::menu" type="service_closure" id=".service_locator.c5HshjL"/>
-        <argument key="App\Controller\UserController::userhomepage" type="service_closure" id=".service_locator.y09GgST"/>
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="App\Kernel::terminate" type="service_closure" id=".service_locator.KfwZsne"/>
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="kernel::terminate" type="service_closure" id=".service_locator.KfwZsne"/>
-        <argument key="App\Controller\AddFavoriteController:addFav" type="service_closure" id=".service_locator.CpYXYDY"/>
-        <argument key="App\Controller\AjoutDishController:onAddictionDishSuccess" type="service_closure" id=".service_locator.sk74CaS"/>
-        <argument key="App\Controller\AjoutDishController:register" type="service_closure" id=".service_locator.l2QwsaZ"/>
+        <argument key="App\Controller\FavoriteController:addFav" type="service_closure" id=".service_locator.CpYXYDY"/>
+        <argument key="App\Controller\FavoriteController:delFav" type="service_closure" id=".service_locator.ShvcuJq"/>
+        <argument key="App\Controller\FavoriteController:menu" type="service_closure" id=".service_locator.c5HshjL"/>
         <argument key="App\Controller\HomepageController:menu" type="service_closure" id=".service_locator.QMnY7LW"/>
-        <argument key="App\Controller\MenuController:showAll" type="service_closure" id=".service_locator.QMnY7LW"/>
+        <argument key="App\Controller\MenuController:add" type="service_closure" id=".service_locator..ALD__g"/>
+        <argument key="App\Controller\MenuController:menu" type="service_closure" id=".service_locator.QMnY7LW"/>
+        <argument key="App\Controller\MessageController:contact" type="service_closure" id=".service_locator.l2QwsaZ"/>
         <argument key="App\Controller\RegistrationController:register" type="service_closure" id=".service_locator.B3Rkt.q"/>
         <argument key="App\Controller\SecurityController:login" type="service_closure" id=".service_locator.UDgw6Ol"/>
-        <argument key="App\Controller\UserController:menu" type="service_closure" id=".service_locator.c5HshjL"/>
-        <argument key="App\Controller\UserController:userhomepage" type="service_closure" id=".service_locator.y09GgST"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="kernel:registerContainerConfiguration" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="kernel:terminate" type="service_closure" id=".service_locator.KfwZsne"/>
@@ -6381,9 +6393,9 @@
         <argument key="twig" type="service_closure" id="twig" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id=".service_locator.l1ae.Qz.App\Controller\AddFavoriteController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\AddFavoriteController"/>
-      <argument>App\Controller\AddFavoriteController</argument>
+    <service id=".service_locator.l1ae.Qz.App\Controller\AddDishController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\AddDishController"/>
+      <argument>App\Controller\AddDishController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.l1ae.Qz" method="withContext"/>
     </service>
@@ -6393,9 +6405,9 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.l1ae.Qz" method="withContext"/>
     </service>
-    <service id=".service_locator.l1ae.Qz.App\Controller\AjoutDishController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\AjoutDishController"/>
-      <argument>App\Controller\AjoutDishController</argument>
+    <service id=".service_locator.l1ae.Qz.App\Controller\FavoriteController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\FavoriteController"/>
+      <argument>App\Controller\FavoriteController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.l1ae.Qz" method="withContext"/>
     </service>
@@ -6408,6 +6420,12 @@
     <service id=".service_locator.l1ae.Qz.App\Controller\MenuController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\MenuController"/>
       <argument>App\Controller\MenuController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.l1ae.Qz" method="withContext"/>
+    </service>
+    <service id=".service_locator.l1ae.Qz.App\Controller\MessageController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\MessageController"/>
+      <argument>App\Controller\MessageController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.l1ae.Qz" method="withContext"/>
     </service>
@@ -6601,12 +6619,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.MhAORL_"/>
+      <argument type="service" id=".service_locator.OhoKKh1"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.MhAORL_"/>
+      <argument type="service" id=".service_locator.OhoKKh1"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection"/>
@@ -6624,7 +6642,6 @@
     </service>
     <service id=".errored..service_locator.KfwZsne.Symfony\Component\HttpFoundation\Response" class="Symfony\Component\HttpFoundation\Response"/>
     <service id=".errored..service_locator.KfbR3DY.Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
-    <service id=".errored..service_locator.sk74CaS.Symfony\Component\Security\Core\Authentication\Token\TokenInterface" class="Symfony\Component\Security\Core\Authentication\Token\TokenInterface"/>
     <service id=".console.command.about.lazy" class="Symfony\Component\Console\Command\LazyCommand">
       <argument>about</argument>
       <argument type="collection"/>
@@ -7435,7 +7452,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.MhAORL_"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.OhoKKh1"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>
@@ -7452,9 +7469,11 @@
     <service id="Psr\Log\LoggerInterface $securityLogger" alias="monolog.logger.security"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id=".service_locator.0GV1BZZ" alias=".service_locator.gSv9zYw"/>
-    <service id=".service_locator.YIjRGHA" alias=".service_locator.B3Rkt.q"/>
     <service id=".service_locator.QmZPBku" alias=".service_locator.c5HshjL"/>
-    <service id=".service_locator.SEp7Sic" alias=".service_locator.MhAORL_"/>
+    <service id=".service_locator.i1HVFYp" alias=".service_locator.ShvcuJq"/>
+    <service id=".service_locator.0kijmoZ" alias=".service_locator..ALD__g"/>
+    <service id=".service_locator.YIjRGHA" alias=".service_locator.B3Rkt.q"/>
+    <service id=".service_locator.OkHVqO9" alias=".service_locator.OhoKKh1"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
     <service id=".service_locator.GB.ES.n" alias=".service_locator.ahsFN9D"/>
     <service id=".service_locator.qBCHs1a" alias=".service_locator.QXcJQkF"/>
@@ -7482,13 +7501,14 @@
     <service id="doctrine.orm.default_metadata_driver" alias=".doctrine.orm.default_metadata_driver"/>
     <service id=".service_locator._5g_Wvc" alias=".service_locator.KfwZsne"/>
     <service id=".service_locator.JBAFp66" alias=".service_locator.KfbR3DY"/>
+    <service id=".service_locator.4PA9MJ2" alias=".service_locator.c5HshjL"/>
     <service id=".service_locator.8vkYWXN" alias=".service_locator.CpYXYDY"/>
-    <service id=".service_locator.cYdS77X" alias=".service_locator.sk74CaS"/>
-    <service id=".service_locator.Er0_7SX" alias=".service_locator.l2QwsaZ"/>
+    <service id=".service_locator.IJDXXsD" alias=".service_locator.ShvcuJq"/>
     <service id=".service_locator.SQmpdyU" alias=".service_locator.QMnY7LW"/>
+    <service id=".service_locator.yhNcCyT" alias=".service_locator..ALD__g"/>
+    <service id=".service_locator.Er0_7SX" alias=".service_locator.l2QwsaZ"/>
     <service id=".service_locator.OUdDkM8" alias=".service_locator.B3Rkt.q"/>
     <service id=".service_locator.kXCVHeG" alias=".service_locator.UDgw6Ol"/>
-    <service id=".service_locator.4PA9MJ2" alias=".service_locator.c5HshjL"/>
     <service id=".service_locator.moWzgtz" alias=".service_locator.l1ae.Qz"/>
     <service id=".service_locator.u6DWx23" alias=".service_locator.cXsfP3P"/>
     <service id=".service_locator.9YCWxeJ" alias=".service_locator.dw8O4oN"/>

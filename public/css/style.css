@@ -29,9 +29,10 @@ a{
 
 }
 .btn-sm {
+    margin-left: 5px !important;
 }
 .hrCustom{
-    margin: 0;
+    margin-bottom: 10px;
     border:2px solid #8f392c ;
 }
 .content{
@@ -82,7 +83,10 @@ a{
 }
 .btn-submit{
     float: right;
+}
 
+text-center {
+    margin-top: 10px !important;
 }
 
 .mamamiaTitle{

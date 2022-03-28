@@ -31,15 +31,25 @@
         </div>
         <div class="my-auto">
             <a href ="#"  class="btn btn-outline-primary" role = "button">CART</a>
-            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            {% if is_granted('ROLE_ADMIN') %}
                 <div class="dropdown">
                     <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ app.user.idUser }} </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href = "#">Reservations</a>
-                        <a class="dropdown-item" href="{{ path('favoris') }}">Favoris</a>
-                        <a class="dropdown-item" href = "#">Contact</a>
-                        <a class="dropdown-item" href = "#">Mon compte</a>
-                        <a class="dropdown-item" href="#">Log out</a>
+                        <a class="dropdown-item" href = "#">Mes Messages</a>
+                        <a class="dropdown-item" href = "#">Mon Compte</a>
+                        <a class="dropdown-item" href="{{ path('app_logout') }}">Log out</a>
+                    </div>
+                </div>
+            {% elseif is_granted('ROLE_USER') %}
+                <div class="dropdown">
+                    <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ app.user.idUser }} </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href = "#">Mes Reservations</a>
+                        <a class="dropdown-item" href="{{ path('favoris') }}">Mes Favoris</a>
+                        <a class="dropdown-item" href ="{{ path('contact') }}">Contact</a>
+                        <a class="dropdown-item" href ="">Mon Compte</a>
+                        <a class="dropdown-item" href="{{ path('app_logout') }}">Log out</a>
                     </div>
                 </div>
             {% else %}

@@ -3,6 +3,13 @@
 {% block title %}La carte{% endblock %}
 
 {% block body %}
+
+    <div class="row justify-content-md-center">
+        {% if is_granted('ROLE_ADMIN') %}
+            <a href="{{ path('add_dish') }}" class="btn btn-primary btn-lg btn-block"> Want more ? Add more ! </a>
+        {% endif %}
+    </div>
+
     <div class="box">
         <table style="margin: auto; text-align: center; width:100%">
             <tr>
@@ -35,11 +42,7 @@
                 {% endfor %}
         </table>
     </div>
-    <div class="row justify-content-md-center">
-        {% if is_granted('ROLE_ADMIN') %}
-            <a href="{{ path('ajout_dish') }}" class="btn btn-primary btn-sm"> Ajouter des plats </a>
-        {% endif %}
-    </div>
+
 
 
 {% endblock %}

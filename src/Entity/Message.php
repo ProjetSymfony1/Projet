@@ -12,6 +12,9 @@ class Message
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
     private $id;
+	
+	#[ORM\Column(type: 'string', length: 2048)]
+	private $object;
 
     #[ORM\Column(type: 'string', length: 2048)]
     private $message;

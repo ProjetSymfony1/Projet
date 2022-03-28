@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* user/index.html.twig */
+/* user/contact.html.twig */
 class __TwigTemplate_1d4db46d9f5047cf6b5689557479d6e75caae7fb58896065bd8a601733f91eb7 extends Template
 {
     private $source;
@@ -40,12 +40,12 @@ class __TwigTemplate_1d4db46d9f5047cf6b5689557479d6e75caae7fb58896065bd8a601733f
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "user/index.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "user/contact.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "user/index.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "user/contact.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "user/index.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "user/contact.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -104,8 +104,8 @@ class __TwigTemplate_1d4db46d9f5047cf6b5689557479d6e75caae7fb58896065bd8a601733f
         echo "\">src/Controller/UserController.php</a></code></li>
         <li>Your template at <code><a href=\"";
         // line 17
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("C:/xampp1/htdocs/test_bd/templates/user/index.html.twig", 0), "html", null, true);
-        echo "\">templates/user/index.html.twig</a></code></li>
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("C:/xampp1/htdocs/test_bd/templates/user/contact.html.twig", 0), "html", null, true);
+        echo "\">templates/user/contact.html.twig</a></code></li>
     </ul>
 </div>
 ";
@@ -119,7 +119,7 @@ class __TwigTemplate_1d4db46d9f5047cf6b5689557479d6e75caae7fb58896065bd8a601733f
 
     public function getTemplateName()
     {
-        return "user/index.html.twig";
+        return "user/contact.html.twig";
     }
 
     public function isTraitable()
@@ -150,10 +150,10 @@ class __TwigTemplate_1d4db46d9f5047cf6b5689557479d6e75caae7fb58896065bd8a601733f
     This friendly message is coming from:
     <ul>
         <li>Your controller at <code><a href=\"{{ 'C:/xampp1/htdocs/test_bd/src/Controller/UserController.php'|file_link(0) }}\">src/Controller/UserController.php</a></code></li>
-        <li>Your template at <code><a href=\"{{ 'C:/xampp1/htdocs/test_bd/templates/user/index.html.twig'|file_link(0) }}\">templates/user/index.html.twig</a></code></li>
+        <li>Your template at <code><a href=\"{{ 'C:/xampp1/htdocs/test_bd/templates/user/contact.html.twig'|file_link(0) }}\">templates/user/contact.html.twig</a></code></li>
     </ul>
 </div>
 {% endblock %}
-", "user/index.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\user\\index.html.twig");
+", "user/contact.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\user\\contact.html.twig");
     }
 }
