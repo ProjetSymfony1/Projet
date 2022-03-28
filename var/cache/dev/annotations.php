@@ -56,50 +56,40 @@ return [[
 '[C]Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%24container' => 1,
 'App%5CController%5CAdminController' => 0,
 '[C]App%5CController%5CAdminController' => 1,
-'App%5CController%5CAdminController%23index' => 2,
-'[C]App%5CController%5CAdminController%23index' => 1,
-'App%5CController%5CAdminController%23addAdmin' => 3,
-'[C]App%5CController%5CAdminController%23addAdmin' => 1,
-'App%5CController%5CAdminController%23addCreneau' => 4,
-'[C]App%5CController%5CAdminController%23addCreneau' => 1,
-'App%5CController%5CAjoutDishController' => 0,
-'[C]App%5CController%5CAjoutDishController' => 1,
-'App%5CController%5CAjoutDishController%23__construct' => 0,
-'[C]App%5CController%5CAjoutDishController%23__construct' => 1,
-'App%5CController%5CAjoutDishController%23onAddictionDishSuccess' => 0,
-'[C]App%5CController%5CAjoutDishController%23onAddictionDishSuccess' => 1,
-'App%5CController%5CAjoutDishController%23getLoginUrl' => 0,
-'[C]App%5CController%5CAjoutDishController%23getLoginUrl' => 1,
-'App%5CController%5CAjoutDishController%23register' => 0,
-'[C]App%5CController%5CAjoutDishController%23register' => 1,
-'App%5CController%5CAjoutDishController%24urlGenerator' => 0,
-'[C]App%5CController%5CAjoutDishController%24urlGenerator' => 1,
+'App%5CController%5CFavoriteController' => 0,
+'[C]App%5CController%5CFavoriteController' => 1,
+'App%5CController%5CFavoriteController%23menu' => 2,
+'[C]App%5CController%5CFavoriteController%23menu' => 1,
+'App%5CController%5CFavoriteController%23addFav' => 0,
+'[C]App%5CController%5CFavoriteController%23addFav' => 1,
+'App%5CController%5CFavoriteController%23delFav' => 0,
+'[C]App%5CController%5CFavoriteController%23delFav' => 1,
 'App%5CController%5CHomepageController' => 0,
 '[C]App%5CController%5CHomepageController' => 1,
-'App%5CController%5CHomepageController%23home' => 5,
+'App%5CController%5CHomepageController%23home' => 3,
 '[C]App%5CController%5CHomepageController%23home' => 1,
-'App%5CController%5CHomepageController%23menu' => 6,
+'App%5CController%5CHomepageController%23menu' => 4,
 '[C]App%5CController%5CHomepageController%23menu' => 1,
-'App%5CController%5CHomepageController%23book' => 7,
+'App%5CController%5CHomepageController%23book' => 5,
 '[C]App%5CController%5CHomepageController%23book' => 1,
 'App%5CController%5CMenuController' => 0,
 '[C]App%5CController%5CMenuController' => 1,
-'App%5CController%5CMenuController%23showAll' => 0,
-'[C]App%5CController%5CMenuController%23showAll' => 1,
+'App%5CController%5CMenuController%23menu' => 0,
+'[C]App%5CController%5CMenuController%23menu' => 1,
+'App%5CController%5CMenuController%23add' => 0,
+'[C]App%5CController%5CMenuController%23add' => 1,
 'App%5CController%5CRegistrationController' => 0,
 '[C]App%5CController%5CRegistrationController' => 1,
 'App%5CController%5CRegistrationController%23register' => 0,
 '[C]App%5CController%5CRegistrationController%23register' => 1,
 'App%5CController%5CSecurityController' => 0,
 '[C]App%5CController%5CSecurityController' => 1,
-'App%5CController%5CSecurityController%23login' => 8,
+'App%5CController%5CSecurityController%23login' => 6,
 '[C]App%5CController%5CSecurityController%23login' => 1,
-'App%5CController%5CSecurityController%23logout' => 9,
+'App%5CController%5CSecurityController%23logout' => 7,
 '[C]App%5CController%5CSecurityController%23logout' => 1,
 'App%5CController%5CUserController' => 0,
 '[C]App%5CController%5CUserController' => 1,
-'App%5CController%5CUserController%23userhomepage' => 10,
-'[C]App%5CController%5CUserController%23userhomepage' => 1,
 'App%5CEntity%5CCart' => 0,
 '[C]App%5CEntity%5CCart' => 1,
 'App%5CEntity%5CCart%23__construct' => 0,
@@ -130,10 +120,14 @@ return [[
 '[C]App%5CEntity%5CFavorite%23getIdUser' => 1,
 'App%5CEntity%5CFavorite%23setIdUser' => 0,
 '[C]App%5CEntity%5CFavorite%23setIdUser' => 1,
+'App%5CEntity%5CFavorite%23setUserDish' => 0,
+'[C]App%5CEntity%5CFavorite%23setUserDish' => 1,
 'App%5CEntity%5CFavorite%23getIdDish' => 0,
 '[C]App%5CEntity%5CFavorite%23getIdDish' => 1,
 'App%5CEntity%5CFavorite%23setIdDish' => 0,
 '[C]App%5CEntity%5CFavorite%23setIdDish' => 1,
+'App%5CEntity%5CFavorite%23setDishFav' => 0,
+'[C]App%5CEntity%5CFavorite%23setDishFav' => 1,
 'App%5CEntity%5CFavorite%24id' => 0,
 '[C]App%5CEntity%5CFavorite%24id' => 1,
 'App%5CEntity%5CFavorite%24id_user' => 0,
@@ -158,6 +152,8 @@ return [[
 '[C]App%5CEntity%5CMessage%23setCreatedAt' => 1,
 'App%5CEntity%5CMessage%24id' => 0,
 '[C]App%5CEntity%5CMessage%24id' => 1,
+'App%5CEntity%5CMessage%24object' => 0,
+'[C]App%5CEntity%5CMessage%24object' => 1,
 'App%5CEntity%5CMessage%24message' => 0,
 '[C]App%5CEntity%5CMessage%24message' => 1,
 'App%5CEntity%5CMessage%24id_user' => 0,
@@ -246,7 +242,7 @@ return [[
 '[C]App%5CEntity%5CTimeSlot%24timeslot_reservation' => 1,
 'App%5CEntity%5CTimeSlot%24dateTime' => 0,
 '[C]App%5CEntity%5CTimeSlot%24dateTime' => 1,
-'App%5CEntity%5CUser' => 11,
+'App%5CEntity%5CUser' => 8,
 '[C]App%5CEntity%5CUser' => 1,
 'App%5CEntity%5CUser%23__construct' => 0,
 '[C]App%5CEntity%5CUser%23__construct' => 1,
@@ -962,7 +958,7 @@ return [[
 ], [
 
 0 => [],
-1 => 1647969169,
+1 => 1648497093,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
@@ -972,7 +968,7 @@ return [[
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
-                    '/AdminIndex',
+                    '/favoris',
                 ],
                 'methods' => [
                     [],
@@ -981,7 +977,7 @@ return [[
                     [],
                 ],
                 'name' => [
-                    'indexAdmin',
+                    'favoris',
                 ],
                 'requirements' => [
                     [],
@@ -1013,104 +1009,6 @@ return [[
     );
 },
 3 => static function () {
-    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
-        $o = [
-            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
-        ],
-        null,
-        [
-            'Symfony\\Component\\Routing\\Annotation\\Route' => [
-                'path' => [
-                    '/ajout-compte-admin',
-                ],
-                'methods' => [
-                    [],
-                ],
-                'schemes' => [
-                    [],
-                ],
-                'name' => [
-                    'ajoutAdmin',
-                ],
-                'requirements' => [
-                    [],
-                ],
-                'options' => [
-                    [],
-                ],
-                'defaults' => [
-                    [],
-                ],
-                'host' => [
-                    null,
-                ],
-                'condition' => [
-                    null,
-                ],
-                'priority' => [
-                    null,
-                ],
-                'env' => [
-                    null,
-                ],
-            ],
-        ],
-        [
-            $o[0],
-        ],
-        []
-    );
-},
-4 => static function () {
-    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
-        $o = [
-            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
-        ],
-        null,
-        [
-            'Symfony\\Component\\Routing\\Annotation\\Route' => [
-                'path' => [
-                    '/ajout-creneau',
-                ],
-                'methods' => [
-                    [],
-                ],
-                'schemes' => [
-                    [],
-                ],
-                'name' => [
-                    'ajoutCreneau',
-                ],
-                'requirements' => [
-                    [],
-                ],
-                'options' => [
-                    [],
-                ],
-                'defaults' => [
-                    [],
-                ],
-                'host' => [
-                    null,
-                ],
-                'condition' => [
-                    null,
-                ],
-                'priority' => [
-                    null,
-                ],
-                'env' => [
-                    null,
-                ],
-            ],
-        ],
-        [
-            $o[0],
-        ],
-        []
-    );
-},
-5 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
@@ -1159,7 +1057,7 @@ return [[
         []
     );
 },
-6 => static function () {
+4 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
@@ -1208,7 +1106,7 @@ return [[
         []
     );
 },
-7 => static function () {
+5 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
@@ -1257,7 +1155,7 @@ return [[
         []
     );
 },
-8 => static function () {
+6 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
@@ -1306,7 +1204,7 @@ return [[
         []
     );
 },
-9 => static function () {
+7 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
@@ -1355,56 +1253,7 @@ return [[
         []
     );
 },
-10 => static function () {
-    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
-        $o = [
-            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
-        ],
-        null,
-        [
-            'Symfony\\Component\\Routing\\Annotation\\Route' => [
-                'path' => [
-                    '/user/{id}',
-                ],
-                'methods' => [
-                    [],
-                ],
-                'schemes' => [
-                    [],
-                ],
-                'name' => [
-                    'user-homepage',
-                ],
-                'requirements' => [
-                    [],
-                ],
-                'options' => [
-                    [],
-                ],
-                'defaults' => [
-                    [],
-                ],
-                'host' => [
-                    null,
-                ],
-                'condition' => [
-                    null,
-                ],
-                'priority' => [
-                    null,
-                ],
-                'env' => [
-                    null,
-                ],
-            ],
-        ],
-        [
-            $o[0],
-        ],
-        []
-    );
-},
-11 => static function () {
+8 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity')),

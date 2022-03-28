@@ -1,7 +1,7 @@
 <?php return array (
   0 => 'Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController',
   1 => 'App\\Controller\\AdminController',
-  2 => 'App\\Controller\\AjoutDishController',
+  2 => 'App\\Controller\\FavoriteController',
   3 => 'App\\Controller\\HomepageController',
   4 => 'App\\Controller\\MenuController',
   5 => 'App\\Controller\\RegistrationController',

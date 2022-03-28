@@ -7,7 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Controller\\AdminController' => $baseDir . '/src/Controller/AdminController.php',
-    'App\\Controller\\AjoutDishController' => $baseDir . '/src/Controller/AjoutDishController.php',
+    'App\\Controller\\FavoriteController' => $baseDir . '/src/Controller/FavoriteController.php',
     'App\\Controller\\HomepageController' => $baseDir . '/src/Controller/HomepageController.php',
     'App\\Controller\\MenuController' => $baseDir . '/src/Controller/MenuController.php',
     'App\\Controller\\RegistrationController' => $baseDir . '/src/Controller/RegistrationController.php',
@@ -4195,6 +4195,8 @@ return array(
     'Symfony\\Component\\Intl\\Util\\IcuVersion' => $vendorDir . '/symfony/intl/Util/IcuVersion.php',
     'Symfony\\Component\\Intl\\Util\\IntlTestHelper' => $vendorDir . '/symfony/intl/Util/IntlTestHelper.php',
     'Symfony\\Component\\Intl\\Util\\Version' => $vendorDir . '/symfony/intl/Util/Version.php',
+    'Symfony\\Component\\Mailer\\Bridge\\Google\\Transport\\GmailSmtpTransport' => $vendorDir . '/symfony/google-mailer/Transport/GmailSmtpTransport.php',
+    'Symfony\\Component\\Mailer\\Bridge\\Google\\Transport\\GmailTransportFactory' => $vendorDir . '/symfony/google-mailer/Transport/GmailTransportFactory.php',
     'Symfony\\Component\\Mailer\\DataCollector\\MessageDataCollector' => $vendorDir . '/symfony/mailer/DataCollector/MessageDataCollector.php',
     'Symfony\\Component\\Mailer\\DelayedEnvelope' => $vendorDir . '/symfony/mailer/DelayedEnvelope.php',
     'Symfony\\Component\\Mailer\\Envelope' => $vendorDir . '/symfony/mailer/Envelope.php',
