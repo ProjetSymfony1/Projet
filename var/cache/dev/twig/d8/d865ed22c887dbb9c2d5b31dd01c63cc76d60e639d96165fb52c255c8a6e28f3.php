@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* admin/contact.html.twig */
+/* admin/contact.html.twig.twig */
 class __TwigTemplate_ae348fd4848e410148c9cb74e34e25c2c05e1b843e60d1c6dd4f1300080857c7 extends Template
 {
     private $source;
@@ -40,12 +40,12 @@ class __TwigTemplate_ae348fd4848e410148c9cb74e34e25c2c05e1b843e60d1c6dd4f1300080
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "admin/contact.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "admin/contact.html.twig.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "admin/contact.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "admin/contact.html.twig.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "admin/contact.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "admin/contact.html.twig.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -104,8 +104,8 @@ class __TwigTemplate_ae348fd4848e410148c9cb74e34e25c2c05e1b843e60d1c6dd4f1300080
         echo "\">src/Controller/AdminController.php</a></code></li>
         <li>Your template at <code><a href=\"";
         // line 17
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("C:/xampp/htdocs/chez-gusto/templates/admin/contact.html.twig", 0), "html", null, true);
-        echo "\">templates/admin/contact.html.twig</a></code></li>
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("C:/xampp/htdocs/chez-gusto/templates/admin/contact.html.twig.twig", 0), "html", null, true);
+        echo "\">templates/admin/contact.html.twig.twig</a></code></li>
     </ul>
 </div>
 ";
@@ -119,7 +119,7 @@ class __TwigTemplate_ae348fd4848e410148c9cb74e34e25c2c05e1b843e60d1c6dd4f1300080
 
     public function getTemplateName()
     {
-        return "admin/contact.html.twig";
+        return "admin/contact.html.twig.twig";
     }
 
     public function isTraitable()
@@ -150,10 +150,10 @@ class __TwigTemplate_ae348fd4848e410148c9cb74e34e25c2c05e1b843e60d1c6dd4f1300080
     This friendly message is coming from:
     <ul>
         <li>Your controller at <code><a href=\"{{ 'C:/xampp/htdocs/chez-gusto/src/Controller/AdminController.php'|file_link(0) }}\">src/Controller/AdminController.php</a></code></li>
-        <li>Your template at <code><a href=\"{{ 'C:/xampp/htdocs/chez-gusto/templates/admin/contact.html.twig'|file_link(0) }}\">templates/admin/contact.html.twig</a></code></li>
+        <li>Your template at <code><a href=\"{{ 'C:/xampp/htdocs/chez-gusto/templates/admin/contact.html.twig.twig'|file_link(0) }}\">templates/admin/contact.html.twig.twig</a></code></li>
     </ul>
 </div>
 {% endblock %}
-", "admin/contact.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\admin\\contact.html.twig");
+", "admin/contact.html.twig.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\admin\\contact.html.twig.twig");
     }
 }

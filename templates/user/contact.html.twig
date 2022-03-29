@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+
+
+
+    {{ form_start(formMsg) }}
+
+    {{ form_row(formMsg.object) }}
+
+    {{ form_row(formMsg.message) }}
+
+    <button type="submit" class="btn btn-primary btn-lg btn-block">Append</button>
+
+    {{ form_end(formMsg) }}
+
+
+{% endblock %}
