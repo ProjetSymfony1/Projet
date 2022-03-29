@@ -103,7 +103,7 @@ class __TwigTemplate_5826001571f88a6bd7abc300010854eb450eaff1ce89ec8a77f0b938b31
             <a href =\"#\"  class=\"btn btn-outline-primary\" role = \"button\">CART</a>
             ";
         // line 34
-        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
             // line 35
             echo "                <div class=\"dropdown\">
                     <button class=\"btn btn-outline-primary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"> ";
@@ -111,34 +111,69 @@ class __TwigTemplate_5826001571f88a6bd7abc300010854eb450eaff1ce89ec8a77f0b938b31
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 36, $this->source); })()), "user", [], "any", false, false, false, 36), "idUser", [], "any", false, false, false, 36), "html", null, true);
             echo " </button>
                     <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
+                        <a class=\"dropdown-item\" href=\"";
+            // line 38
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("updateInfo");
+            echo "\">Changer Information</a>
                         <a class=\"dropdown-item\" href = \"#\">Reservations</a>
-                        <a class=\"dropdown-item\" href=\"#\">Favoris</a>
-                        <a class=\"dropdown-item\" href = \"#\">Contact</a>
-                        <a class=\"dropdown-item\" href = \"#\">Mon compte</a>
-                        <a class=\"dropdown-item\" href=\"#\">Log out</a>
+                        <a class=\"dropdown-item\" href = \"#\">Mes Messages</a>
+                        <a class=\"dropdown-item\" href = \"#\">Mon Compte</a>
+                        <a class=\"dropdown-item\" href=\"";
+            // line 42
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+            echo "\">Log out</a>
+                    </div>
+                </div>
+            ";
+        } elseif ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER")) {
+            // line 46
+            echo "                <div class=\"dropdown\">
+                    <button class=\"btn btn-outline-primary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"> ";
+            // line 47
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 47, $this->source); })()), "user", [], "any", false, false, false, 47), "idUser", [], "any", false, false, false, 47), "html", null, true);
+            echo " </button>
+                    <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
+                        <a class=\"dropdown-item\" href=\"";
+            // line 49
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("updateInfo");
+            echo "\">Changer Information</a>
+                        <a class=\"dropdown-item\" href = \"#\">Mes Reservations</a>
+                        <a class=\"dropdown-item\" href=\"";
+            // line 51
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("favoris");
+            echo "\">Mes Favoris</a>
+                        <a class=\"dropdown-item\" href =\"";
+            // line 52
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
+            echo "\">Contact</a>
+                        <a class=\"dropdown-item\" href =\"\">Mon Compte</a>
+                        <a class=\"dropdown-item\" href=\"";
+            // line 54
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+            echo "\">Log out</a>
                     </div>
                 </div>
             ";
         } else {
-            // line 46
+            // line 58
             echo "                <a href = ";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             echo " class=\"btn btn-outline-primary\" role = \"button\">SIGNUP</a> &nbsp;&nbsp;
                 <a href = ";
-            // line 47
+            // line 59
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
             echo " class=\"btn btn-outline-primary\" role = \"button\">LOGIN</a>
             ";
         }
-        // line 49
+        // line 61
         echo "        </div>
     </div>
 </div>
 <hr class=\"hrCustom \">
 ";
-        // line 53
+        // line 65
         $this->displayBlock('body', $context, $blocks);
-        // line 54
+        // line 66
         echo "<div class=\"footer\">
     <div class=\"container\">
         <div class=\"d-flex justify-content-between py-4\">
@@ -255,7 +290,7 @@ class __TwigTemplate_5826001571f88a6bd7abc300010854eb450eaff1ce89ec8a77f0b938b31
 
     }
 
-    // line 53
+    // line 65
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -285,7 +320,7 @@ class __TwigTemplate_5826001571f88a6bd7abc300010854eb450eaff1ce89ec8a77f0b938b31
 
     public function getDebugInfo()
     {
-        return array (  259 => 53,  241 => 19,  228 => 16,  218 => 15,  205 => 12,  195 => 11,  176 => 5,  142 => 54,  140 => 53,  134 => 49,  129 => 47,  124 => 46,  111 => 36,  108 => 35,  106 => 34,  99 => 30,  93 => 27,  89 => 26,  85 => 25,  78 => 20,  76 => 19,  73 => 18,  71 => 15,  68 => 14,  66 => 11,  59 => 8,  54 => 5,  48 => 1,);
+        return array (  294 => 65,  276 => 19,  263 => 16,  253 => 15,  240 => 12,  230 => 11,  211 => 5,  177 => 66,  175 => 65,  169 => 61,  164 => 59,  159 => 58,  152 => 54,  147 => 52,  143 => 51,  138 => 49,  133 => 47,  130 => 46,  123 => 42,  116 => 38,  111 => 36,  108 => 35,  106 => 34,  99 => 30,  93 => 27,  89 => 26,  85 => 25,  78 => 20,  76 => 19,  73 => 18,  71 => 15,  68 => 14,  66 => 11,  59 => 8,  54 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -323,15 +358,27 @@ class __TwigTemplate_5826001571f88a6bd7abc300010854eb450eaff1ce89ec8a77f0b938b31
         </div>
         <div class=\"my-auto\">
             <a href =\"#\"  class=\"btn btn-outline-primary\" role = \"button\">CART</a>
-            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            {% if is_granted('ROLE_ADMIN') %}
                 <div class=\"dropdown\">
                     <button class=\"btn btn-outline-primary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"> {{ app.user.idUser }} </button>
                     <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
+                        <a class=\"dropdown-item\" href=\"{{ path('updateInfo') }}\">Changer Information</a>
                         <a class=\"dropdown-item\" href = \"#\">Reservations</a>
-                        <a class=\"dropdown-item\" href=\"#\">Favoris</a>
-                        <a class=\"dropdown-item\" href = \"#\">Contact</a>
-                        <a class=\"dropdown-item\" href = \"#\">Mon compte</a>
-                        <a class=\"dropdown-item\" href=\"#\">Log out</a>
+                        <a class=\"dropdown-item\" href = \"#\">Mes Messages</a>
+                        <a class=\"dropdown-item\" href = \"#\">Mon Compte</a>
+                        <a class=\"dropdown-item\" href=\"{{ path('app_logout') }}\">Log out</a>
+                    </div>
+                </div>
+            {% elseif is_granted('ROLE_USER') %}
+                <div class=\"dropdown\">
+                    <button class=\"btn btn-outline-primary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"> {{ app.user.idUser }} </button>
+                    <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
+                        <a class=\"dropdown-item\" href=\"{{ path('updateInfo') }}\">Changer Information</a>
+                        <a class=\"dropdown-item\" href = \"#\">Mes Reservations</a>
+                        <a class=\"dropdown-item\" href=\"{{ path('favoris') }}\">Mes Favoris</a>
+                        <a class=\"dropdown-item\" href =\"{{ path('contact') }}\">Contact</a>
+                        <a class=\"dropdown-item\" href =\"\">Mon Compte</a>
+                        <a class=\"dropdown-item\" href=\"{{ path('app_logout') }}\">Log out</a>
                     </div>
                 </div>
             {% else %}

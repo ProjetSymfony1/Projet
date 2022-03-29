@@ -65,7 +65,7 @@ class __TwigTemplate_414a101c505b60b3cdc53b82a68739f77e7335beb3f755f49f020b0a640
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Ajouter Dish";
+        echo "Add A Dish";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -95,11 +95,11 @@ class __TwigTemplate_414a101c505b60b3cdc53b82a68739f77e7335beb3f755f49f020b0a640
                 <form>
                     <div class=\"ma-form\">
                         <div class=\"form-group\">
-                            <div class=\"border-class\">
-                                ";
-        // line 14
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["DishForm"]) || array_key_exists("DishForm", $context) ? $context["DishForm"] : (function () { throw new RuntimeError('Variable "DishForm" does not exist.', 14, $this->source); })()), "dish_name", [], "any", false, false, false, 14), 'label');
+                            ";
+        // line 13
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["DishForm"]) || array_key_exists("DishForm", $context) ? $context["DishForm"] : (function () { throw new RuntimeError('Variable "DishForm" does not exist.', 13, $this->source); })()), "dish_name", [], "any", false, false, false, 13), 'label', ["label" => "Dish name"]);
         echo "
+                            <div class=\"border-class\">
                                 ";
         // line 15
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["DishForm"]) || array_key_exists("DishForm", $context) ? $context["DishForm"] : (function () { throw new RuntimeError('Variable "DishForm" does not exist.', 15, $this->source); })()), "dish_name", [], "any", false, false, false, 15), 'widget');
@@ -107,57 +107,73 @@ class __TwigTemplate_414a101c505b60b3cdc53b82a68739f77e7335beb3f755f49f020b0a640
                             </div>
                         </div>
                         <div class=\"form-group\">
-                            <div class=\"border-class\">
-                                ";
-        // line 20
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["DishForm"]) || array_key_exists("DishForm", $context) ? $context["DishForm"] : (function () { throw new RuntimeError('Variable "DishForm" does not exist.', 20, $this->source); })()), "description", [], "any", false, false, false, 20), 'row');
+                            ";
+        // line 19
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["DishForm"]) || array_key_exists("DishForm", $context) ? $context["DishForm"] : (function () { throw new RuntimeError('Variable "DishForm" does not exist.', 19, $this->source); })()), "description", [], "any", false, false, false, 19), 'label', ["label" => "Describe the dish"]);
         echo "
-                            </div>
-                        </div>
-                        <div class=\"form-group\">
                             <div class=\"border-class\">
                                 ";
-        // line 25
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["DishForm"]) || array_key_exists("DishForm", $context) ? $context["DishForm"] : (function () { throw new RuntimeError('Variable "DishForm" does not exist.', 25, $this->source); })()), "photo", [], "any", false, false, false, 25), 'row');
+        // line 21
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["DishForm"]) || array_key_exists("DishForm", $context) ? $context["DishForm"] : (function () { throw new RuntimeError('Variable "DishForm" does not exist.', 21, $this->source); })()), "description", [], "any", false, false, false, 21), 'widget');
         echo "
                             </div>
                         </div>
                         <div class=\"form-row\">
                             <div class=\"form-group col-md-6\">
+                                ";
+        // line 26
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["DishForm"]) || array_key_exists("DishForm", $context) ? $context["DishForm"] : (function () { throw new RuntimeError('Variable "DishForm" does not exist.', 26, $this->source); })()), "type", [], "any", false, false, false, 26), 'label', ["label" => "Type"]);
+        echo "
                                 <div class=\"border-class\">
                                     ";
-        // line 31
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["DishForm"]) || array_key_exists("DishForm", $context) ? $context["DishForm"] : (function () { throw new RuntimeError('Variable "DishForm" does not exist.', 31, $this->source); })()), "type", [], "any", false, false, false, 31), 'row');
+        // line 28
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["DishForm"]) || array_key_exists("DishForm", $context) ? $context["DishForm"] : (function () { throw new RuntimeError('Variable "DishForm" does not exist.', 28, $this->source); })()), "type", [], "any", false, false, false, 28), 'widget');
         echo "
                                 </div>
                             </div>
                             <div class=\"form-group col-md-6\">
+                                ";
+        // line 32
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["DishForm"]) || array_key_exists("DishForm", $context) ? $context["DishForm"] : (function () { throw new RuntimeError('Variable "DishForm" does not exist.', 32, $this->source); })()), "price", [], "any", false, false, false, 32), 'label', ["label" => "Price"]);
+        echo "
                                 <div class=\"border-class\">
                                     ";
-        // line 36
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["DishForm"]) || array_key_exists("DishForm", $context) ? $context["DishForm"] : (function () { throw new RuntimeError('Variable "DishForm" does not exist.', 36, $this->source); })()), "price", [], "any", false, false, false, 36), 'row');
+        // line 34
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["DishForm"]) || array_key_exists("DishForm", $context) ? $context["DishForm"] : (function () { throw new RuntimeError('Variable "DishForm" does not exist.', 34, $this->source); })()), "price", [], "any", false, false, false, 34), 'widget');
         echo "
                                 </div>
+                            </div>
+                        </div>
+                        <div class=\"form-group\">
+                            ";
+        // line 39
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["DishForm"]) || array_key_exists("DishForm", $context) ? $context["DishForm"] : (function () { throw new RuntimeError('Variable "DishForm" does not exist.', 39, $this->source); })()), "photo", [], "any", false, false, false, 39), 'label', ["label" => "Upload your path.."]);
+        echo "
+                            <div class=\"border-class\">
+                                ";
+        // line 41
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["DishForm"]) || array_key_exists("DishForm", $context) ? $context["DishForm"] : (function () { throw new RuntimeError('Variable "DishForm" does not exist.', 41, $this->source); })()), "photo", [], "any", false, false, false, 41), 'widget');
+        echo "
                             </div>
                         </div>
                     </div>
 
 
-                    <button type=\"submit\" class=\"btn btn-primary\">Ajouter</button>
+                    <button type=\"submit\" class=\"btn btn-primary btn-lg btn-block\">Append</button>
                     ";
-        // line 44
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["DishForm"]) || array_key_exists("DishForm", $context) ? $context["DishForm"] : (function () { throw new RuntimeError('Variable "DishForm" does not exist.', 44, $this->source); })()), 'form_end');
+        // line 48
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["DishForm"]) || array_key_exists("DishForm", $context) ? $context["DishForm"] : (function () { throw new RuntimeError('Variable "DishForm" does not exist.', 48, $this->source); })()), 'form_end');
         echo "
                 </form>
             </div>
 
-            <div class=\"col-4\">
-                <div class=\"titre-border mb-4 ml-0\">
-                    <p class=\"text-center h3 my-2\">Ajouter un nouveau plat</p>
+            <div class=\"col-5\">
+                <div class=\"borderTitle mb-4 ml-0\">
+                    <p class=\"text-center h2 my-2\">Add A New Dish</p>
                 </div>
                 <div class=\"col-5\">
                     <img src=\"";
-        // line 53
+        // line 57
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/pngwing.com.png"), "html", null, true);
         echo "\"/>
                 </div>
@@ -186,14 +202,14 @@ class __TwigTemplate_414a101c505b60b3cdc53b82a68739f77e7335beb3f755f49f020b0a640
 
     public function getDebugInfo()
     {
-        return array (  161 => 53,  149 => 44,  138 => 36,  130 => 31,  121 => 25,  113 => 20,  105 => 15,  101 => 14,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  177 => 57,  165 => 48,  155 => 41,  150 => 39,  142 => 34,  137 => 32,  130 => 28,  125 => 26,  117 => 21,  112 => 19,  105 => 15,  100 => 13,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Ajouter Dish{% endblock %}
+{% block title %}Add A Dish{% endblock %}
 
 {% block body %}
     <div class=\"container-fluid content\">
@@ -203,44 +219,48 @@ class __TwigTemplate_414a101c505b60b3cdc53b82a68739f77e7335beb3f755f49f020b0a640
                 <form>
                     <div class=\"ma-form\">
                         <div class=\"form-group\">
+                            {{form_label(DishForm.dish_name, 'Dish name')}}
                             <div class=\"border-class\">
-                                {{form_label(DishForm.dish_name)}}
                                 {{form_widget(DishForm.dish_name)}}
                             </div>
                         </div>
                         <div class=\"form-group\">
+                            {{form_label(DishForm.description, 'Describe the dish')}}
                             <div class=\"border-class\">
-                                {{ form_row(DishForm.description) }}
-                            </div>
-                        </div>
-                        <div class=\"form-group\">
-                            <div class=\"border-class\">
-                                {{ form_row(DishForm.photo) }}
+                                {{ form_widget(DishForm.description) }}
                             </div>
                         </div>
                         <div class=\"form-row\">
                             <div class=\"form-group col-md-6\">
+                                {{form_label(DishForm.type, 'Type')}}
                                 <div class=\"border-class\">
-                                    {{ form_row(DishForm.type) }}
+                                    {{ form_widget(DishForm.type) }}
                                 </div>
                             </div>
                             <div class=\"form-group col-md-6\">
+                                {{form_label(DishForm.price, 'Price')}}
                                 <div class=\"border-class\">
-                                    {{ form_row(DishForm.price) }}
+                                    {{ form_widget(DishForm.price) }}
                                 </div>
+                            </div>
+                        </div>
+                        <div class=\"form-group\">
+                            {{form_label(DishForm.photo, 'Upload your path..')}}
+                            <div class=\"border-class\">
+                                {{ form_widget(DishForm.photo) }}
                             </div>
                         </div>
                     </div>
 
 
-                    <button type=\"submit\" class=\"btn btn-primary\">Ajouter</button>
+                    <button type=\"submit\" class=\"btn btn-primary btn-lg btn-block\">Append</button>
                     {{ form_end(DishForm) }}
                 </form>
             </div>
 
-            <div class=\"col-4\">
-                <div class=\"titre-border mb-4 ml-0\">
-                    <p class=\"text-center h3 my-2\">Ajouter un nouveau plat</p>
+            <div class=\"col-5\">
+                <div class=\"borderTitle mb-4 ml-0\">
+                    <p class=\"text-center h2 my-2\">Add A New Dish</p>
                 </div>
                 <div class=\"col-5\">
                     <img src=\"{{ asset('image/pngwing.com.png') }}\"/>

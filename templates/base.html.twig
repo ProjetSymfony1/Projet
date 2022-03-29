@@ -35,6 +35,7 @@
                 <div class="dropdown">
                     <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ app.user.idUser }} </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="{{ path('updateInfo') }}">Changer Information</a>
                         <a class="dropdown-item" href = "#">Reservations</a>
                         <a class="dropdown-item" href = "#">Mes Messages</a>
                         <a class="dropdown-item" href = "#">Mon Compte</a>
@@ -45,6 +46,7 @@
                 <div class="dropdown">
                     <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ app.user.idUser }} </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="{{ path('updateInfo') }}">Changer Information</a>
                         <a class="dropdown-item" href = "#">Mes Reservations</a>
                         <a class="dropdown-item" href="{{ path('favoris') }}">Mes Favoris</a>
                         <a class="dropdown-item" href ="{{ path('contact') }}">Contact</a>

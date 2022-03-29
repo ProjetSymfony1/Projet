@@ -1,73 +1,80 @@
-{% extends 'user/base.html.twig' %}
+{% extends 'base.html.twig' %}
 
-{% block title %}Update Info User{% endblock %}
+{% block title %}Update Info Client{% endblock %}
 
 {% block body %}
-<div class="container-fluid content">
-    <div class="col my-auto">
-        <div class="row">
-            <div class="col-sm">
-                <a href ="#"  class="btn btn-outline-primary" role = "button">RESERVATION</a> &nbsp;&nbsp;
+
+    <div class="container-fluid content">
+        <div class = "row">
+            <div class="col-6 my-auto">
+                {{ form_start(updateInfoForm) }}
+                <form>
+                    <div class="ma-form">
+                        <div class="form-group">
+                            {{ form_label(updateInfoForm.id_user, 'Username') }}
+                            <div class="border-class">
+                                {{form_widget(updateInfoForm.id_user, {'attr': {'class': 'border-class'}})}}
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                {{ form_label(updateInfoForm.id_user, 'Last Name') }}
+                                <div class="border-class">
+                                    {{ form_widget(updateInfoForm.lastName, {'attr': {'class': 'border-class'}}) }}
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                {{ form_label(updateInfoForm.id_user, 'First Name') }}
+                                <div class="border-class">
+                                    {{ form_widget(updateInfoForm.firstName, {'attr': {'class': 'border-class'}}) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                {{ form_label(updateInfoForm.id_user, 'Email') }}
+                                <div class="border-class">
+                                    {{ form_widget(updateInfoForm.mail, {'attr': {'class': 'border-class'}}) }}
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                {{ form_label(updateInfoForm.id_user, 'Full adress') }}
+                                <div class="border-class">
+                                    {{ form_widget(updateInfoForm.adress, {'attr': {'class': 'border-class'}}) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            {{ form_label(updateInfoForm.id_user, 'Gender') }}
+                            <div class="border-class">
+                                {{ form_widget(updateInfoForm.gender, {'attr': {'class': 'border-class'}}) }}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            {{ form_label(updateInfoForm.id_user, 'Password') }}
+                            <div class="border-class">
+                                {{ form_widget(updateInfoForm.plainPassword, {'attr': {'class': 'border-class'}}) }}
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">UPDATE</button>
+                    {{ form_end(updateInfoForm) }}
+                </form>
             </div>
-            <div class="col-sm">
-                <a href ="#"  class="btn btn-outline-primary" role = "button">FAVORIS</a> &nbsp;&nbsp;
+
+            <div class="col-4">
+                <div class="titre-border mb-4 ml-0">
+                    <p class="text-center h3 my-2">Update information</p>
+                </div>
+                <div class="col-5">
+                    <img src="{{ asset('image/CHEZ_GUSTO_LOGO.png') }}"/>
+                </div>
             </div>
-            <div class="col-sm">
-                <a href ="#"  class="btn btn-outline-primary text-button" role = "button">
-                    CONTACT</a> &nbsp;&nbsp;
-            </div>
-            <div class="col-sm">
-                <a href ="#"  class="btn btn-outline-primary text-button active" role = "button">
-                    MON COMPTE</a>
-            </div>
+
         </div>
     </div>
-
-    <div class="col-6 my-auto">
-        <form>
-            <div class="ma-form">
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="nom">Nom</label>
-                        <div class="border-class">
-                            <input type="text" class="form-control" id="nom" placeholder="ex: DUPONT, TRAN,...">
-                        </div>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="prenom">Prenom</label>
-                        <div class="border-class">
-                            <input type="text" class="form-control" id="prenom" placeholder="ex: Jessica, Ha Phuong,...">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="mail">Mail</label>
-                    <div class="border-class">
-                        <input type="text" class="form-control" id="mail" placeholder="abc@gmail.com,...">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="mdp">Password</label>
-                    <div class="border-class">
-                        <input type="Password" class="form-control" id="mdp" placeholder="">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="adresse">Adresse</label>
-                    <div class="border-class">
-                        <input type="text" class="form-control" id="adresse" placeholder="100 rue XYZ, 75000 Paris, France">
-                    </div>
-                </div>
-            </div>
-            <div class="btn-submit">
-                <button type="submit" class="btn btn-primary btn-lg btn-blog">UPDATE</button>
-            </div>
-        </form>
-    </div>
-
-</div>
 
 {% endblock %}
