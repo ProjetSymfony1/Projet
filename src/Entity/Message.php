@@ -12,9 +12,6 @@ class Message
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
     private $id;
-	
-	#[ORM\Column(type: 'string', length: 2048)]
-	private $object;
 
     #[ORM\Column(type: 'string', length: 2048)]
     private $message;
@@ -24,6 +21,12 @@ class Message
 
     #[ORM\Column(type: 'datetime_immutable')]
     private $createdAt;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    private $object;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    private $status;
 
     public function getId(): ?int
     {
@@ -62,6 +65,30 @@ class Message
     public function setCreatedAt(\DateTimeImmutable $createdAt): self
     {
         $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getObject(): ?string
+    {
+        return $this->object;
+    }
+
+    public function setObject(string $object): self
+    {
+        $this->object = $object;
+
+        return $this;
+    }
+
+    public function getStatus(): ?string
+    {
+        return $this->status;
+    }
+
+    public function setStatus(string $status): self
+    {
+        $this->status = $status;
 
         return $this;
     }

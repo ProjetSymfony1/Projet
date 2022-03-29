@@ -18,12 +18,12 @@ class MessageController extends AbstractController
     #[Route('/contact', name: 'contact')]
     public function message(Request $request, EntityManagerInterface $entityManager): Response
     {
-	   
+
 		$msg = new Message();
 		$form = $this->createForm(MessageFormType::class);
 	    $form->handleRequest($request);
-		
-	
+
+
 	    if($form->isSubmitted()){
 		    $msg->setObject($form->get('object')->getData());
 		    $msg->setMessage($form->get('message')->getData());
@@ -34,7 +34,7 @@ class MessageController extends AbstractController
 		    $entityManager->flush();
 		    return $this->render('homepage/index.html.twig');
 	    }
-		
+
         return $this ->render('user/contact.html.twig', [
 			'formMsg' => $form->createView()
         ]);
@@ -43,27 +43,27 @@ class MessageController extends AbstractController
 	#[Route('/user/message', name: 'userMessages')]
 
 	public function mesMessages(MessageRepository $messageRepository) {
-		
+
 		$id = ($this->getUser())->getId();
 		return $this->render("user/userMessages.html.twig", [
 			"messages" => $messageRepository->findBy(array('id_user' => $id))
 		]);
-		
+
 	}
-	
+
 	#[Route('/user/delMessage', name: 'delMessage')]
-	
+
 	public function delMessage(MessageRepository $messageRepository, EntityManagerInterface $entityManager) {
 		$idMsg = $_GET["idMsg"];
 		$msg = $messageRepository->find($idMsg);
 		$entityManager -> remove($msg);
 		$entityManager -> flush();
-		
+
 		return $this->mesMessages($messageRepository);
 	}
-	
+
 	#[Route('/admin/message', name: 'adminMessages')]
-	
+
 	public function getMessages(MessageRepository $messageRepository, UserRepository $userRepository) {
 		$msg = $messageRepository->findAll();
 		$nameArray = array();
@@ -74,16 +74,16 @@ class MessageController extends AbstractController
 			"messages" => $messageRepository->findAll(), "username" => $nameArray
 		]);
 	}
-	
+
 	#[Route('/user/checkMessage', name: 'checkMessage')]
-	
+
 	public function checkMessage(MessageRepository $messageRepository, UserRepository $userRepository, EntityManagerInterface $entityManager) {
 		$idMsg = $_GET["idMsg"];
 		$msg = $messageRepository->find($idMsg);
 		$msg ->setStatus('Traité');
 		$entityManager->persist($msg);
 		$entityManager->flush();
-		
+
 		return $this->mesMessages($messageRepository, $userRepository);
 	}
 }

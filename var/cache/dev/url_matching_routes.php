@@ -20,14 +20,12 @@ return [
         '/menu' => [[['_route' => 'menu', '_controller' => 'App\\Controller\\HomepageController::menu'], null, null, null, false, false, null]],
         '/reservation' => [[['_route' => 'reservation', '_controller' => 'App\\Controller\\HomepageController::book'], null, null, null, false, false, null]],
         '/addDish' => [[['_route' => 'add_dish', '_controller' => 'App\\Controller\\MenuController::add'], null, null, null, false, false, null]],
-<<<<<<< Updated upstream
-=======
         '/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\MessageController::message'], null, null, null, false, false, null]],
         '/user/message' => [[['_route' => 'userMessages', '_controller' => 'App\\Controller\\MessageController::mesMessages'], null, null, null, false, false, null]],
         '/user/delMessage' => [[['_route' => 'delMessage', '_controller' => 'App\\Controller\\MessageController::delMessage'], null, null, null, false, false, null]],
         '/admin/message' => [[['_route' => 'adminMessages', '_controller' => 'App\\Controller\\MessageController::getMessages'], null, null, null, false, false, null]],
         '/user/checkMessage' => [[['_route' => 'checkMessage', '_controller' => 'App\\Controller\\MessageController::checkMessage'], null, null, null, false, false, null]],
->>>>>>> Stashed changes
+        '/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\MessageController::message'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
