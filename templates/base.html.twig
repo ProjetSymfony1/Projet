@@ -37,21 +37,19 @@
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href = "#">Booking</a>
                         <a class="dropdown-item" href = "{{ path('adminMessages') }}">Messages</a>
-                        <a class="dropdown-item" href = "#">My Account</a>
-                        <a class="dropdown-item" href="{{ path('updateInfo') }}">Changer Information</a>
-                        <a class="dropdown-item" href="{{ path('app_logout') }}">Log out</a>
+                        <a class="dropdown-item" href = "{{ path('account') }}">My Account</a>
+                        <a class="dropdown-item" href = "{{ path('app_logout') }}">Log out</a>
                     </div>
                 </div>
             {% elseif is_granted('ROLE_USER') %}
                 <div class="dropdown">
                     <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ app.user.idUser }} </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href ="">My Account</a>
+                        <a class="dropdown-item" href = "">My Account</a>
                         <a class="dropdown-item" href = "#">My Booking</a>
-                        <a class="dropdown-item" href="{{ path('favoris') }}">My Favorites</a>
+                        <a class="dropdown-item" href = "{{ path('favoris') }}">My Favorites</a>
                         <a class="dropdown-item" href = "{{ path('userMessages')}}?id={{ app.user.id }}">My Messages</a>
                         <a class="dropdown-item" href ="{{ path('contact') }}">Contact</a>
-                        <a class="dropdown-item" href="{{ path('updateInfo') }}">Changer Information</a>
                         <a class="dropdown-item" href="{{ path('app_logout') }}">Log out</a>
                     </div>
                 </div>

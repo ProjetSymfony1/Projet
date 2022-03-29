@@ -58,16 +58,18 @@
                             </div>
 
                         </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">UPDATE</button>
+                        <div class="form-check-label text-center">
+                            {{ form_row(updateInfoForm.agreeTerms)  }}
+                        </div>
                     </div>
-
-                    <button type="submit" class="btn btn-primary">UPDATE</button>
                     {{ form_end(updateInfoForm) }}
                 </form>
             </div>
 
             <div class="col-4">
                 <div class="titre-border mb-4 ml-0">
-                    <p class="text-center h3 my-2">Update information</p>
+                    <p class="text-center h3 my-2">UPDATE YOUR PROFILE</p>
                 </div>
                 <div class="col-5">
                     <img src="{{ asset('image/CHEZ_GUSTO_LOGO.png') }}"/>

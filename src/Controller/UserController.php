@@ -3,12 +3,10 @@
 namespace App\Controller;
 
 use App\Entity\User;
-use App\Form\UpdateInfoFormType;
+use App\Form\RegistrationFormType;
 use App\Repository\UserRepository;
-use App\Security\AppCustomAuthenticator;
-use App\Services\MailerService;
 use Doctrine\ORM\EntityManagerInterface;
-use Doctrine\Persistence\ManagerRegistry;
+
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,13 +16,20 @@ use Symfony\Component\Security\Http\Authentication\UserAuthenticatorInterface;
 
 class UserController extends AbstractController
 {
-
-
+	
+	#[Route('/myAccount', name: 'account')]
+	
+	public function myAccount(): Response
+	{
+		return $this->render("user/account.html.twig");
+	
+	}
+	
     #[Route('/updateInfo', name: 'updateInfo')]
-    public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, UserAuthenticatorInterface $userAuthenticator, AppCustomAuthenticator $authenticator, EntityManagerInterface $entityManager, MailerService $mailerService): Response
+    public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, EntityManagerInterface $entityManager, UserRepository $userRepository): Response
     {
-        $user = $this->getUser();
-        $form = $this->createForm(UpdateInfoFormType::class, $user);
+	    $user = $this->getUser();
+        $form = $this->createForm(RegistrationFormType::class, $user);
 
         $form->handleRequest($request);
 
@@ -38,6 +43,7 @@ class UserController extends AbstractController
             );
             $entityManager->persist($user);
             $entityManager->flush();
+			return $this->myAccount();
         }
 
         return $this->render('user/updateInfoClient.html.twig', [

@@ -6084,7 +6084,15 @@
         <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.hOpnwnr" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.ToB61S3" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="userPasswordHasher" type="service_closure" id="security.user_password_hasher"/>
+        <argument key="userRepository" type="service_closure" id="App\Repository\UserRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.OM8_kQ." class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\FavoriteController::addFav" type="service_closure" id=".service_locator.CpYXYDY"/>
@@ -6101,6 +6109,7 @@
         <argument key="App\Controller\MessageController::message" type="service_closure" id=".service_locator.l2QwsaZ"/>
         <argument key="App\Controller\RegistrationController::register" type="service_closure" id=".service_locator.Dbqq6dv"/>
         <argument key="App\Controller\SecurityController::login" type="service_closure" id=".service_locator.UDgw6Ol"/>
+        <argument key="App\Controller\UserController::register" type="service_closure" id=".service_locator.ToB61S3"/>
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="App\Kernel::terminate" type="service_closure" id=".service_locator.KfwZsne"/>
@@ -6121,6 +6130,7 @@
         <argument key="App\Controller\MessageController:message" type="service_closure" id=".service_locator.l2QwsaZ"/>
         <argument key="App\Controller\RegistrationController:register" type="service_closure" id=".service_locator.Dbqq6dv"/>
         <argument key="App\Controller\SecurityController:login" type="service_closure" id=".service_locator.UDgw6Ol"/>
+        <argument key="App\Controller\UserController:register" type="service_closure" id=".service_locator.ToB61S3"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="kernel:registerContainerConfiguration" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="kernel:terminate" type="service_closure" id=".service_locator.KfwZsne"/>
@@ -6680,12 +6690,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.hOpnwnr"/>
+      <argument type="service" id=".service_locator.OM8_kQ."/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.hOpnwnr"/>
+      <argument type="service" id=".service_locator.OM8_kQ."/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection"/>
@@ -7513,7 +7523,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.hOpnwnr"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.OM8_kQ."/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>
@@ -7536,7 +7546,8 @@
     <service id=".service_locator.198l3tl" alias=".service_locator.sUicarI"/>
     <service id=".service_locator.Rw.2rWD" alias=".service_locator.7W1mY2B"/>
     <service id=".service_locator.I3YGizR" alias=".service_locator.Dbqq6dv"/>
-    <service id=".service_locator.R6EEe4Y" alias=".service_locator.hOpnwnr"/>
+    <service id=".service_locator.KS3nifg" alias=".service_locator.ToB61S3"/>
+    <service id=".service_locator.2iuj0_q" alias=".service_locator.OM8_kQ."/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
     <service id=".service_locator.nhH76HW" alias=".service_locator.Oq4.iNe"/>
     <service id=".service_locator.qBCHs1a" alias=".service_locator.QXcJQkF"/>
@@ -7576,6 +7587,7 @@
     <service id=".service_locator.6Xo0Blh" alias=".service_locator.7W1mY2B"/>
     <service id=".service_locator.Qo8r5Fu" alias=".service_locator.Dbqq6dv"/>
     <service id=".service_locator.kXCVHeG" alias=".service_locator.UDgw6Ol"/>
+    <service id=".service_locator.2w2LO6l" alias=".service_locator.ToB61S3"/>
     <service id=".service_locator.moWzgtz" alias=".service_locator.l1ae.Qz"/>
     <service id=".service_locator.u6DWx23" alias=".service_locator.cXsfP3P"/>
     <service id=".service_locator.9YCWxeJ" alias=".service_locator.dw8O4oN"/>
