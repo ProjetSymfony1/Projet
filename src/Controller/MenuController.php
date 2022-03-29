@@ -26,14 +26,13 @@ class MenuController extends AbstractController
         ]);
     }
 	
-	#[Route('/addDish', name: 'add_dish')]
-	public function add(Request $request, EntityManagerInterface $entityManager, DishRepository $dishRepository): \Symfony\Component\HttpFoundation\Response
+	#[Route('/addDish', name: 'add-dish')]
+	public function add(Request $request, EntityManagerInterface $entityManager, DishRepository $dishRepository): Response
 	{
 		$dish = new Dish();
 		$form = $this->createForm(DishFormType::class, $dish);
 		
 		$form->handleRequest($request);
-		
 		if($form->isSubmitted()){
 			$entityManager->persist($dish);
 			$entityManager->flush();
@@ -43,6 +42,16 @@ class MenuController extends AbstractController
 		return $this->render('Dish/ajoutDish.html.twig', [
 			'DishForm' => $form->createView(),
 		]);
+	}
+
+	#[Route('/delDish', name: 'del-dish')]
+	public function del(DishRepository $dishRepository, EntityManagerInterface $entityManager) {
+		$idDish = $_GET["idDish"];
+		$dish = $dishRepository->find($idDish);
+		$entityManager -> remove($dish);
+		$entityManager -> flush();
+		
+		return $this->menu($dishRepository);
 	}
 }
 

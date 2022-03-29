@@ -6,7 +6,7 @@
 
     <div class="row justify-content-md-center">
         {% if is_granted('ROLE_ADMIN') %}
-            <a href="{{ path('add_dish') }}" class="btn btn-primary btn-lg btn-block"> Want more ? Add more ! </a>
+            <a href="{{ path('add-dish') }}" class="btn btn-primary btn-lg btn-block"> Want more ? Add more ! </a>
         {% endif %}
     </div>
 
@@ -27,7 +27,7 @@
                                         <a href="" class="btn btn-addCart"> Add to Cart </a>
                                         <a href="{{ path('add-fav') }}?idDish={{ dish.id }} " class="btn btn-primary"> Add to Favorites </a>
                                     {% elseif is_granted('ROLE_ADMIN') %}
-                                        <a href="" class="btn btn-primary"> Delete Dish </a>
+                                        <a href="{{ path('del-dish') }}?idDish={{ dish.id }} " class="btn btn-primary"> Delete Dish </a>
                                     {% endif %}
 
                                 </td>

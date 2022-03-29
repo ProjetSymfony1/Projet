@@ -25,7 +25,7 @@ class FavoriteController extends AbstractController
 		]);
 	}
 	
-	#[Route('/ajoutFavoris', name: 'add-fav')]
+	#[Route('/addFavoris', name: 'add-fav')]
 	
     public function addFav(DishRepository $dishRepository, EntityManagerInterface $entityManager, ManagerRegistry $registry): Response
     {
