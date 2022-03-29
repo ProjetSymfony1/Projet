@@ -893,3 +893,17 @@ e4f772,::1,GET,http://localhost:8888/chez-gusto/public/efzefze,1648583628,5d0567
 5d0567,::1,GET,http://localhost:8888/chez-gusto/public/efzefze,1648583628,,404
 017d24,::1,GET,http://localhost:8888/chez-gusto/public/hh,1648583628,,404
 75652c,::1,GET,http://localhost:8888/chez-gusto/public/a,1648583628,,404
+51f56e,::1,GET,http://localhost:8888/chez-gusto/public/delDish?idDish=2,1648583725,,200
+e7d4a9,::1,GET,http://localhost:8888/chez-gusto/public/hh,1648583726,d0d4bd,404
+d0d4bd,::1,GET,http://localhost:8888/chez-gusto/public/hh,1648583726,,404
+7eb7a9,::1,GET,http://localhost:8888/chez-gusto/public/a,1648583726,b458c0,404
+94f305,::1,GET,http://localhost:8888/chez-gusto/public/efzefze,1648583726,81a7d3,404
+81a7d3,::1,GET,http://localhost:8888/chez-gusto/public/efzefze,1648583726,,404
+b458c0,::1,GET,http://localhost:8888/chez-gusto/public/a,1648583726,,404
+11125c,::1,GET,http://localhost:8888/chez-gusto/public/delDish?idDish=3,1648583728,,200
+48578b,::1,GET,http://localhost:8888/chez-gusto/public/a,1648583729,0be34f,404
+db49f1,::1,GET,http://localhost:8888/chez-gusto/public/efzefze,1648583729,bdbfbf,404
+a58838,::1,GET,http://localhost:8888/chez-gusto/public/hh,1648583729,d8f324,404
+0be34f,::1,GET,http://localhost:8888/chez-gusto/public/a,1648583729,,404
+d8f324,::1,GET,http://localhost:8888/chez-gusto/public/hh,1648583729,,404
+bdbfbf,::1,GET,http://localhost:8888/chez-gusto/public/efzefze,1648583729,,404
