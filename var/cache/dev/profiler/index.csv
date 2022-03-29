@@ -688,7 +688,6 @@ d72531,::1,POST,http://localhost:8888/chez-gusto/public/register,1648497403,,500
 8a7117,::1,POST,http://localhost:8888/chez-gusto/public/register,1648497438,,500
 90cd85,::1,POST,http://localhost:8888/chez-gusto/public/register,1648497580,,302
 b16b8d,::1,GET,http://localhost:8888/chez-gusto/public/,1648497582,,200
-<<<<<<< HEAD
 49d06e,::1,GET,http://localhost:8888/chez-gusto/public/contact,1648509632,,200
 0e699a,::1,GET,http://localhost:8888/chez-gusto/public/contact,1648509979,dc8f0d,500
 dc8f0d,::1,GET,http://localhost:8888/chez-gusto/public/contact,1648509979,,500
@@ -756,5 +755,3 @@ fe89e4,::1,GET,http://localhost:8888/chez-gusto/public/contact,1648513668,,500
 249426,::1,GET,http://localhost:8888/chez-gusto/public/contact,1648513724,,200
 b701cb,::1,POST,http://localhost:8888/chez-gusto/public/contact,1648513731,,200
 91196f,::1,GET,http://localhost:8888/chez-gusto/public/contact,1648513764,,200
-=======
->>>>>>> parent of 4639dfb5 (UserInterface&AdminInterface for messages, option delete and update)

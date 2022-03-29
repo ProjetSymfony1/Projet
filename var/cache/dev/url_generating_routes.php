@@ -22,15 +22,12 @@ return [
     'menu' => [[], ['_controller' => 'App\\Controller\\HomepageController::menu'], [], [['text', '/menu']], [], [], []],
     'reservation' => [[], ['_controller' => 'App\\Controller\\HomepageController::book'], [], [['text', '/reservation']], [], [], []],
     'add_dish' => [[], ['_controller' => 'App\\Controller\\MenuController::add'], [], [['text', '/addDish']], [], [], []],
-<<<<<<< HEAD
     'contact' => [[], ['_controller' => 'App\\Controller\\MessageController::message'], [], [['text', '/contact']], [], [], []],
     'userMessages' => [[], ['_controller' => 'App\\Controller\\MessageController::mesMessages'], [], [['text', '/user/message']], [], [], []],
     'delMessage' => [[], ['_controller' => 'App\\Controller\\MessageController::delMessage'], [], [['text', '/user/delMessage']], [], [], []],
     'adminMessages' => [[], ['_controller' => 'App\\Controller\\MessageController::getMessages'], [], [['text', '/admin/message']], [], [], []],
     'checkMessage' => [[], ['_controller' => 'App\\Controller\\MessageController::checkMessage'], [], [['text', '/user/checkMessage']], [], [], []],
     'contact' => [[], ['_controller' => 'App\\Controller\\MessageController::message'], [], [['text', '/contact']], [], [], []],
-=======
->>>>>>> parent of 4639dfb5 (UserInterface&AdminInterface for messages, option delete and update)
     'app_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], [], []],
     'login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], [], []],

@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes Messages{% endblock %}
+
+{% block body %}
+
+<div class="shadow-lg p-3 mb-5 bg-white rounded">
+
+    <div class="card text-center">
+        <div class="card-header">
+            Your messages
+        </div>
+        <div class="card-body">
+            <h5 class="card-title"> You reached to us and we reached back !</h5>
+            <p class="card-text">If it hasn't already been treated, your question is in safe hands, an admin will be there soon !</p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Object</th>
+                    <th scope="col">Message</th>
+                    <th scope="col">Status</th>
+                    <th scope="col"></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for msg in messages %}
+                <td>{{ msg.object }}</td>
+                <td>{{ msg.message }}</td>
+                <td>{{ msg.status }}</td>
+                {% if msg.status == 'En cours de traitement'%}
+                <td>  <a href="{{ path('delMessage') }}?idMsg={{ msg.id }}" class="btn btn-addCart"> Delete </a> </td>
+                {% endif %}
+
+                </tbody>
+                {% endfor %}
+                </table>
+        <div class="card-footer text-muted">
+            GustoHelpService
+        </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
