@@ -23,9 +23,11 @@
                                     <h2 class="textMenu" id="dishName"> {{ dish.dishName }} </h2>
                                     <h4 class="textPrix"> {{ dish.price }} € </h4>
                                     <h6 class="textDesc"> {{ dish.description }} </h6>
-                                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                                        <a href="" class="btn btn-addCart"> Ajouter au Panier </a>
-                                        <a href="{{ path('add-fav') }}?idDish={{ dish.id }} " class="btn btn-primary"> Ajouter aux Favoris </a>
+                                    {% if is_granted('ROLE_USER') %}
+                                        <a href="" class="btn btn-addCart"> Add to Cart </a>
+                                        <a href="{{ path('add-fav') }}?idDish={{ dish.id }} " class="btn btn-primary"> Add to Favorites </a>
+                                    {% elseif is_granted('ROLE_ADMIN') %}
+                                        <a href="" class="btn btn-primary"> Delete Dish </a>
                                     {% endif %}
 
                                 </td>

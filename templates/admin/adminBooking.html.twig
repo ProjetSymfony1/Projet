@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bookings{% endblock %}
+
+{% block body %}
+    <div class="shadow-lg p-5 mb-5 bg-white rounded container">
+
+        <div class="card text-center">
+            <div class="card-header">
+                Bookings
+            </div>
+            <div class="card-body">
+                <h5 class="card-title"> Welcome back admin {{ app.user.idUser }} !</h5>
+                <p class="card-text">Look at all those people coming to see us, let's get to work !</p>
+
+                <div class="card-footer text-muted">
+                    GustoHelpService
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
