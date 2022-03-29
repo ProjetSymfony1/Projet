@@ -3,28 +3,46 @@
 {% block title %}Vos favoris{% endblock %}
 
 {% block body %}
-    <div class="box">
-        <table style="margin: auto">
-        {% for fav in favs %}
-            {% if fav.idUser == app.user.id %}
-                {% for dish in dishes %}
-                    {% if dish.id == fav.idDish %}
-                            <tr>
-                                <td>
-                                    <img class="imgMenu" src="{{ asset(dish.photo) }}">
-                                </td>
-                                <td>
-                                    <h2 class="textMenu">{{ dish.dishName }}</h2>
-                                    <h4 class="textPrix"> {{ dish.price }} € </h4>
-                                    <h6 class="textDesc"> {{ dish.description }} </h6>
-                                    <a href="{{ path('del-fav') }}?idFav={{ fav.id }}" class="btn-sm btn-outline-primary"> Remove </a>
-                                </td>
-                            </tr>
-                    {% endif %}
-                {% endfor %}
-            {% endif %}
-        {% endfor %}
-        </table>
+
+    <div class="shadow-lg p-5 mb-5 bg-white rounded container">
+
+        <div class="card text-center">
+            <div class="card-header">
+                Favorites
+            </div>
+            <div class="card-body">
+                <h5 class="card-title"> Coming back for your best picks ?</h5>
+                <p class="card-text">Gusto will never fail you ! MAMMA MIA !</p>
+                <table class="table">
+                    {% for fav in favs %}
+                        {% if fav.idUser == app.user.id %}
+                            {% for dish in dishes %}
+                                {% if dish.id == fav.idDish %}
+                                    <tbody>
+                                    <td>
+                                        <tr>
+                                            <img class="imgMenu" src="{{ asset(dish.photo) }}">
+                                            <h2 class="textMenu">{{ dish.dishName }}</h2>
+                                            <h4 class="textPrix"> {{ dish.price }} € </h4>
+                                            <h6 class="textDesc"> {{ dish.description }} </h6>
+                                        </tr>
+                                        <tr>
+                                            <a href="{{ path('del-fav') }}?idFav={{ fav.id }}" class="btn btn-outline-primary"> Remove </a>
+                                            <a href="" class="btn btn-outline-primary"> Add to Cart </a>
+                                        </tr>
+                                    </td>
+                                    </tbody>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                </table>
+                <div class="card-footer text-muted">
+                    GustoHelpService
+                </div>
+            </div>
+        </div>
     </div>
+
 
 {% endblock %}
