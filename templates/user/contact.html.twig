@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+
+        <div class="card text-center">
+            <div class="card-header">
+                Need help ?
+            </div>
+            <div class="card-body">
+                <h5 class="card-title"> If you reach out, we will always take care of you ?</h5>
+                <p class="card-text">Describe your problem and our team is here to respond to any of your requests</p>
+
+
+                    <div class="ma-form">
+                        {{ form_start(formMsg) }}
+                        <div class="form-group">
+                            {{form_label(formMsg.object, 'Object')}}
+                            <div class="border-class">
+                                {{form_widget(formMsg.object)}}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            {{form_label(formMsg.message, 'Tell us more...')}}
+                            <div class="border-class">
+                                {{ form_widget(formMsg.message) }}
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+                {{ form_end(formMsg) }}
+            </div>
+            <div class="card-footer text-muted">
+                GustoHelpService
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
