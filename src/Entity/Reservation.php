@@ -33,7 +33,7 @@ class Reservation
     #[ORM\Column(type: 'time')]
     private $timeReservation;
 
-    #[ORM\Column(type: 'boolean')]
+    #[ORM\Column(type: 'integer')]
     private $available;
 
     public function getId(): ?int

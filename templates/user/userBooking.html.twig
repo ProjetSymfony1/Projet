@@ -27,10 +27,12 @@
                     <td>{{ reservation.dateReservation|date('Y-m-d') }}</td>
                     <td>{{ reservation.timeReservation|date('H:i') }}</td>
 
-                    {% if reservation.available == true %}
+                    {% if reservation.available == 1 %}
                         <td>  Confirmed </td>
-                    {% else %}
+                    {% elseif  reservation.available == 0 %}
                         <td>  Pending confirmation </td>
+                    {% else %}
+                        <td>  Canceled </td>
                     {% endif %}
                         <td>
                            <a href="{{ path('delBooking') }}?idRez={{ reservation.id }}" class="btn btn-addCart"> Delete </a>

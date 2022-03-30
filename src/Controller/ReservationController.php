@@ -33,7 +33,7 @@ class ReservationController extends AbstractController
                 $reservation->setTimeReservation($form->get('timeReservation')->getData());
                 $reservation->setIdUser($this->getUser());
                 $reservation->setCreatedAt(new \DateTimeImmutable());
-                $reservation->setAvailable(false);
+                $reservation->setAvailable(0);
                 $entityManager->persist($reservation);
                 $entityManager->flush();
                 $this->addFlash('success', 'Your table has been booked !');

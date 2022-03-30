@@ -30,7 +30,7 @@ class ManageBookings extends AbstractController
 
     #[Route('/user/delBooking', name: 'delBooking')]
 
-    public function delMessage(ReservationRepository $reservationRepository, EntityManagerInterface $entityManager) {
+    public function delBooking(ReservationRepository $reservationRepository, EntityManagerInterface $entityManager) {
         $idRez = $_GET["idRez"];
         $rez = $reservationRepository->find($idRez);
         $entityManager -> remove($rez);
@@ -38,4 +38,20 @@ class ManageBookings extends AbstractController
         $this->addFlash('success', 'Your booking has been deleted !');
         return $this->booking($reservationRepository);
     }
+
+    #[Route('/admin/adminManageBookings', name: 'adminBookings')]
+
+    public function adminManageBookings(ReservationRepository $reservationRepository, UserRepository $userRepository) {
+        $rez = $reservationRepository->findAll();
+        $nameArray = array();
+        foreach ($rez as $value) {
+            $nameArray[] = ($userRepository->findBy(array('id' => $value->getIdUser())))[0]->getIdUser();
+        }
+        return $this->render("admin/adminManageBookings.html.twig", [
+            "rez" => $rez, "username" => $nameArray
+        ]);
+
+
+    }
+
 }

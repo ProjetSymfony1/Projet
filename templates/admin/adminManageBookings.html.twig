@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}My Booking{% endblock %}
+
+{% block body %}
+
+    <div class="shadow-lg p-5 mb-5 bg-white rounded container">
+
+        <div class="card text-center">
+            <div class="card-header">
+                Manage bookings
+            </div>
+            <div class="card-body">
+                <h5 class="card-title"> Upcoming booking @ Gusto !</h5>
+                <p class="card-text">Manage bookings at a glance</p>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">User</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Manage</th>
+                    </tr>
+                    </thead>
+                   <tbody>
+                    {% for i in 0..rez|length-1 %}
+                        <tr>
+                        <td> {{ username[i] }}</td>
+                        <td>{{ rez[i].dateReservation|date('Y-m-d') }}</td>
+                        <td>{{ rez[i].timeReservation|date('H:i') }}</td>
+                        {% if rez[i].available == 1 %}
+                            <td>  Confirmed </td>
+                        {% elseif  rez[i].available == 0 %}
+                            <td>  Pending confirmation </td>
+                        {% else %}
+                            <td>  Canceled </td>
+                        {% endif %}
+                        <td>
+                            <a href="{{ path('delBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> Cancel </a>&nbsp;&nbsp;
+                            <a href="{{ path('delBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> Confirm </a>
+                        </td>
+
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
