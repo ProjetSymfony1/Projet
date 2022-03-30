@@ -25,23 +25,25 @@
                     </thead>
                    <tbody>
                     {% for i in 0..rez|length-1 %}
-                        <tr>
-                        <td> {{ username[i] }}</td>
-                        <td>{{ rez[i].dateReservation|date('Y-m-d') }}</td>
-                        <td>{{ rez[i].timeReservation|date('H:i') }}</td>
-                        {% if rez[i].available == 1 %}
-                            <td>  Confirmed </td>
-                        {% elseif  rez[i].available == 0 %}
-                            <td>  Pending confirmation </td>
-                        {% else %}
-                            <td>  Canceled </td>
+                        {% if rez[i].available != 3 %}
+                            <tr>
+                                <td> {{ username[i] }}</td>
+                                <td>{{ rez[i].dateReservation|date('Y-m-d') }}</td>
+                                <td>{{ rez[i].timeReservation|date('H:i') }}</td>
+                                {% if rez[i].available == 1 %}
+                                    <td>  Confirmed </td>
+                                {% elseif  rez[i].available == 0 %}
+                                    <td>  Pending confirmation </td>
+                                {% else %}
+                                    <td>  Canceled </td>
+                                {% endif %}
+                                <td>
+                                    <a href="{{ path('cancelBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> Cancel </a>&nbsp;&nbsp;
+                                    <a href="{{ path('confirmBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> Confirm </a>&nbsp;&nbsp;
+                                    <a href="{{ path('archiveBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> Archive </a>
+                                </td>
+                            </tr>
                         {% endif %}
-                        <td>
-                            <a href="{{ path('delBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> Cancel </a>&nbsp;&nbsp;
-                            <a href="{{ path('delBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> Confirm </a>
-                        </td>
-
-                        </tr>
                     {% endfor %}
                     </tbody>
                 </table>

@@ -50,8 +50,38 @@ class ManageBookings extends AbstractController
         return $this->render("admin/adminManageBookings.html.twig", [
             "rez" => $rez, "username" => $nameArray
         ]);
-
-
     }
 
+    #[Route('/admin/confirmBooking', name: 'confirmBooking')]
+
+    public function confirmBooking(ReservationRepository $reservationRepository, EntityManagerInterface $entityManager, UserRepository $userRepository) {
+        $idRez = $_GET["idRez"];
+        $rez = $reservationRepository->find($idRez);
+        $rez ->setAvailable(1);
+        $entityManager -> flush();
+        $this->addFlash('success', 'Booking confirmed !');
+        return $this->adminManageBookings($reservationRepository,  $userRepository);
+    }
+
+    #[Route('/admin/cancelBooking', name: 'cancelBooking')]
+
+    public function cancelBooking(ReservationRepository $reservationRepository, EntityManagerInterface $entityManager, UserRepository $userRepository) {
+        $idRez = $_GET["idRez"];
+        $rez = $reservationRepository->find($idRez);
+        $rez ->setAvailable(2);
+        $entityManager -> flush();
+        $this->addFlash('success', 'Booking canceled !');
+        return $this->adminManageBookings($reservationRepository, $userRepository);
+    }
+
+    #[Route('/admin/archiveBooking', name: 'archiveBooking')]
+
+    public function archiveBooking(ReservationRepository $reservationRepository, EntityManagerInterface $entityManager, UserRepository $userRepository) {
+        $idRez = $_GET["idRez"];
+        $rez = $reservationRepository->find($idRez);
+        $rez ->setAvailable(3);
+        $entityManager -> flush();
+        $this->addFlash('success', 'Booking archived !');
+        return $this->adminManageBookings($reservationRepository, $userRepository);
+    }
 }

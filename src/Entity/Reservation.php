@@ -114,12 +114,12 @@ class Reservation
         return $this;
     }
 
-    public function getAvailable(): ?bool
+    public function getAvailable(): ?int
     {
         return $this->available;
     }
 
-    public function setAvailable(bool $available): self
+    public function setAvailable(int $available): self
     {
         $this->available = $available;
 
