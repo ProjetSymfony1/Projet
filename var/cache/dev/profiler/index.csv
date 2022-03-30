@@ -1219,3 +1219,9 @@ bba74f,::1,GET,http://localhost:8888/chez-gusto/public/cart,1648654766,,200
 70cd3e,::1,GET,http://localhost:8888/chez-gusto/public/addCart?idDish=4,1648654783,,200
 559f72,::1,GET,http://localhost:8888/chez-gusto/public/menu,1648654787,,200
 03f743,::1,GET,http://localhost:8888/chez-gusto/public/addCart?idDish=4,1648654789,,200
+cbc7db,::1,GET,http://localhost/chez-gusto/public/Booking,1648659781,,200
+e67959,::1,POST,http://localhost/chez-gusto/public/Booking,1648659807,,200
+37a8e5,::1,POST,http://localhost/chez-gusto/public/Booking,1648659826,,200
+83388b,::1,GET,http://localhost/chez-gusto/public/myAccount,1648659856,,200
+babb1a,::1,GET,http://localhost/chez-gusto/public/admin/message,1648659869,d12077,500
+d12077,::1,GET,http://localhost/chez-gusto/public/admin/message,1648659869,,500

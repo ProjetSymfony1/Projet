@@ -68,7 +68,7 @@ a{
 .ma-form{
     color: #790b30;
 }
-.border-class{
+.border-class, js-datepicker, js-timepicker{
     border: 2px solid #790b30
 }
 .titre-border{

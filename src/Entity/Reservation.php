@@ -17,9 +17,6 @@ class Reservation
     #[ORM\JoinColumn(nullable: false)]
     private $id_user;
 
-    #[ORM\ManyToOne(targetEntity: TimeSlot::class, inversedBy: 'timeslot_reservation')]
-    #[ORM\JoinColumn(nullable: false)]
-    private $id_timeslot;
 
     #[ORM\Column(type: 'datetime_immutable')]
     private $createdAt;
@@ -29,6 +26,15 @@ class Reservation
 
     #[ORM\Column(type: 'datetime_immutable', nullable: true)]
     private $updatedAt;
+
+    #[ORM\Column(type: 'date')]
+    private $dateReservation;
+
+    #[ORM\Column(type: 'time')]
+    private $timeReservation;
+
+    #[ORM\Column(type: 'boolean')]
+    private $available;
 
     public function getId(): ?int
     {
@@ -47,17 +53,6 @@ class Reservation
         return $this;
     }
 
-    public function getIdTimeslot(): ?TimeSlot
-    {
-        return $this->id_timeslot;
-    }
-
-    public function setIdTimeslot(?TimeSlot $id_timeslot): self
-    {
-        $this->id_timeslot = $id_timeslot;
-
-        return $this;
-    }
 
     public function getCreatedAt(): ?\DateTimeImmutable
     {
@@ -91,6 +86,42 @@ class Reservation
     public function setUpdatedAt(?\DateTimeImmutable $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getDateReservation(): ?\DateTimeInterface
+    {
+        return $this->dateReservation;
+    }
+
+    public function setDateReservation(\DateTimeInterface $dateReservation): self
+    {
+        $this->dateReservation = $dateReservation;
+
+        return $this;
+    }
+
+    public function getTimeReservation(): ?\DateTimeInterface
+    {
+        return $this->timeReservation;
+    }
+
+    public function setTimeReservation(\DateTimeInterface $timeReservation): self
+    {
+        $this->timeReservation = $timeReservation;
+
+        return $this;
+    }
+
+    public function getAvailable(): ?bool
+    {
+        return $this->available;
+    }
+
+    public function setAvailable(bool $available): self
+    {
+        $this->available = $available;
 
         return $this;
     }

@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    {% for message in app.flashes('notice') %}
+        <div class="alert alert-success" style="background-color: rgba(255,0,0,0.48)">
+
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    <div class="container-fluid content">
+        {{ form_start(reservationForm) }}
+        <form>
+            <div class="row">
+                <div class="col-6 my-auto">
+                    <div class="borderTitle mb-4 ml-0">
+                        <p class="text-center h2 my-2">Sit at our table...</p>
+                    </div>
+                    <div class="ma-form">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    {{ form_label(reservationForm.dateReservation, 'Date') }}
+                                    <div class="border-class">
+                                        {{form_widget(reservationForm.dateReservation, {'attr': {'class': 'js-datepicker', 'style':'width: 100%'}})}}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(reservationForm.timeReservation, 'Time') }}
+                                    <div class="border-class">
+                                        {{form_widget(reservationForm.timeReservation, {'attr': {'class': 'js-timepicker', 'style':'width: 100%'}})}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="float: right">Book</button>
+                    {{ form_end(reservationForm) }}
+                </div>
+                <div class="col-6">
+                    <img src="{{ asset('image/pngwing.com-8.png') }}" width="100%" height="auto"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        $(document).ready(function() {
+
+            $('.js-datepicker').datepicker({
+                format: 'yyyy-mm-dd',
+                startDate: '0',
+            });
+            $('.js-datepicker').attr("placeholder","Select a date");
+            $('.js-timepicker').attr("min", "11:00");
+            $('.js-timepicker').attr("max", "23:00");
+
+        });
+    </script>
+{% endblock %}

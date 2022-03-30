@@ -29,6 +29,7 @@ return [
         '/admin/message' => [[['_route' => 'adminMessages', '_controller' => 'App\\Controller\\MessageController::getMessages'], null, null, null, false, false, null]],
         '/user/checkMessage' => [[['_route' => 'checkMessage', '_controller' => 'App\\Controller\\MessageController::checkMessage'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
+        '/Booking' => [[['_route' => 'app_booking', '_controller' => 'App\\Controller\\ReservationController::book'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         '/myAccount' => [[['_route' => 'account', '_controller' => 'App\\Controller\\UserController::myAccount'], null, null, null, false, false, null]],
