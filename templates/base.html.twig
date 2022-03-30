@@ -76,6 +76,18 @@
     </div>
 </div>
 <hr class="hrCustom w-100">
+{% for message in app.flashes('success') %}
+    <div class="alert alert-success">
+        {{ message }}
+    </div>
+{% endfor %}
+
+{% for message in app.flashes('notice') %}
+    <div class="alert alert-success" style="background-color: rgba(255,0,0,0.48)">
+
+        {{ message }}
+    </div>
+{% endfor %}
 {% block body %}{% endblock %}
 <div class="footer mt-auto">
     <div class="container">

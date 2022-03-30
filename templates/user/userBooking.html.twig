@@ -23,14 +23,20 @@
                     </tr>
                     </thead>
                     <tbody>
+                    {% for reservation in bookings %}
+                    <td>{{ reservation.dateReservation|date('Y-m-d') }}</td>
+                    <td>{{ reservation.timeReservation|date('H:i') }}</td>
 
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-
+                    {% if reservation.available == true %}
+                        <td>  Confirmed </td>
+                    {% else %}
+                        <td>  Pending confirmation </td>
+                    {% endif %}
+                        <td>
+                           <a href="{{ path('delBooking') }}?idRez={{ reservation.id }}" class="btn btn-addCart"> Delete </a>
+                        </td>
+                    {% endfor %}
                     </tbody>
-
                 </table>
 
             </div>
