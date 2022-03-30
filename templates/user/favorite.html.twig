@@ -19,18 +19,18 @@
                             {% for dish in dishes %}
                                 {% if dish.id == fav.idDish %}
                                     <tbody>
-                                    <td>
-                                        <tr>
+                                    <tr>
+                                        <td>
                                             <img class="imgMenu" src="{{ asset(dish.photo) }}">
                                             <h2 class="textMenu">{{ dish.dishName }}</h2>
                                             <h4 class="textPrix"> {{ dish.price }} € </h4>
                                             <h6 class="textDesc"> {{ dish.description }} </h6>
-                                        </tr>
-                                        <tr>
+                                        </td>
+                                        <td>
                                             <a href="{{ path('del-fav') }}?idFav={{ fav.id }}" class="btn btn-outline-primary"> Remove </a>
                                             <a href="" class="btn btn-outline-primary"> Add to Cart </a>
-                                        </tr>
-                                    </td>
+                                        </td>
+                                    </tr>
                                     </tbody>
                                 {% endif %}
                             {% endfor %}

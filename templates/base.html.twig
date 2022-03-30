@@ -30,7 +30,7 @@
             <img src="{{ asset('image/CHEZ_GUSTO_LOGO.png') }}" class="imgHeader" />
         </div>
         <div class="my-auto">
-            <a href ="#"  class="btn btn-outline-primary" role = "button">CART</a>
+            <a href ="{{ path('cart') }}"  class="btn btn-outline-primary" role = "button">CART</a>
             {% if is_granted('ROLE_ADMIN') %}
                 <div class="dropdown">
                     <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ app.user.idUser }} </button>

@@ -19,6 +19,17 @@ class CartRepository extends ServiceEntityRepository
         parent::__construct($registry, Cart::class);
     }
 
+    public function existOpenCart(int $idUser)
+    {
+        return $this->createQueryBuilder("f")
+            ->andWhere("f.id_user = :idUser")
+            ->andWhere("f.status = :status")
+            ->setParameter("idUser", $idUser)
+            ->setParameter("status", "open")
+            ->getQuery()
+            ->getResult();
+    }
+
     // /**
     //  * @return Cart[] Returns an array of Cart objects
     //  */

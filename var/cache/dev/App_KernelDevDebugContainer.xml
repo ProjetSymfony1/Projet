@@ -338,6 +338,13 @@
         <argument type="service" id=".service_locator.l1ae.Qz.App\Controller\AdminController"/>
       </call>
     </service>
+    <service id="App\Controller\CartController" class="App\Controller\CartController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.l1ae.Qz.App\Controller\CartController"/>
+      </call>
+    </service>
     <service id="App\Controller\FavoriteController" class="App\Controller\FavoriteController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -5640,6 +5647,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AdminController" class="App\Controller\AdminController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AdminController" class="App\Controller\AdminController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\AdminController" class="App\Controller\AdminController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CartController" class="App\Controller\CartController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CartController" class="App\Controller\CartController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\CartController" class="App\Controller\CartController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\FavoriteController" class="App\Controller\FavoriteController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\FavoriteController" class="App\Controller\FavoriteController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\FavoriteController" class="App\Controller\FavoriteController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -5998,6 +6008,21 @@
         <argument key="loader" type="service_closure" id=".errored..service_locator.KfbR3DY.Symfony\Component\Config\Loader\LoaderInterface"/>
       </argument>
     </service>
+    <service id=".service_locator.Nt1q1Yk" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="cartRepository" type="service_closure" id="App\Repository\CartRepository"/>
+        <argument key="dishRepository" type="service_closure" id="App\Repository\DishRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.z5j1fWx" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="cartRepository" type="service_closure" id="App\Repository\CartRepository"/>
+        <argument key="dishRepository" type="service_closure" id="App\Repository\DishRepository"/>
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
     <service id=".service_locator.c5HshjL" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6092,9 +6117,11 @@
         <argument key="userRepository" type="service_closure" id="App\Repository\UserRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.OM8_kQ." class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.vrPfZ0B" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Controller\CartController::addCart" type="service_closure" id=".service_locator.z5j1fWx"/>
+        <argument key="App\Controller\CartController::cart" type="service_closure" id=".service_locator.Nt1q1Yk"/>
         <argument key="App\Controller\FavoriteController::addFav" type="service_closure" id=".service_locator.CpYXYDY"/>
         <argument key="App\Controller\FavoriteController::delFav" type="service_closure" id=".service_locator.ShvcuJq"/>
         <argument key="App\Controller\FavoriteController::menu" type="service_closure" id=".service_locator.c5HshjL"/>
@@ -6116,6 +6143,8 @@
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="kernel::terminate" type="service_closure" id=".service_locator.KfwZsne"/>
+        <argument key="App\Controller\CartController:addCart" type="service_closure" id=".service_locator.z5j1fWx"/>
+        <argument key="App\Controller\CartController:cart" type="service_closure" id=".service_locator.Nt1q1Yk"/>
         <argument key="App\Controller\FavoriteController:addFav" type="service_closure" id=".service_locator.CpYXYDY"/>
         <argument key="App\Controller\FavoriteController:delFav" type="service_closure" id=".service_locator.ShvcuJq"/>
         <argument key="App\Controller\FavoriteController:menu" type="service_closure" id=".service_locator.c5HshjL"/>
@@ -6476,6 +6505,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.l1ae.Qz" method="withContext"/>
     </service>
+    <service id=".service_locator.l1ae.Qz.App\Controller\CartController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\CartController"/>
+      <argument>App\Controller\CartController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.l1ae.Qz" method="withContext"/>
+    </service>
     <service id=".service_locator.l1ae.Qz.App\Controller\FavoriteController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\FavoriteController"/>
       <argument>App\Controller\FavoriteController</argument>
@@ -6690,12 +6725,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.OM8_kQ."/>
+      <argument type="service" id=".service_locator.vrPfZ0B"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.OM8_kQ."/>
+      <argument type="service" id=".service_locator.vrPfZ0B"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection"/>
@@ -7523,7 +7558,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.OM8_kQ."/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.vrPfZ0B"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>
@@ -7540,6 +7575,7 @@
     <service id="Psr\Log\LoggerInterface $securityLogger" alias="monolog.logger.security"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id=".service_locator.0GV1BZZ" alias=".service_locator.gSv9zYw"/>
+    <service id=".service_locator.mInYk9c" alias=".service_locator.z5j1fWx"/>
     <service id=".service_locator.QmZPBku" alias=".service_locator.c5HshjL"/>
     <service id=".service_locator.i1HVFYp" alias=".service_locator.ShvcuJq"/>
     <service id=".service_locator.0kijmoZ" alias=".service_locator..ALD__g"/>
@@ -7547,7 +7583,7 @@
     <service id=".service_locator.Rw.2rWD" alias=".service_locator.7W1mY2B"/>
     <service id=".service_locator.I3YGizR" alias=".service_locator.Dbqq6dv"/>
     <service id=".service_locator.KS3nifg" alias=".service_locator.ToB61S3"/>
-    <service id=".service_locator.2iuj0_q" alias=".service_locator.OM8_kQ."/>
+    <service id=".service_locator.TwQnv99" alias=".service_locator.vrPfZ0B"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
     <service id=".service_locator.nhH76HW" alias=".service_locator.Oq4.iNe"/>
     <service id=".service_locator.qBCHs1a" alias=".service_locator.QXcJQkF"/>
@@ -7575,6 +7611,8 @@
     <service id="doctrine.orm.default_metadata_driver" alias=".doctrine.orm.default_metadata_driver"/>
     <service id=".service_locator._5g_Wvc" alias=".service_locator.KfwZsne"/>
     <service id=".service_locator.JBAFp66" alias=".service_locator.KfbR3DY"/>
+    <service id=".service_locator.t0k8wWB" alias=".service_locator.Nt1q1Yk"/>
+    <service id=".service_locator.3ZyMvLw" alias=".service_locator.z5j1fWx"/>
     <service id=".service_locator.4PA9MJ2" alias=".service_locator.c5HshjL"/>
     <service id=".service_locator.8vkYWXN" alias=".service_locator.CpYXYDY"/>
     <service id=".service_locator.IJDXXsD" alias=".service_locator.ShvcuJq"/>

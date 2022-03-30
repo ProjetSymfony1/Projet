@@ -13,6 +13,8 @@ return [
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
+        '/cart' => [[['_route' => 'cart', '_controller' => 'App\\Controller\\CartController::cart'], null, null, null, false, false, null]],
+        '/addCart' => [[['_route' => 'add-cart', '_controller' => 'App\\Controller\\CartController::addCart'], null, null, null, false, false, null]],
         '/favoris' => [[['_route' => 'favoris', '_controller' => 'App\\Controller\\FavoriteController::menu'], null, null, null, false, false, null]],
         '/addFavoris' => [[['_route' => 'add-fav', '_controller' => 'App\\Controller\\FavoriteController::addFav'], null, null, null, false, false, null]],
         '/supFavoris' => [[['_route' => 'del-fav', '_controller' => 'App\\Controller\\FavoriteController::delFav'], null, null, null, false, false, null]],

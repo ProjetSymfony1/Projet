@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+{% block header %} <link rel="stylesheet" href="{{ asset('css/menuStyle.css') }}" />{% endblock %}
+
+{% block title %}Cart{% endblock %}
+
+{% block body %}
+    <div class="shadow-lg p-5 mb-5 bg-white rounded container">
+        <div class="card text-center">
+            <div class="card-header">
+                Your cart
+            </div>
+            <div class="card-body">
+                <h5 class="card-title"> Coming back for your best picks ?</h5>
+                <p class="card-text">Gusto will never fail you ! MAMMA MIA !</p>
+                <table class="table">
+                    {% for c in cart %}
+                        {% for key, value in c.idDish %}
+                            {% for dish in dishes %}
+                                {% if dish.id == key %}
+                                    <tr>
+                                        <td>
+                                            <img class="imgMenu" src="{{ asset(dish.photo) }}">
+                                            <h2 class="textMenu">{{ dish.dishName }}</h2>
+                                            <h4 class="textPrix"> {{ dish.price }} € </h4>
+                                            <h6 class="textDesc"> {{ dish.description }} </h6>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-outline-primary"> Remove </a>
+                                            <h4 class="textPrix"> {{ value }} </h4>
+                                        </td>
+                                    </tr>
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
