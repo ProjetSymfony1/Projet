@@ -61,7 +61,7 @@
                     <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ app.user.idUser }} </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href = "">My Account</a>
-                        <a class="dropdown-item" href = "#">My Booking</a>
+                        <a class="dropdown-item" href = "{{ path('manageBookings') }}">My Booking</a>
                         <a class="dropdown-item" href = "{{ path('favoris') }}">My Favorites</a>
                         <a class="dropdown-item" href = "{{ path('userMessages')}}?id={{ app.user.id }}">My Messages</a>
                         <a class="dropdown-item" href ="{{ path('contact') }}">Contact</a>

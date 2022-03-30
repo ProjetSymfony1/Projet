@@ -23,6 +23,7 @@ return [
     'homepage' => [[], ['_controller' => 'App\\Controller\\HomepageController::home'], [], [['text', '/']], [], [], []],
     'menu' => [[], ['_controller' => 'App\\Controller\\HomepageController::menu'], [], [['text', '/menu']], [], [], []],
     'reservation' => [[], ['_controller' => 'App\\Controller\\HomepageController::book'], [], [['text', '/reservation']], [], [], []],
+    'manageBookings' => [[], ['_controller' => 'App\\Controller\\ManageBookings::message'], [], [['text', '/manageBooking']], [], [], []],
     'add-dish' => [[], ['_controller' => 'App\\Controller\\MenuController::add'], [], [['text', '/addDish']], [], [], []],
     'del-dish' => [[], ['_controller' => 'App\\Controller\\MenuController::del'], [], [['text', '/delDish']], [], [], []],
     'contact' => [[], ['_controller' => 'App\\Controller\\MessageController::message'], [], [['text', '/contact']], [], [], []],

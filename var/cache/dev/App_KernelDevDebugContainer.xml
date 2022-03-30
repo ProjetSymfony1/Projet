@@ -359,6 +359,13 @@
         <argument type="service" id=".service_locator.jIxfAsi.App\Controller\HomepageController"/>
       </call>
     </service>
+    <service id="App\Controller\ManageBookings" class="App\Controller\ManageBookings" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.jIxfAsi.App\Controller\ManageBookings"/>
+      </call>
+    </service>
     <service id="App\Controller\MenuController" class="App\Controller\MenuController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -5671,6 +5678,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\HomepageController" class="App\Controller\HomepageController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\HomepageController" class="App\Controller\HomepageController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\HomepageController" class="App\Controller\HomepageController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ManageBookings" class="App\Controller\ManageBookings" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ManageBookings" class="App\Controller\ManageBookings" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ManageBookings" class="App\Controller\ManageBookings" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\MenuController" class="App\Controller\MenuController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\MenuController" class="App\Controller\MenuController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\MenuController" class="App\Controller\MenuController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6072,16 +6082,16 @@
         <argument key="dishRepository" type="service_closure" id="App\Repository\DishRepository"/>
       </argument>
     </service>
+    <service id=".service_locator.aKM6MDa" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
     <service id=".service_locator.HxVcYnW" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="dishRepository" type="service_closure" id="App\Repository\DishRepository"/>
-        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
-      </argument>
-    </service>
-    <service id=".service_locator.aKM6MDa" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
         <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
@@ -6144,7 +6154,7 @@
         <argument key="userRepository" type="service_closure" id="App\Repository\UserRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.3Bb_PKI" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.xlUM.w1" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\CartController::addCart" type="service_closure" id=".service_locator.9F4P_5w"/>
@@ -6153,6 +6163,7 @@
         <argument key="App\Controller\FavoriteController::delFav" type="service_closure" id=".service_locator.16cAqTB"/>
         <argument key="App\Controller\FavoriteController::menu" type="service_closure" id=".service_locator.D3sksqL"/>
         <argument key="App\Controller\HomepageController::menu" type="service_closure" id=".service_locator.hOGlcpj"/>
+        <argument key="App\Controller\ManageBookings::message" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\MenuController::add" type="service_closure" id=".service_locator.HxVcYnW"/>
         <argument key="App\Controller\MenuController::del" type="service_closure" id=".service_locator.HxVcYnW"/>
         <argument key="App\Controller\MenuController::menu" type="service_closure" id=".service_locator.hOGlcpj"/>
@@ -6177,6 +6188,7 @@
         <argument key="App\Controller\FavoriteController:delFav" type="service_closure" id=".service_locator.16cAqTB"/>
         <argument key="App\Controller\FavoriteController:menu" type="service_closure" id=".service_locator.D3sksqL"/>
         <argument key="App\Controller\HomepageController:menu" type="service_closure" id=".service_locator.hOGlcpj"/>
+        <argument key="App\Controller\ManageBookings:message" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\MenuController:add" type="service_closure" id=".service_locator.HxVcYnW"/>
         <argument key="App\Controller\MenuController:del" type="service_closure" id=".service_locator.HxVcYnW"/>
         <argument key="App\Controller\MenuController:menu" type="service_closure" id=".service_locator.hOGlcpj"/>
@@ -6553,6 +6565,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.jIxfAsi" method="withContext"/>
     </service>
+    <service id=".service_locator.jIxfAsi.App\Controller\ManageBookings" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ManageBookings"/>
+      <argument>App\Controller\ManageBookings</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.jIxfAsi" method="withContext"/>
+    </service>
     <service id=".service_locator.jIxfAsi.App\Controller\MenuController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\MenuController"/>
       <argument>App\Controller\MenuController</argument>
@@ -6761,12 +6779,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.3Bb_PKI"/>
+      <argument type="service" id=".service_locator.xlUM.w1"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.3Bb_PKI"/>
+      <argument type="service" id=".service_locator.xlUM.w1"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection"/>
@@ -7594,7 +7612,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.3Bb_PKI"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.xlUM.w1"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>
@@ -7619,7 +7637,7 @@
     <service id=".service_locator.p_0PZIF" alias=".service_locator.l4r8NAl"/>
     <service id=".service_locator.wZEd48x" alias=".service_locator.8T0KtT7"/>
     <service id=".service_locator.oYdWrmM" alias=".service_locator.inzdibF"/>
-    <service id=".service_locator.DspktoF" alias=".service_locator.3Bb_PKI"/>
+    <service id=".service_locator.dgpIvzw" alias=".service_locator.xlUM.w1"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
     <service id=".service_locator.jiykuhk" alias=".service_locator.3Hw_9y."/>
     <service id=".service_locator.qBCHs1a" alias=".service_locator.QXcJQkF"/>
@@ -7653,8 +7671,8 @@
     <service id=".service_locator.d3xz0ZD" alias=".service_locator.fdg056t"/>
     <service id=".service_locator.eIa1eU8" alias=".service_locator.16cAqTB"/>
     <service id=".service_locator.QxoqEVb" alias=".service_locator.hOGlcpj"/>
-    <service id=".service_locator.wNt07G_" alias=".service_locator.HxVcYnW"/>
     <service id=".service_locator.bInR.ll" alias=".service_locator.aKM6MDa"/>
+    <service id=".service_locator.wNt07G_" alias=".service_locator.HxVcYnW"/>
     <service id=".service_locator.rTKdhJy" alias=".service_locator.tQUwO87"/>
     <service id=".service_locator.vumS3I0" alias=".service_locator.7B8MPwp"/>
     <service id=".service_locator.T7GRSUv" alias=".service_locator.tscA5jo"/>

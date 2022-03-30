@@ -21,6 +21,7 @@ return [
         '/' => [[['_route' => 'homepage', '_controller' => 'App\\Controller\\HomepageController::home'], null, null, null, false, false, null]],
         '/menu' => [[['_route' => 'menu', '_controller' => 'App\\Controller\\HomepageController::menu'], null, null, null, false, false, null]],
         '/reservation' => [[['_route' => 'reservation', '_controller' => 'App\\Controller\\HomepageController::book'], null, null, null, false, false, null]],
+        '/manageBooking' => [[['_route' => 'manageBookings', '_controller' => 'App\\Controller\\ManageBookings::message'], null, null, null, false, false, null]],
         '/addDish' => [[['_route' => 'add-dish', '_controller' => 'App\\Controller\\MenuController::add'], null, null, null, false, false, null]],
         '/delDish' => [[['_route' => 'del-dish', '_controller' => 'App\\Controller\\MenuController::del'], null, null, null, false, false, null]],
         '/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\MessageController::message'], null, null, null, false, false, null]],
