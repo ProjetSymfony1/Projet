@@ -39,6 +39,7 @@ class CartController extends AbstractController
         $cart->addIdDish($idDish);
         $cart->setStatus("open");
         $entityManager->persist($cart);
+	    $this->addFlash('success', 'Added to cart !');
         $entityManager->flush();
 
         return $this->render("user/cart.html.twig", [

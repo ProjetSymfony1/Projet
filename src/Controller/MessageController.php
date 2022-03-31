@@ -29,9 +29,10 @@ class MessageController extends AbstractController
 		    $msg->setMessage($form->get('message')->getData());
 		    $msg->setCreatedAt(new \DateTimeImmutable());
 		    $msg->setIdUser($this->getUser());
-		    $msg->setStatus('En cours de traitement');
+		    $msg->setStatus('Being processed');
 		    $entityManager->persist($msg);
 		    $entityManager->flush();
+		    $this->addFlash('success', 'Your message has been sent !');
 		    return $this->render('homepage/index.html.twig');
 	    }
 
@@ -58,6 +59,7 @@ class MessageController extends AbstractController
 		$msg = $messageRepository->find($idMsg);
 		$entityManager -> remove($msg);
 		$entityManager -> flush();
+		$this->addFlash('success', 'Your message has been deleted !');
 
 		return $this->mesMessages($messageRepository);
 	}
@@ -74,16 +76,15 @@ class MessageController extends AbstractController
 			"messages" => $messageRepository->findAll(), "username" => $nameArray
 		]);
 	}
-
-	#[Route('/user/checkMessage', name: 'checkMessage')]
-
-	public function checkMessage(MessageRepository $messageRepository, UserRepository $userRepository, EntityManagerInterface $entityManager) {
+	#[Route('/admin/checkMessage', name: 'checkMessage')]
+	public function checkMessage(MessageRepository $messageRepository, EntityManagerInterface $entityManager) {
+		
 		$idMsg = $_GET["idMsg"];
 		$msg = $messageRepository->find($idMsg);
-		$msg ->setStatus('Traité');
+		$msg ->setStatus('Processed');
 		$entityManager->persist($msg);
 		$entityManager->flush();
-
-		return $this->mesMessages($messageRepository, $userRepository);
+		$this->addFlash('success', 'The message has been checked !');
+		return $this->render('homepage/index.html.twig');
 	}
 }

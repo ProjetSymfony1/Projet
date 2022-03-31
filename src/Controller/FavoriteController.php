@@ -38,6 +38,7 @@ class FavoriteController extends AbstractController
             $fav->setUserDish($idUser);
             $entityManager->persist($fav);
             $entityManager->flush();
+	        $this->addFlash('success', 'Added to favorites !');
         }
         return  $this->render("homepage/menu.html.twig", [
             "dishes" => $dishRepository->findAll()
@@ -52,6 +53,7 @@ class FavoriteController extends AbstractController
 		$fav = $favoriteRepository->find($idFav);
 		$entityManager -> remove($fav);
 		$entityManager -> flush();
+		$this->addFlash('success', 'Deleted from favorites !');
 		
 		return $this->menu($favoriteRepository, $dishRepository);
 	}

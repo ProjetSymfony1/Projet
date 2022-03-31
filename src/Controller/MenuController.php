@@ -36,6 +36,7 @@ class MenuController extends AbstractController
 		if($form->isSubmitted()){
 			$entityManager->persist($dish);
 			$entityManager->flush();
+			$this->addFlash('success', 'New dish added !');
 			return $this->menu($dishRepository);
         }
 		
@@ -50,6 +51,7 @@ class MenuController extends AbstractController
 		$dish = $dishRepository->find($idDish);
 		$entityManager -> remove($dish);
 		$entityManager -> flush();
+		$this->addFlash('success', 'Dish deleted !');
 		
 		return $this->menu($dishRepository);
 	}

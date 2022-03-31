@@ -35,7 +35,7 @@ return [
     'userMessages' => [[], ['_controller' => 'App\\Controller\\MessageController::mesMessages'], [], [['text', '/user/message']], [], [], []],
     'delMessage' => [[], ['_controller' => 'App\\Controller\\MessageController::delMessage'], [], [['text', '/user/delMessage']], [], [], []],
     'adminMessages' => [[], ['_controller' => 'App\\Controller\\MessageController::getMessages'], [], [['text', '/admin/message']], [], [], []],
-    'checkMessage' => [[], ['_controller' => 'App\\Controller\\MessageController::checkMessage'], [], [['text', '/user/checkMessage']], [], [], []],
+    'checkMessage' => [[], ['_controller' => 'App\\Controller\\MessageController::checkMessage'], [], [['text', '/admin/checkMessage']], [], [], []],
     'app_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], [], []],
     'app_booking' => [[], ['_controller' => 'App\\Controller\\ReservationController::book'], [], [['text', '/Booking']], [], [], []],
     'login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], [], []],
