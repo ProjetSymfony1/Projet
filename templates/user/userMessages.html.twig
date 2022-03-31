@@ -19,15 +19,16 @@
                     <th scope="col">Object</th>
                     <th scope="col">Message</th>
                     <th scope="col">Status</th>
-                    <th scope="col"></th>
+                    <th scope="col">Manage</th>
                 </tr>
                 </thead>
                 <tbody>
                 {% for msg in messages %}
                 <td>{{ msg.object }}</td>
                 <td>{{ msg.message }}</td>
-                <td>{{ msg.status }}</td>
-                {% if msg.status == 'En cours de traitement'%}
+                <td>{{ msg.status }}
+                </td>
+                {% if msg.status == 'Being processed'%}
                 <td>  <a href="{{ path('delMessage') }}?idMsg={{ msg.id }}" class="btn btn-addCart"> Delete </a> </td>
                 {% endif %}
 

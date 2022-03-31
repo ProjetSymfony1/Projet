@@ -156,3 +156,7 @@ text-center {
 .card-title {
     text-decoration: underline;
 }
+
+.table td {
+    vertical-align: middle !important;
+}
