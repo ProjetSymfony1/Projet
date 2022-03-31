@@ -46,7 +46,6 @@
             <img src="{{ asset('image/CHEZ_GUSTO_LOGO.png') }}" class="imgHeader" />
         </div>
         <div class="my-auto">
-            <a href ="{{ path('cart') }}"  class="btn btn-outline-primary" role = "button">CART</a>&nbsp; &nbsp;
             {% if is_granted('ROLE_ADMIN') %}
                 <div class="dropdown">
                     <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ app.user.idUser }} </button>
@@ -58,6 +57,7 @@
                     </div>
                 </div>
             {% elseif is_granted('ROLE_USER') %}
+                <a href ="{{ path('cart') }}"  class="btn btn-outline-primary" role = "button">CART</a>&nbsp;
                 <div class="dropdown">
                     <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ app.user.idUser }} </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -70,8 +70,9 @@
                     </div>
                 </div>
             {% else %}
-                <a href = {{ path('app_register') }} class="btn btn-outline-primary" role = "button">SIGNUP</a> &nbsp;&nbsp;
-                <a href = {{ path('login') }} class="btn btn-outline-primary" role = "button">LOGIN</a>
+                <a href = "{{ path('reservation') }}"  class="btn btn-outline-primary" role = "button">CART</a>&nbsp;
+                <a href = "{{ path('app_register') }}" class="btn btn-outline-primary" role = "button">SIGNUP</a> &nbsp;&nbsp;
+                <a href = "{{ path('login') }}" class="btn btn-outline-primary" role = "button">LOGIN</a>
             {% endif %}
         </div>
     </div>

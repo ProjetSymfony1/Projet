@@ -30,10 +30,6 @@ class RegistrationFormType extends AbstractType
 		            'Other' => null,
 	            ],
             ])
-            ->add('level',CheckboxType::class, [
-                'mapped'=>false,
-	            'required' => false,
-            ])
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
                 'constraints' => [

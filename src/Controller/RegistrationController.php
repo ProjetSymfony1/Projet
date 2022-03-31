@@ -25,13 +25,6 @@ class RegistrationController extends AbstractController
 
         $form->handleRequest($request);
 
-        if ($form->get('level')->getData() === false) {
-            $user->setLevel(['ROLE_USER']);
-        }
-
-        if ($form->get('level')->getData() === true) {
-            $user->setLevel(['ROLE_ADMIN']);
-        }
         $user->setCreatedAt(new \DateTimeImmutable());
 
         if ($form->isSubmitted() && $form->isValid()) {
