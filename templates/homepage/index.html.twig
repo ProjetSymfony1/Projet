@@ -8,20 +8,24 @@
     <div class="container-fluid content">
         <div class="row">
             <div class="col-7 my-auto">
-                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                    <div class="borderTitle mb-4 ml-0">
-                        <p class="text-center h3 my-2">Welcome to your home !</p>
+                    <div class="cardHome text-center">
+                        <div class="card-body">
+                            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                            <h5 class="card-title"> Welcome back to Gusto's, your favorite italian place !</h5>
+                            {% else %}
+                            <h5 class="card-title"> Welcome to Gusto's, your new favorite italian place !</h5>
+                            {% endif %}
+                            <p class="card-text">
+                                After a first very successful french bistrot "Chez Rémi", famous chef, Auguste Gusteau, launches his first italian restaurant. <br>
+                                We welcome you every day, <b>from 10AM to 2AM</b>, to enjoy your favorite italian classics.</p>
+                            <div class="shadow-lg p-3 mb-5 bg-white rounded">
+                            <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=2.774782776832581%2C48.866660925797014%2C2.7779746055603027%2C48.86804066257791&amp;layer=mapnik&amp;marker=48.867350798944365%2C2.7763760089396783" style="border: 1px solid black"></iframe><br/><small>
+                                <a href="https://www.openstreetmap.org/?mlat=48.86735&amp;mlon=2.77638#map=19/48.86735/2.77638">View Larger Map</a>
+                            </small>
+                            </div>
+                        </div>
                     </div>
-                {% else %}
-                    <div class="borderTitle mb-4 ml-0">
-                        <p class="text-center h3 my-2">'anyone can cook'</p>
-                    </div>
-                {% endif %}
-                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolorum
-                    impedit, aut laboriosam sunt eum expedita neque dicta dolore, cupiditate velit consectetur error rem
-                    nostrum provident accusantium officiis at doloribus totam esse fugiat! Impedit, dolorum et nemo
-                    neque fuga reprehenderit saepe error eveniet eum quasi aliquam, non nisi rem, qui nobis ipsam
-                    tenetur repellat aspernatur! Nulla nobis illum tempore reprehenderit? Nam, cupiditate. Pariatur?</p>
+
             </div>
             <div class="col-5">
                 <img src="{{ asset('image/pngwing.com.png') }}" width="100%" height="auto"/>

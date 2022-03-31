@@ -34,4 +34,5 @@ class HomepageController extends AbstractController
     public function book(): Response{
         return $this->render('homepage/booking.html.twig');
     }
+	
 }

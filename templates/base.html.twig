@@ -33,13 +33,14 @@
 <div class="container my-1">
     <div class="d-flex justify-content-between">
         <div class="my-auto">
-            <a href="{{ path('homepage') }}">HOME</a>&nbsp; &nbsp;
-            <a href= {{ path('menu') }}>MENU</a>&nbsp; &nbsp;
+            <a href="{{ path('homepage') }}">HOME</a>
+            <a href= {{ path('menu') }}>MENU</a>
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                 <a href="{{ path('app_booking') }}">BOOK WITH US</a>
             {% else %}
                 <a href="{{ path('reservation') }}">BOOK WITH US</a>
             {% endif %}
+
         </div>
         <div>
             <img src="{{ asset('image/CHEZ_GUSTO_LOGO.png') }}" class="imgHeader" />
@@ -60,7 +61,7 @@
                 <div class="dropdown">
                     <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ app.user.idUser }} </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href = "">My Account</a>
+                        <a class="dropdown-item" href = "{{ path('account') }}">My Account</a>
                         <a class="dropdown-item" href = "{{ path('manageBookings') }}">My Booking</a>
                         <a class="dropdown-item" href = "{{ path('favoris') }}">My Favorites</a>
                         <a class="dropdown-item" href = "{{ path('userMessages')}}?id={{ app.user.id }}">My Messages</a>

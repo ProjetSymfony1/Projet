@@ -24,7 +24,7 @@ class AppFixtures extends Fixture
 	    $dish->setDescription("Cooked Salmon, Spring mix, Cherry tomatoes");
 	    $dish->setType("Starter");
 	    $dish->setPrice(28);
-	    $dish->setPhoto("public/image/plat-1.png");
+	    $dish->setPhoto("image/plat-1.png");
 	    $manager->persist($dish);
 	    $manager->flush();
 	
@@ -33,7 +33,7 @@ class AppFixtures extends Fixture
 	    $dish->setDescription("Poached shrimp, Fresh cheese");
 	    $dish->setType("Starter");
 	    $dish->setPrice(22);
-	    $dish->setPhoto("public/image/plat-5.png");
+	    $dish->setPhoto("image/plat-5.png");
 	    $manager->persist($dish);
 	    $manager->flush();
 	
@@ -42,7 +42,7 @@ class AppFixtures extends Fixture
 	    $dish->setDescription("Chicken, Croutons, Avocado ");
 	    $dish->setType("Starter");
 	    $dish->setPrice(32);
-	    $dish->setPhoto("public/image/plat-6.png");
+	    $dish->setPhoto("image/plat-6.png");
 	    $manager->persist($dish);
 	    $manager->flush();
 	    
@@ -51,7 +51,16 @@ class AppFixtures extends Fixture
 	    $dish->setDescription("Fresh linguini, Homemade tomato sauce");
 	    $dish->setType("Main");
 	    $dish->setPrice(35);
-	    $dish->setPhoto("public/image/plat-2.png");
+	    $dish->setPhoto("image/plat-2.png");
+	    $manager->persist($dish);
+	    $manager->flush();
+	
+	    $dish = new dish();
+	    $dish->setDishName("Venetian Broil");
+	    $dish->setDescription("Steak, Patotoes, Side salad");
+	    $dish->setType("Main");
+	    $dish->setPrice(45);
+	    $dish->setPhoto("image/plat-4.png");
 	    $manager->persist($dish);
 	    $manager->flush();
 		
@@ -60,16 +69,7 @@ class AppFixtures extends Fixture
 	    $dish->setDescription("Fresh eliche, Garlic, Basil");
 	    $dish->setType("Main");
 	    $dish->setPrice(25);
-	    $dish->setPhoto("public/image/plat-3.png");
-	    $manager->persist($dish);
-	    $manager->flush();
-	
-	    $dish = new dish();
-	    $dish->setDishName("London Broil");
-	    $dish->setDescription("Steak, Patotoes, Side salad");
-	    $dish->setType("Main");
-	    $dish->setPrice(45);
-	    $dish->setPhoto("public/image/plat-4.png");
+	    $dish->setPhoto("image/plat-3.png");
 	    $manager->persist($dish);
 	    $manager->flush();
 		
@@ -78,7 +78,7 @@ class AppFixtures extends Fixture
 	    $dish->setDescription("Seasonal fruits");
 	    $dish->setType("Dessert");
 	    $dish->setPrice(20);
-	    $dish->setPhoto("public/image/plat-7.png");
+	    $dish->setPhoto("image/plat-7.png");
 	    $manager->persist($dish);
 	    $manager->flush();
 	
@@ -87,7 +87,7 @@ class AppFixtures extends Fixture
 	    $dish->setDescription("1 portion");
 	    $dish->setType("Dessert");
 	    $dish->setPrice(17);
-	    $dish->setPhoto("public/image/plat-9.png");
+	    $dish->setPhoto("image/plat-8.png");
 	    $manager->persist($dish);
 	    $manager->flush();
 	
@@ -96,7 +96,7 @@ class AppFixtures extends Fixture
 	    $dish->setDescription("1 portion");
 	    $dish->setType("Dessert");
 	    $dish->setPrice(15);
-	    $dish->setPhoto("public/image/plat-9.png");
+	    $dish->setPhoto("image/plat-9.png");
 	    $manager->persist($dish);
 	    $manager->flush();
 		
@@ -144,7 +144,7 @@ class AppFixtures extends Fixture
 	    $user = new User();
 	    $user->setIdUser("manel");
 	    $user->setFirstName("Manel");
-	    $user->setLastName("Isselmane");
+	    $user->setLastName("Isselnane");
 	    $user->setGender("F");
 	    $user->setAdress("75000");
 	    $user->setMail("maneliss@gmail.com");

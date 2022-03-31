@@ -18,6 +18,7 @@ La MIAGE Sorbonne répond à l'appel.
 - Créer, confirmer, archiver et afficher des réservations
 - Ajouter des plats au panier et aux favoris
 - Supprimer des plats du panier et des favoris
+- API 
 - Valider, afficher et archiver des commandes
 
 ##Fixtures 
@@ -41,6 +42,6 @@ Vous pouvez désormais vous connecter et accéder au menu
 
 - HAMMACHE Katia (PO)
 - DIDI Teya 
-- ISSELMANE Manel 
+- ISSELNANE Manel 
 - TRAN Ha Phuong 
 
