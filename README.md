@@ -11,6 +11,7 @@ La MIAGE Sorbonne répond à l'appel.
 
 ##Fonctionnalités
 - Se connecter et créer un compte
+- Envoyer un mail lors de l'inscription
 - Modifier ses informations personnelles
 - Envoyer, receptionner, afficher et traiter des messages à travers un accès à des "fiches clients"
 - Créer, modifier et archiver un plat
