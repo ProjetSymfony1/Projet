@@ -41,6 +41,6 @@ Vous pouvez désormais vous connecter et accéder au menu
 
 - HAMMACHE Katia (PO)
 - DIDI Teya 
-- ISSELMANE Manel 
+- ISSELNANE Manel 
 - TRAN Ha Phuong 
 
