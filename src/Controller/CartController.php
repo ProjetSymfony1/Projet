@@ -42,7 +42,7 @@ class CartController extends AbstractController
 	    $this->addFlash('success', 'Added to cart !');
         $entityManager->flush();
 
-        return $this->render("user/cart.html.twig", [
+        return $this->render("homepage/menu.html.twig", [
             "cart" => $cartRepository->findBy(array("id_user"=>$idUser)),
             "dishes" => $dishRepository->findAll()
         ]);
