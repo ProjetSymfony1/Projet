@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}My Account{% endblock %}
+
+{% block body %}
+
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+        <div class="card text-center">
+            <div class="card-header">
+                Client Data
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <h6 class="textDesc">Username : {{ data.idUser }}</h6>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6 class="textDesc">Email : {{ data.mail }}</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6 class="textDesc">First Name : {{ data.firstName }}</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6 class="textDesc">Last Name : {{ data.lastName }}</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6 class="textDesc">Gender : {{ data.gender }}</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6 class="textDesc">Adress : {{ data.adress }}</h6>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="card-footer text-muted">
+                    GustoHelpService
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

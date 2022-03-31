@@ -15,6 +15,7 @@ return [
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], [], []],
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
+    'clientData' => [[], ['_controller' => 'App\\Controller\\AdminController::getClientData'], [], [['text', '/admin/clientData']], [], [], []],
     'cart' => [[], ['_controller' => 'App\\Controller\\CartController::cart'], [], [['text', '/cart']], [], [], []],
     'add-cart' => [[], ['_controller' => 'App\\Controller\\CartController::addCart'], [], [['text', '/addCart']], [], [], []],
     'remove' => [[], ['_controller' => 'App\\Controller\\CartController::remove'], [], [['text', '/remove']], [], [], []],

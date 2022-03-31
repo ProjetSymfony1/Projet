@@ -26,7 +26,7 @@
                 <tbody>
                 {% if messages != null %}
                     {% for i in 0..messages|length-1 %}
-                        <td> {{ username[i]}}</td>
+                        <td><a href="{{ path('clientData') }}?idUser={{ username[i] }}">{{ username[i]}}</a></td>
                         <td>{{ messages[i].object }}</td>
                         <td>{{ messages[i].message }}</td>
                         <td>{{ messages[i].status }}</td>
@@ -40,7 +40,7 @@
 
                 </tbody>
                     {% endfor %}
-                {% endif %}
+                {% endif     %}
                 </table>
         <div class="card-footer text-muted">
             GustoHelpService
