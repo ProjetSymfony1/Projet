@@ -1736,3 +1736,5 @@ d259fd,::1,GET,http://localhost:8888/chez-gusto/public/contact,1648745881,,200
 00c39d,::1,GET,http://localhost:8888/chez-gusto/public/,1648745896,,200
 8ebab5,::1,GET,http://localhost:8888/chez-gusto/public/menu,1648745897,,200
 f55f22,::1,GET,http://localhost:8888/chez-gusto/public/Booking,1648745899,,200
+5c5dd7,::1,GET,http://localhost:8888/chez-gusto/public/,1648746112,,200
+e25d49,::1,GET,http://localhost:8888/chez-gusto/public/menu,1648746276,,200
