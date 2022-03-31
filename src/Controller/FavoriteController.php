@@ -55,7 +55,7 @@ class FavoriteController extends AbstractController
 		$entityManager -> flush();
 		$this->addFlash('success', 'Deleted from favorites !');
 		
-		return $this->menu($favoriteRepository, $dishRepository);
+		return $this->redirectToRoute('favoris');
 	}
 
 }

@@ -34,6 +34,7 @@ class MenuController extends AbstractController
 		
 		$form->handleRequest($request);
 		if($form->isSubmitted()){
+			$dish->setArchived(false);
 			$entityManager->persist($dish);
 			$entityManager->flush();
 			$this->addFlash('success', 'New dish added !');
@@ -49,11 +50,12 @@ class MenuController extends AbstractController
 	public function del(DishRepository $dishRepository, EntityManagerInterface $entityManager) {
 		$idDish = $_GET["idDish"];
 		$dish = $dishRepository->find($idDish);
-		$entityManager -> remove($dish);
+		$dish->setArchived(true);
+		$entityManager -> persist($dish);
 		$entityManager -> flush();
 		$this->addFlash('success', 'Dish deleted !');
 		
-		return $this->menu($dishRepository);
+		return $this->redirectToRoute('menu');
 	}
 }
 

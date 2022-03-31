@@ -160,3 +160,11 @@ text-center {
 .table td {
     vertical-align: middle !important;
 }
+
+.table h2{
+    margin-top: 10px !important;
+}
+
+.sign {
+    font-size: 30px;
+}

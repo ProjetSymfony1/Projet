@@ -14,6 +14,7 @@
         <table style="margin: auto; text-align: center; width:100%">
             <tr>
                 {% for dish in dishes %}
+                {% if dish.archived != true %}
                     <td>
                         <table style="text-align: center; margin: auto">
                             <tr>
@@ -39,6 +40,7 @@
                         <tr><td><br></td></tr>
                         <tr>
                     {% endif %}
+                            {% endif %}
                 {% endfor %}
         </table>
     </div>

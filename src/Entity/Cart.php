@@ -48,6 +48,12 @@ class Cart
     {
         return $this->id_dish;
     }
+	
+	public function setIdDish(array $id_dish): self
+	{
+		$this->id_dish = $id_dish;
+		return $this;
+	}
 
     public function addIdDish(int $idDish): self
     {

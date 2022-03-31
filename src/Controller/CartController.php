@@ -47,4 +47,38 @@ class CartController extends AbstractController
             "dishes" => $dishRepository->findAll()
         ]);
     }
+	
+	#[Route('/remove', name: 'remove')]
+	public function remove(CartRepository $cartRepository, EntityManagerInterface $entityManager, DishRepository $dishRepository) {
+		$idDish = $_GET["idDish"];
+		$idCart = $_GET["idCart"];
+		$cart = $cartRepository->find($idCart);
+		$id_dish = $cart->getIdDish();
+		unset($id_dish[$idDish]);
+		$cart->setIdDish($id_dish);
+		$entityManager -> persist($cart);
+		$entityManager -> flush();
+		return $this->redirectToRoute('cart');
+	}
+	
+	#[Route('/minusDish', name: 'minus')]
+	public function minus(CartRepository $cartRepository, EntityManagerInterface $entityManager) {
+		$idDish = $_GET["idDish"];
+		$idCart = $_GET["idCart"];
+		$cart = $cartRepository->find($idCart);
+		$id_dish = $cart->getIdDish();
+		$id_dish[$idDish] -= 1;
+		$cart->setIdDish($id_dish);
+		$entityManager -> persist($cart);
+		$entityManager -> flush();
+		return $this->redirectToRoute('cart');
+	}
+	
+	#[Route('/plusDish', name: 'plus')]
+	public function plus(CartRepository $cartRepository, EntityManagerInterface $entityManager, DishRepository $dishRepository) {
+		$this->addCart($cartRepository, $entityManager, $dishRepository);
+		return $this->redirectToRoute('cart');
+	}
+	
+	
 }

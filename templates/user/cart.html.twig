@@ -20,14 +20,29 @@
                                     <tr>
                                         <td>
                                             <img class="imgMenu" src="{{ asset(dish.photo) }}">
+                                        </td>
+                                        <td>
                                             <h2 class="textMenu">{{ dish.dishName }}</h2>
                                             <h4 class="textPrix"> {{ dish.price }} € </h4>
                                             <h6 class="textDesc"> {{ dish.description }} </h6>
                                         </td>
                                         <td>
-                                            <a href="#" class="btn btn-outline-primary"> Remove </a>
-                                            <h4 class="textPrix"> {{ value }} </h4>
-                                            <a href="#"> + </a> <a href="#"> - </a>
+                                            {% if value != 1 %}
+                                                <a href="{{ path('minus') }}?idDish={{ dish.id }}&idCart={{ cart[0].id }}" class="sign">
+                                                    -
+                                                </a>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            <h2 class="textDesc"> {{ value }} </h2>
+                                        </td>
+                                        <td>
+                                            <a href="{{ path('plus') }}?idDish={{ dish.id }}" class="sign">
+                                                +
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="{{ path('remove') }}?idDish={{ dish.id }}&idCart={{ cart[0].id }}" class="btn btn-primary btn-sm"> Remove </a>
                                         </td>
                                     </tr>
                                 {% endif %}

@@ -72,6 +72,7 @@ class MessageController extends AbstractController
 		foreach ($msg as $value) {
 			$nameArray[] = ($userRepository->findBy(array('id' => $value->getIdUser())))[0]->getIdUser();
 		}
+		
 		return $this->render("admin/adminMessages.html.twig", [
 			"messages" => $messageRepository->findAll(), "username" => $nameArray
 		]);
