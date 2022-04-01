@@ -30,16 +30,19 @@
 
                             {% if reservation.available == 1 %}
                                 <td>  Confirmed </td>
+                                <td>
+                                    <a href="{{ path('cancelBooking') }}?idRez={{ reservation.id }}" class="btn btn-addCart"> Cancel </a>
+                                </td>
                             {% elseif  reservation.available == 0 %}
                                 <td>  Pending confirmation </td>
+                                <td>
+                                    <a href="{{ path('cancelBooking') }}?idRez={{ reservation.id }}" class="btn btn-addCart"> Cancel </a>
+                                </td>
                             {% elseif  reservation.available == 3 %}
                                 <td>  Archived </td>
                             {% else %}
                                 <td>  Canceled </td>
                             {% endif %}
-                                <td>
-                                   <a href="{{ path('delBooking') }}?idRez={{ reservation.id }}" class="btn btn-addCart"> Delete </a>
-                                </td>
                         </tr>
                     {% endfor %}
                     </tbody>

@@ -28,17 +28,6 @@ class ManageBookings extends AbstractController
 
     }
 
-    #[Route('/user/delBooking', name: 'delBooking')]
-
-    public function delBooking(ReservationRepository $reservationRepository, EntityManagerInterface $entityManager) {
-        $idRez = $_GET["idRez"];
-        $rez = $reservationRepository->find($idRez);
-        $entityManager -> remove($rez);
-        $entityManager -> flush();
-        $this->addFlash('success', 'Your booking has been deleted !');
-        return $this->booking($reservationRepository);
-    }
-
     #[Route('/admin/adminManageBookings', name: 'adminBookings')]
 
     public function adminManageBookings(ReservationRepository $reservationRepository, UserRepository $userRepository) {
@@ -63,7 +52,7 @@ class ManageBookings extends AbstractController
         return $this->adminManageBookings($reservationRepository,  $userRepository);
     }
 
-    #[Route('/admin/cancelBooking', name: 'cancelBooking')]
+    #[Route('/cancelBooking', name: 'cancelBooking')]
 
     public function cancelBooking(ReservationRepository $reservationRepository, EntityManagerInterface $entityManager, UserRepository $userRepository) {
         $idRez = $_GET["idRez"];

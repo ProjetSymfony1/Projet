@@ -18,7 +18,7 @@ La MIAGE Sorbonne répond à l'appel.
 - Créer, confirmer, archiver et afficher des réservations
 - Ajouter des plats au panier et aux favoris
 - Supprimer des plats du panier et des favoris
-- API 
+- API Map
 - Valider, afficher et archiver des commandes
 
 ##Fixtures 

@@ -21,7 +21,6 @@ class HomepageController extends AbstractController
      * @Route("/menu", name="menu")
      */
     public function menu(DishRepository $dishRepository): Response{
-        //return $this->render('homepage/menu.html.twig');
 
         return $this->render("homepage/menu.html.twig", [
             "dishes" => $dishRepository->findAll()
