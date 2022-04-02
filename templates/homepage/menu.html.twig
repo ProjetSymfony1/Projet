@@ -13,13 +13,14 @@
     <div class="box">
         <table style="margin: auto; text-align: center; width:100%">
             <tr>
+                {% set nbr = 0 %}
                 {% for dish in dishes %}
                 {% if dish.archived != true %}
                     <td>
                         <table style="text-align: center; margin: auto">
                             <tr>
                                 <td>
-
+                                    {% set nbr = nbr+1 %}
                                     <img src="{{ asset(dish.photo) }}" class="imgMenu">
                                     <h2 class="textMenu" id="dishName"> {{ dish.dishName }} </h2>
                                     <h4 class="textPrix"> {{ dish.price }} € </h4>
@@ -35,7 +36,7 @@
                             </tr>
                         </table>
                     </td>
-                    {% if dish.id % 3 == 0 %}
+                    {% if nbr % 3 == 0 %}
                         </tr>
                         <tr><td><br></td></tr>
                         <tr>
