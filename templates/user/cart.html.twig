@@ -13,10 +13,12 @@
                 <h5 class="card-title"> Coming back for your best picks ?</h5>
                 <p class="card-text">Gusto will never fail you ! MAMMA MIA !</p>
                 <table class="table">
+                    {% set total = 0 %}
                     {% for c in cart %}
                         {% for key, value in c.idDish %}
                             {% for dish in dishes %}
                                 {% if dish.id == key %}
+                                    {% set total = total+(dish.price*value) %}
                                     <tr>
                                         <td>
                                             <img class="imgMenu" src="{{ asset(dish.photo) }}">
@@ -49,6 +51,11 @@
                             {% endfor %}
                         {% endfor %}
                     {% endfor %}
+                    <tr>
+                        <td colspan="6" style="text-align: center">
+                            <h3 class="textPrix">Total : {{ total }} €</h3>
+                        </td>
+                    </tr>
                 </table>
             </div>
         </div>
