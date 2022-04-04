@@ -24,10 +24,11 @@ class RegistrationController extends AbstractController
         $form = $this->createForm(RegistrationFormType::class, $user);
 
         $form->handleRequest($request);
-
-        $user->setCreatedAt(new \DateTimeImmutable());
+	    $user->setCreatedAt(new \DateTimeImmutable());
+	    $user->setLevel(['ROLE_USER']);
 
         if ($form->isSubmitted() && $form->isValid()) {
+	        
             // encode the plain password
             $user->setPwduser(
             $userPasswordHasher->hashPassword(
@@ -35,7 +36,6 @@ class RegistrationController extends AbstractController
                     $form->get('plainPassword')->getData()
                 )
             );
-
             $entityManager->persist($user);
             $entityManager->flush();
             // do anything else you need here, like send an email
