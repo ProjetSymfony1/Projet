@@ -18,22 +18,24 @@
                         {% if fav.idUser == app.user.id %}
                             {% for dish in dishes %}
                                 {% if dish.id == fav.idDish %}
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            <img class="imgMenu" src="{{ asset(dish.photo) }}">
-                                        </td>
-                                        <td>
-                                            <h2 class="textMenu">{{ dish.dishName }}</h2>
-                                            <h4 class="textPrix"> {{ dish.price }} € </h4>
-                                            <h6 class="textDesc"> {{ dish.description }} </h6>
-                                        </td>
-                                        <td>
-                                            <a href="{{ path('del-fav') }}?idFav={{ fav.id }}" class="btn btn-outline-primary"> Remove </a>
-                                            <a href="{{ path('add-cart') }}?idDish={{ dish.id }} " class="btn btn-outline-primary"> Add to Cart </a>
-                                        </td>
-                                    </tr>
-                                    </tbody>
+                                    {% if dish.archived != 1 %}
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <img class="imgMenu" src="{{ asset(dish.photo) }}">
+                                            </td>
+                                            <td>
+                                                <h2 class="textMenu">{{ dish.dishName }}</h2>
+                                                <h4 class="textPrix"> {{ dish.price }} € </h4>
+                                                <h6 class="textDesc"> {{ dish.description }} </h6>
+                                            </td>
+                                            <td>
+                                                <a href="{{ path('del-fav') }}?idFav={{ fav.id }}" class="btn btn-outline-primary"> Remove </a>
+                                                <a href="{{ path('add-cart') }}?idDish={{ dish.id }} " class="btn btn-outline-primary"> Add to Cart </a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    {% endif %}
                                 {% endif %}
                             {% endfor %}
                         {% endif %}
