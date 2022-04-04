@@ -60,7 +60,7 @@ class ManageBookings extends AbstractController
         $rez ->setAvailable(2);
         $entityManager -> flush();
         $this->addFlash('success', 'Booking canceled !');
-        return $this->adminManageBookings($reservationRepository, $userRepository);
+        return $this->redirectToRoute('manageBookings');
     }
 
     #[Route('/admin/archiveBooking', name: 'archiveBooking')]
