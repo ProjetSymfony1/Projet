@@ -49,7 +49,7 @@ class ManageBookings extends AbstractController
         $rez ->setAvailable(1);
         $entityManager -> flush();
         $this->addFlash('success', 'Booking confirmed !');
-	    return $this->redirectToRoute('adminBookings');
+	    return $this->redirectToRoute('manageBookings');
     }
 
     #[Route('/cancelBooking', name: 'cancelBooking')]
@@ -60,7 +60,13 @@ class ManageBookings extends AbstractController
         $rez ->setAvailable(2);
         $entityManager -> flush();
         $this->addFlash('success', 'Booking canceled !');
-        return $this->redirectToRoute('adminBookings');
+		if (($this->getUser())->getRoles() !== ['ROLE_ADMIN']) {
+			return $this->redirectToRoute('manageBookings');
+		}
+		else {
+			return $this->redirectToRoute('adminBookings');
+		}
+    
     }
 
     #[Route('/admin/archiveBooking', name: 'archiveBooking')]
