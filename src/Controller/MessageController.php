@@ -33,7 +33,7 @@ class MessageController extends AbstractController
 		    $entityManager->persist($msg);
 		    $entityManager->flush();
 		    $this->addFlash('success', 'Your message has been sent !');
-		    return $this->render('homepage/index.html.twig');
+		    return $this->redirectToRoute('userMessages');
 	    }
 
         return $this ->render('user/contact.html.twig', [
@@ -85,7 +85,7 @@ class MessageController extends AbstractController
 		$msg ->setStatus('Processed');
 		$entityManager->persist($msg);
 		$entityManager->flush();
-		$this->addFlash('success', 'The message has been checked !');
-		return $this->render('homepage/index.html.twig');
+		$this->addFlash('success', 'The message has been processed !');
+		return $this->redirectToRoute('adminMessages');
 	}
 }

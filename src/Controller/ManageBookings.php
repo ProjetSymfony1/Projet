@@ -34,7 +34,7 @@ class ManageBookings extends AbstractController
         $rez = $reservationRepository->findAll();
         $nameArray = array();
         foreach ($rez as $value) {
-            $nameArray[] = ($userRepository->findBy(array('id' => $value->getIdUser())))[0]->getIdUser();
+            $nameArray[] = ($userRepository->findBy(array('id' => $value->getIdUser())))[0]->getLastName();
         }
         return $this->render("admin/adminManageBookings.html.twig", [
             "rez" => $rez, "username" => $nameArray
@@ -49,7 +49,7 @@ class ManageBookings extends AbstractController
         $rez ->setAvailable(1);
         $entityManager -> flush();
         $this->addFlash('success', 'Booking confirmed !');
-        return $this->adminManageBookings($reservationRepository,  $userRepository);
+	    return $this->redirectToRoute('adminBookings');
     }
 
     #[Route('/cancelBooking', name: 'cancelBooking')]
@@ -60,7 +60,7 @@ class ManageBookings extends AbstractController
         $rez ->setAvailable(2);
         $entityManager -> flush();
         $this->addFlash('success', 'Booking canceled !');
-        return $this->redirectToRoute('manageBookings');
+        return $this->redirectToRoute('adminBookings');
     }
 
     #[Route('/admin/archiveBooking', name: 'archiveBooking')]
@@ -71,6 +71,6 @@ class ManageBookings extends AbstractController
         $rez ->setAvailable(3);
         $entityManager -> flush();
         $this->addFlash('success', 'Booking archived !');
-        return $this->adminManageBookings($reservationRepository, $userRepository);
+	    return $this->redirectToRoute('adminBookings');
     }
 }

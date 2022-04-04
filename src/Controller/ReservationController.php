@@ -38,7 +38,7 @@ class ReservationController extends AbstractController
                 $entityManager->flush();
                 $this->addFlash('success', 'Your table has been booked !');
             }
-            else $this->addFlash('notice', 'Your slot is outdated !!');
+            else $this->addFlash('notice', 'Your slot is outdated !');
 
         }
 
