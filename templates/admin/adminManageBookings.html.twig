@@ -38,10 +38,18 @@
                                 {% else %}
                                     <td>  Canceled </td>
                                 {% endif %}
+
                                 <td>
-                                    <a href="{{ path('cancelBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> Cancel </a>&nbsp;&nbsp;
-                                    <a href="{{ path('confirmBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> Confirm </a>&nbsp;&nbsp;
+                                    {% if rez[i].available == 2 %}
                                     <a href="{{ path('archiveBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> Archive </a>
+                                    {% elseif rez[i].available == 1 %}
+                                        <a href="{{ path('cancelBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> Cancel </a>&nbsp;
+                                        <a href="{{ path('archiveBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> Archive </a>
+                                    {% else %}
+                                        <a href="{{ path('cancelBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> Cancel </a>&nbsp;&nbsp;
+                                        <a href="{{ path('confirmBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> Confirm </a>
+                                        <a href="{{ path('archiveBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> Archive </a>
+                                    {% endif %}&nbsp;&nbsp;
                                 </td>
                             </tr>
                         {% endif %}
