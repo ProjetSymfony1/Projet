@@ -15,49 +15,66 @@
                 <table class="table">
                     {% set total = 0 %}
                     {% for c in cart %}
-                        {% for key, value in c.idDish %}
-                            {% for dish in dishes %}
-                                {% if dish.id == key %}
-                                    {% if dish.archived != 1 %}
-                                        {% set total = total+(dish.price*value) %}
-                                        <tr>
-                                            <td>
-                                                <img class="imgMenu" src="{{ asset(dish.photo) }}">
-                                            </td>
-                                            <td>
-                                                <h2 class="textMenu">{{ dish.dishName }}</h2>
-                                                <h4 class="textPrix"> {{ dish.price }} € </h4>
-                                                <h6 class="textDesc"> {{ dish.description }} </h6>
-                                            </td>
-                                            <td>
-                                                {% if value != 1 %}
-                                                    <a href="{{ path('minus') }}?idDish={{ dish.id }}&idCart={{ cart[0].id }}" class="sign">
-                                                        -
+                        {% if c.status == "open" %}
+                            {% for key, value in c.idDish %}
+                                {% for dish in dishes %}
+                                    {% if dish.id == key %}
+                                        {% if dish.archived != 1 %}
+                                            {% set total = total+(dish.price*value) %}
+                                            <tr>
+                                                <td>
+                                                    <img class="imgMenu" src="{{ asset(dish.photo) }}">
+                                                </td>
+                                                <td>
+                                                    <h2 class="textMenu">{{ dish.dishName }}</h2>
+                                                    <h4 class="textPrix"> {{ dish.price }} € </h4>
+                                                    <h6 class="textDesc"> {{ dish.description }} </h6>
+                                                </td>
+                                                <td>
+                                                    {% if value != 1 %}
+                                                        <a href="{{ path('minus') }}?idDish={{ dish.id }}&idCart={{ cart[0].id }}" class="sign">
+                                                            -
+                                                        </a>
+                                                    {% endif %}
+                                                </td>
+                                                <td>
+                                                    <h2 class="textDesc"> {{ value }} </h2>
+                                                </td>
+                                                <td>
+                                                    <a href="{{ path('plus') }}?idDish={{ dish.id }}" class="sign">
+                                                        +
                                                     </a>
-                                                {% endif %}
-                                            </td>
-                                            <td>
-                                                <h2 class="textDesc"> {{ value }} </h2>
-                                            </td>
-                                            <td>
-                                                <a href="{{ path('plus') }}?idDish={{ dish.id }}" class="sign">
-                                                    +
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <a href="{{ path('remove') }}?idDish={{ dish.id }}&idCart={{ cart[0].id }}" class="btn btn-primary btn-sm"> Remove </a>
-                                            </td>
-                                        </tr>
+                                                </td>
+                                                <td>
+                                                    <a href="{{ path('remove') }}?idDish={{ dish.id }}&idCart={{ cart[0].id }}" class="btn btn-primary btn-sm"> Remove </a>
+                                                </td>
+                                            </tr>
+                                        {% endif %}
                                     {% endif %}
-                                {% endif %}
+                                {% endfor %}
                             {% endfor %}
-                        {% endfor %}
+                        {% endif %}
                     {% endfor %}
-                    <tr>
-                        <td colspan="6" style="text-align: center">
-                            <h3 class="textPrix">Total : {{ total }} €</h3>
-                        </td>
-                    </tr>
+                    {% for c in cart %}
+                        {% if c.status == "open" %}
+                            <tr>
+                                <td colspan="6" style="text-align: center">
+                                    <h3 class="textPrix">Total : {{ total }} €</h3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" style="text-align: center">
+                                    <a href="{{ path('make-order')}}?total={{ total }}" class="btn btn-primary"> Order </a>
+                                </td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <td colspan="6" style="text-align: center">
+                                    <p class="card-text">Cart is empty ? <a href="{{ path('menu') }}">Choose your menu here !</a></p>
+                                </td>
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
                 </table>
             </div>
         </div>
