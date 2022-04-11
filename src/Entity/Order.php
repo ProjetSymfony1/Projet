@@ -21,6 +21,12 @@ class Order
     #[ORM\JoinColumn(nullable: false)]
     private $id_cart;
 
+    #[ORM\Column(type: 'float')]
+    private $amount;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    private $status;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -43,9 +49,38 @@ class Order
         return $this->id_cart;
     }
 
+    public function getIdCartInt(): int
+    {
+        return $this->id_cart->getId();
+    }
+
     public function setIdCart(cart $id_cart): self
     {
         $this->id_cart = $id_cart;
+
+        return $this;
+    }
+
+    public function getAmount(): ?float
+    {
+        return $this->amount;
+    }
+
+    public function setAmount(float $amount): self
+    {
+        $this->amount = $amount;
+
+        return $this;
+    }
+
+    public function getStatus(): ?string
+    {
+        return $this->status;
+    }
+
+    public function setStatus(string $status): self
+    {
+        $this->status = $status;
 
         return $this;
     }

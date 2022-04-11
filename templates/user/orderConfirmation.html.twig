@@ -46,7 +46,7 @@
                         <tr>
                             <td colspan="3" style="text-align: center">
                                 <a href="{{ path('cart') }}" class="btn btn-addCart"> Back to cart </a>
-                                <a href="{{ path('order')}}?idCart={{ c.id }}" class="btn btn-primary"> Confirm </a>
+                                <a href="{{ path('order')}}?idCart={{ c.id }}&total={{ total }}" class="btn btn-primary"> Confirm </a>
                             </td>
                         </tr>
                     {% endif %}

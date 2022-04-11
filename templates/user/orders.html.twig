@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+{% block header %} <link rel="stylesheet" href="{{ asset('css/menuStyle.css') }}" />{% endblock %}
+
+{% block title %}Orders{% endblock %}
+
+{% block body %}
+
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+
+        <div class="card text-center">
+            <div class="card-header">
+                Your messages
+            </div>
+            <div class="card-body">
+                <h5 class="card-title"> Here are your orders {{ app.user.idUser }} !</h5>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Details</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Status</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {% for c in cart %}
+                            {% if c.status == "close" %}
+                                {% for o in order %}
+                                    {% if o.getIdCartInt() == c.id %}
+
+                                        <td><a href="{{ path('order-detail') }}?idCart={{ c.id }}">show details</a></td>
+                                        <td>{{ o.date|date("l d F") }}</td>
+                                        <td>{{ o.amount }}</td>
+                                        <td>{{ o.status }}</td>
+
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                    </tbody>
+                        {% endfor %}
+                </table>
+                <div class="card-footer text-muted">
+                    GustoHelpService
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

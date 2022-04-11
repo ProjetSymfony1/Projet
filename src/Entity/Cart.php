@@ -32,7 +32,7 @@ class Cart
         return $this->id;
     }
 
-    public function getIdUser(): ?User
+    public function getIdUser(): int
     {
         return $this->id_user;
     }
