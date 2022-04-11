@@ -40,14 +40,14 @@
                         <tr>
                             <td colspan="3" style="text-align: center">
                                 <h3 class="textPrix">Total : {{ total }} €</h3>
-                                <h4> At : {{ app.user.adress }} </h4>
+                                <h4> Deliver to : {{ app.user.adress }} </h4>
                             </td>
                         </tr>
 
                         <tr>
                             <td colspan="3" style="text-align: center">
-                                <a href="{{ path('cart') }}" class="btn btn-addCart"> Back to cart </a>
-                                <a href="{{ path('order')}}?idCart={{ c.id }}&total={{ total }}" class="btn btn-primary"> Confirm </a>
+                                <a href="{{ path('cart') }}" class="btn-lg btn-outline-primary"> Back to cart </a>
+                                <a href="{{ path('order')}}?idCart={{ c.id }}&total={{ total }}" class="btn-lg btn-primary"> Confirm </a>
                             </td>
                         </tr>
                     {% endif %}

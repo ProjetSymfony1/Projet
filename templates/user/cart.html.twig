@@ -58,15 +58,14 @@
                     {% for c in cart|slice(-1) %}
                         {% if c.status == "open" %}
                             <tr>
-                                <td colspan="6" style="text-align: center">
+                                <td colspan="6">
                                     <h3 class="textPrix">Total : {{ total }} €</h3>
                                 </td>
-                            </tr>
-                            <tr>
                                 <td colspan="6" style="text-align: center">
-                                    <a href="{{ path('make-order')}}?total={{ total }}" class="btn btn-primary"> Order </a>
+                                    <a href="{{ path('make-order')}}?total={{ total }}" class="btn btn-primary btn-lg btn-block"> Order </a>
                                 </td>
                             </tr>
+
                         {% else %}
                             <tr>
                                 <td colspan="6" style="text-align: center">

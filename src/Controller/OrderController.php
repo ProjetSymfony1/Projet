@@ -6,6 +6,7 @@ use App\Entity\Order;
 use App\Repository\CartRepository;
 use App\Repository\DishRepository;
 use App\Repository\OrderRepository;
+use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use \Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -33,7 +34,7 @@ class OrderController extends AbstractController
 
         $order->setIdCart($cart);
         $order->setDate(new \DateTimeImmutable());
-        $order->setStatus("waiting for confirmation");
+        $order->setStatus("Pending confirmation");
         $order->setAmount($_GET["total"]);
 
         $entityManager->persist($cart);
@@ -57,9 +58,34 @@ class OrderController extends AbstractController
     #[Route('/orderDetail', name: 'order-detail')]
     public function orderDetail(CartRepository $cartRepository, DishRepository $dishRepository): Response
     {
-        return $this->render("user/orderData.html.twig", [
-            "details" => $cartRepository->findOneBy(array("id_user"=>($this->getUser())->getId(), "id"=>$_GET["idCart"])),
-            "dishes" => $dishRepository->findAll()
-        ]);
+			return $this->render("user/orderData.html.twig", [
+				"details" => $cartRepository->findOneBy(array("id_user"=>$_GET["idUser"], "id"=>$_GET["idCart"])),
+				"dishes" => $dishRepository->findAll()
+			]);
+    
     }
+
+	#[Route('/admin/orders', name: 'orders')]
+
+	public function getOrders(OrderRepository $orderRepository, UserRepository $userRepository, CartRepository $cartRepository)
+	{
+		$orders = $orderRepository->findAll();
+		$carts = array();
+		$buyers = array();
+		
+		foreach ($orders as $order) {
+			$carts[] = $cartRepository->findBy(array('id' => $order->getIdCartInt()));
+		}
+		
+		foreach ($carts as $cart) {
+			$buyers[] = $userRepository->findBy(array('id' => $cart[0]->getIdUser()));
+		}
+		
+		
+		return $this->render("admin/adminOrders.html.twig", [
+			"orders" => $orders, "buyers" => $buyers, "carts" => $carts
+		]);
+		
+	}
+
 }

@@ -29,11 +29,15 @@
                                 {% for o in order %}
                                     {% if o.getIdCartInt() == c.id %}
 
-                                        <td><a href="{{ path('order-detail') }}?idCart={{ c.id }}">show details</a></td>
+                                        <td><a href="{{ path('order-detail') }}?idCart={{ c.id }}&idUser={{ app.user.id }}"> Order N°{{ o.id }}</a></td>
                                         <td>{{ o.date|date("l d F") }}</td>
                                         <td>{{ o.amount }}</td>
                                         <td>{{ o.status }}</td>
-
+                                        {% if o.status == "Pending confirmation" %}
+                                            <td>
+                                                <a href="" class="btn btn-addCart"> Cancel </a>
+                                            </td>
+                                        {% endif %}
                                     {% endif %}
                                 {% endfor %}
                             {% endif %}
