@@ -55,7 +55,7 @@
                             {% endfor %}
                         {% endif %}
                     {% endfor %}
-                    {% for c in cart %}
+                    {% for c in cart|slice(-1) %}
                         {% if c.status == "open" %}
                             <tr>
                                 <td colspan="6" style="text-align: center">
