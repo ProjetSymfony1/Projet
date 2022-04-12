@@ -30,6 +30,7 @@
                                         <a href="{{ path('add-fav') }}?idDish={{ dish.id }} " class="btn btn-primary"> Add to Favorites </a>
                                     {% elseif is_granted('ROLE_ADMIN') %}
                                         <a href="{{ path('del-dish') }}?idDish={{ dish.id }} " class="btn btn-primary"> Delete Dish </a>
+                                        <a href="{{ path('update-dish') }}?idDish={{ dish.id }}" class="btn btn-primary"> Update Dish </a>
                                     {% endif %}
 
                                 </td>

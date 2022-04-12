@@ -31,6 +31,7 @@ return [
         '/cancelBooking' => [[['_route' => 'cancelBooking', '_controller' => 'App\\Controller\\ManageBookings::cancelBooking'], null, null, null, false, false, null]],
         '/admin/archiveBooking' => [[['_route' => 'archiveBooking', '_controller' => 'App\\Controller\\ManageBookings::archiveBooking'], null, null, null, false, false, null]],
         '/addDish' => [[['_route' => 'add-dish', '_controller' => 'App\\Controller\\MenuController::add'], null, null, null, false, false, null]],
+        '/updateDish' => [[['_route' => 'update-dish', '_controller' => 'App\\Controller\\MenuController::update'], null, null, null, false, false, null]],
         '/delDish' => [[['_route' => 'del-dish', '_controller' => 'App\\Controller\\MenuController::del'], null, null, null, false, false, null]],
         '/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\MessageController::message'], null, null, null, false, false, null]],
         '/user/message' => [[['_route' => 'userMessages', '_controller' => 'App\\Controller\\MessageController::mesMessages'], null, null, null, false, false, null]],

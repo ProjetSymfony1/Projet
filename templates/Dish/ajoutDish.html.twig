@@ -44,14 +44,26 @@
                     </div>
 
 
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">Append</button>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">
+                        {% if updateMode %}
+                            Update
+                        {% else %}
+                            Append
+                        {% endif %}
+                    </button>
                     {{ form_end(DishForm) }}
                 </form>
             </div>
 
             <div class="col-5">
                 <div class="borderTitle mb-4 ml-0">
-                    <p class="text-center h2 my-2">Add A New Dish</p>
+                    <p class="text-center h2 my-2">
+                        {% if updateMode %}
+                            Update your Dish
+                        {% else %}
+                            Add A New Dish
+                        {% endif %}
+                    </p>
                 </div>
                 <div class="col-5">
                     <img src="{{ asset('image/pngwing.com.png') }}"/>

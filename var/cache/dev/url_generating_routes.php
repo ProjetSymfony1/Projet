@@ -33,6 +33,7 @@ return [
     'cancelBooking' => [[], ['_controller' => 'App\\Controller\\ManageBookings::cancelBooking'], [], [['text', '/cancelBooking']], [], [], []],
     'archiveBooking' => [[], ['_controller' => 'App\\Controller\\ManageBookings::archiveBooking'], [], [['text', '/admin/archiveBooking']], [], [], []],
     'add-dish' => [[], ['_controller' => 'App\\Controller\\MenuController::add'], [], [['text', '/addDish']], [], [], []],
+    'update-dish' => [[], ['_controller' => 'App\\Controller\\MenuController::update'], [], [['text', '/updateDish']], [], [], []],
     'del-dish' => [[], ['_controller' => 'App\\Controller\\MenuController::del'], [], [['text', '/delDish']], [], [], []],
     'contact' => [[], ['_controller' => 'App\\Controller\\MessageController::message'], [], [['text', '/contact']], [], [], []],
     'userMessages' => [[], ['_controller' => 'App\\Controller\\MessageController::mesMessages'], [], [['text', '/user/message']], [], [], []],

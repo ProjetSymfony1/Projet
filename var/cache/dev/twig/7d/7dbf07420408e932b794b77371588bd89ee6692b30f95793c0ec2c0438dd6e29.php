@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* homepage/contact.html.twig.twig */
+/* homepage/index.html.twig */
 class __TwigTemplate_b719f757354c7a1f145491c95e6ca74af47acfba81299985f8cfaa22426f9755 extends Template
 {
     private $source;
@@ -40,12 +40,12 @@ class __TwigTemplate_b719f757354c7a1f145491c95e6ca74af47acfba81299985f8cfaa22426
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "homepage/contact.html.twig.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "homepage/index.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "homepage/contact.html.twig.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "homepage/index.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "homepage/contact.html.twig.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "homepage/index.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -65,7 +65,7 @@ class __TwigTemplate_b719f757354c7a1f145491c95e6ca74af47acfba81299985f8cfaa22426
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Page d'accueil";
+        echo "HomePage";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -90,31 +90,35 @@ class __TwigTemplate_b719f757354c7a1f145491c95e6ca74af47acfba81299985f8cfaa22426
     <div class=\"container-fluid content\">
         <div class=\"row\">
             <div class=\"col-7 my-auto\">
-                ";
-        // line 11
+                    <div class=\"cardHome text-center\">
+                        <div class=\"card-body\">
+                            ";
+        // line 13
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 12
-            echo "                    <div class=\"borderTitle mb-4 ml-0\">
-                        <p class=\"text-center h3 my-2\">Welcome to your home !</p>
-                    </div>
-                ";
+            // line 14
+            echo "                            <h5 class=\"card-title\"> Welcome back to Gusto's, your favorite italian place !</h5>
+                            ";
         } else {
             // line 16
-            echo "                    <div class=\"borderTitle mb-4 ml-0\">
-                        <p class=\"text-center h3 my-2\">'anyone can cook'</p>
-                    </div>
-                ";
+            echo "                            <h5 class=\"card-title\"> Welcome to Gusto's, your new favorite italian place !</h5>
+                            ";
         }
-        // line 20
-        echo "                <p class=\"description\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolorum
-                    impedit, aut laboriosam sunt eum expedita neque dicta dolore, cupiditate velit consectetur error rem
-                    nostrum provident accusantium officiis at doloribus totam esse fugiat! Impedit, dolorum et nemo
-                    neque fuga reprehenderit saepe error eveniet eum quasi aliquam, non nisi rem, qui nobis ipsam
-                    tenetur repellat aspernatur! Nulla nobis illum tempore reprehenderit? Nam, cupiditate. Pariatur?</p>
+        // line 18
+        echo "                            <p class=\"card-text\">
+                                After a first very successful french bistrot \"Chez Rémi\", famous chef, Auguste Gusteau, launches his first italian restaurant. <br>
+                                We welcome you every day, <b>from 11AM to 11PM</b>, to enjoy your favorite italian classics.</p>
+                            <div class=\"shadow-lg p-3 mb-5 bg-white rounded\">
+                            <iframe width=\"425\" height=\"350\" src=\"https://www.openstreetmap.org/export/embed.html?bbox=2.774782776832581%2C48.866660925797014%2C2.7779746055603027%2C48.86804066257791&amp;layer=mapnik&amp;marker=48.867350798944365%2C2.7763760089396783\" style=\"border: 1px solid black\"></iframe><br/><small>
+                                <a href=\"https://www.openstreetmap.org/?mlat=48.86735&amp;mlon=2.77638#map=19/48.86735/2.77638\">View Larger Map</a>
+                            </small>
+                            </div>
+                        </div>
+                    </div>
+
             </div>
             <div class=\"col-5\">
                 <img src=\"";
-        // line 27
+        // line 31
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/pngwing.com.png"), "html", null, true);
         echo "\" width=\"100%\" height=\"auto\"/>
             </div>
@@ -131,7 +135,7 @@ class __TwigTemplate_b719f757354c7a1f145491c95e6ca74af47acfba81299985f8cfaa22426
 
     public function getTemplateName()
     {
-        return "homepage/contact.html.twig.twig";
+        return "homepage/index.html.twig";
     }
 
     public function isTraitable()
@@ -141,14 +145,14 @@ class __TwigTemplate_b719f757354c7a1f145491c95e6ca74af47acfba81299985f8cfaa22426
 
     public function getDebugInfo()
     {
-        return array (  118 => 27,  109 => 20,  103 => 16,  97 => 12,  95 => 11,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  122 => 31,  107 => 18,  103 => 16,  99 => 14,  97 => 13,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Page d'accueil{% endblock %}
+{% block title %}HomePage{% endblock %}
 
 {% block body %}
 
@@ -156,20 +160,24 @@ class __TwigTemplate_b719f757354c7a1f145491c95e6ca74af47acfba81299985f8cfaa22426
     <div class=\"container-fluid content\">
         <div class=\"row\">
             <div class=\"col-7 my-auto\">
-                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                    <div class=\"borderTitle mb-4 ml-0\">
-                        <p class=\"text-center h3 my-2\">Welcome to your home !</p>
+                    <div class=\"cardHome text-center\">
+                        <div class=\"card-body\">
+                            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                            <h5 class=\"card-title\"> Welcome back to Gusto's, your favorite italian place !</h5>
+                            {% else %}
+                            <h5 class=\"card-title\"> Welcome to Gusto's, your new favorite italian place !</h5>
+                            {% endif %}
+                            <p class=\"card-text\">
+                                After a first very successful french bistrot \"Chez Rémi\", famous chef, Auguste Gusteau, launches his first italian restaurant. <br>
+                                We welcome you every day, <b>from 11AM to 11PM</b>, to enjoy your favorite italian classics.</p>
+                            <div class=\"shadow-lg p-3 mb-5 bg-white rounded\">
+                            <iframe width=\"425\" height=\"350\" src=\"https://www.openstreetmap.org/export/embed.html?bbox=2.774782776832581%2C48.866660925797014%2C2.7779746055603027%2C48.86804066257791&amp;layer=mapnik&amp;marker=48.867350798944365%2C2.7763760089396783\" style=\"border: 1px solid black\"></iframe><br/><small>
+                                <a href=\"https://www.openstreetmap.org/?mlat=48.86735&amp;mlon=2.77638#map=19/48.86735/2.77638\">View Larger Map</a>
+                            </small>
+                            </div>
+                        </div>
                     </div>
-                {% else %}
-                    <div class=\"borderTitle mb-4 ml-0\">
-                        <p class=\"text-center h3 my-2\">'anyone can cook'</p>
-                    </div>
-                {% endif %}
-                <p class=\"description\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolorum
-                    impedit, aut laboriosam sunt eum expedita neque dicta dolore, cupiditate velit consectetur error rem
-                    nostrum provident accusantium officiis at doloribus totam esse fugiat! Impedit, dolorum et nemo
-                    neque fuga reprehenderit saepe error eveniet eum quasi aliquam, non nisi rem, qui nobis ipsam
-                    tenetur repellat aspernatur! Nulla nobis illum tempore reprehenderit? Nam, cupiditate. Pariatur?</p>
+
             </div>
             <div class=\"col-5\">
                 <img src=\"{{ asset('image/pngwing.com.png') }}\" width=\"100%\" height=\"auto\"/>
@@ -177,6 +185,6 @@ class __TwigTemplate_b719f757354c7a1f145491c95e6ca74af47acfba81299985f8cfaa22426
         </div>
     </div>
 {% endblock %}
-", "homepage/contact.html.twig.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\homepage\\contact.html.twig.twig");
+", "homepage/index.html.twig", "C:\\xampp1\\htdocs\\chez-gusto\\templates\\homepage\\index.html.twig");
     }
 }

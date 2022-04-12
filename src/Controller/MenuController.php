@@ -29,7 +29,7 @@ class MenuController extends AbstractController
 	#[Route('/addDish', name: 'add-dish')]
 	public function add(Request $request, EntityManagerInterface $entityManager, DishRepository $dishRepository): Response
 	{
-		$dish = new Dish();
+        $dish = new dish();
 		$form = $this->createForm(DishFormType::class, $dish);
 		
 		$form->handleRequest($request);
@@ -37,14 +37,36 @@ class MenuController extends AbstractController
 			$dish->setArchived(false);
 			$entityManager->persist($dish);
 			$entityManager->flush();
-			$this->addFlash('success', 'New dish added !');
+            $this->addFlash('success', 'New dish added !');
 			return $this->menu($dishRepository);
         }
 		
 		return $this->render('Dish/ajoutDish.html.twig', [
 			'DishForm' => $form->createView(),
+            'updateMode' => $dish->getId() !== null
 		]);
 	}
+
+    #[Route('/updateDish', name: 'update-dish')]
+    public function update(Request $request, EntityManagerInterface $entityManager,DishRepository $dishRepository): Response{
+        $idDish = $_GET["idDish"];
+        $dish = $dishRepository->find($idDish);
+        $form = $this->createForm(DishFormType::class, $dish);
+
+        $form->handleRequest($request);
+        if($form->isSubmitted()){
+            $dish->setArchived(false);
+            $entityManager->persist($dish);
+            $entityManager->flush();
+            $this->addFlash('success', 'update success !');
+            return $this->menu($dishRepository);
+        }
+
+        return $this->render('Dish/ajoutDish.html.twig', [
+            'DishForm' => $form->createView(),
+            'updateMode' => $dish->getId() !== null
+        ]);
+    }
 
 	#[Route('/delDish', name: 'del-dish')]
 	public function del(DishRepository $dishRepository, EntityManagerInterface $entityManager) {
