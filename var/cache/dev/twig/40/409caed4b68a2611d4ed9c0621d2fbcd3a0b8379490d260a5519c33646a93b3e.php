@@ -156,26 +156,28 @@ class __TwigTemplate_414a101c505b60b3cdc53b82a68739f77e7335beb3f755f49f020b0a640
         echo "
                             </div>
                         </div>
+
+
                     </div>
 
 
                     <button type=\"submit\" class=\"btn btn-primary btn-lg btn-block\">
                         ";
-        // line 48
-        if ((isset($context["updateMode"]) || array_key_exists("updateMode", $context) ? $context["updateMode"] : (function () { throw new RuntimeError('Variable "updateMode" does not exist.', 48, $this->source); })())) {
-            // line 49
+        // line 50
+        if ((isset($context["updateMode"]) || array_key_exists("updateMode", $context) ? $context["updateMode"] : (function () { throw new RuntimeError('Variable "updateMode" does not exist.', 50, $this->source); })())) {
+            // line 51
             echo "                            Update
                         ";
         } else {
-            // line 51
+            // line 53
             echo "                            Append
                         ";
         }
-        // line 53
+        // line 55
         echo "                    </button>
                     ";
-        // line 54
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["DishForm"]) || array_key_exists("DishForm", $context) ? $context["DishForm"] : (function () { throw new RuntimeError('Variable "DishForm" does not exist.', 54, $this->source); })()), 'form_end');
+        // line 56
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["DishForm"]) || array_key_exists("DishForm", $context) ? $context["DishForm"] : (function () { throw new RuntimeError('Variable "DishForm" does not exist.', 56, $this->source); })()), 'form_end');
         echo "
                 </form>
             </div>
@@ -184,22 +186,22 @@ class __TwigTemplate_414a101c505b60b3cdc53b82a68739f77e7335beb3f755f49f020b0a640
                 <div class=\"borderTitle mb-4 ml-0\">
                     <p class=\"text-center h2 my-2\">
                         ";
-        // line 61
-        if ((isset($context["updateMode"]) || array_key_exists("updateMode", $context) ? $context["updateMode"] : (function () { throw new RuntimeError('Variable "updateMode" does not exist.', 61, $this->source); })())) {
-            // line 62
+        // line 63
+        if ((isset($context["updateMode"]) || array_key_exists("updateMode", $context) ? $context["updateMode"] : (function () { throw new RuntimeError('Variable "updateMode" does not exist.', 63, $this->source); })())) {
+            // line 64
             echo "                            Update your Dish
                         ";
         } else {
-            // line 64
+            // line 66
             echo "                            Add A New Dish
                         ";
         }
-        // line 66
+        // line 68
         echo "                    </p>
                 </div>
                 <div class=\"col-5\">
                     <img src=\"";
-        // line 69
+        // line 71
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("image/pngwing.com.png"), "html", null, true);
         echo "\"/>
                 </div>
@@ -228,7 +230,7 @@ class __TwigTemplate_414a101c505b60b3cdc53b82a68739f77e7335beb3f755f49f020b0a640
 
     public function getDebugInfo()
     {
-        return array (  203 => 69,  198 => 66,  194 => 64,  190 => 62,  188 => 61,  178 => 54,  175 => 53,  171 => 51,  167 => 49,  165 => 48,  155 => 41,  150 => 39,  142 => 34,  137 => 32,  130 => 28,  125 => 26,  117 => 21,  112 => 19,  105 => 15,  100 => 13,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  205 => 71,  200 => 68,  196 => 66,  192 => 64,  190 => 63,  180 => 56,  177 => 55,  173 => 53,  169 => 51,  167 => 50,  155 => 41,  150 => 39,  142 => 34,  137 => 32,  130 => 28,  125 => 26,  117 => 21,  112 => 19,  105 => 15,  100 => 13,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -276,6 +278,8 @@ class __TwigTemplate_414a101c505b60b3cdc53b82a68739f77e7335beb3f755f49f020b0a640
                                 {{ form_widget(DishForm.photo) }}
                             </div>
                         </div>
+
+
                     </div>
 
 

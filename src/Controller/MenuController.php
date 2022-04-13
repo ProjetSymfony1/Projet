@@ -5,11 +5,14 @@ namespace App\Controller;
 use App\Entity\dish;
 use App\Form\DishFormType;
 use App\Repository\DishRepository;
+
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use \Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\String\Slugger\SluggerInterface;
 
 
 class MenuController extends AbstractController
@@ -34,6 +37,12 @@ class MenuController extends AbstractController
 		
 		$form->handleRequest($request);
 		if($form->isSubmitted()){
+
+               $file = $dish->getPhoto();
+               $fileName = 'image/'.uniqid().'.'.$file->guessExtension();
+               $file->move($this->getParameter('file_directory'), $fileName);
+               $dish->setPhoto($fileName);
+
 			$dish->setArchived(false);
 			$entityManager->persist($dish);
 			$entityManager->flush();
@@ -51,10 +60,17 @@ class MenuController extends AbstractController
     public function update(Request $request, EntityManagerInterface $entityManager,DishRepository $dishRepository): Response{
         $idDish = $_GET["idDish"];
         $dish = $dishRepository->find($idDish);
+
         $form = $this->createForm(DishFormType::class, $dish);
 
         $form->handleRequest($request);
         if($form->isSubmitted()){
+
+            $file = $dish->getPhoto();
+            $fileName = 'image/'.uniqid().'.'.$file->guessExtension();
+            $file->move($this->getParameter('file_directory'), $fileName);
+            $dish->setPhoto($fileName);
+
             $dish->setArchived(false);
             $entityManager->persist($dish);
             $entityManager->flush();

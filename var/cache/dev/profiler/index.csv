@@ -1,8 +1,2 @@
-9cca22,::1,GET,http://localhost/chez-gusto/public/updateDish?idDish=8,1649764559,,200
-d387b3,::1,POST,http://localhost/chez-gusto/public/updateDish?idDish=8,1649764615,,200
-374763,::1,GET,http://localhost/chez-gusto/public/addDish,1649764624,,200
-4e7ec7,::1,POST,http://localhost/chez-gusto/public/addDish,1649764641,,200
-49ebc4,::1,GET,http://localhost/chez-gusto/public/updateDish?idDish=17,1649764651,,200
-72b45c,::1,POST,http://localhost/chez-gusto/public/updateDish?idDish=17,1649764662,,200
-cb6ed8,::1,GET,http://localhost/chez-gusto/public/delDish?idDish=17,1649764666,,302
-4853e5,::1,GET,http://localhost/chez-gusto/public/menu,1649764667,,200
+d9bbdf,::1,GET,http://localhost/chez-gusto/public/updateDish?idDish=8,1649891146,,200
+610231,::1,POST,http://localhost/chez-gusto/public/updateDish?idDish=8,1649891156,,200
