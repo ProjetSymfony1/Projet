@@ -19,3 +19,4 @@
 /phpunit.xml
 .phpunit.result.cache
 ###< phpunit/phpunit ###
+var/cache/dev/App_KernelDevDebugContainerDeprecations.log

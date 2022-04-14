@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Orders{% endblock %}
+
+{% block body %}
+
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+
+        <div class="card text-center">
+            <div class="card-header">
+                Orders
+            </div>
+            <div class="card-body">
+                <h5 class="card-title"> Welcome back admin {{ app.user.idUser }} !</h5>
+                <p class="card-text">Look at all those orders, we have work to do !</p>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Order</th>
+                        <th scope="col">Customer</th>
+                        <th scope="col">Adress</th>
+                        <th scope="col">Status</th>
+                        <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% if orders != null %}
+                    {% for i in 0..orders|length-1 %}
+                    <td><a href="{{ path('order-detail') }}?idCart={{ carts[i][0].id }}&idUser={{ buyers[i][0].id }}">Order N°{{ orders[i].id }}</a></td>
+                    <td> {{ buyers[i][0].firstName }} {{ buyers[i][0].lastName }}</td>
+                    <td> {{ buyers[i][0].adress }}</td>
+                    <td> {{ orders[i].status }}</td>
+                    <td>
+                        <a href="" class="btn btn-addCart"> <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                        </a>
+                    </td>
+
+                    </tbody>
+                    {% endfor %}
+                    {% endif %}
+                </table>
+                <div class="card-footer text-muted">
+                    GustoHelpService
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

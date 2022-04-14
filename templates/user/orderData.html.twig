@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}My Account{% endblock %}
+
+{% block body %}
+
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+        <div class="card text-center">
+            <div class="card-header">
+                {% if is_granted('ROLE_USER') %}
+                <a href="{{ path('show-order') }}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5zM10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5z"/>
+                    </svg>
+                </a>
+                {% elseif is_granted('ROLE_ADMIN') %}
+                <a href="{{ path('orders') }}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5zM10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5z"/>
+                    </svg>
+                </a>
+                {% endif %}
+                Order information
+            </div>
+            <div class="card-body">
+
+
+                </h5>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Dish name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    {% for key, value in details.idDish %}
+                        {% for dish in dishes %}
+                            {% if key == dish.id %}
+                                <tbody>
+                                    <td>
+                                        <h6 class="textDesc"> {{ dish.dishName }}</h6>
+                                    </td>
+                                    <td>
+                                        <h6 class="textDesc"> {{ dish.description }}</h6>
+                                    </td>
+                                    <td>
+                                        <h6 class="textDesc"> {{ dish.price }}</h6>
+                                    </td>
+                                    <td>
+                                        <h6 class="textDesc"> {{ value }}</h6>
+                                    </td>
+                                </tbody>
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                </table>
+                <div class="card-footer text-muted">
+                    GustoHelpService
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

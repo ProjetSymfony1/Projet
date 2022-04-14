@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+{% block header %} <link rel="stylesheet" href="{{ asset('css/menuStyle.css') }}" />{% endblock %}
+
+{% block title %}Cart{% endblock %}
+
+{% block body %}
+<div class="shadow-lg p-5 mb-5 bg-white rounded container">
+    <div class="card text-center">
+        <div class="card-header">
+            Your order
+        </div>
+        <div class="card-body">
+            <h5 class="card-title"> This is a recapitulated of your order</h5>
+            <p class="card-text">Please, verify all details</p>
+            <table class="table">
+
+                {% for c in cart %}
+                    {% if c.status == "open" %}
+                        {% for key, value in c.idDish %}
+                            {% for dish in dishes %}
+                                {% if dish.id == key %}
+                                    {% if dish.archived != 1 %}
+                                        <tr>
+                                            <td>
+                                                <img class="imgMenu" src="{{ asset(dish.photo) }}">
+                                            </td>
+                                            <td>
+                                                <h2 class="textMenu">{{ dish.dishName }}</h2>
+                                                <h4 class="textPrix"> {{ dish.price }} € </h4>
+                                                <h6 class="textDesc"> {{ dish.description }} </h6>
+                                            </td>
+                                            <td>
+                                                <h2 class="textDesc"> x{{ value }} </h2>
+                                            </td>
+                                        </tr>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                        <tr>
+                            <td colspan="3" style="text-align: center">
+                                <h3 class="textPrix">Total : {{ total }} €</h3>
+                                <h4> Deliver to : {{ app.user.adress }} </h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="3" style="text-align: center">
+                                <a href="{{ path('cart') }}" class="btn-lg btn-outline-primary"> Back to cart </a>
+                                <a href="{{ path('order')}}?idCart={{ c.id }}&total={{ total }}" class="btn-lg btn-primary"> Confirm </a>
+                            </td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+
+
+            </table>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
