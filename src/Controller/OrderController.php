@@ -93,12 +93,27 @@ class OrderController extends AbstractController
     {
         $orderId = $_GET["orderId"];
         $order = $orderRepository->find($orderId);
-        $order->setStatus("cancelled");
+        $order->setStatus("Cancelled");
 
         $entityManager->persist($order);
         $entityManager->flush();
 
         return $this->redirectToRoute('show-order');
+    }
+
+    #[Route('/confirmOrder', name: 'confirm-order')]
+    public function confirmOrder(EntityManagerInterface $entityManager, OrderRepository $orderRepository): Response
+    {
+        $orderId = $_GET["orderId"];
+        $order = $orderRepository->find($orderId);
+        if ($order->getStatus() == "Pending confirmation") {
+            $order->setStatus("Confirmed");
+        }
+
+        $entityManager->persist($order);
+        $entityManager->flush();
+
+        return $this->redirectToRoute('orders');
     }
 
 }
