@@ -67,7 +67,7 @@ class OrderController extends AbstractController
 
 	#[Route('/admin/orders', name: 'orders')]
 
-	public function getOrders(OrderRepository $orderRepository, UserRepository $userRepository, CartRepository $cartRepository)
+	public function getOrders(OrderRepository $orderRepository, UserRepository $userRepository, CartRepository $cartRepository): Response
 	{
 		$orders = $orderRepository->findAll();
 		$carts = array();
@@ -80,7 +80,6 @@ class OrderController extends AbstractController
 		foreach ($carts as $cart) {
 			$buyers[] = $userRepository->findBy(array('id' => $cart[0]->getIdUser()));
 		}
-		
 		
 		return $this->render("admin/adminOrders.html.twig", [
 			"orders" => $orders, "buyers" => $buyers, "carts" => $carts
