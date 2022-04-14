@@ -88,4 +88,17 @@ class OrderController extends AbstractController
 		
 	}
 
+    #[Route('/cancelOrder', name: 'cancel-order')]
+    public function cancelOrder(EntityManagerInterface $entityManager, OrderRepository $orderRepository): Response
+    {
+        $orderId = $_GET["orderId"];
+        $order = $orderRepository->find($orderId);
+        $order->setStatus("cancelled");
+
+        $entityManager->persist($order);
+        $entityManager->flush();
+
+        return $this->redirectToRoute('show-order');
+    }
+
 }
