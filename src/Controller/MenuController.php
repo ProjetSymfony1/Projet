@@ -17,19 +17,8 @@ use Symfony\Component\String\Slugger\SluggerInterface;
 
 class MenuController extends AbstractController
 {
-    /**
-     * @param DishRepository $dishRepository
-     * @return Response
-     */
-
-    public function menu(DishRepository $dishRepository) : Response
-    {
-        return $this->render('homepage/menu.html.twig', [
-            "dishes" => $dishRepository->findAll()
-        ]);
-    }
 	
-	#[Route('/addDish', name: 'add-dish')]
+	#[Route('/{_locale<%app.supported_locales%>}/addDish', name: 'add-dish')]
 	public function add(Request $request, EntityManagerInterface $entityManager, DishRepository $dishRepository): Response
 	{
         $dish = new dish();
@@ -37,17 +26,15 @@ class MenuController extends AbstractController
 		
 		$form->handleRequest($request);
 		if($form->isSubmitted()){
-
-               $file = $dish->getPhoto();
-               $fileName = 'image/'.uniqid().'.'.$file->guessExtension();
-               $file->move($this->getParameter('file_directory'), $fileName);
-               $dish->setPhoto($fileName);
-
+			$file = $dish->getPhoto();
+			$fileName = 'image/'.uniqid().'.'.$file->guessExtension();
+			$file->move($this->getParameter('file_directory'), $fileName);
+			$dish->setPhoto($fileName);
 			$dish->setArchived(false);
 			$entityManager->persist($dish);
 			$entityManager->flush();
             $this->addFlash('success', 'New dish added !');
-			return $this->menu($dishRepository);
+			return $this->redirectToRoute('menu');
         }
 		
 		return $this->render('Dish/ajoutDish.html.twig', [
@@ -56,7 +43,7 @@ class MenuController extends AbstractController
 		]);
 	}
 
-    #[Route('/updateDish', name: 'update-dish')]
+    #[Route('/{_locale<%app.supported_locales%>}/updateDish', name: 'update-dish')]
     public function update(Request $request, EntityManagerInterface $entityManager,DishRepository $dishRepository): Response{
         $idDish = $_GET["idDish"];
         $dish = $dishRepository->find($idDish);
@@ -70,12 +57,11 @@ class MenuController extends AbstractController
             $fileName = 'image/'.uniqid().'.'.$file->guessExtension();
             $file->move($this->getParameter('file_directory'), $fileName);
             $dish->setPhoto($fileName);
-
             $dish->setArchived(false);
             $entityManager->persist($dish);
             $entityManager->flush();
             $this->addFlash('success', 'update success !');
-            return $this->menu($dishRepository);
+	        return $this->redirectToRoute('menu');
         }
 
         return $this->render('Dish/ajoutDish.html.twig', [
@@ -84,7 +70,7 @@ class MenuController extends AbstractController
         ]);
     }
 
-	#[Route('/delDish', name: 'del-dish')]
+	#[Route('/{_locale<%app.supported_locales%>}/delDish', name: 'del-dish')]
 	public function del(DishRepository $dishRepository, EntityManagerInterface $entityManager) {
 		$idDish = $_GET["idDish"];
 		$dish = $dishRepository->find($idDish);
@@ -92,7 +78,6 @@ class MenuController extends AbstractController
 		$entityManager -> persist($dish);
 		$entityManager -> flush();
 		$this->addFlash('success', 'Dish deleted !');
-		
 		return $this->redirectToRoute('menu');
 	}
 }

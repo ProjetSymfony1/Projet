@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}My Messages{% endblock %}
+{% block title %}{{ "" |trans}}My Messages{% endblock %}
 
 {% block body %}
 
@@ -8,18 +8,18 @@
 
     <div class="card text-center">
         <div class="card-header">
-            Messages
+            {{ "Messages" |trans}}
         </div>
         <div class="card-body">
-            <h5 class="card-title"> You reached to us and we reached back !</h5>
-            <p class="card-text">If it hasn't already been processed, your question is in safe hands, an admin will be there soon !</p>
+            <h5 class="card-title"> {{ "You reached to us and we reached back !" |trans}}</h5>
+            <p class="card-text">I{{ "If it hasn't already been processed, your question is in safe hands, an admin will be there soon !" |trans}}</p>
             <table class="table">
                 <thead>
                 <tr>
-                    <th scope="col">Object</th>
-                    <th scope="col">Message</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Manage</th>
+                    <th scope="col">{{ "Object" |trans}}</th>
+                    <th scope="col">{{ "Message" |trans}}</th>
+                    <th scope="col">{{ "Status" |trans}}</th>
+                    <th scope="col">{{ "Manage" |trans}}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -29,7 +29,7 @@
                 <td>{{ msg.status }}
                 </td>
                 {% if msg.status == 'Being processed'%}
-                <td>  <a href="{{ path('delMessage') }}?idMsg={{ msg.id }}" class="btn btn-addCart"> Delete </a> </td>
+                <td>  <a href="{{ path('delMessage') }}?idMsg={{ msg.id }}" class="btn btn-addCart"> {{ "Delete" |trans}} </a> </td>
                 {% endif %}
 
                 </tbody>

@@ -15,7 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class OrderController extends AbstractController
 {
-    #[Route('/makeOrder', name: 'make-order')]
+    #[Route('/{_locale<%app.supported_locales%>}/makeOrder', name: 'make-order')]
     public function makeOrder(CartRepository $cartRepository, DishRepository $dishRepository): Response
     {
         return $this->render("user/orderConfirmation.html.twig", [
@@ -24,7 +24,7 @@ class OrderController extends AbstractController
         ]);
     }
 
-    #[Route('/order', name: 'order')]
+    #[Route('/{_locale<%app.supported_locales%>}/order', name: 'order')]
     public function order(CartRepository $cartRepository, EntityManagerInterface $entityManager): Response
     {
         $order = new Order();
@@ -46,7 +46,7 @@ class OrderController extends AbstractController
         return $this->redirectToRoute('homepage');
     }
 
-    #[Route('/showOrder', name: 'show-order')]
+    #[Route('/{_locale<%app.supported_locales%>}/showOrder', name: 'show-order')]
     public function showOrder(CartRepository $cartRepository, OrderRepository $orderRepository): Response
     {
         return $this->render("user/orders.html.twig", [
@@ -55,7 +55,7 @@ class OrderController extends AbstractController
         ]);
     }
 
-    #[Route('/orderDetail', name: 'order-detail')]
+    #[Route('/{_locale<%app.supported_locales%>}/orderDetail', name: 'order-detail')]
     public function orderDetail(CartRepository $cartRepository, DishRepository $dishRepository): Response
     {
 			return $this->render("user/orderData.html.twig", [
@@ -65,7 +65,7 @@ class OrderController extends AbstractController
     
     }
 
-	#[Route('/admin/orders', name: 'orders')]
+	#[Route('/{_locale<%app.supported_locales%>}/admin/orders', name: 'orders')]
 
 	public function getOrders(OrderRepository $orderRepository, UserRepository $userRepository, CartRepository $cartRepository): Response
 	{
@@ -87,7 +87,7 @@ class OrderController extends AbstractController
 		
 	}
 
-    #[Route('/cancelOrder', name: 'cancel-order')]
+    #[Route('/{_locale<%app.supported_locales%>}/cancelOrder', name: 'cancel-order')]
     public function cancelOrder(EntityManagerInterface $entityManager, OrderRepository $orderRepository): Response
     {
         $orderId = $_GET["orderId"];
@@ -100,7 +100,7 @@ class OrderController extends AbstractController
         return $this->redirectToRoute('show-order');
     }
 
-    #[Route('/confirmOrder', name: 'confirm-order')]
+    #[Route('/{_locale<%app.supported_locales%>}/confirmOrder', name: 'confirm-order')]
     public function confirmOrder(EntityManagerInterface $entityManager, OrderRepository $orderRepository): Response
     {
         $orderId = $_GET["orderId"];

@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class AdminController extends AbstractController
 {
 
-	#[Route('/admin/clientData', name: 'clientData')]
+	#[Route('/{_locale<%app.supported_locales%>}/admin/clientData', name: 'clientData')]
 
 	public function getClientData(UserRepository $userRepository) {
 		$idUser = $_GET["idUser"];

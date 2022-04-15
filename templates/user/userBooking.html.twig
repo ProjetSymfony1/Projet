@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}My Bookings{% endblock %}
+{% block title %}{{ "" |trans}}My Bookings{% endblock %}
 
 {% block body %}
 
@@ -8,18 +8,18 @@
 
         <div class="card text-center">
             <div class="card-header">
-               My bookings
+                {{ "My bookings" |trans}}
             </div>
             <div class="card-body">
-                <h5 class="card-title"> My bookings @ Gusto !</h5>
-                <p class="card-text">Follow and manage your bookings at a glance.</p>
+                <h5 class="card-title"> {{ "My bookings" |trans}} @ Gusto !</h5>
+                <p class="card-text">{{ "Follow and manage your bookings at a glance." |trans}}</p>
                 <table class="table">
                     <thead>
                     <tr>
-                        <th scope="col">Date</th>
-                        <th scope="col">Time</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Manage</th>
+                        <th scope="col">{{ "Date" |trans}}</th>
+                        <th scope="col">{{ "Time" |trans}}</th>
+                        <th scope="col">{{ "Status" |trans}}</th>
+                        <th scope="col">{{ "Manage" |trans}}</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -29,20 +29,20 @@
                             <td>{{ reservation.timeReservation|date('H:i') }}</td>
 
                             {% if reservation.available == 1 %}
-                                <td>  Confirmed </td>
+                                <td>  {{ "Confirmed" |trans}} </td>
                                 <td>
-                                    <a href="{{ path('cancelBooking') }}?idRez={{ reservation.id }}" class="btn btn-addCart"> Cancel </a>
+                                    <a href="{{ path('cancelBooking') }}?idRez={{ reservation.id }}" class="btn btn-addCart"> {{ "Cancel" |trans}} </a>
                                 </td>
                             {% elseif  reservation.available == 0 %}
-                                <td>  Pending confirmation </td>
+                                <td>  {{ "Pending confirmation" |trans}} </td>
                                 <td>
-                                    <a href="{{ path('cancelBooking') }}?idRez={{ reservation.id }}" class="btn btn-addCart"> Cancel </a>
+                                    <a href="{{ path('cancelBooking') }}?idRez={{ reservation.id }}" class="btn btn-addCart"> {{ "Cancel" |trans}} </a>
                                 </td>
                             {% elseif  reservation.available == 3 %}
-                                <td>  Archived </td>
+                                <td>  {{ "Archived" |trans}} </td>
                                 <td></td>
                             {% else %}
-                                <td>  Canceled </td>
+                                <td>  {{ "Canceled" |trans}} </td>
                                 <td></td>
                             {% endif %}
                         </tr>

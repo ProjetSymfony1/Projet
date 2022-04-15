@@ -7,11 +7,11 @@
     <div class="shadow-lg p-5 mb-5 bg-white rounded container">
         <div class="card text-center">
             <div class="card-header">
-                Your cart
+                {{ "Your cart" |trans}}
             </div>
             <div class="card-body">
-                <h5 class="card-title"> Coming back for your best picks ?</h5>
-                <p class="card-text">Gusto will never fail you ! MAMMA MIA !</p>
+                <h5 class="card-title"> {{ "Coming back for your best picks ?" |trans}}</h5>
+                <p class="card-text"> {{ "Gusto will never fail you !" |trans}} MAMMA MIA !</p>
                 <table class="table">
                     {% set total = 0 %}
                     {% for c in cart %}
@@ -46,7 +46,7 @@
                                                     </a>
                                                 </td>
                                                 <td>
-                                                    <a href="{{ path('remove') }}?idDish={{ dish.id }}&idCart={{ cart[0].id }}" class="btn btn-primary btn-sm"> Remove </a>
+                                                    <a href="{{ path('remove') }}?idDish={{ dish.id }}&idCart={{ cart[0].id }}" class="btn btn-primary btn-sm"> {{ "Remove" |trans}}  </a>
                                                 </td>
                                             </tr>
                                         {% endif %}
@@ -64,14 +64,14 @@
                             </tr>
                             <tr>
                                 <td colspan="6" style="text-align: center">
-                                    <a href="{{ path('make-order')}}?total={{ total }}" class="btn btn-primary btn-lg btn-block"> Order </a>
+                                    <a href="{{ path('make-order')}}?total={{ total }}" class="btn btn-primary btn-lg btn-block"> {{ "Order" |trans}}  </a>
                                 </td>
                             </tr>
 
                         {% else %}
                             <tr>
                                 <td colspan="6" style="text-align: center">
-                                    <p class="card-text">Cart is empty ? <a href="{{ path('menu') }}">Choose your menu here !</a></p>
+                                    <p class="card-text"> {{ "Cart is empty ?" |trans}} <a href="{{ path('menu') }}">{{ "Choose your menu here !" |trans}}</a></p>
                                 </td>
                             </tr>
                         {% endif %}

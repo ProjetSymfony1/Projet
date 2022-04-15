@@ -7,47 +7,47 @@
 <div class="shadow-lg p-3 mb-5 bg-white rounded">
     <div class="card text-center">
         <div class="card-header">
-            My Account
+            {{ "My Account" |trans}}
         </div>
         <div class="card-body">
-            <h5 class="card-title"> Welcome to your account {{ app.user.idUser }} !</h5>
-            <p class="card-text">Feel free to check and update your information below.</p>
+            <h5 class="card-title"> {{ "Welcome to your account" |trans}}  {{ app.user.idUser }} !</h5>
+            <p class="card-text"> {{ "Feel free to check and update your information below." |trans}} </p>
             <table class="table">
                 <tbody>
                     <tr>
                         <td>
-                            <h6 class="textDesc">Username : {{ app.user.idUser }}</h6>
+                            <h6 class="textDesc">{{ "Username : " |trans}}{{ app.user.idUser }}</h6>
 
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <h6 class="textDesc">Email : {{ app.user.mail }}</h6>
+                            <h6 class="textDesc">{{ "Email :" |trans}} {{ app.user.mail }}</h6>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <h6 class="textDesc">First Name : {{ app.user.firstName }}</h6>
+                            <h6 class="textDesc">{{ "First Name :" |trans}} {{ app.user.firstName }}</h6>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <h6 class="textDesc">Last Name : {{ app.user.lastName }}</h6>
+                            <h6 class="textDesc">{{ "Last Name :" |trans}} {{ app.user.lastName }}</h6>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <h6 class="textDesc">Gender : {{ app.user.gender }}</h6>
+                            <h6 class="textDesc">{{ "Gender :" |trans}} {{ app.user.gender }}</h6>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <h6 class="textDesc">Adress : {{ app.user.adress }}</h6>
+                            <h6 class="textDesc">{{ "Adress :" |trans}} {{ app.user.adress }}</h6>
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <a class="btn btn-primary btn-lg btn-block" href="{{ path('updateInfo') }}?id={{ app.user.id }}">Update</a>
+            <a class="btn btn-primary btn-lg btn-block" href="{{ path('updateInfo') }}?id={{ app.user.id }}">{{ "Update" |trans}}</a>
         <div class="card-footer text-muted">
             GustoHelpService
         </div>

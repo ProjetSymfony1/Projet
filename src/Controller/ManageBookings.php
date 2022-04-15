@@ -17,7 +17,7 @@ class ManageBookings extends AbstractController
 {
 
 
-    #[Route('/manageBooking', name: 'manageBookings')]
+    #[Route('/{_locale<%app.supported_locales%>}/manageBooking', name: 'manageBookings')]
 
     public function booking(ReservationRepository $reservationRepository) {
 
@@ -28,7 +28,7 @@ class ManageBookings extends AbstractController
 
     }
 
-    #[Route('/admin/adminManageBookings', name: 'adminBookings')]
+    #[Route('/{_locale<%app.supported_locales%>}/admin/adminManageBookings', name: 'adminBookings')]
 
     public function adminManageBookings(ReservationRepository $reservationRepository, UserRepository $userRepository) {
         $rez = $reservationRepository->findAll();
@@ -41,7 +41,7 @@ class ManageBookings extends AbstractController
         ]);
     }
 
-    #[Route('/admin/confirmBooking', name: 'confirmBooking')]
+    #[Route('/{_locale<%app.supported_locales%>}/admin/confirmBooking', name: 'confirmBooking')]
 
     public function confirmBooking(ReservationRepository $reservationRepository, EntityManagerInterface $entityManager, UserRepository $userRepository) {
         $idRez = $_GET["idRez"];
@@ -52,7 +52,7 @@ class ManageBookings extends AbstractController
 	    return $this->redirectToRoute('adminBookings');
     }
 
-    #[Route('/cancelBooking', name: 'cancelBooking')]
+    #[Route('/{_locale<%app.supported_locales%>}/cancelBooking', name: 'cancelBooking')]
 
     public function cancelBooking(ReservationRepository $reservationRepository, EntityManagerInterface $entityManager, UserRepository $userRepository) {
         $idRez = $_GET["idRez"];
@@ -69,7 +69,7 @@ class ManageBookings extends AbstractController
     
     }
 
-    #[Route('/admin/archiveBooking', name: 'archiveBooking')]
+    #[Route('/{_locale<%app.supported_locales%>}/admin/archiveBooking', name: 'archiveBooking')]
 
     public function archiveBooking(ReservationRepository $reservationRepository, EntityManagerInterface $entityManager, UserRepository $userRepository) {
         $idRez = $_GET["idRez"];

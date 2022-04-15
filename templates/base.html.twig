@@ -38,45 +38,49 @@
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                 <a href="{{ path('app_booking') }}">BOOK WITH US</a>
             {% else %}
-                <a href="{{ path('reservation') }}">BOOK WITH US</a>
+                <a href="{{ path('reservation') }}">{{ 'BOOK WITH US' |trans}}</a>
             {% endif %}
-
         </div>
         <div>
             <img src="{{ asset('image/CHEZ_GUSTO_LOGO.png') }}" class="imgHeader" alt="Logo chez-gusto"/>
         </div>
         <div class="my-auto">
+            <div class="dropdown">
+                <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Lang </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href = "{{ path('homepage', {_locale: 'en'}) }}">Eng</a>
+                    <a class="dropdown-item" href = "{{ path('homepage', {_locale: 'fr'}) }}">Fr</a>
+                </div>
+            </div>
             {% if is_granted('ROLE_ADMIN') %}
                 <div class="dropdown">
                     <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ app.user.idUser }} </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href = "{{ path('adminBookings') }}">Bookings</a>
-                        <a class="dropdown-item" href = "{{ path('adminMessages') }}">Messages</a>
-                        <a class="dropdown-item" href = "{{ path('orders') }}">Orders</a>
-                        <a class="dropdown-item" href = "{{ path('account') }}">My Account</a>
-                        <a class="dropdown-item" href = "{{ path('app_logout') }}">Log out</a>
+                        <a class="dropdown-item" href = "{{ path('adminBookings') }}">{{ 'Bookings' |trans}}</a>
+                        <a class="dropdown-item" href = "{{ path('adminMessages') }}">{{ 'Messages' |trans}}</a>
+                        <a class="dropdown-item" href = "{{ path('orders') }}">{{ 'Orders' |trans}}</a>
+                        <a class="dropdown-item" href = "{{ path('account') }}">{{ 'My Accounr' |trans}}</a>
+                        <a class="dropdown-item" href = "{{ path('app_logout') }}">{{ 'Log out' |trans}}</a>
                     </div>
                 </div>
             {% elseif is_granted('ROLE_USER') %}
-                <a href ="{{ path('cart') }}"  class="btn btn-outline-primary" role = "button">CART</a>&nbsp;
-                <a class="dropdown-item" href="{{ path('homepage', {_locale: 'en'}) }}">English</a></li>
-                <a class="dropdown-item" href="{{ path('homepage', {_locale: 'fr'}) }}">Français</a></li>
+                <a href ="{{ path('cart') }}"  class="btn btn-outline-primary" role = "button">{{ 'CART' |trans}}</a>&nbsp;
                 <div class="dropdown">
                     <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ app.user.idUser }} </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href = "{{ path('account') }}">My Account</a>
-                        <a class="dropdown-item" href = "{{ path('manageBookings') }}">My Bookings</a>
-                        <a class="dropdown-item" href = "{{ path('show-order') }}">My Orders</a>
-                        <a class="dropdown-item" href = "{{ path('favoris') }}">My Favorites</a>
-                        <a class="dropdown-item" href = "{{ path('userMessages')}}?id={{ app.user.id }}">My Messages</a>
+                        <a class="dropdown-item" href = "{{ path('account') }}">{{ 'My Account' |trans}}</a>
+                        <a class="dropdown-item" href = "{{ path('manageBookings') }}">{{ 'My Bookings' |trans}}</a>
+                        <a class="dropdown-item" href = "{{ path('show-order') }}">{{ 'My Orders' |trans}}</a>
+                        <a class="dropdown-item" href = "{{ path('favoris') }}">{{ 'My Favorites' |trans}}</a>
+                        <a class="dropdown-item" href = "{{ path('userMessages')}}?id={{ app.user.id }}">{{ 'My Messages' |trans}}</a>
                         <a class="dropdown-item" href ="{{ path('contact') }}">Contact</a>
-                        <a class="dropdown-item" href="{{ path('app_logout') }}">Log out</a>
+                        <a class="dropdown-item" href="{{ path('app_logout') }}">{{ 'Log out' |trans}}</a>
                     </div>
                 </div>
             {% else %}
-                <a href = "{{ path('reservation') }}"  class="btn btn-outline-primary" role = "button">CART</a>&nbsp;
-                <a href = "{{ path('app_register') }}" class="btn btn-outline-primary" role = "button">SIGNUP</a> &nbsp;&nbsp;
-                <a href = "{{ path('login') }}" class="btn btn-outline-primary" role = "button">LOGIN</a>
+                <a href = "{{ path('reservation') }}"  class="btn btn-outline-primary" role = "button">{{ 'CART' |trans}}</a>&nbsp;
+                <a href = "{{ path('app_register') }}" class="btn btn-outline-primary" role = "button">{{ 'SIGNUP' |trans}}</a> &nbsp;&nbsp;
+                <a href = "{{ path('login') }}" class="btn btn-outline-primary" role = "button">{{ 'LOGIN' |trans}}</a>
             {% endif %}
         </div>
     </div>

@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Bookings{% endblock %}
+{% block title %}{{ "Bookings{" |trans}}% endblock %}
 
 {% block body %}
 
@@ -8,19 +8,19 @@
 
         <div class="card text-center">
             <div class="card-header">
-                Manage bookings
+                {{ "Manage bookings" |trans}}
             </div>
             <div class="card-body">
-                <h5 class="card-title"> Upcoming bookings @ Gusto !</h5>
-                <p class="card-text">Manage bookings at a glance. </p>
+                <h5 class="card-title"> {{ "Upcoming bookings" |trans}}  @ Gusto !</h5>
+                <p class="card-text">{{ "Manage bookings at a glance" |trans}} . </p>
                 <table class="table">
                     <thead>
                     <tr>
-                        <th scope="col">User</th>
-                        <th scope="col">Date</th>
-                        <th scope="col">Time</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Manage</th>
+                        <th scope="col">{{ "User" |trans}} </th>
+                        <th scope="col">{{ "Date" |trans}} </th>
+                        <th scope="col">{{ "Time" |trans}} </th>
+                        <th scope="col">{{ "Status" |trans}} </th>
+                        <th scope="col">{{ "Manage" |trans}} </th>
                     </tr>
                     </thead>
                    <tbody>
@@ -32,23 +32,23 @@
                                 <td>{{ rez[i].dateReservation|date('Y-m-d') }}</td>
                                 <td>{{ rez[i].timeReservation|date('H:i') }}</td>
                                 {% if rez[i].available == 1 %}
-                                    <td>  Confirmed </td>
+                                    <td>  {{ "Confirmed" |trans}}  </td>
                                 {% elseif  rez[i].available == 0 %}
-                                    <td>  Pending confirmation </td>
+                                    <td>  {{ "Pending confirmation" |trans}}  </td>
                                 {% else %}
-                                    <td>  Canceled </td>
+                                    <td>  {{ "Canceled" |trans}}  </td>
                                 {% endif %}
 
                                 <td>
                                     {% if rez[i].available == 2 %}
-                                    <a href="{{ path('archiveBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> Archive </a>
+                                    <a href="{{ path('archiveBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> {{ "Archive" |trans}}  </a>
                                     {% elseif rez[i].available == 1 %}
-                                        <a href="{{ path('cancelBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> Cancel </a>&nbsp;
-                                        <a href="{{ path('archiveBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> Archive </a>
+                                        <a href="{{ path('cancelBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> {{ "Cancel" |trans}}  </a>&nbsp;
+                                        <a href="{{ path('archiveBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> {{ "Archive" |trans}}  </a>
                                     {% else %}
-                                        <a href="{{ path('cancelBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> Cancel </a>&nbsp;&nbsp;
-                                        <a href="{{ path('confirmBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> Confirm </a>
-                                        <a href="{{ path('archiveBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> Archive </a>
+                                        <a href="{{ path('cancelBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> {{ "Cancel" |trans}}  </a>&nbsp;&nbsp;
+                                        <a href="{{ path('confirmBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> {{ "Confirm" |trans}}  </a>
+                                        <a href="{{ path('archiveBooking') }}?idRez={{ rez[i].id }}" class="btn btn-addCart"> {{ "Archive" |trans}}  </a>
                                     {% endif %}&nbsp;&nbsp;
                                 </td>
                             </tr>

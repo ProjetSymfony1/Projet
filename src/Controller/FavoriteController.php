@@ -16,7 +16,7 @@ class FavoriteController extends AbstractController
 {
 	
 	/**
-	 * @Route("/favoris", name="favoris")
+	 * @Route("/{_locale<%app.supported_locales%>}/favoris", name="favoris")
 	 */
 	public function menu(FavoriteRepository $favoriteRepository, DishRepository $dishRepository): Response
 	{
@@ -25,7 +25,7 @@ class FavoriteController extends AbstractController
 		]);
 	}
 	
-	#[Route('/addFavoris', name: 'add-fav')]
+	#[Route('/{_locale<%app.supported_locales%>}/addFavoris', name: 'add-fav')]
 	
     public function addFav(DishRepository $dishRepository, EntityManagerInterface $entityManager, ManagerRegistry $registry): Response
     {
@@ -45,7 +45,7 @@ class FavoriteController extends AbstractController
         ]);
     }
 	
-	#[Route('/supFavoris', name: 'del-fav')]
+	#[Route('/{_locale<%app.supported_locales%>}/supFavoris', name: 'del-fav')]
 	
 	public function delFav(FavoriteRepository $favoriteRepository, DishRepository $dishRepository, EntityManagerInterface $entityManager)
 	{

@@ -8,11 +8,11 @@
 
         <div class="card text-center">
             <div class="card-header">
-                Favorites
+                {{ "Favorites" |trans}}
             </div>
             <div class="card-body">
-                <h5 class="card-title"> Coming back for your best picks ?</h5>
-                <p class="card-text">Gusto will never fail you ! MAMMA MIA !</p>
+                <h5 class="card-title"> {{ "Coming back for your best picks ?" |trans}} </h5>
+                <p class="card-text">{{ "Gusto will never fail you ! MAMMA MIA " |trans}} !</p>
                 <table class="table">
                     {% for fav in favs %}
                         {% if fav.idUser == app.user.id %}
@@ -30,8 +30,8 @@
                                                 <h6 class="textDesc"> {{ dish.description }} </h6>
                                             </td>
                                             <td>
-                                                <a href="{{ path('del-fav') }}?idFav={{ fav.id }}" class="btn btn-outline-primary"> Remove </a>
-                                                <a href="{{ path('add-cart') }}?idDish={{ dish.id }} " class="btn btn-outline-primary"> Add to Cart </a>
+                                                <a href="{{ path('del-fav') }}?idFav={{ fav.id }}" class="btn btn-outline-primary"> {{ "Remove" |trans}}  </a>
+                                                <a href="{{ path('add-cart') }}?idDish={{ dish.id }} " class="btn btn-outline-primary"> {{ "Add to Cart" |trans}}  </a>
                                             </td>
                                         </tr>
                                         </tbody>

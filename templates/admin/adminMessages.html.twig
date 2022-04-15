@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Messages{% endblock %}
+{% block title %}{{ "Messages" |trans}}{% endblock %}
 
 {% block body %}
 
@@ -8,18 +8,18 @@
 
     <div class="card text-center">
         <div class="card-header">
-            Your messages
+            {{ "Your messages" |trans}}
         </div>
         <div class="card-body">
-            <h5 class="card-title"> Welcome back admin {{ app.user.idUser }} !</h5>
-            <p class="card-text">Look at all those questions, we have work to do !</p>
+            <h5 class="card-title"> {{ "Welcome back admin" |trans}}  {{ app.user.idUser }} !</h5>
+            <p class="card-text">{{ "Look at all those questions, we have work to do !" |trans}} </p>
             <table class="table">
                 <thead>
                 <tr>
-                    <th scope="col">User</th>
-                    <th scope="col">Object</th>
-                    <th scope="col">Message</th>
-                    <th scope="col">Status</th>
+                    <th scope="col">{{ "User" |trans}}</th>
+                    <th scope="col">{{ "Object" |trans}}</th>
+                    <th scope="col">{{ "Message" |trans}}</th>
+                    <th scope="col">{{ "Status" |trans}}</th>
                     <th scope="col"></th>
                 </tr>
                 </thead>

@@ -6211,6 +6211,13 @@
         <argument key="userRepository" type="service_closure" id="App\Repository\UserRepository"/>
       </argument>
     </service>
+    <service id=".service_locator.7KwggNc" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="orderRepository" type="service_closure" id="App\Repository\OrderRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.Dbqq6dv" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6242,7 +6249,7 @@
         <argument key="userRepository" type="service_closure" id="App\Repository\UserRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.DGgrxVw" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.pNjd.Lx" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AdminController::getClientData" type="service_closure" id=".service_locator..Ae5NXw"/>
@@ -6262,13 +6269,14 @@
         <argument key="App\Controller\ManageBookings::confirmBooking" type="service_closure" id=".service_locator.s4UVCrM"/>
         <argument key="App\Controller\MenuController::add" type="service_closure" id=".service_locator..ALD__g"/>
         <argument key="App\Controller\MenuController::del" type="service_closure" id=".service_locator..ALD__g"/>
-        <argument key="App\Controller\MenuController::menu" type="service_closure" id=".service_locator.QMnY7LW"/>
         <argument key="App\Controller\MenuController::update" type="service_closure" id=".service_locator..ALD__g"/>
         <argument key="App\Controller\MessageController::checkMessage" type="service_closure" id=".service_locator.sUicarI"/>
         <argument key="App\Controller\MessageController::delMessage" type="service_closure" id=".service_locator.sUicarI"/>
         <argument key="App\Controller\MessageController::getMessages" type="service_closure" id=".service_locator.kVyWcI2"/>
         <argument key="App\Controller\MessageController::mesMessages" type="service_closure" id=".service_locator.ClO9SG7"/>
         <argument key="App\Controller\MessageController::message" type="service_closure" id=".service_locator.l2QwsaZ"/>
+        <argument key="App\Controller\OrderController::cancelOrder" type="service_closure" id=".service_locator.7KwggNc"/>
+        <argument key="App\Controller\OrderController::confirmOrder" type="service_closure" id=".service_locator.7KwggNc"/>
         <argument key="App\Controller\OrderController::getOrders" type="service_closure" id=".service_locator.N3dbsuu"/>
         <argument key="App\Controller\OrderController::makeOrder" type="service_closure" id=".service_locator.Nt1q1Yk"/>
         <argument key="App\Controller\OrderController::order" type="service_closure" id=".service_locator.PdDoBxt"/>
@@ -6301,13 +6309,14 @@
         <argument key="App\Controller\ManageBookings:confirmBooking" type="service_closure" id=".service_locator.s4UVCrM"/>
         <argument key="App\Controller\MenuController:add" type="service_closure" id=".service_locator..ALD__g"/>
         <argument key="App\Controller\MenuController:del" type="service_closure" id=".service_locator..ALD__g"/>
-        <argument key="App\Controller\MenuController:menu" type="service_closure" id=".service_locator.QMnY7LW"/>
         <argument key="App\Controller\MenuController:update" type="service_closure" id=".service_locator..ALD__g"/>
         <argument key="App\Controller\MessageController:checkMessage" type="service_closure" id=".service_locator.sUicarI"/>
         <argument key="App\Controller\MessageController:delMessage" type="service_closure" id=".service_locator.sUicarI"/>
         <argument key="App\Controller\MessageController:getMessages" type="service_closure" id=".service_locator.kVyWcI2"/>
         <argument key="App\Controller\MessageController:mesMessages" type="service_closure" id=".service_locator.ClO9SG7"/>
         <argument key="App\Controller\MessageController:message" type="service_closure" id=".service_locator.l2QwsaZ"/>
+        <argument key="App\Controller\OrderController:cancelOrder" type="service_closure" id=".service_locator.7KwggNc"/>
+        <argument key="App\Controller\OrderController:confirmOrder" type="service_closure" id=".service_locator.7KwggNc"/>
         <argument key="App\Controller\OrderController:getOrders" type="service_closure" id=".service_locator.N3dbsuu"/>
         <argument key="App\Controller\OrderController:makeOrder" type="service_closure" id=".service_locator.Nt1q1Yk"/>
         <argument key="App\Controller\OrderController:order" type="service_closure" id=".service_locator.PdDoBxt"/>
@@ -6901,12 +6910,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.DGgrxVw"/>
+      <argument type="service" id=".service_locator.pNjd.Lx"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.DGgrxVw"/>
+      <argument type="service" id=".service_locator.pNjd.Lx"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection"/>
@@ -7736,7 +7745,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.DGgrxVw"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.pNjd.Lx"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>
@@ -7762,7 +7771,7 @@
     <service id=".service_locator.KZvsNX1" alias=".service_locator.N3dbsuu"/>
     <service id=".service_locator.I3YGizR" alias=".service_locator.Dbqq6dv"/>
     <service id=".service_locator.KS3nifg" alias=".service_locator.ToB61S3"/>
-    <service id=".service_locator.Uiw8IKs" alias=".service_locator.DGgrxVw"/>
+    <service id=".service_locator.hmE8Uj7" alias=".service_locator.pNjd.Lx"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
     <service id=".service_locator.jiykuhk" alias=".service_locator.3Hw_9y."/>
     <service id=".service_locator.qBCHs1a" alias=".service_locator.QXcJQkF"/>
@@ -7808,6 +7817,7 @@
     <service id=".service_locator.OGwcexl" alias=".service_locator.kVyWcI2"/>
     <service id=".service_locator.UP1W.iT" alias=".service_locator.xAJHBWh"/>
     <service id=".service_locator.lkML7QV" alias=".service_locator.N3dbsuu"/>
+    <service id=".service_locator.lfUo5ne" alias=".service_locator.7KwggNc"/>
     <service id=".service_locator.Qo8r5Fu" alias=".service_locator.Dbqq6dv"/>
     <service id=".service_locator.lOpSgUV" alias=".service_locator.x.QLGOu"/>
     <service id=".service_locator.kXCVHeG" alias=".service_locator.UDgw6Ol"/>

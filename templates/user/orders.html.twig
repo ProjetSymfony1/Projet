@@ -9,16 +9,16 @@
 
         <div class="card text-center">
             <div class="card-header">
-                Your orders
+                {{ "" |trans}}Your orders
             </div>
             <div class="card-body">
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">Details</th>
-                            <th scope="col">Date</th>
-                            <th scope="col">Amount</th>
-                            <th scope="col">Status</th>
+                            <th scope="col">{{ "" |trans}}Details</th>
+                            <th scope="col">{{ "" |trans}}Date</th>
+                            <th scope="col">{{ "" |trans}}Amount</th>
+                            <th scope="col">{{ "" |trans}}Status</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
@@ -29,13 +29,13 @@
                                 {% for o in order %}
                                     {% if o.getIdCartInt() == c.id %}
 
-                                        <td><a href="{{ path('order-detail') }}?idCart={{ c.id }}&idUser={{ app.user.id }}"> Order N°{{ o.id }}</a></td>
+                                        <td><a href="{{ path('order-detail') }}?idCart={{ c.id }}&idUser={{ app.user.id }}"> {{ "" |trans}}Order N°{{ o.id }}</a></td>
                                         <td>{{ o.date|date("l d F") }}</td>
                                         <td>{{ o.amount }}</td>
                                         <td>{{ o.status }}</td>
                                         {% if o.status == "Pending confirmation" %}
                                             <td>
-                                                <a href="{{ path('cancel-order') }}?orderId={{ o.id }}" class="btn btn-addCart"> Cancel </a>
+                                                <a href="{{ path('cancel-order') }}?orderId={{ o.id }}" class="btn btn-addCart"> {{ "" |trans}}Cancel </a>
                                             </td>
                                         {% else %}
                                             <td></td>

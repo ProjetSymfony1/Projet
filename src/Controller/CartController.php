@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class CartController extends AbstractController
 {
     /**
-     * @Route("/cart", name="cart")
+     * @Route("/{_locale<%app.supported_locales%>}/cart", name="cart")
      */
     public function cart(CartRepository $cartRepository, DishRepository $dishRepository): Response
     {
@@ -23,7 +23,7 @@ class CartController extends AbstractController
         ]);
     }
 
-    #[Route('/addCart', name: 'add-cart')]
+    #[Route('/{_locale<%app.supported_locales%>}/addCart', name: 'add-cart')]
     public function addCart(CartRepository $cartRepository, EntityManagerInterface $entityManager, DishRepository $dishRepository): Response
     {
         $idUser = ($this->getUser())->getId();
@@ -48,7 +48,7 @@ class CartController extends AbstractController
         ]);
     }
 	
-	#[Route('/remove', name: 'remove')]
+	#[Route('/{_locale<%app.supported_locales%>}/remove', name: 'remove')]
 	public function remove(CartRepository $cartRepository, EntityManagerInterface $entityManager, DishRepository $dishRepository) {
 		$idDish = $_GET["idDish"];
 		$idCart = $_GET["idCart"];
@@ -61,7 +61,7 @@ class CartController extends AbstractController
 		return $this->redirectToRoute('cart');
 	}
 	
-	#[Route('/minusDish', name: 'minus')]
+	#[Route('/{_locale<%app.supported_locales%>}/minusDish', name: 'minus')]
 	public function minus(CartRepository $cartRepository, EntityManagerInterface $entityManager) {
 		$idDish = $_GET["idDish"];
 		$idCart = $_GET["idCart"];
@@ -74,7 +74,7 @@ class CartController extends AbstractController
 		return $this->redirectToRoute('cart');
 	}
 	
-	#[Route('/plusDish', name: 'plus')]
+	#[Route('/{_locale<%app.supported_locales%>}/plusDish', name: 'plus')]
 	public function plus(CartRepository $cartRepository, EntityManagerInterface $entityManager, DishRepository $dishRepository) {
 		$this->addCart($cartRepository, $entityManager, $dishRepository);
 		return $this->redirectToRoute('cart');

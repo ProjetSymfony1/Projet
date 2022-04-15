@@ -15,7 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MessageController extends AbstractController
 {
-    #[Route('/contact', name: 'contact')]
+    #[Route('/{_locale<%app.supported_locales%>}/contact', name: 'contact')]
     public function message(Request $request, EntityManagerInterface $entityManager): Response
     {
 
@@ -41,7 +41,7 @@ class MessageController extends AbstractController
         ]);
     }
 
-	#[Route('/user/message', name: 'userMessages')]
+	#[Route('/{_locale<%app.supported_locales%>}/user/message', name: 'userMessages')]
 
 	public function mesMessages(MessageRepository $messageRepository) {
 
@@ -52,7 +52,7 @@ class MessageController extends AbstractController
 
 	}
 
-	#[Route('/user/delMessage', name: 'delMessage')]
+	#[Route('/{_locale<%app.supported_locales%>}/user/delMessage', name: 'delMessage')]
 
 	public function delMessage(MessageRepository $messageRepository, EntityManagerInterface $entityManager) {
 		$idMsg = $_GET["idMsg"];
@@ -64,7 +64,7 @@ class MessageController extends AbstractController
 		return $this->mesMessages($messageRepository);
 	}
 
-	#[Route('/admin/message', name: 'adminMessages')]
+	#[Route('/{_locale<%app.supported_locales%>}/admin/message', name: 'adminMessages')]
 
 	public function getMessages(MessageRepository $messageRepository, UserRepository $userRepository) {
 		$msg = $messageRepository->findAll();
@@ -77,7 +77,7 @@ class MessageController extends AbstractController
 			"messages" => $messageRepository->findAll(), "username" => $nameArray
 		]);
 	}
-	#[Route('/admin/checkMessage', name: 'checkMessage')]
+	#[Route('/{_locale<%app.supported_locales%>}/admin/checkMessage', name: 'checkMessage')]
 	public function checkMessage(MessageRepository $messageRepository, EntityManagerInterface $entityManager) {
 		
 		$idMsg = $_GET["idMsg"];

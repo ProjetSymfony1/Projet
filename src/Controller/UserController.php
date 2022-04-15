@@ -17,7 +17,7 @@ use Symfony\Component\Security\Http\Authentication\UserAuthenticatorInterface;
 class UserController extends AbstractController
 {
 	
-	#[Route('/myAccount', name: 'account')]
+	#[Route('/{_locale<%app.supported_locales%>}/myAccount', name: 'account')]
 	
 	public function myAccount(): Response
 	{

@@ -7,11 +7,11 @@
 <div class="shadow-lg p-5 mb-5 bg-white rounded container">
     <div class="card text-center">
         <div class="card-header">
-            Your order
+            {{ "Your order" |trans}}
         </div>
         <div class="card-body">
-            <h5 class="card-title"> This is a recapitulated of your order</h5>
-            <p class="card-text">Please, verify all details</p>
+            <h5 class="card-title"> {{ "" |trans}} This is a recapitulated of your order</h5>
+            <p class="card-text"> {{ "" |trans}} Please, verify all details</p>
             <table class="table">
 
                 {% for c in cart %}
@@ -46,8 +46,8 @@
 
                         <tr>
                             <td colspan="3" style="text-align: center">
-                                <a href="{{ path('cart') }}" class="btn-lg btn-outline-primary"> Back to cart </a>
-                                <a href="{{ path('order')}}?idCart={{ c.id }}&total={{ total }}" class="btn-lg btn-primary"> Confirm </a>
+                                <a href="{{ path('cart') }}" class="btn-lg btn-outline-primary"> {{ "Back to cart" |trans}} </a>
+                                <a href="{{ path('order')}}?idCart={{ c.id }}&total={{ total }}" class="btn-lg btn-primary"> {{ "Confirm" |trans}} </a>
                             </td>
                         </tr>
                     {% endif %}

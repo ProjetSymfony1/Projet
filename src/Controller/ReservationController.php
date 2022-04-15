@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ReservationController extends AbstractController
 {
-    #[Route('/Booking', name: 'app_booking')]
+    #[Route('/{_locale<%app.supported_locales%>}/Booking', name: 'app_booking')]
     public function book(Request $request, EntityManagerInterface $entityManager, ReservationRepository $reservationRepository): Response
     {
         $reservation = new Reservation();
