@@ -39,3 +39,6 @@ fcbf55,::1,GET,http://localhost:8888/chez-gusto/public/fr/,1650021686,,200
 c9e099,::1,GET,http://localhost:8888/chez-gusto/public/fr/,1650022158,,200
 4d58c5,::1,GET,http://localhost:8888/chez-gusto/public/fr/menu,1650022166,,200
 dbb3db,::1,GET,http://localhost:8888/chez-gusto/public/fr/,1650022551,,200
+c20593,::1,GET,http://localhost:8888/chez-gusto/public/fr/,1650030497,,200
+4a6253,::1,GET,http://localhost:8888/chez-gusto/public/fr/menu,1650030551,,200
+363619,::1,GET,http://localhost:8888/chez-gusto/public/fr/reservation,1650030554,,200
