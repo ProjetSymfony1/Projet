@@ -17,7 +17,7 @@ class Order
     #[ORM\Column(type: 'date')]
     private $date;
 
-    #[ORM\OneToOne(targetEntity: cart::class, cascade: ['persist', 'remove'])]
+    #[ORM\OneToOne(targetEntity: Cart::class, cascade: ['persist', 'remove'])]
     #[ORM\JoinColumn(nullable: false)]
     private $id_cart;
 
@@ -44,7 +44,7 @@ class Order
         return $this;
     }
 
-    public function getIdCart(): ?cart
+    public function getIdCart(): ?Cart
     {
         return $this->id_cart;
     }
@@ -54,7 +54,7 @@ class Order
         return $this->id_cart->getId();
     }
 
-    public function setIdCart(cart $id_cart): self
+    public function setIdCart(Cart $id_cart): self
     {
         $this->id_cart = $id_cart;
 

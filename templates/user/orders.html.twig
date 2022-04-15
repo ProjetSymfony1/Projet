@@ -35,8 +35,10 @@
                                         <td>{{ o.status }}</td>
                                         {% if o.status == "Pending confirmation" %}
                                             <td>
-                                                <a href="" class="btn btn-addCart"> Cancel </a>
+                                                <a href="{{ path('cancel-order') }}?orderId={{ o.id }}" class="btn btn-addCart"> Cancel </a>
                                             </td>
+                                        {% else %}
+                                            <td></td>
                                         {% endif %}
                                     {% endif %}
                                 {% endfor %}

@@ -49,7 +49,7 @@ class ManageBookings extends AbstractController
         $rez ->setAvailable(1);
         $entityManager -> flush();
         $this->addFlash('success', 'Booking confirmed !');
-	    return $this->redirectToRoute('manageBookings');
+	    return $this->redirectToRoute('adminBookings');
     }
 
     #[Route('/cancelBooking', name: 'cancelBooking')]
