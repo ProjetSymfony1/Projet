@@ -10,16 +10,13 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HomepageController extends AbstractController
 {
-    /**
-     * @Route("/", name="homepage")
-     */
+	#[Route('/{_locale<%app.supported_locales%>}/', name: 'homepage')]
+	
     public function home(): Response{
         return $this->render('homepage/index.html.twig');
     }
-
-    /**
-     * @Route("/menu", name="menu")
-     */
+	
+	#[Route('/{_locale<%app.supported_locales%>}/menu', name: 'menu')]
     public function menu(DishRepository $dishRepository): Response{
 
         return $this->render("homepage/menu.html.twig", [
@@ -28,7 +25,7 @@ class HomepageController extends AbstractController
     }
 
     /**
-     * @Route("/reservation", name="reservation")
+     * @Route("/{_locale<%app.supported_locales%>}/reservation", name="reservation")
      */
     public function book(): Response{
         return $this->render('homepage/booking.html.twig');

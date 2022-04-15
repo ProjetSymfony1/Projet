@@ -22,9 +22,6 @@ return [
         '/favoris' => [[['_route' => 'favoris', '_controller' => 'App\\Controller\\FavoriteController::menu'], null, null, null, false, false, null]],
         '/addFavoris' => [[['_route' => 'add-fav', '_controller' => 'App\\Controller\\FavoriteController::addFav'], null, null, null, false, false, null]],
         '/supFavoris' => [[['_route' => 'del-fav', '_controller' => 'App\\Controller\\FavoriteController::delFav'], null, null, null, false, false, null]],
-        '/' => [[['_route' => 'homepage', '_controller' => 'App\\Controller\\HomepageController::home'], null, null, null, false, false, null]],
-        '/menu' => [[['_route' => 'menu', '_controller' => 'App\\Controller\\HomepageController::menu'], null, null, null, false, false, null]],
-        '/reservation' => [[['_route' => 'reservation', '_controller' => 'App\\Controller\\HomepageController::book'], null, null, null, false, false, null]],
         '/manageBooking' => [[['_route' => 'manageBookings', '_controller' => 'App\\Controller\\ManageBookings::booking'], null, null, null, false, false, null]],
         '/admin/adminManageBookings' => [[['_route' => 'adminBookings', '_controller' => 'App\\Controller\\ManageBookings::adminManageBookings'], null, null, null, false, false, null]],
         '/admin/confirmBooking' => [[['_route' => 'confirmBooking', '_controller' => 'App\\Controller\\ManageBookings::confirmBooking'], null, null, null, false, false, null]],
@@ -67,6 +64,13 @@ return [
                     .')'
                     .'|error/(\\d+)(?:\\.([^/]++))?(*:159)'
                 .')'
+                .'|/(en|fr)(?'
+                    .'|(*:179)'
+                    .'|/(?'
+                        .'|menu(*:195)'
+                        .'|reservation(*:214)'
+                    .')'
+                .')'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -76,8 +80,11 @@ return [
         101 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         114 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         124 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        159 => [
-            [['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null],
+        159 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
+        179 => [[['_route' => 'homepage', '_controller' => 'App\\Controller\\HomepageController::home'], ['_locale'], null, null, true, true, null]],
+        195 => [[['_route' => 'menu', '_controller' => 'App\\Controller\\HomepageController::menu'], ['_locale'], null, null, false, false, null]],
+        214 => [
+            [['_route' => 'reservation', '_controller' => 'App\\Controller\\HomepageController::book'], ['_locale'], null, null, false, false, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

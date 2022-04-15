@@ -19,3 +19,11 @@ ece2c4,::1,GET,http://localhost:8888/chez-gusto/public/updateDish?idDish=2,16499
 719a9e,::1,GET,http://localhost:8888/chez-gusto/public/menu,1649936110,,200
 eeb396,::1,GET,http://localhost:8888/chez-gusto/public/updateDish?idDish=2,1649936112,,200
 5c67a8,::1,GET,http://localhost:8888/chez-gusto/public/admin/orders,1649936119,,200
+56e87a,::1,GET,http://localhost:8888/chez-gusto/public/menu,1649936207,,200
+f8123c,::1,GET,http://localhost:8888/chez-gusto/public/addDish,1649936210,,200
+bdb73b,::1,POST,http://localhost:8888/chez-gusto/public/addDish,1649936237,,200
+1a16e1,::1,GET,http://localhost:8888/chez-gusto/public/delDish?idDish=10,1649936242,,302
+0420cd,::1,GET,http://localhost:8888/chez-gusto/public/menu,1649936242,,200
+c8e844,::1,GET,http://localhost:8888/chez-gusto/public/addDish,1649936571,,200
+6ba2b5,::1,GET,http://localhost:8888/chez-gusto/public/,1649936983,,200
+49e873,::1,GET,http://localhost:8888/chez-gusto/public/,1649962500,,404

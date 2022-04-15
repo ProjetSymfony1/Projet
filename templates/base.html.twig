@@ -59,6 +59,8 @@
                 </div>
             {% elseif is_granted('ROLE_USER') %}
                 <a href ="{{ path('cart') }}"  class="btn btn-outline-primary" role = "button">CART</a>&nbsp;
+                <a class="dropdown-item" href="{{ path('homepage', {_locale: 'en'}) }}">English</a></li>
+                <a class="dropdown-item" href="{{ path('homepage', {_locale: 'fr'}) }}">Français</a></li>
                 <div class="dropdown">
                     <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ app.user.idUser }} </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
