@@ -4,10 +4,8 @@
 
 {% block body %}
 
-
     <div class="container-fluid content">
         {{ form_start(reservationForm) }}
-        <form>
             <div class="row">
                 <div class="col-6 my-auto">
                     <div class="borderTitle mb-4 ml-0">
@@ -32,13 +30,13 @@
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary" style="float: right">{{ "Book" |trans}} </button>
-                    {{ form_end(reservationForm) }}
+
                 </div>
                 <div class="col-6">
-                    <img src="{{ asset('image/pngwing.com-8.png') }}" width="100%" height="auto"/>
+                    <img src="{{ asset('image/pngwing.com-8.png') }}" style="width:100%; height:auto" alt="table image"/>
                 </div>
             </div>
-        </form>
+        {{ form_end(reservationForm) }}
     </div>
     <script>
         $(document).ready(function() {
