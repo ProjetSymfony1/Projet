@@ -9,44 +9,36 @@
             <a href="{{ path('add-dish') }}" class="btn btn-primary btn-lg btn-block"> {{ "" |trans}} Want more ? Add more ! </a>
         {% endif %}
     </div>
-
-    <div class="box">
-        <table style="margin: auto; text-align: center; width:100%">
-            <tr>
+    <div class="box" style="margin: auto">
+        <div class="col-22 my-auto">
+            <div class="row" style="margin-top: 50px">
                 {% set nbr = 0 %}
                 {% for dish in dishes %}
-                {% if dish.archived != true %}
-                    <td>
-                        <table style="text-align: center; margin: auto">
-                            <tr>
-                                <td>
-                                    {% set nbr = nbr+1 %}
-                                    <img src="{{ asset(dish.photo) }}" class="imgMenu">
-                                    <h2 class="textMenu" id="dishName"> {{ dish.dishName }} </h2>
-                                    <h4 class="textPrix"> {{ dish.price }} € </h4>
-                                    <h6 class="textDesc"> {{ dish.description }} </h6>
-                                    {% if is_granted('ROLE_USER') %}
-                                        <a href="{{ path('add-cart') }}?idDish={{ dish.id }} " class="btn btn-addCart"> {{ "Add to Cart" |trans}}  </a>
-                                        <a href="{{ path('add-fav') }}?idDish={{ dish.id }} " class="btn btn-primary"> {{ "Add to Favorites" |trans}}  </a>
-                                    {% elseif is_granted('ROLE_ADMIN') %}
-                                        <a href="{{ path('del-dish') }}?idDish={{ dish.id }} " class="btn btn-primary"> {{ "Delete Dish" |trans}}  </a>
-                                        <a href="{{ path('update-dish') }}?idDish={{ dish.id }}" class="btn btn-primary"> {{ "Update Dish" |trans}}  </a>
-                                    {% endif %}
-
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                    {% if nbr % 3 == 0 %}
-                        </tr>
-                        <tr><td><br></td></tr>
-                        <tr>
-                    {% endif %}
+                    {% if dish.archived != true %}
+                        <div class="card" style="margin: 50px; border: none">
+                            {% set nbr = nbr+1 %}
+                            <img src="{{ asset(dish.photo) }}" class="imgMenu" alt="{{ dish.dishName }}">
+                            <h2 class="textMenu"> {{ dish.dishName }} </h2>
+                            <h4 class="textPrix"> {{ dish.price }} € </h4>
+                            <h6 class="textDesc" style="width: 250px"> {{ dish.description }} </h6>
+                            {% if is_granted('ROLE_USER') %}
+                                <p>
+                                    <a href="{{ path('add-cart') }}?idDish={{ dish.id }} " class="btn btn-addCart"> {{ "Add to Cart" |trans}}  </a>
+                                    <a href="{{ path('add-fav') }}?idDish={{ dish.id }} " class="btn btn-primary"> {{ "Add to Favorites" |trans}}  </a>
+                                </p>
+                            {% elseif is_granted('ROLE_ADMIN') %}
+                                <p>
+                                    <a href="{{ path('del-dish') }}?idDish={{ dish.id }} " class="btn btn-primary"> {{ "Delete Dish" |trans}}  </a>
+                                    <a href="{{ path('update-dish') }}?idDish={{ dish.id }}" class="btn btn-primary"> {{ "Update Dish" |trans}}  </a>
+                                </p>
                             {% endif %}
+                        </div>
+                        {% if nbr % 3 == 0 %}
+                    </div><div class="row">
+                        {% endif %}
+                    {% endif %}
                 {% endfor %}
-        </table>
+            </div>
+        </div>
     </div>
-
-
-
 {% endblock %}
