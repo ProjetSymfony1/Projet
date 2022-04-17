@@ -16,6 +16,10 @@ a{
     height: 100px;
     object-fit: cover;
 }
+
+.dropdown {
+    margin-right: 7px;
+}
 .btn-outline-primary{
     color: #8f392c !important;
     border-color: #8f392c !important;

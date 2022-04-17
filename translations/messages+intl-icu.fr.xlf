@@ -361,6 +361,14 @@
         <source>Archive</source>
         <target>Archiver</target>
       </trans-unit>
+      <trans-unit id="1Sqc5wm" resname="Here's a recap of your order.">
+        <source>Here's a recap of your order.</source>
+        <target>Voici un résumé du contenu de votre panier.</target>
+      </trans-unit>
+      <trans-unit id="68HQeHo" resname="Please, verify all details before confirming your cart.">
+        <source>Please, verify all details before confirming your cart.</source>
+        <target>Veuillez en vérifier le contenu avant de valider.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

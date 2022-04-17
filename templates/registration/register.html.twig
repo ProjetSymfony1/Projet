@@ -17,13 +17,13 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                {{ form_label(registrationForm.id_user, 'Last Name') }}
+                                {{ form_label(registrationForm.lastName, 'Last Name') }}
                                 <div class="border-class">
                                     {{ form_widget(registrationForm.lastName, {'attr': {'class': 'border-class'}}) }}
                                 </div>
                             </div>
                             <div class="form-group col-md-6">
-                                {{ form_label(registrationForm.id_user, 'First Name') }}
+                                {{ form_label(registrationForm.firstName, 'First Name') }}
                                 <div class="border-class">
                                     {{ form_widget(registrationForm.firstName, {'attr': {'class': 'border-class'}}) }}
                                 </div>
@@ -31,27 +31,27 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                {{ form_label(registrationForm.id_user, 'Email') }}
+                                {{ form_label(registrationForm.mail, 'Email') }}
                                 <div class="border-class">
                                     {{ form_widget(registrationForm.mail, {'attr': {'class': 'border-class'}}) }}
                                 </div>
                             </div>
                             <div class="form-group col-md-6">
-                                {{ form_label(registrationForm.id_user, 'Full adress') }}
+                                {{ form_label(registrationForm.adress, 'Full adress') }}
                                 <div class="border-class">
                                     {{ form_widget(registrationForm.adress, {'attr': {'class': 'border-class'}}) }}
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            {{ form_label(registrationForm.id_user, 'Gender') }}
+                            {{ form_label(registrationForm.gender, 'Gender') }}
                             <div class="border-class">
                                 {{ form_widget(registrationForm.gender, {'attr': {'class': 'border-class'}}) }}
                             </div>
                         </div>
 
                         <div class="form-group">
-                            {{ form_label(registrationForm.id_user, 'Password') }}
+                            {{ form_label(registrationForm.plainPassword, 'Password') }}
                             <div class="border-class">
                                 {{ form_widget(registrationForm.plainPassword, {'attr': {'class': 'border-class'}}) }}
                             </div>

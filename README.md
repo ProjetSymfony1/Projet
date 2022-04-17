@@ -18,8 +18,10 @@ La MIAGE Sorbonne répond à l'appel.
 - Créer, confirmer, archiver et afficher des réservations
 - Ajouter des plats au panier et aux favoris
 - Supprimer des plats du panier et des favoris
+- Valider, afficher, annuler et consulter le détail des commandes
 - API Map
-- Valider, afficher et archiver des commandes
+
+
 
 ##Fixtures 
 _STEP 1 - INSTALL_ 
@@ -40,7 +42,7 @@ Vous pouvez désormais vous connecter et accéder au menu
 
 ##Membres de l'équipe
 
-- HAMMACHE Katia (PO)
+- HAMMACHE Katia **(PO)**
 - DIDI Teya 
 - ISSELNANE Manel 
 - TRAN Ha Phuong 
