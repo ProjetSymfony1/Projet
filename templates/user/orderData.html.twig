@@ -25,9 +25,6 @@
                 Order information
             </div>
             <div class="card-body">
-
-
-                </h5>
                 <table class="table">
                     <thead>
                         <tr>
@@ -35,13 +32,13 @@
                             <th scope="col">{{ "Description" |trans}}</th>
                             <th scope="col">{{ "Price" |trans}}</th>
                             <th scope="col">{{ "Quantity" |trans}}</th>
-                            <th scope="col"></th>
                         </tr>
                     </thead>
+                    <tbody>
                     {% for key, value in details.idDish %}
                         {% for dish in dishes %}
                             {% if key == dish.id %}
-                                <tbody>
+                                <tr>
                                     <td>
                                         <h6 class="textDesc"> {{ dish.dishName }}</h6>
                                     </td>
@@ -54,10 +51,11 @@
                                     <td>
                                         <h6 class="textDesc"> {{ value }}</h6>
                                     </td>
-                                </tbody>
+                                </tr>
                             {% endif %}
                         {% endfor %}
                     {% endfor %}
+                    </tbody>
                 </table>
                 <div class="card-footer text-muted">
                     GustoHelpService
