@@ -22,7 +22,7 @@
                                     {% if dish.archived != 1 %}
                                         <tr>
                                             <td>
-                                                <img class="imgMenu" src="{{ asset(dish.photo) }}">
+                                                <img class="imgMenu" src="{{ asset(dish.photo) }}" alt="{{ dish.dishName }}">
                                             </td>
                                             <td>
                                                 <h2 class="textMenu">{{ dish.dishName }}</h2>

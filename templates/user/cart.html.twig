@@ -23,7 +23,7 @@
                                             {% set total = total+(dish.price*value) %}
                                             <tr>
                                                 <td>
-                                                    <img class="imgMenu" src="{{ asset(dish.photo) }}">
+                                                    <img class="imgMenu" src="{{ asset(dish.photo) }}" alt="{{ dish.dishName }}">
                                                 </td>
                                                 <td>
                                                     <h2 class="textMenu">{{ dish.dishName }}</h2>
@@ -56,7 +56,7 @@
                         {% endif %}
                     {% endfor %}
                     {% for c in cart|slice(-1) %}
-                        {% if c.status == "open" %}
+                        {% if c.status == "open" and c.idDish is not empty  %}
                             <tr>
                                 <td colspan="6">
                                     <h3 class="textPrix">Total : {{ total }} €</h3>
@@ -70,7 +70,7 @@
 
                         {% else %}
                             <tr>
-                                <td colspan="6" style="text-align: center">
+                                <td style="text-align: center">
                                     <p class="card-text"> {{ "Cart is empty ?" |trans}} <a href="{{ path('menu') }}">{{ "Choose your menu here !" |trans}}</a></p>
                                 </td>
                             </tr>
