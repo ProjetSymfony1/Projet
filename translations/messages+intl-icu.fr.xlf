@@ -7,183 +7,179 @@
     <body>
       <trans-unit id="Oo1uvoV" resname="Join Us !">
         <source>Join Us !</source>
-        <target>__Join Us !</target>
+        <target>Rejoignez-nous !</target>
       </trans-unit>
       <trans-unit id="ryI9vcf" resname="BOOK WITH US">
         <source>BOOK WITH US</source>
-        <target>__BOOK WITH US</target>
+        <target>RESERVER</target>
       </trans-unit>
       <trans-unit id="Tl_Brac" resname="Bookings">
         <source>Bookings</source>
-        <target>__Bookings</target>
+        <target>Reservations</target>
       </trans-unit>
       <trans-unit id="BNe0gzk" resname="Messages">
         <source>Messages</source>
-        <target>__Messages</target>
+        <target>Messages</target>
       </trans-unit>
       <trans-unit id="t_is3VI" resname="Orders">
         <source>Orders</source>
-        <target>__Orders</target>
+        <target>Commandes</target>
       </trans-unit>
       <trans-unit id="O2MShVy" resname="My Accounr">
         <source>My Accounr</source>
-        <target>__My Accounr</target>
+        <target>Mon Compte</target>
       </trans-unit>
       <trans-unit id="SWFhRVF" resname="Log out">
         <source>Log out</source>
-        <target>__Log out</target>
+        <target>Deconnexion</target>
       </trans-unit>
       <trans-unit id="9f1i.gr" resname="CART">
         <source>CART</source>
-        <target>__CART</target>
+        <target>PANIER</target>
       </trans-unit>
       <trans-unit id="rQGHrde" resname="My Account">
         <source>My Account</source>
-        <target>__My Account</target>
+        <target>Mon Compte</target>
       </trans-unit>
       <trans-unit id="awNjpQs" resname="My Bookings">
         <source>My Bookings</source>
-        <target>__My Bookings</target>
+        <target>Mes Reservations</target>
       </trans-unit>
       <trans-unit id="ANt5Pyu" resname="My Orders">
         <source>My Orders</source>
-        <target>__My Orders</target>
+        <target>Mes Commandes</target>
       </trans-unit>
       <trans-unit id=".HCEP3e" resname="My Favorites">
         <source>My Favorites</source>
-        <target>__My Favorites</target>
+        <target>Mes Favoris</target>
       </trans-unit>
       <trans-unit id="fuAlWhK" resname="My Messages">
         <source>My Messages</source>
-        <target>__My Messages</target>
+        <target>Mes Messages</target>
       </trans-unit>
       <trans-unit id="Up8nISG" resname="SIGNUP">
         <source>SIGNUP</source>
-        <target>__SIGNUP</target>
+        <target>INSCRIPTION</target>
       </trans-unit>
       <trans-unit id="rkKvsb1" resname="LOGIN">
         <source>LOGIN</source>
-        <target>__LOGIN</target>
-      </trans-unit>
-      <trans-unit id="47DEQpj" resname="">
-        <source></source>
-        <target>__</target>
+        <target>CONNEXION</target>
       </trans-unit>
       <trans-unit id="zXdxjJr" resname="Add to Cart">
         <source>Add to Cart</source>
-        <target>__Add to Cart</target>
+        <target>Ajouter au Panier</target>
       </trans-unit>
       <trans-unit id="JGHPsO1" resname="Add to Favorites">
         <source>Add to Favorites</source>
-        <target>__Add to Favorites</target>
+        <target>Ajouter aux Favoris</target>
       </trans-unit>
       <trans-unit id="nuJLDKL" resname="Delete Dish">
         <source>Delete Dish</source>
-        <target>__Delete Dish</target>
+        <target>Supprimer le plat</target>
       </trans-unit>
       <trans-unit id="tEnBcPC" resname="Update Dish">
         <source>Update Dish</source>
-        <target>__Update Dish</target>
+        <target>Modifier le plat</target>
       </trans-unit>
       <trans-unit id="5f0TZ1n" resname="Welcome back to Gusto's, your favorite italian place !">
         <source>Welcome back to Gusto's, your favorite italian place !</source>
-        <target>__Welcome back to Gusto's, your favorite italian place !</target>
+        <target>Bienvenue chez Gusto's, votre restaurant italien préféré !</target>
       </trans-unit>
       <trans-unit id="f_nH0uh" resname="Welcome to Gusto's, your new favorite italian place !">
         <source>Welcome to Gusto's, your new favorite italian place !</source>
-        <target>__Welcome to Gusto's, your new favorite italian place !</target>
+        <target>Bienvenue chez Gusto's, votre nouveau restaurant italien préféré !</target>
       </trans-unit>
       <trans-unit id="18R4vhI" resname="After a first very successful french bistrot 'Chez Rémi', famous chef, Auguste Gusteau, launches his first italian restaurant.">
         <source>After a first very successful french bistrot 'Chez Rémi', famous chef, Auguste Gusteau, launches his first italian restaurant.</source>
-        <target>__After a first very successful french bistrot 'Chez Rémi', famous chef, Auguste Gusteau, launches his first italian restaurant.</target>
+        <target>Après un premier bistrot français "Chez Rémi" couronné de succès, le célèbre chef Auguste Gusteau lance son premier restaurant italien.</target>
       </trans-unit>
       <trans-unit id="AgJRmwe" resname="We welcome you every day,">
         <source>We welcome you every day,</source>
-        <target>__We welcome you every day,</target>
+        <target>Nous vous accueillons tous les jours,</target>
       </trans-unit>
       <trans-unit id="mSO.kMY" resname="from 11AM to 11PM">
         <source>from 11AM to 11PM</source>
-        <target>__from 11AM to 11PM</target>
+        <target>de 11H à 23H </target>
       </trans-unit>
       <trans-unit id="TqiUbOo" resname="to enjoy your favorite italian classics.">
         <source>to enjoy your favorite italian classics.</source>
-        <target>__to enjoy your favorite italian classics.</target>
+        <target>pour apprécier vos classiques italiens préférés.</target>
       </trans-unit>
       <trans-unit id="ezOejt5" resname="Need to log in for this one...">
         <source>Need to log in for this one...</source>
-        <target>__Need to log in for this one...</target>
+        <target>Vous devez vous connecter pour celle-là...</target>
       </trans-unit>
       <trans-unit id="G1RbI.r" resname="Don't have an account?">
         <source>Don't have an account?</source>
-        <target>__Don't have an account?</target>
+        <target>Vous n'avez pas de compte ?</target>
       </trans-unit>
       <trans-unit id="iE5BVRw" resname="Don't have an account? Sign up">
         <source>Don't have an account? Sign up</source>
-        <target>__Don't have an account? Sign up</target>
+        <target>Vous n'avez pas de compte ? Inscrivez-vous</target>
       </trans-unit>
       <trans-unit id="RDRcrCb" resname="Welcome Back !">
         <source>Welcome Back !</source>
-        <target>__Welcome Back !</target>
+        <target>Bienvenue à la maison !</target>
       </trans-unit>
       <trans-unit id="vvxukYB" resname="Your messages">
         <source>Your messages</source>
-        <target>__Your messages</target>
+        <target>Vos messages</target>
       </trans-unit>
       <trans-unit id="YmWQRk4" resname="Welcome back admin">
         <source>Welcome back admin</source>
-        <target>__Welcome back admin</target>
+        <target>Bienvenue admin !</target>
       </trans-unit>
       <trans-unit id="z4OAnuZ" resname="Look at all those questions, we have work to do !">
         <source>Look at all those questions, we have work to do !</source>
-        <target>__Look at all those questions, we have work to do !</target>
+        <target>Regardez toutes ces questions, nous avons du travail à faire !</target>
       </trans-unit>
       <trans-unit id="tRLZfny" resname="User">
         <source>User</source>
-        <target>__User</target>
+        <target>Utilisateur</target>
       </trans-unit>
       <trans-unit id="YqbahzX" resname="Object">
         <source>Object</source>
-        <target>__Object</target>
+        <target>Objet</target>
       </trans-unit>
       <trans-unit id="L3dmip3" resname="Message">
         <source>Message</source>
-        <target>__Message</target>
+        <target>Message</target>
       </trans-unit>
       <trans-unit id="kg5BPH1" resname="Status">
         <source>Status</source>
-        <target>__Status</target>
+        <target>Status</target>
       </trans-unit>
       <trans-unit id="oBStQq1" resname="Username :">
         <source>Username :</source>
-        <target>__Username :</target>
+        <target>Nom d'utilisateur :</target>
       </trans-unit>
       <trans-unit id="JLff1s." resname="Email :">
         <source>Email :</source>
-        <target>__Email :</target>
+        <target>Email :</target>
       </trans-unit>
       <trans-unit id="Sqh3DZg" resname="First Name :">
         <source>First Name :</source>
-        <target>__First Name :</target>
+        <target>Prénom :</target>
       </trans-unit>
       <trans-unit id="wjTxMpJ" resname="Last Name :">
         <source>Last Name :</source>
-        <target>__Last Name :</target>
+        <target>Nom :</target>
       </trans-unit>
       <trans-unit id="XWiDp_b" resname="Gender :">
         <source>Gender :</source>
-        <target>__Gender :</target>
+        <target>Genre :</target>
       </trans-unit>
       <trans-unit id="d739QY2" resname="Adress :">
         <source>Adress :</source>
-        <target>__Adress :</target>
+        <target>Adresse :</target>
       </trans-unit>
       <trans-unit id="z.1ut7K" resname="Look at all those orders, we have work to do !">
         <source>Look at all those orders, we have work to do !</source>
-        <target>__Look at all those orders, we have work to do !</target>
+        <target>Regardez toutes ces commandes, nous avons du travail à faire !</target>
       </trans-unit>
       <trans-unit id="a_CQgly" resname="Order">
         <source>Order</source>
-        <target>__Order</target>
+        <target>Commander</target>
       </trans-unit>
       <trans-unit id="vzdjODq" resname="Customer">
         <source>Customer</source>
@@ -191,159 +187,180 @@
       </trans-unit>
       <trans-unit id="PN..9Ga" resname="Adress">
         <source>Adress</source>
-        <target>__Adress</target>
+        <target>Adresse</target>
       </trans-unit>
       <trans-unit id="kJy4ESf" resname="Book">
         <source>Book</source>
-        <target>__Book</target>
+        <target>Réserver</target>
       </trans-unit>
       <trans-unit id="8VnhjxM" resname="Your order">
         <source>Your order</source>
-        <target>__Your order</target>
+        <target>Votre commande</target>
       </trans-unit>
       <trans-unit id="PxCYvQ9" resname="Back to cart">
         <source>Back to cart</source>
-        <target>__Back to cart</target>
+        <target>Retourner au panier</target>
       </trans-unit>
       <trans-unit id="7r3SSnf" resname="Confirm">
         <source>Confirm</source>
-        <target>__Confirm</target>
+        <target>Valider</target>
       </trans-unit>
       <trans-unit id="frEmLFz" resname="Your cart">
         <source>Your cart</source>
-        <target>__Your cart</target>
+        <target>Votre panier</target>
       </trans-unit>
       <trans-unit id="IcZtavX" resname="Coming back for your best picks ?">
         <source>Coming back for your best picks ?</source>
-        <target>__Coming back for your best picks ?</target>
+        <target>Vous revenez pour vos coups de cœur ?</target>
       </trans-unit>
       <trans-unit id="nrzCZ_v" resname="Gusto will never fail you !">
         <source>Gusto will never fail you !</source>
-        <target>__Gusto will never fail you !</target>
+        <target>Gusto ne vous décevra jamais !</target>
       </trans-unit>
       <trans-unit id="w4EvxKy" resname="Remove">
         <source>Remove</source>
-        <target>__Remove</target>
+        <target>Supprimer</target>
       </trans-unit>
       <trans-unit id="zYWDcC4" resname="Cart is empty ?">
         <source>Cart is empty ?</source>
-        <target>__Cart is empty ?</target>
+        <target>Panier vide?</target>
       </trans-unit>
       <trans-unit id="x5JyvOd" resname="Choose your menu here !">
         <source>Choose your menu here !</source>
-        <target>__Choose your menu here !</target>
+        <target>Choisissez vos plats ici !</target>
       </trans-unit>
       <trans-unit id="2z8zWkW" resname="You reached to us and we reached back !">
         <source>You reached to us and we reached back !</source>
-        <target>__You reached to us and we reached back !</target>
+        <target>Vous nous avez tendu la main et nous vous l'avons redonné !</target>
       </trans-unit>
       <trans-unit id="1e97z_R" resname="If it hasn't already been processed, your question is in safe hands, an admin will be there soon !">
         <source>If it hasn't already been processed, your question is in safe hands, an admin will be there soon !</source>
-        <target>__If it hasn't already been processed, your question is in safe hands, an admin will be there soon !</target>
+        <target>Si elle n'a pas encore été traitée, votre question est entre de bonnes mains, un administrateur sera bientôt là !</target>
       </trans-unit>
       <trans-unit id="WiNESCj" resname="Manage">
         <source>Manage</source>
-        <target>__Manage</target>
+        <target>Gérer</target>
       </trans-unit>
       <trans-unit id="4tClSWj" resname="Delete">
         <source>Delete</source>
-        <target>__Delete</target>
+        <target>Supprimer</target>
       </trans-unit>
       <trans-unit id="hw1HWr7" resname="Welcome to your account">
         <source>Welcome to your account</source>
-        <target>__Welcome to your account</target>
+        <target>Bienvenue sur votre compte</target>
       </trans-unit>
       <trans-unit id="5A69X0f" resname="Feel free to check and update your information below.">
         <source>Feel free to check and update your information below.</source>
-        <target>__Feel free to check and update your information below.</target>
+        <target>N'hésitez pas à vérifier et à mettre à jour vos informations ci-dessous.</target>
       </trans-unit>
       <trans-unit id="wcEAnT8" resname="Update">
         <source>Update</source>
-        <target>__Update</target>
+        <target>Modifier</target>
       </trans-unit>
       <trans-unit id="JtInMwt" resname="Dish name">
         <source>Dish name</source>
-        <target>__Dish name</target>
+        <target>Nom du plat</target>
       </trans-unit>
       <trans-unit id="Um4Ah8w" resname="Description">
         <source>Description</source>
-        <target>__Description</target>
+        <target>Description</target>
       </trans-unit>
       <trans-unit id="k8kchR5" resname="Price">
         <source>Price</source>
-        <target>__Price</target>
+        <target>Prix</target>
       </trans-unit>
       <trans-unit id="giurjUG" resname="Quantity">
         <source>Quantity</source>
-        <target>__Quantity</target>
+        <target>Quantité</target>
       </trans-unit>
       <trans-unit id="nkOdKDr" resname="Need help ?">
         <source>Need help ?</source>
-        <target>__Need help ?</target>
+        <target>Besoin d'aide?</target>
       </trans-unit>
       <trans-unit id="bwYEJqw" resname="If you reach out, we will always take care of you !">
         <source>If you reach out, we will always take care of you !</source>
-        <target>__If you reach out, we will always take care of you !</target>
+        <target>Si vous nous contactez, nous prendrons toujours soin de vous !</target>
       </trans-unit>
       <trans-unit id="3V3D6xs" resname="Describe your problem and our team is here to respond to any of your requests">
         <source>Describe your problem and our team is here to respond to any of your requests</source>
-        <target>__Describe your problem and our team is here to respond to any of your requests</target>
+        <target>Décrivez votre problème et notre équipe est là pour répondre à toutes vos demandes</target>
       </trans-unit>
       <trans-unit id="9vRoj.I" resname="Send">
         <source>Send</source>
-        <target>__Send</target>
+        <target>Envoyer</target>
       </trans-unit>
       <trans-unit id="eh8qg6y" resname="Favorites">
         <source>Favorites</source>
-        <target>__Favorites</target>
+        <target>Favoris</target>
       </trans-unit>
       <trans-unit id="OIK34K2" resname="Gusto will never fail you ! MAMMA MIA">
         <source>Gusto will never fail you ! MAMMA MIA</source>
-        <target>__Gusto will never fail you ! MAMMA MIA</target>
+        <target>Gusto ne vous lâchera jamais ! MAMMA MIA</target>
       </trans-unit>
       <trans-unit id="bLeKsca" resname="UPDATE">
         <source>UPDATE</source>
-        <target>__UPDATE</target>
+        <target>MODIFIER</target>
       </trans-unit>
       <trans-unit id="NyYx0_K" resname="Update your profile">
         <source>Update your profile</source>
-        <target>__Update your profile</target>
+        <target>Modifier votre profil</target>
       </trans-unit>
       <trans-unit id="vhtTuso" resname="My bookings">
         <source>My bookings</source>
-        <target>__My bookings</target>
+        <target>Mes reservations</target>
       </trans-unit>
       <trans-unit id="1kzJzSs" resname="Follow and manage your bookings at a glance.">
         <source>Follow and manage your bookings at a glance.</source>
-        <target>__Follow and manage your bookings at a glance.</target>
+        <target>Suivez et gérez vos réservations d'un seul coup d'œil.</target>
       </trans-unit>
       <trans-unit id="mcQKtAW" resname="Date">
         <source>Date</source>
-        <target>__Date</target>
+        <target>Date</target>
       </trans-unit>
       <trans-unit id="M7k0ds9" resname="Time">
         <source>Time</source>
-        <target>__Time</target>
+        <target>Créneau</target>
       </trans-unit>
       <trans-unit id=".gC2e23" resname="Confirmed">
         <source>Confirmed</source>
-        <target>__Confirmed</target>
+        <target>Confirmé</target>
       </trans-unit>
       <trans-unit id="GXZu1sy" resname="Cancel">
         <source>Cancel</source>
-        <target>__Cancel</target>
+        <target>Annuler</target>
       </trans-unit>
       <trans-unit id="V0MFpIE" resname="Pending confirmation">
         <source>Pending confirmation</source>
-        <target>__Pending confirmation</target>
+        <target>En attente de confirmation</target>
       </trans-unit>
       <trans-unit id="vbhlBfg" resname="Archived">
         <source>Archived</source>
-        <target>__Archived</target>
+        <target>Archivé</target>
       </trans-unit>
       <trans-unit id="E8ou4km" resname="Canceled">
         <source>Canceled</source>
-        <target>__Canceled</target>
+        <target>Annulé</target>
+      </trans-unit>
+      <trans-unit id="B2YewcA" resname="Bookings{">
+        <source>Bookings{</source>
+        <target>__Bookings{</target>
+      </trans-unit>
+      <trans-unit id="9A8yM4w" resname="Manage bookings">
+        <source>Manage bookings</source>
+        <target>Gérer les reservations</target>
+      </trans-unit>
+      <trans-unit id="p9ztfZc" resname="Upcoming bookings">
+        <source>Upcoming bookings</source>
+        <target>Reservations à venir</target>
+      </trans-unit>
+      <trans-unit id="1NBElHA" resname="Manage bookings at a glance">
+        <source>Manage bookings at a glance</source>
+        <target>Gérer les réservations en un coup d'œil</target>
+      </trans-unit>
+      <trans-unit id="ZvSATuI" resname="Archive">
+        <source>Archive</source>
+        <target>Archiver</target>
+      </trans-unit>
       </trans-unit>
     </body>
   </file>

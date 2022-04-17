@@ -24,6 +24,7 @@ return [
     'favoris' => [['_locale'], ['_controller' => 'App\\Controller\\FavoriteController::menu'], ['_locale' => 'en|fr'], [['text', '/favoris'], ['variable', '/', 'en|fr', '_locale', true]], [], [], []],
     'add-fav' => [['_locale'], ['_controller' => 'App\\Controller\\FavoriteController::addFav'], ['_locale' => 'en|fr'], [['text', '/addFavoris'], ['variable', '/', 'en|fr', '_locale', true]], [], [], []],
     'del-fav' => [['_locale'], ['_controller' => 'App\\Controller\\FavoriteController::delFav'], ['_locale' => 'en|fr'], [['text', '/supFavoris'], ['variable', '/', 'en|fr', '_locale', true]], [], [], []],
+    'index' => [[], ['_controller' => 'App\\Controller\\HomepageController::index'], [], [['text', '/']], [], [], []],
     'homepage' => [['_locale'], ['_controller' => 'App\\Controller\\HomepageController::home'], ['_locale' => 'en|fr'], [['text', '/'], ['variable', '/', 'en|fr', '_locale', true]], [], [], []],
     'menu' => [['_locale'], ['_controller' => 'App\\Controller\\HomepageController::menu'], ['_locale' => 'en|fr'], [['text', '/menu'], ['variable', '/', 'en|fr', '_locale', true]], [], [], []],
     'reservation' => [['_locale'], ['_controller' => 'App\\Controller\\HomepageController::book'], ['_locale' => 'en|fr'], [['text', '/reservation'], ['variable', '/', 'en|fr', '_locale', true]], [], [], []],

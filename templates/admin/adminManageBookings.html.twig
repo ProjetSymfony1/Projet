@@ -1,11 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ "Bookings{" |trans}}% endblock %}
+{% block title %}{{ "Bookings" |trans}} {% endblock %}
 
 {% block body %}
-
     <div class="shadow-lg p-5 mb-5 bg-white rounded container">
-
         <div class="card text-center">
             <div class="card-header">
                 {{ "Manage bookings" |trans}}
@@ -54,12 +52,10 @@
                             </tr>
                         {% endif %}
                     {% endfor %}
-                   {% endif %}
-                    </tbody>
+                    {% endif %}
+                   </tbody>
                 </table>
-
             </div>
         </div>
     </div>
-
 {% endblock %}
