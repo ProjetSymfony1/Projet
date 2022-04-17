@@ -253,3 +253,11 @@ a0feea,::1,GET,http://localhost:8888/chez-gusto/public/en/register,1650230893,,2
 8fbfc8,::1,GET,http://localhost:8888/chez-gusto/public/fr/,1650231064,,200
 9b664e,::1,GET,http://localhost:8888/chez-gusto/public/fr/,1650231068,,200
 aa376e,::1,GET,http://localhost:8888/chez-gusto/public/en/,1650231069,,200
+ff1083,::1,GET,http://localhost:8888/chez-gusto/public/,1650231594,,302
+9d58d4,::1,GET,http://localhost:8888/chez-gusto/public/en/,1650231595,,200
+71ead1,::1,GET,http://localhost:8888/chez-gusto/public/fr/,1650231608,,200
+ae848a,::1,GET,http://localhost:8888/chez-gusto/public/en/,1650231617,,200
+9e35e1,::1,GET,http://localhost:8888/chez-gusto/public/en/,1650232251,,200
+90fdf3,::1,GET,http://localhost:8888/chez-gusto/public/en/reservation,1650232252,,200
+064ce9,::1,GET,http://localhost:8888/chez-gusto/public/en/menu,1650232255,,200
+f0226e,::1,GET,http://localhost:8888/chez-gusto/public/fr/,1650232265,,200

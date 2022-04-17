@@ -27,8 +27,11 @@ La MIAGE Sorbonne répond à l'appel.
 _STEP 1 - INSTALL_ 
 
     composer require --dev orm-fixtures
+    créer une base de données 'chez-gusto'
+
 _STEP 2 - LOAD_ 
 
+    php bin/console doctrine:schema:update --force
     php bin/console doctrine:fixtures:load
 _STEP 3 - GO_ 
 
