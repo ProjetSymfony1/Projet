@@ -160,3 +160,8 @@ cc5024,::1,GET,http://localhost:8888/chez-gusto/public/fr/admin/adminManageBooki
 1735f5,::1,GET,http://localhost:8888/chez-gusto/public/fr/logout,1650201688,,302
 f6f44c,::1,GET,http://localhost:8888/chez-gusto/public/fr/,1650201688,,200
 4172c5,::1,GET,http://localhost:8888/chez-gusto/public/fr/register,1650201690,,200
+0eec60,::1,GET,http://localhost:8888/chez-gusto/public/en/,1650214887,,200
+9f3ca6,::1,GET,http://localhost:8888/chez-gusto/public/fr/,1650214898,9056ee,500
+9056ee,::1,GET,http://localhost:8888/chez-gusto/public/fr/,1650214898,,500
+9514e0,::1,GET,http://localhost:8888/chez-gusto/public/fr/,1650215271,,200
+654107,::1,GET,http://localhost:8888/chez-gusto/public/fr/,1650215279,,200
