@@ -12,8 +12,8 @@
             <div class="card-body">
                 <h5 class="card-title"> {{ "If you reach out, we will always take care of you !" |trans}} </h5>
                 <p class="card-text">{{ "Describe your problem and our team is here to respond to any of your requests" |trans}} </p>
-                    <div class="ma-form">
-                        {{ form_start(formMsg) }}
+                <div class="ma-form">
+                    {{ form_start(formMsg) }}
                         <div class="form-group">
                             {{form_label(formMsg.object, 'Object')}}
                             <div class="border-class">
@@ -26,9 +26,9 @@
                                 {{ form_widget(formMsg.message) }}
                             </div>
                         </div>
-                    </div>
                     <button type="submit" class="btn btn-primary btn-lg btn-block">{{ "Send" |trans}} </button>
-                {{ form_end(formMsg) }}
+                    {{ form_end(formMsg) }}
+                </div>
             </div>
             <div class="card-footer text-muted">
                 GustoHelpService
