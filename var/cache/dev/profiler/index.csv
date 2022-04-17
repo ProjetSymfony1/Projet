@@ -250,3 +250,6 @@ a0feea,::1,GET,http://localhost:8888/chez-gusto/public/en/register,1650230893,,2
 96d527,::1,GET,http://localhost:8888/chez-gusto/public/en/login,1650230954,,200
 284b16,::1,GET,http://localhost:8888/chez-gusto/public/en/login,1650230980,,200
 5a033f,::1,GET,http://localhost:8888/chez-gusto/public/fr/,1650230986,,200
+8fbfc8,::1,GET,http://localhost:8888/chez-gusto/public/fr/,1650231064,,200
+9b664e,::1,GET,http://localhost:8888/chez-gusto/public/fr/,1650231068,,200
+aa376e,::1,GET,http://localhost:8888/chez-gusto/public/en/,1650231069,,200
