@@ -1654,6 +1654,8 @@
             <argument>/Applications/MAMP/htdocs/chez-gusto/vendor/symfony/form/Resources/translations/validators.fr.xlf</argument>
             <argument>/Applications/MAMP/htdocs/chez-gusto/vendor/symfony/security-core/Resources/translations/security.fr.xlf</argument>
             <argument>/Applications/MAMP/htdocs/chez-gusto/translations/messages+intl-icu.fr.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/chez-gusto/translations/security.fr.xlf</argument>
+            <argument>/Applications/MAMP/htdocs/chez-gusto/translations/validators.fr.xlf</argument>
           </argument>
           <argument key="gl" type="collection">
             <argument>/Applications/MAMP/htdocs/chez-gusto/vendor/symfony/validator/Resources/translations/validators.gl.xlf</argument>

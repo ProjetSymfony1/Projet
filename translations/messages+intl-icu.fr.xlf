@@ -150,7 +150,7 @@
         <target>Status</target>
       </trans-unit>
       <trans-unit id="oBStQq1" resname="Username :">
-        <source>Username : </source>
+        <source>Username :</source>
         <target>Nom d'utilisateur :</target>
       </trans-unit>
       <trans-unit id="JLff1s." resname="Email :">
@@ -340,6 +340,27 @@
       <trans-unit id="E8ou4km" resname="Canceled">
         <source>Canceled</source>
         <target>Annulé</target>
+      </trans-unit>
+      <trans-unit id="B2YewcA" resname="Bookings{">
+        <source>Bookings{</source>
+        <target>__Bookings{</target>
+      </trans-unit>
+      <trans-unit id="9A8yM4w" resname="Manage bookings">
+        <source>Manage bookings</source>
+        <target>Gérer les reservations</target>
+      </trans-unit>
+      <trans-unit id="p9ztfZc" resname="Upcoming bookings">
+        <source>Upcoming bookings</source>
+        <target>Reservations à venir</target>
+      </trans-unit>
+      <trans-unit id="1NBElHA" resname="Manage bookings at a glance">
+        <source>Manage bookings at a glance</source>
+        <target>Gérer les réservations en un coup d'œil</target>
+      </trans-unit>
+      <trans-unit id="ZvSATuI" resname="Archive">
+        <source>Archive</source>
+        <target>Archiver</target>
+      </trans-unit>
       </trans-unit>
     </body>
   </file>

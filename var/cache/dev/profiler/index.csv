@@ -149,3 +149,14 @@ f38c4d,::1,GET,http://localhost:8888/chez-gusto/public/fr/myAccount,1650200857,,
 7ff367,::1,GET,http://localhost:8888/chez-gusto/public/fr/admin/adminManageBookings,1650200860,b9f0e1,500
 b9f0e1,::1,GET,http://localhost:8888/chez-gusto/public/fr/admin/adminManageBookings,1650200860,,500
 021d12,::1,GET,http://localhost:8888/chez-gusto/public/fr/admin/adminManageBookings,1650200982,,200
+1ad3cc,::1,GET,http://localhost:8888/chez-gusto/public/fr/admin/adminManageBookings,1650201568,5bf100,500
+5bf100,::1,GET,http://localhost:8888/chez-gusto/public/fr/admin/adminManageBookings,1650201568,,500
+3d6c5f,::1,GET,http://localhost:8888/chez-gusto/public/fr/admin/adminManageBookings,1650201598,,200
+7069a2,::1,GET,http://localhost:8888/chez-gusto/public/fr/admin/message,1650201609,,200
+9c14b5,::1,GET,http://localhost:8888/chez-gusto/public/fr/myAccount,1650201613,,200
+f3b551,::1,GET,http://localhost:8888/chez-gusto/public/fr/admin/message,1650201616,,200
+cc5024,::1,GET,http://localhost:8888/chez-gusto/public/fr/admin/adminManageBookings,1650201618,,200
+384e70,::1,GET,http://localhost:8888/chez-gusto/public/fr/,1650201623,,200
+1735f5,::1,GET,http://localhost:8888/chez-gusto/public/fr/logout,1650201688,,302
+f6f44c,::1,GET,http://localhost:8888/chez-gusto/public/fr/,1650201688,,200
+4172c5,::1,GET,http://localhost:8888/chez-gusto/public/fr/register,1650201690,,200
