@@ -66,8 +66,6 @@ if (PHP_VERSION_ID < 80000) {
                 return $operation ? flock($this->handle, $operation) : true;
             }
 
-<<<<<<< HEAD
-=======
             public function stream_seek($offset, $whence)
             {
                 if (0 === fseek($this->handle, $offset, $whence)) {
@@ -78,7 +76,6 @@ if (PHP_VERSION_ID < 80000) {
                 return false;
             }
 
->>>>>>> origin/front-end
             public function stream_tell()
             {
                 return $this->position;

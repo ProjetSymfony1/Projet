@@ -36,9 +36,9 @@
             <a href="{{ path('homepage') }}">HOME</a>
             <a href= {{ path('menu') }}>MENU</a>
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                <a href="{{ path('app_booking') }}">BOOK WITH US</a>
+                <a href="{{ path('app_booking') }}">{{ 'BOOK WITH US' | trans}}</a>
             {% else %}
-                <a href="{{ path('reservation') }}">{{ 'BOOK WITH US' |trans}}</a>
+                <a href="{{ path('reservation') }}">{{ 'BOOK WITH US' | trans}}</a>
             {% endif %}
         </div>
         <div>

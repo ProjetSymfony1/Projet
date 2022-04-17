@@ -10,6 +10,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HomepageController extends AbstractController
 {
+	#[Route('/', name: 'index')]
+	public function index() {
+		return $this->redirectToRoute('homepage');
+	}
+	
 	#[Route('/{_locale<%app.supported_locales%>}/', name: 'homepage')]
 	
     public function home(): Response{
