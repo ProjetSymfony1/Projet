@@ -20,7 +20,7 @@
                             <img src="{{ asset(dish.photo) }}" class="imgMenu" alt="{{ dish.dishName }}">
                             <h2 class="textMenu"> {{ dish.dishName }} </h2>
                             <h4 class="textPrix"> {{ dish.price }} € </h4>
-                            <h6 class="textDesc" style="width: 250px"> {{ dish.description }} </h6>
+                            <h6 class="textDesc" style="width: 250px; height: 50px"> {{ dish.description }} </h6>
                             {% if is_granted('ROLE_USER') %}
                                 <p>
                                     <a href="{{ path('add-cart') }}?idDish={{ dish.id }} " class="btn btn-addCart"> {{ "Add to Cart" |trans}}  </a>
