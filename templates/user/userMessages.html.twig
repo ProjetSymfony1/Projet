@@ -15,26 +15,30 @@
             <p class="card-text"> {{ "If it hasn't already been processed, your question is in safe hands, an admin will be there soon !" |trans}} </p>
             <table class="table">
                 <thead>
-                <tr>
-                    <th scope="col">{{ "Object" |trans}}</th>
-                    <th scope="col">{{ "Message" |trans}}</th>
-                    <th scope="col">{{ "Status" |trans}}</th>
-                    <th scope="col">{{ "Manage" |trans}}</th>
-                </tr>
+                    <tr>
+                        <th scope="col">{{ "Object" |trans}}</th>
+                        <th scope="col">{{ "Message" |trans}}</th>
+                        <th scope="col">{{ "Status" |trans}}</th>
+                        <th scope="col">{{ "Manage" |trans}}</th>
+                    </tr>
                 </thead>
                 <tbody>
-                {% for msg in messages %}
-                <td>{{ msg.object }}</td>
-                <td>{{ msg.message }}</td>
-                <td>{{ msg.status }}
-                </td>
-                {% if msg.status == 'Being processed'%}
-                <td>  <a href="{{ path('delMessage') }}?idMsg={{ msg.id }}" class="btn btn-addCart"> {{ "Delete" |trans}} </a> </td>
-                {% endif %}
+                    {% for msg in messages %}
+                        <tr>
+                            <td>{{ msg.object }}</td>
+                            <td>{{ msg.message }}</td>
+                            <td>{{ msg.status }}
+                            </td>
+                            {% if msg.status == 'Being processed'%}
+                                <td>  <a href="{{ path('delMessage') }}?idMsg={{ msg.id }}" class="btn btn-addCart"> {{ "Delete" |trans}} </a> </td>
+                            {% else %}
+                                <td></td>
+                            {% endif %}
 
+                        </tr>
+                    {% endfor %}
                 </tbody>
-                {% endfor %}
-                </table>
+            </table>
         <div class="card-footer text-muted">
             GustoHelpService
         </div>
