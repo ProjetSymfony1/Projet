@@ -28,23 +28,24 @@
                             {% if c.status == "close" %}
                                 {% for o in order %}
                                     {% if o.getIdCartInt() == c.id %}
-
-                                        <td><a href="{{ path('order-detail') }}?idCart={{ c.id }}&idUser={{ app.user.id }}"> {{ "" |trans}}Order N°{{ o.id }}</a></td>
-                                        <td>{{ o.date|date("l d F") }}</td>
-                                        <td>{{ o.amount }}</td>
-                                        <td>{{ o.status }}</td>
-                                        {% if o.status == "Pending confirmation" %}
-                                            <td>
-                                                <a href="{{ path('cancel-order') }}?orderId={{ o.id }}" class="btn btn-addCart"> {{ "" |trans}}Cancel </a>
-                                            </td>
-                                        {% else %}
-                                            <td></td>
-                                        {% endif %}
+                                        <tr>
+                                            <td><a href="{{ path('order-detail') }}?idCart={{ c.id }}&idUser={{ app.user.id }}"> {{ "" |trans}}Order N°{{ o.id }}</a></td>
+                                            <td>{{ o.date|date("l d F") }}</td>
+                                            <td>{{ o.amount }}</td>
+                                            <td>{{ o.status }}</td>
+                                            {% if o.status == "Pending confirmation" %}
+                                                <td>
+                                                    <a href="{{ path('cancel-order') }}?orderId={{ o.id }}" class="btn btn-addCart"> {{ "" |trans}}Cancel </a>
+                                                </td>
+                                            {% else %}
+                                                <td></td>
+                                            {% endif %}
+                                        </tr>
                                     {% endif %}
                                 {% endfor %}
                             {% endif %}
-                    </tbody>
                         {% endfor %}
+                    </tbody>
                 </table>
                 <div class="card-footer text-muted">
                     GustoHelpService
