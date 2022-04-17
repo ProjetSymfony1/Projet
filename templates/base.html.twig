@@ -47,7 +47,7 @@
                     <a class="dropdown-item" href = "{{ path('homepage', {_locale: 'en'}) }}">Eng</a>
                     <a class="dropdown-item" href = "{{ path('homepage', {_locale: 'fr'}) }}">Fr</a>
                 </div>
-            </div>
+            </div> &nbsp;
             {% if is_granted('ROLE_ADMIN') %}
                 <div class="dropdown">
                     <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ app.user.idUser }} </button>
@@ -75,7 +75,7 @@
                 </div>
             {% else %}
                 <a href = "{{ path('reservation') }}"  class="btn btn-outline-primary" role = "button">{{ 'CART' |trans}}</a>&nbsp;
-                <a href = "{{ path('app_register') }}" class="btn btn-outline-primary" role = "button">{{ 'SIGNUP' |trans}}</a> &nbsp;&nbsp;
+                <a href = "{{ path('app_register') }}" class="btn btn-outline-primary" role = "button">{{ 'SIGNUP' |trans}}</a>&nbsp;
                 <a href = "{{ path('login') }}" class="btn btn-outline-primary" role = "button">{{ 'LOGIN' |trans}}</a>
             {% endif %}
         </div>
