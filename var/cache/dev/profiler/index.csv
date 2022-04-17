@@ -165,3 +165,7 @@ f6f44c,::1,GET,http://localhost:8888/chez-gusto/public/fr/,1650201688,,200
 9056ee,::1,GET,http://localhost:8888/chez-gusto/public/fr/,1650214898,,500
 9514e0,::1,GET,http://localhost:8888/chez-gusto/public/fr/,1650215271,,200
 654107,::1,GET,http://localhost:8888/chez-gusto/public/fr/,1650215279,,200
+da4e1a,::1,GET,http://localhost:8888/chez-gusto/public/fr/reservation,1650215614,,200
+caefb4,::1,GET,http://localhost:8888/chez-gusto/public/fr/reservation,1650215648,,200
+19b3ff,::1,GET,http://localhost:8888/chez-gusto/public/fr/login,1650215654,,200
+eaa2c1,::1,GET,http://localhost:8888/chez-gusto/public/fr/register,1650215658,,200
